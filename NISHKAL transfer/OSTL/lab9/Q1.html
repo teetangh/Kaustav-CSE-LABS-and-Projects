@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Element position</title>
+	<script type="text/javascript">
+		function getPosition(element)
+		{
+			var pos = element.getBoundingClientRect();
+			document.getElementById('text').innerHTML 
+				= 'X: ' + pos.x + '<br>' + 'Y: ' + pos.y;
+		}
+	</script>
+
+</head>
+<body>
+	<p> Mouse over the elements to get position: </p>
+	<p>Text 1</p>
+	<div onmouseover = "getPosition(this)"> 
+	    Position: <p id = 'text'></p> 
+	</div>
+	<p style = "direction:rtl">Text 2</p>
+	<div onmouseover = "getPosition(this)"> 
+	      <p id = 'text'></p>
+	</div> 
+
+</body>
+</html>

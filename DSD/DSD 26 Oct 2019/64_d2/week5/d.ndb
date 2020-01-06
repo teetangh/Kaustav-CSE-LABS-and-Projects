@@ -1,0 +1,93 @@
+NDB006
+The number of symbol table entries is: 1
+The length of the symbol table is: 13
+
+Index Hierarchy Path
+----- --------------
+!	&null_hpath&
+
+The number of name info structs is : 81
+
+InsOrder BitField SymTableIndex NextSyn SynParent Loc ChainType NextChain ChainParent FanOut DirExp ParExp ShareExp NodeName
+-------- -------- ------------- ------- --------- --- --------- --------- ----------- ------ ------ ------ -------- --------
+"	IeEA	!	16	0	:10	x
+#	IGdW	!	:11	y
+$	IGdW	!	:12	z
+%	IGdW	!	:13	{
+&	IGdW	!	:14	|
+'	IGdW	!	:15	}
+(	IGdW	!	:16	~
+)	IGdW	!	:17	"!
+*	IGdW	!	:18	""
++	IGdW	!	:19	"#
+,	IGdW	!	:20	"$
+-	IGdW	!	:21	"%
+.	IGdW	!	:22	"&
+/	IGdW	!	:23	"'
+0	IGdW	!	:24	"(
+1	IGdW	!	:25	")
+2	IeEA	!	16	0	:26	"*
+3	IeEA	!	17	0	:27	"+
+4	IeEA	!	17	0	:28	",
+5	IeEA	!	17	0	:29	"-
+6	IGdW	!	:30	".
+7	IGdW	!	:31	"/
+8	IGdW	!	:32	"0
+9	IGdW	!	:33	"1
+:	IGdW	!	:34	"2
+;	IGdW	!	:35	"3
+<	IGdW	!	:36	"4
+=	IGdW	!	:37	"5
+>	IGdW	!	:38	"6
+?	IGdW	!	:39	"7
+@	IGdW	!	:40	"8
+A	IGdW	!	:41	"9
+B	IGdW	!	:42	":
+C	IGdW	!	:43	";
+D	IGdW	!	:44	"<
+E	IeEA	!	17	0	:45	"=
+F	IeEA	!	17	0	:46	">
+G	IeEA	!	17	0	:47	"?
+H	IeEA	!	17	0	:48	"@
+I	IeEA	!	17	0	:49	"A
+J	IeEA	!	16	0	:8	v
+K	IeEA	!	16	0	:9	w
+L	IeE[	!	5	0	f	u
+M	"?%_n	!	3	0	2	^	m	s0	!	s0	t
+N	"?%_n	!	3	0	1	L	s1	!	s1	s
+O	"?%_n	!	2	0	1	^	w0	!	w0	r
+P	"?%_n	!	2	0	1	^	w1	!	w1	q
+Q	"?%_n	!	2	0	1	m	w2	!	w2	p
+R	"?%_n	!	2	0	1	m	w3	!	w3	o
+S	IdL3	!	16	0	~10~1	x
+T	IFkI	!	~11~1	y
+U	IFkI	!	~12~1	z
+V	IFkI	!	~13~1	{
+W	IFkI	!	~14~1	|
+X	IFkI	!	~17~1	"!
+Y	IFkI	!	~18~1	""
+Z	IFkI	!	~19~1	"#
+[	IFkI	!	~20~1	"$
+\	IFkI	!	~21~1	"%
+]	IFkI	!	~24~1	"(
+^	Kx.7	!	1	L	~25~1	")
+_	IdL3	!	16	0	~26~1	"*
+`	IdL3	!	17	0	~27~1	"+
+a	IdL3	!	17	0	~28~1	",
+b	IdL3	!	17	0	~29~1	"-
+c	IFkI	!	~30~1	".
+d	IFkI	!	~31~1	"/
+e	IFkI	!	~32~1	"0
+f	IFkI	!	~33~1	"1
+g	IFkI	!	~36~1	"4
+h	IFkI	!	~37~1	"5
+i	IFkI	!	~38~1	"6
+j	IFkI	!	~39~1	"7
+k	IFkI	!	~40~1	"8
+l	IFkI	!	~43~1	";
+m	Kx.7	!	1	L	~44~1	"<
+n	IdL3	!	17	0	~45~1	"=
+o	IdL3	!	17	0	~48~1	"@
+p	IdL3	!	17	0	~49~1	"A
+q	IdL3	!	16	0	~8~1	v
+r	IdL3	!	16	0	~9~1	w

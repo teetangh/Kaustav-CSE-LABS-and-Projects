@@ -1,0 +1,34 @@
+\documentclass[a4paper, 12 pt]{article}
+\begin{document}
+	\title{My first document}
+	\author{Nishkal}
+	\date{\today}
+	\maketitle
+	\section{Introduction}
+	This is the introduction.
+	\section{methods}
+	\subsection{Stage1}
+	\label{sec1}
+	The first part of the methods
+	\subsection{Stage2}
+	The second part of the methods
+	\section{Results}
+	Here are my results
+	Referring to section \ref{sec1} on \pageref{sec1} in the Results section.
+	\pagenumbering{roman}
+	\tableofcontents
+	\newpage
+	\pagenumbering{arabic}
+	\begin{itemize}
+		\item Apple
+		\begin{itemize}
+			\item Red Delicious
+			\item Washington
+		\end{itemize}
+		\item Orange
+	\end{itemize}
+    \begin{enumerate}
+	    \item Apple
+	    \item Orange
+    \end{enumerate}
+\end{document}

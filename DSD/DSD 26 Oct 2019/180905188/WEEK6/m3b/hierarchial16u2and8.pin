@@ -1,0 +1,74 @@
+-- Copyright (C) 1988-2002 Altera Corporation
+-- Any megafunction design, and related net list (encrypted or decrypted),
+-- support information, device programming or simulation file, and any other
+-- associated documentation or information provided by Altera or a partner
+-- under Altera's Megafunction Partnership Program may be used only to
+-- program PLD devices (but not masked PLD devices) from Altera.  Any other
+-- use of such megafunction design, net list, support information, device
+-- programming or simulation file, or any other related documentation or
+-- information is prohibited for any other purpose, including, but not
+-- limited to modification, reverse engineering, de-compiling, or use with
+-- any other silicon devices, unless such use is explicitly licensed under
+-- a separate agreement with Altera or a megafunction partner.  Title to
+-- the intellectual property, including patents, copyrights, trademarks,
+-- trade secrets, or maskworks, embodied in any such megafunction design,
+-- net list, support information, device programming or simulation file, or
+-- any other related documentation or information provided by Altera or a
+-- megafunction partner, remains with Altera, the megafunction partner, or
+-- their respective licensors.  No other licenses, including any licenses
+-- needed under any third party's intellectual property, are provided herein.
+
+
+
+N.C. = No Connect. This pin has no internal connection to the device.
+VCC = Dedicated power pin, which MUST be connected to VCC.
+GND = Dedicated ground pin or unused dedicated input, which MUST be connected to GND.
+RESERVED = Unused I/O pin, which MUST be left unconnected.
+
+----------------------------------------------------------------------------
+
+CHIP "hierarchial16u2and8" ASSIGNED TO AN EPM7032LC44-6
+GND                              : 1
+GND                              : 2
+VCC                              : 3
+hw5                              : 4
+hw12                             : 5
+hw13                             : 6
+hw14                             : 7
+hw15                             : 8
+hw4                              : 9
+GND                              : 10
+hw3                              : 11
+hw2                              : 12
+hw1                              : 13
+hw0                              : 14
+VCC                              : 15
+hs3                              : 16
+hs2                              : 17
+hs1                              : 18
+hs0                              : 19
+hw11                             : 20
+hw10                             : 21
+GND                              : 22
+VCC                              : 23
+RESERVED                         : 24
+RESERVED                         : 25
+RESERVED                         : 26
+RESERVED                         : 27
+RESERVED                         : 28
+RESERVED                         : 29
+GND                              : 30
+RESERVED                         : 31
+RESERVED                         : 32
+RESERVED                         : 33
+RESERVED                         : 34
+VCC                              : 35
+hw6                              : 36
+hw7                              : 37
+RESERVED                         : 38
+hf                               : 39
+hw8                              : 40
+hw9                              : 41
+GND                              : 42
+GND                              : 43
+GND                              : 44

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <style>
+      body {
+        background-color: lightblue;
+      }
+
+      h1 {
+        color: white;
+        text-align: center;
+      }
+
+      p {
+        font-family: serif;
+      }
+    </style>
+    <script language="javascript">
+      function check(form) {
+        if (form.userid.value == "myuserid" && form.pswrd.value == "mypswrd") {
+          window.open("https://www.google.com", "_blank");
+        } else alert("Error Password or Username");
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Validate Credentials</h1>
+    <form name="login">
+      Username<input type="text" name="userid" /> Password<input
+        type="password"
+        name="pswrd"
+      />
+      <input type="button" onclick="check(this.form)" value="Login" />
+      <input type="reset" value="Cancel" />
+    </form>
+  </body>
+</html>

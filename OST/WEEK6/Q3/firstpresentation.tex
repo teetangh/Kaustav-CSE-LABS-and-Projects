@@ -1,0 +1,46 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{utopia}
+%font utopia imported
+\usecolortheme{default}
+\title{About Beamer}
+\subtitle{A Short Story}
+\author[Author 1, Author 2]{Faculty 1\inst{1} \and Faculty 2\inst{2}}
+\institute{MIT,MAHE,Manipal}
+{
+	\inst{1}
+	MIT,MAHE,Manipal
+	\and \inst{2}
+	\Deparment of Computer Science \& Engineering
+	MIT,MAHE,Manipal.
+}
+\date[Dept of CSE,MIT 2019]
+{Manipal Academy of Higher Education,July-December 2019}
+\logo[\includegraphics[height=10cm]{manipal.jpg}]
+
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{My Table of Contents}
+		\tableofcontents
+	\end{frame}
+}
+
+\begin{document}
+	\begin{frame}
+		\frametitle{Your Tabel of Contents}
+		\tableofcontents
+	\end{frame}
+
+	\section{First Section}
+	\begin{frame}
+		\frametitle{Sample Frame Title}
+		This is a Text in the second frame.
+		\begin{itemize}
+			\item <1-> Text1
+			\item <2-> Text2
+		\end{itemize}
+	\end{frame}
+\end{document}
+

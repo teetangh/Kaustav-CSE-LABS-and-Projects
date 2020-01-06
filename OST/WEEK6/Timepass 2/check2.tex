@@ -1,0 +1,98 @@
+\documentclass{beamer}
+	\usepackage[utf8]{inputenc}
+	\title[About Beamer]{Presentation with Beamer}
+	\subtitle{This is subtitle}
+	\author[Author 1,Author 2]{Faculty A \inst{1} \and Faculty B \inst{2}}
+	\institute{MIT,Manipal,MAHE}
+	\date[Dept of CSE 2019]{Manipal Academy of Higher Education,July-Decemeber 2019}
+	\logo{\includegraphics[height=1cm]{mahe.jpg}}
+	
+	%\usetheme{Madrid}
+	%\usecolortheme{beaver}
+	%\useinnertheme{circles}
+	%\useoutertheme{split}
+	%\usefonttheme{serif}
+	
+
+	\begin{document}
+		\frame{\titlepage}
+		
+		\begin{frame}
+			\frametitle{Table of Contents}
+			\tableofcontents[currentsection]
+		\end{frame}
+	
+		\begin{frame}
+			\frametitle{Sample Frame Title}
+			\begin{itemize}
+				\item This is a text1 in first frame.
+			
+				\item This is a text2 in first frame.
+				
+				\item This is a text3 in first frame.
+				
+			\end{itemize}
+			
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{Second Sample Frame Title}
+			In this slide some important text will be \alert{highlighted} because it is important.
+			Please don't abuse it.
+			
+			\begin{block}{Remark}
+				Sample Text in blue box
+			\end{block} 
+		
+			\begin{alertblock}{Important Theorem}
+				Important text in red box
+			\end{alertblock}
+		
+			\begin{examples}
+				Sample text in green box. The title of the box is "Examples".
+			\end{examples}
+					
+		\end{frame}
+	
+		\begin{columns}
+			\begin{column}[]{.3\textwidth}
+				\begin{block}{Block 1}
+					Contents of Block 1
+				\end{block}
+			\end{column}
+		
+			\begin{column}[]{.3\textwidth}
+			\begin{block}{Block 2}
+				Contents of Block 2
+			\end{block}
+			\end{column}
+		\end{columns}
+	
+		\begin{frame}
+			\frametitle{Two-column Slide}
+			\begin{columns}
+				\column{0.5\textwidth}
+				This is a text in first column.
+				$$E=mc^2$$
+				
+				\begin{itemize}
+					\item First Item
+					\item Second Item
+				\end{itemize}
+				
+				\column{0.5\textwidth}
+				This is a text in second column and on a second thought is nice layout in some cases. 			
+			\end{columns}
+		\end{frame}
+	
+		\begin{frame}
+			\begin{center}
+				The center-aligned text goes here.
+			\end{center}
+		\end{frame}
+	
+	\end{document}
+
+
+	
+

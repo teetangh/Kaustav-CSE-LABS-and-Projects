@@ -1,0 +1,223 @@
+Input no of Students
+5
+Default Constructor
+*****************
+
+ Input details of Student 1
+
+ Input name 	a
+
+ Input Semester 	5
+
+ Input gpa 	7
+
+ Input cgpa 	7
+
+ Enter doj for student 1
+format is year,month day
+2019
+7
+8
+Reg no is 1
+
+Displaying name a
+Displaying semester 5
+Displaying gpa 7.0
+Displaying cgpa 7.0
+Displaying doj 8/7/2019
+Displaying regno 1
+*****************
+Default Constructor
+*****************
+
+ Input details of Student 2
+
+ Input name 	b
+
+ Input Semester 	5
+
+ Input gpa 	2
+
+ Input cgpa 	2
+
+ Enter doj for student 2
+format is year,month day
+2014
+6
+7
+Reg no is 2
+
+Displaying name b
+Displaying semester 5
+Displaying gpa 2.0
+Displaying cgpa 2.0
+Displaying doj 7/6/2014
+Displaying regno 2
+*****************
+Default Constructor
+*****************
+
+ Input details of Student 3
+
+ Input name 	c       
+
+ Input Semester 	3
+
+ Input gpa 	2
+
+ Input cgpa 	2
+
+ Enter doj for student 3
+format is year,month day
+2016
+7
+8
+Reg no is 3
+
+Displaying name c
+Displaying semester 3
+Displaying gpa 2.0
+Displaying cgpa 2.0
+Displaying doj 8/7/2016
+Displaying regno 3
+*****************
+Default Constructor
+*****************
+
+ Input details of Student 4
+
+ Input name 	d
+
+ Input Semester 	3
+
+ Input gpa 	8
+
+ Input cgpa 	8
+
+ Enter doj for student 4
+format is year,month day
+2017
+4
+5
+Reg no is 4
+
+Displaying name d
+Displaying semester 3
+Displaying gpa 8.0
+Displaying cgpa 8.0
+Displaying doj 5/4/2017
+Displaying regno 4
+*****************
+Default Constructor
+*****************
+
+ Input details of Student 5
+
+ Input name 	e
+
+ Input Semester 	8 
+
+ Input gpa 	10
+
+ Input cgpa 	10
+
+ Enter doj for student 5
+format is year,month day
+2013
+6
+7
+Reg no is 5
+
+Displaying name e
+Displaying semester 8
+Displaying gpa 10.0
+Displaying cgpa 10.0
+Displaying doj 7/6/2013
+Displaying regno 5
+*****************
+
+ AFTER SEM AND CGPA SORTING 
+
+
+Displaying name e
+Displaying semester 8
+Displaying gpa 10.0
+Displaying cgpa 10.0
+Displaying doj 7/6/2013
+Displaying regno 5
+
+
+Displaying name a
+Displaying semester 5
+Displaying gpa 7.0
+Displaying cgpa 7.0
+Displaying doj 7/6/2013
+Displaying regno 1
+
+
+Displaying name b
+Displaying semester 5
+Displaying gpa 2.0
+Displaying cgpa 2.0
+Displaying doj 7/6/2013
+Displaying regno 2
+
+
+Displaying name d
+Displaying semester 3
+Displaying gpa 8.0
+Displaying cgpa 8.0
+Displaying doj 7/6/2013
+Displaying regno 4
+
+
+Displaying name c
+Displaying semester 3
+Displaying gpa 2.0
+Displaying cgpa 2.0
+Displaying doj 7/6/2013
+Displaying regno 3
+
+
+ AFTER NAME SORTING 
+
+
+Displaying name d
+Displaying semester 3
+Displaying gpa 8.0
+Displaying cgpa 8.0
+Displaying doj 7/6/2013
+Displaying regno 4
+
+
+Displaying name c
+Displaying semester 3
+Displaying gpa 2.0
+Displaying cgpa 2.0
+Displaying doj 7/6/2013
+Displaying regno 3
+
+
+Displaying name a
+Displaying semester 5
+Displaying gpa 7.0
+Displaying cgpa 7.0
+Displaying doj 7/6/2013
+Displaying regno 1
+
+
+Displaying name b
+Displaying semester 5
+Displaying gpa 2.0
+Displaying cgpa 2.0
+Displaying doj 7/6/2013
+Displaying regno 2
+
+
+Displaying name e
+Displaying semester 8
+Displaying gpa 10.0
+Displaying cgpa 10.0
+Displaying doj 7/6/2013
+Displaying regno 5
+

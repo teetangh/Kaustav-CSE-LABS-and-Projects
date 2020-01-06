@@ -1,0 +1,70 @@
+\documentclass[a4paper,12pt]{article}
+	\usepackage{graphicx}
+    \begin{document}
+        \title{My First Document}
+        \author{My Name}
+        \date{\today}
+        \maketitle
+		
+		\pagenumbering{roman}		
+		\tableofcontents
+		\newpage
+		\pagenumbering{arabic}
+		
+        \section{Introduction}
+        This is the Introduction.
+
+        \section{Methods}
+        \subsection{Stage 1}
+        The first part of the methods.
+        \label{Sec 1}
+        
+        \subsection{Stage 2}
+        The second part of the methods.
+
+        \section{Results}
+        Here are my Results.
+        \newline
+        
+        Unnumbered List is here
+        \begin{itemize}
+        	\item Apple
+        	\item Orange
+        \end{itemize}
+    
+    	Numbered List is here
+    	\begin{enumerate}
+    		\item Banana
+    		\item Guava
+    	\end{enumerate}
+    
+    Referring to previous section \ref{Sec 1}.
+        
+    \begin{figure}[hb]
+    	\centering
+    	\includegraphics[width=0.2\textwidth]{time1.jpg}
+    	\caption{This is Winnie the Pooh.}
+    	\label{WTP}
+    \end{figure}
+
+	\newpage
+	
+	\textmd{Sample Text 1}
+	\newline
+	
+	\textbf{Sample Text 2}
+	\newline
+	
+	\textup{Sample Text 3}
+	\newline
+	
+	\textit{Sample Text 4}
+	\newline
+	
+	\textsl{Sample Text 5}
+	\newline
+	
+	\textsc{Sample Text 6}
+	\newline        
+        
+    \end{document}

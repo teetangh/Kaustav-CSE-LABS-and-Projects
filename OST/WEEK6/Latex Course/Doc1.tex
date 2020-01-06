@@ -1,0 +1,107 @@
+%Preamble
+\documentclass[a4paper,12pt]{article}
+	\title{Kaustav's Title}
+	\author{Kaustav}
+	\date{\today}
+%Packages	
+	\usepackage{graphicx}
+	\usepackage{booktabs}
+	\usepackage{multirow}
+	\begin{document}
+		\maketitle
+		\begin{center}			
+			This is my first sentence on the first page		
+		\end{center}
+		\clearpage
+		\pagenumbering{roman}
+		\tableofcontents
+		\newpage
+		\pagenumbering{arabic}
+		\clearpage
+		\section{Introduction}
+		This is the Introduction
+		\section{Methods}
+		\subsection{Stage 1}
+		\label{section1}		
+		This is the first part of Methods		
+		\subsection{Stage 2}
+		This is the second part of Methods
+		\section{Results}
+	
+		Here are my results.
+		\ref{section1}
+		\pageref{section1}
+		\clearpage
+		
+		\textbf{Unordered list}
+		\begin{itemize}
+			\item Age of Empires
+			\item DOTA
+			\item League of Legends
+		\end{itemize}
+	
+		\textbf{Ordered List}
+		\begin{enumerate}
+			\item NFS
+			\item Battlefield
+			\item Call ofDuty
+		\end{enumerate}
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=1.2\textwidth]{/home/180905188/Downloads/thedivision.jpg}
+		\caption{This is the The Division picture.}
+		\label{Cross-reference_key}
+		
+	\end{figure}
+
+	\begin{table}
+			\clearpage
+		\begin{tabular}{r|c|l}
+			1st Coloumn & 2nd Column & 3rd Column\\
+			\hline
+			a & b & c \\ \hline
+			\cline{2-3}
+			d & e & f \\ \hline
+		\end{tabular}
+	\end{table}
+
+	\begin{table} 
+			\begin{tabular}{llc}	
+			\hline
+			\multicolumn{2}{c}{Sample} & Roughness\\
+			&&(nm)\\
+			\hline
+			A & ring & 385\\
+			\cline{2-3}
+			& plate & 397\\
+			\hline
+			B & ring & 385\\
+			\cline{2-3}
+			& plate & 397\\
+			\hline  					 
+		\end{tabular}
+		\newline 
+	\end{table}
+
+
+	\begin{tabular}{ llcccc }
+		\toprule
+		\multirow{2}{*}{Name} & \multirow {2}{*}{Course} & \multicolumn{3}{c}{Marks} & Total\\
+		\cmidrule(l) {3-5}
+		&&Test1 & Test2 & Test3&\\
+		\toprule
+		\multirow{2}*{Alice} & C1 & 10 & 9 & 8 & 27\\
+		\cmidrule(l){2-6}
+		&C2&9&9&7&25\\
+		\midrule
+		\multirow{2}*{Bob} & C1 & 7 & 5 & 9 & 21\\
+		\cmidrule(l){2-6}
+		&C2&8&8&8&24\\
+		\bottomrule
+		
+	\end{tabular}
+		
+	
+   	\end{document}
+	

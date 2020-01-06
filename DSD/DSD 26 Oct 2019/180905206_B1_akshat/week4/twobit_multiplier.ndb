@@ -1,0 +1,70 @@
+NDB006
+The number of symbol table entries is: 3
+The length of the symbol table is: 91
+
+Index Hierarchy Path
+----- --------------
+!	&null_hpath&
+.	|twobit_adder:stage0|fulladder:stage0|
+U	|twobit_adder:stage0|fulladder:stage1|
+
+The number of name info structs is : 56
+
+InsOrder BitField SymTableIndex NextSyn SynParent Loc ChainType NextChain ChainParent FanOut DirExp ParExp ShareExp NodeName
+-------- -------- ------------- ------- --------- --- --------- --------- ----------- ------ ------ ------ -------- --------
+"	IeEA	!	10	0	:10	x
+#	IeEA	!	10	0	:11	y
+$	IeEA	!	10	0	:12	z
+%	IeEA	!	10	0	:13	{
+&	IeEA	!	6	0	:14	|
+'	IeEA	!	6	0	:15	}
+(	IeEA	!	6	0	:16	~
+)	IeEA	!	7	0	:17	"!
+*	IeEA	!	7	0	:18	""
++	IeEA	!	8	0	:19	"#
+,	IeEA	!	8	0	:20	"$
+-	IeEA	!	8	0	:21	"%
+.	IeEA	!	9	0	:22	"&
+/	IeEA	!	9	0	:23	"'
+0	IeEA	!	9	0	:24	"(
+1	IeEA	!	12	0	:25	")
+2	IeEA	!	12	0	:26	"*
+3	IeEA	!	12	0	:27	"+
+4	IeEA	!	12	0	:28	",
+5	IeEA	!	13	0	:29	"-
+6	IeEA	!	13	0	:30	".
+7	IeEA	!	13	0	:31	"/
+8	IeEA	!	13	0	:32	"0
+9	IeEA	!	14	0	:33	"1
+:	IeEA	!	14	0	:34	"2
+;	IeEA	!	14	0	:35	"3
+<	IeEA	!	14	0	:36	"4
+=	IeEA	!	10	0	:9	w
+>	"?%_n	!	2	0	4	B	C	D	E	a0	!	a0	p
+?	"?%_n	!	2	0	3	C	D	E	a1	!	a1	o
+@	"?%_n	!	2	0	4	B	C	D	E	b0	!	b0	r
+A	"?%_n	!	2	0	3	C	D	E	b1	!	b1	q
+B	"<R?c	!	3	0	p0	!	p0	v
+C	"<R?c	!	3	0	p1	!	p1	u
+D	"<R?c	!	3	0	p2	!	p2	t
+E	"<R?c	!	3	0	p3	!	p3	s
+F	IeEA	.	32	0	:10	"k
+G	IeEA	.	32	0	:11	"l
+H	IeEA	.	32	0	:12	"m
+I	IeEA	.	32	0	:13	"n
+J	IeEA	.	32	0	:14	"o
+K	IeEA	.	32	0	:15	"p
+L	IeEA	.	30	0	:6	"g
+M	IeEA	.	30	0	:7	"h
+N	IeEA	.	31	0	:8	"i
+O	IeEA	.	31	0	:9	"j
+P	IeEA	U	32	0	:10	#!
+Q	IeEA	U	32	0	:11	#"
+R	IeEA	U	32	0	:12	##
+S	IeEA	U	32	0	:13	#$
+T	IeEA	U	32	0	:14	#%
+U	IeEA	U	32	0	:15	#&
+V	IeEA	U	30	0	:6	"{
+W	IeEA	U	30	0	:7	"|
+X	IeEA	U	31	0	:8	"}
+Y	IeEA	U	31	0	:9	"~

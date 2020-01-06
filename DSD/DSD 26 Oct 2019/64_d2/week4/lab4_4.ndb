@@ -1,0 +1,42 @@
+NDB006
+The number of symbol table entries is: 3
+The length of the symbol table is: 51
+
+Index Hierarchy Path
+----- --------------
+!	&null_hpath&
+.	|fulladder:stage0|
+A	|fulladder:stage1|
+
+The number of name info structs is : 28
+
+InsOrder BitField SymTableIndex NextSyn SynParent Loc ChainType NextChain ChainParent FanOut DirExp ParExp ShareExp NodeName
+-------- -------- ------------- ------- --------- --- --------- --------- ----------- ------ ------ ------ -------- --------
+"	L8ef	!	19	0	3	#	$	%	cin	s
+#	Nj's	!	21	0	2	cout	v
+$	"<R?c	!	20	0	s0	!	s0	u
+%	"AW!{	!	20	0	3	s1	!	s1	t
+&	"?%_n	!	18	0	3	#	$	%	x0	!	x0	p
+'	"?%_n	!	18	0	2	#	%	x1	!	x1	o
+(	"?%_n	!	18	0	3	#	$	%	y0	!	y0	r
+)	"?%_n	!	18	0	2	#	%	y1	!	y1	q
+*	IeEA	.	32	0	:10	"6
++	IeEA	.	32	0	:11	"7
+,	IeEA	.	32	0	:12	"8
+-	IeEA	.	32	0	:13	"9
+.	IeEA	.	32	0	:14	":
+/	IeEA	.	32	0	:15	";
+0	IeEA	.	30	0	:6	"2
+1	IeEA	.	30	0	:7	"3
+2	IeEA	.	31	0	:8	"4
+3	IeEA	.	31	0	:9	"5
+4	IeEA	A	32	0	:10	"J
+5	IeEA	A	32	0	:11	"K
+6	IeEA	A	32	0	:12	"L
+7	IeEA	A	32	0	:13	"M
+8	IeEA	A	32	0	:14	"N
+9	IeEA	A	32	0	:15	"O
+:	IeEA	A	30	0	:6	"F
+;	IeEA	A	30	0	:7	"G
+<	IeEA	A	31	0	:8	"H
+=	IeEA	A	31	0	:9	"I

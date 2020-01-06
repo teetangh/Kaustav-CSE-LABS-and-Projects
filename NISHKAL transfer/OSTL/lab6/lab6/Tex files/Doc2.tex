@@ -1,0 +1,39 @@
+\documentclass[a4paper, 12 pt]{report}
+\usepackage{graphicx}
+\begin{document}
+	\title{Document}
+	\maketitle
+	\section{Introduction}
+	This is the introduction.
+	\section{methods}
+	\subsection{Stage1}
+	\label{sec1}
+	The first part of the methods
+	\subsection{Stage2}
+	The second part of the methods
+	\section{Results}
+	Here are my results
+	Referring to section \ref{sec1} on \pageref{sec1} in the Results section.
+	\pagenumbering{roman}
+	\tableofcontents
+	\newpage
+	\pagenumbering{arabic}
+	\begin{itemize}
+		\item Apple
+		\begin{itemize}
+			\item Red Delicious
+			\item Washington
+		\end{itemize}
+		\item Orange
+	\end{itemize}
+    \begin{enumerate}
+	    \item Apple
+	    \item Orange
+    \end{enumerate}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\textwidth]{/home/180905174/Desktop/OSTLab/lab6/index.png}
+		\caption{This figure shows a plot of x vs. y}
+		\label{Cross-reference_key}
+	\end{figure}
+\end{document}

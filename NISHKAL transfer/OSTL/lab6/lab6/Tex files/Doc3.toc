@@ -1,0 +1,2 @@
+\beamer@sectionintoc {1}{Section1}{2}{0}{1}
+\beamer@sectionintoc {2}{Section 2}{2}{0}{2}

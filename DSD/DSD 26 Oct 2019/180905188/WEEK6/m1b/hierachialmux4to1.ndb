@@ -1,0 +1,100 @@
+NDB006
+The number of symbol table entries is: 4
+The length of the symbol table is: 64
+
+Index Hierarchy Path
+----- --------------
+!	&null_hpath&
+.	|mux2to1:stage0|
+?	|mux2to1:stage1|
+P	|mux2to1:stage2|
+
+The number of name info structs is : 85
+
+InsOrder BitField SymTableIndex NextSyn SynParent Loc ChainType NextChain ChainParent FanOut DirExp ParExp ShareExp NodeName
+-------- -------- ------------- ------- --------- --- --------- --------- ----------- ------ ------ ------ -------- --------
+"	IeE[	!	4	0	hf	u
+#	"?%_n	!	2	0	1	>	hw0	!	hw0	r
+$	"?%_n	!	2	0	1	>	hw1	!	hw1	q
+%	"?%_n	!	2	0	1	X	hw2	!	hw2	p
+&	"?%_n	!	2	0	1	X	hw3	!	hw3	o
+'	"?%_n	!	3	0	2	>	X	s0	!	s0	t
+(	"?%_n	!	3	0	1	"	s1	!	s1	s
+)	IeEA	.	21	0	:10	"7
+*	IeEA	.	21	0	:11	"8
++	IeEA	.	21	0	:12	"9
+,	IeEA	.	23	0	:13	":
+-	IeEA	.	23	0	:14	";
+.	IeEA	.	23	0	:15	"<
+/	IeEA	.	23	0	:16	"=
+0	IeEA	.	23	0	:17	">
+1	IeEA	.	23	0	:18	"?
+2	IeEA	.	17	0	:5	"2
+3	IeEA	.	17	0	:6	"3
+4	IeEA	.	17	0	:7	"4
+5	IeEA	.	19	0	:8	"5
+6	IeEA	.	21	0	:9	"6
+7	IdL3	.	21	0	~10~1	"7
+8	IdL3	.	21	0	~11~1	"8
+9	IdL3	.	21	0	~12~1	"9
+:	IdL3	.	23	0	~13~1	":
+;	IdL3	.	23	0	~15~1	"<
+<	IdL3	.	23	0	~16~1	"=
+=	IdL3	.	23	0	~17~1	">
+>	L7m!	.	23	0	1	"	~18~1	"?
+?	IdL3	.	17	0	~5~1	"2
+@	IdL3	.	17	0	~6~1	"3
+A	IdL3	.	17	0	~7~1	"4
+B	IdL3	.	19	0	~8~1	"5
+C	IeEA	?	21	0	:10	"N
+D	IeEA	?	21	0	:11	"O
+E	IeEA	?	21	0	:12	"P
+F	IeEA	?	23	0	:13	"Q
+G	IeEA	?	23	0	:14	"R
+H	IeEA	?	23	0	:15	"S
+I	IeEA	?	23	0	:16	"T
+J	IeEA	?	23	0	:17	"U
+K	IeEA	?	23	0	:18	"V
+L	IeEA	?	17	0	:5	"I
+M	IeEA	?	17	0	:6	"J
+N	IeEA	?	17	0	:7	"K
+O	IeEA	?	19	0	:8	"L
+P	IeEA	?	21	0	:9	"M
+Q	IdL3	?	21	0	~10~1	"N
+R	IdL3	?	21	0	~11~1	"O
+S	IdL3	?	21	0	~12~1	"P
+T	IdL3	?	23	0	~13~1	"Q
+U	IdL3	?	23	0	~15~1	"S
+V	IdL3	?	23	0	~16~1	"T
+W	IdL3	?	23	0	~17~1	"U
+X	L7m!	?	23	0	1	"	~18~1	"V
+Y	IdL3	?	17	0	~5~1	"I
+Z	IdL3	?	17	0	~6~1	"J
+[	IdL3	?	17	0	~7~1	"K
+\	IdL3	?	19	0	~8~1	"L
+]	IeEA	P	21	0	:10	"d
+^	IeEA	P	21	0	:11	"e
+_	IeEA	P	21	0	:12	"f
+`	IeEA	P	23	0	:13	"g
+a	IeEA	P	23	0	:14	"h
+b	IeEA	P	23	0	:15	"i
+c	IeEA	P	23	0	:16	"j
+d	IeEA	P	23	0	:17	"k
+e	IeEA	P	23	0	:18	"l
+f	IeEA	P	17	0	:5	"_
+g	IeEA	P	17	0	:6	"`
+h	IeEA	P	17	0	:7	"a
+i	IeEA	P	19	0	:8	"b
+j	IeEA	P	21	0	:9	"c
+k	IdL3	P	21	0	~10~1	"d
+l	IdL3	P	21	0	~11~1	"e
+m	IdL3	P	21	0	~12~1	"f
+n	IdL3	P	23	0	~13~1	"g
+o	IdL3	P	23	0	~15~1	"i
+p	IdL3	P	23	0	~16~1	"j
+q	IdL3	P	23	0	~17~1	"k
+r	IdL3	P	23	0	~18~1	"l
+s	IdL3	P	17	0	~5~1	"_
+t	IdL3	P	17	0	~6~1	"`
+u	IdL3	P	17	0	~7~1	"a
+v	IdL3	P	19	0	~8~1	"b

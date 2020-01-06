@@ -1,0 +1,45 @@
+NDB006
+The number of symbol table entries is: 4
+The length of the symbol table is: 55
+
+Index Hierarchy Path
+----- --------------
+!	&null_hpath&
+.	|mux2to1:st0|
+<	|mux2to1:st1|
+J	|mux2to1:st2|
+
+The number of name info structs is : 30
+
+InsOrder BitField SymTableIndex NextSyn SynParent Loc ChainType NextChain ChainParent FanOut DirExp ParExp ShareExp NodeName
+-------- -------- ------------- ------- --------- --- --------- --------- ----------- ------ ------ ------ -------- --------
+"	"<R?c	!	18	0	f0	!	f0	w
+#	"<R?c	!	18	0	f1	!	f1	v
+$	"<R?c	!	18	0	f2	!	f2	u
+%	"?%_n	!	16	0	3	"	#	$	s0	!	s0	t
+&	"?%_n	!	16	0	1	$	s1	!	s1	s
+'	"?%_n	!	15	0	2	"	$	w0	!	w0	r
+(	"?%_n	!	15	0	2	"	$	w1	!	w1	q
+)	"?%_n	!	15	0	2	#	$	w2	!	w2	p
+*	"?%_n	!	15	0	2	#	$	w3	!	w3	o
++	IeEA	.	11	0	:10	":
+,	IeEA	.	11	0	:11	";
+-	IeEA	.	8	0	:5	"5
+.	IeEA	.	8	0	:6	"6
+/	IeEA	.	8	0	:7	"7
+0	IeEA	.	9	0	:8	"8
+1	IeEA	.	11	0	:9	"9
+2	IeEA	<	11	0	:10	"K
+3	IeEA	<	11	0	:11	"L
+4	IeEA	<	8	0	:5	"F
+5	IeEA	<	8	0	:6	"G
+6	IeEA	<	8	0	:7	"H
+7	IeEA	<	9	0	:8	"I
+8	IeEA	<	11	0	:9	"J
+9	IeEA	J	11	0	:10	"[
+:	IeEA	J	11	0	:11	"\
+;	IeEA	J	8	0	:5	"V
+<	IeEA	J	8	0	:6	"W
+=	IeEA	J	8	0	:7	"X
+>	IeEA	J	9	0	:8	"Y
+?	IeEA	J	11	0	:9	"Z

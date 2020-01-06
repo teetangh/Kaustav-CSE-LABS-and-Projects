@@ -1,0 +1,262 @@
+NDB006
+The number of symbol table entries is: 6
+The length of the symbol table is: 88
+
+Index Hierarchy Path
+----- --------------
+!	&null_hpath&
+.	|twoto4low:d0|
+=	|twoto4low:d1|
+L	|twoto4low:d2|
+[	|twoto4low:d3|
+j	|twoto4low:d4|
+
+The number of name info structs is : 245
+
+InsOrder BitField SymTableIndex NextSyn SynParent Loc ChainType NextChain ChainParent FanOut DirExp ParExp ShareExp NodeName
+-------- -------- ------------- ------- --------- --- --------- --------- ----------- ------ ------ ------ -------- --------
+"	IeEA	!	7	0	:22	"&
+#	IeEA	!	8	0	:23	"'
+$	IeEA	!	9	0	:24	"(
+%	IeEA	!	10	0	:25	")
+&	L8ef	!	3	0	9	+	,	4	5	6	8	/	0	2	e	s
+'	"?%_n	!	2	0	9	+	,	4	5	6	8	/	0	2	w0	!	w0	r
+(	"?%_n	!	2	0	9	+	,	4	5	6	8	/	0	2	w1	!	w1	q
+)	"?%_n	!	2	0	9	+	,	4	5	6	8	/	0	2	w2	!	w2	p
+*	"?%_n	!	2	0	9	+	,	4	5	6	8	/	0	2	w3	!	w3	o
++	"<R?c	!	4	0	y0	!	y0	"%
+,	"<R?c	!	4	0	y1	!	y1	"$
+-	"<R?c	!	4	0	y10	!	y10	y
+.	"<R?c	!	4	0	y11	!	y11	x
+/	"<R?c	!	4	0	y12	!	y12	w
+0	"<R?c	!	4	0	y13	!	y13	v
+1	"<R?c	!	4	0	y14	!	y14	u
+2	"<R?c	!	4	0	y15	!	y15	t
+3	"<R?c	!	4	0	y2	!	y2	"#
+4	"<R?c	!	4	0	y3	!	y3	""
+5	"<R?c	!	4	0	y4	!	y4	"!
+6	"<R?c	!	4	0	y5	!	y5	~
+7	"<R?c	!	4	0	y6	!	y6	}
+8	"<R?c	!	4	0	y7	!	y7	|
+9	"<R?c	!	4	0	y8	!	y8	{
+:	"<R?c	!	4	0	y9	!	y9	z
+;	IeEA	.	21	0	:10	"b
+<	IeEA	.	21	0	:11	"c
+=	IeEA	.	21	0	:12	"d
+>	IeEA	.	21	0	:13	"e
+?	IeEA	.	21	0	:14	"f
+@	IeEA	.	21	0	:15	"g
+A	IeEA	.	22	0	:16	"h
+B	IeEA	.	22	0	:17	"i
+C	IeEA	.	22	0	:18	"j
+D	IeEA	.	22	0	:19	"k
+E	IeEA	.	22	0	:20	"l
+F	IeEA	.	22	0	:21	"m
+G	IeEA	.	22	0	:22	"n
+H	IeEA	.	22	0	:23	"o
+I	IeEA	.	23	0	:24	"p
+J	IeEA	.	23	0	:25	"q
+K	IeEA	.	23	0	:26	"r
+L	IeEA	.	23	0	:27	"s
+M	IeEA	.	23	0	:28	"t
+N	IeEA	.	23	0	:29	"u
+O	IeEA	.	23	0	:30	"v
+P	IeEA	.	23	0	:31	"w
+Q	IeEA	.	24	0	:32	"x
+R	IeEA	.	24	0	:33	"y
+S	IeEA	.	24	0	:34	"z
+T	IeEA	.	24	0	:35	"{
+U	IeEA	.	24	0	:36	"|
+V	IeEA	.	24	0	:37	"}
+W	IeEA	.	24	0	:38	"~
+X	IeEA	.	24	0	:39	#!
+Y	IeEA	.	21	0	:40	#"
+Z	IeEA	.	21	0	:41	##
+[	IeEA	.	21	0	:42	#$
+\	IeEA	.	25	0	:43	#%
+]	IeEA	.	25	0	:44	#&
+^	IeEA	.	25	0	:45	#'
+_	IeEA	.	25	0	:46	#(
+`	IeEA	.	25	0	:47	#)
+a	IeEA	.	25	0	:48	#*
+b	IeEA	.	25	0	:49	#+
+c	IeEA	.	25	0	:50	#,
+d	IeEA	.	25	0	:51	#-
+e	IeEA	.	21	0	:8	"`
+f	IeEA	.	21	0	:9	"a
+g	IeEA	=	21	0	:10	#>
+h	IeEA	=	21	0	:11	#?
+i	IeEA	=	21	0	:12	#@
+j	IeEA	=	21	0	:13	#A
+k	IeEA	=	21	0	:14	#B
+l	IeEA	=	21	0	:15	#C
+m	IeEA	=	22	0	:16	#D
+n	IeEA	=	22	0	:17	#E
+o	IeEA	=	22	0	:18	#F
+p	IeEA	=	22	0	:19	#G
+q	IeEA	=	22	0	:20	#H
+r	IeEA	=	22	0	:21	#I
+s	IeEA	=	22	0	:22	#J
+t	IeEA	=	22	0	:23	#K
+u	IeEA	=	23	0	:24	#L
+v	IeEA	=	23	0	:25	#M
+w	IeEA	=	23	0	:26	#N
+x	IeEA	=	23	0	:27	#O
+y	IeEA	=	23	0	:28	#P
+z	IeEA	=	23	0	:29	#Q
+{	IeEA	=	23	0	:30	#R
+|	IeEA	=	23	0	:31	#S
+}	IeEA	=	24	0	:32	#T
+~	IeEA	=	24	0	:33	#U
+"!	IeEA	=	24	0	:34	#V
+""	IeEA	=	24	0	:35	#W
+"#	IeEA	=	24	0	:36	#X
+"$	IeEA	=	24	0	:37	#Y
+"%	IeEA	=	24	0	:38	#Z
+"&	IeEA	=	24	0	:39	#[
+"'	IeEA	=	21	0	:40	#\
+"(	IeEA	=	21	0	:41	#]
+")	IeEA	=	21	0	:42	#^
+"*	IeEA	=	25	0	:43	#_
+"+	IeEA	=	25	0	:44	#`
+",	IeEA	=	25	0	:45	#a
+"-	IeEA	=	25	0	:46	#b
+".	IeEA	=	25	0	:47	#c
+"/	IeEA	=	25	0	:48	#d
+"0	IeEA	=	25	0	:49	#e
+"1	IeEA	=	25	0	:50	#f
+"2	IeEA	=	25	0	:51	#g
+"3	IeEA	=	21	0	:8	#<
+"4	IeEA	=	21	0	:9	#=
+"5	IeEA	L	21	0	:10	#w
+"6	IeEA	L	21	0	:11	#x
+"7	IeEA	L	21	0	:12	#y
+"8	IeEA	L	21	0	:13	#z
+"9	IeEA	L	21	0	:14	#{
+":	IeEA	L	21	0	:15	#|
+";	IeEA	L	22	0	:16	#}
+"<	IeEA	L	22	0	:17	#~
+"=	IeEA	L	22	0	:18	$!
+">	IeEA	L	22	0	:19	$"
+"?	IeEA	L	22	0	:20	$#
+"@	IeEA	L	22	0	:21	$$
+"A	IeEA	L	22	0	:22	$%
+"B	IeEA	L	22	0	:23	$&
+"C	IeEA	L	23	0	:24	$'
+"D	IeEA	L	23	0	:25	$(
+"E	IeEA	L	23	0	:26	$)
+"F	IeEA	L	23	0	:27	$*
+"G	IeEA	L	23	0	:28	$+
+"H	IeEA	L	23	0	:29	$,
+"I	IeEA	L	23	0	:30	$-
+"J	IeEA	L	23	0	:31	$.
+"K	IeEA	L	24	0	:32	$/
+"L	IeEA	L	24	0	:33	$0
+"M	IeEA	L	24	0	:34	$1
+"N	IeEA	L	24	0	:35	$2
+"O	IeEA	L	24	0	:36	$3
+"P	IeEA	L	24	0	:37	$4
+"Q	IeEA	L	24	0	:38	$5
+"R	IeEA	L	24	0	:39	$6
+"S	IeEA	L	21	0	:40	$7
+"T	IeEA	L	21	0	:41	$8
+"U	IeEA	L	21	0	:42	$9
+"V	IeEA	L	25	0	:43	$:
+"W	IeEA	L	25	0	:44	$;
+"X	IeEA	L	25	0	:45	$<
+"Y	IeEA	L	25	0	:46	$=
+"Z	IeEA	L	25	0	:47	$>
+"[	IeEA	L	25	0	:48	$?
+"\	IeEA	L	25	0	:49	$@
+"]	IeEA	L	25	0	:50	$A
+"^	IeEA	L	25	0	:51	$B
+"_	IeEA	L	21	0	:8	#u
+"`	IeEA	L	21	0	:9	#v
+"a	IeEA	[	21	0	:10	$R
+"b	IeEA	[	21	0	:11	$S
+"c	IeEA	[	21	0	:12	$T
+"d	IeEA	[	21	0	:13	$U
+"e	IeEA	[	21	0	:14	$V
+"f	IeEA	[	21	0	:15	$W
+"g	IeEA	[	22	0	:16	$X
+"h	IeEA	[	22	0	:17	$Y
+"i	IeEA	[	22	0	:18	$Z
+"j	IeEA	[	22	0	:19	$[
+"k	IeEA	[	22	0	:20	$\
+"l	IeEA	[	22	0	:21	$]
+"m	IeEA	[	22	0	:22	$^
+"n	IeEA	[	22	0	:23	$_
+"o	IeEA	[	23	0	:24	$`
+"p	IeEA	[	23	0	:25	$a
+"q	IeEA	[	23	0	:26	$b
+"r	IeEA	[	23	0	:27	$c
+"s	IeEA	[	23	0	:28	$d
+"t	IeEA	[	23	0	:29	$e
+"u	IeEA	[	23	0	:30	$f
+"v	IeEA	[	23	0	:31	$g
+"w	IeEA	[	24	0	:32	$h
+"x	IeEA	[	24	0	:33	$i
+"y	IeEA	[	24	0	:34	$j
+"z	IeEA	[	24	0	:35	$k
+"{	IeEA	[	24	0	:36	$l
+"|	IeEA	[	24	0	:37	$m
+"}	IeEA	[	24	0	:38	$n
+"~	IeEA	[	24	0	:39	$o
+#!	IeEA	[	21	0	:40	$p
+#"	IeEA	[	21	0	:41	$q
+##	IeEA	[	21	0	:42	$r
+#$	IeEA	[	25	0	:43	$s
+#%	IeEA	[	25	0	:44	$t
+#&	IeEA	[	25	0	:45	$u
+#'	IeEA	[	25	0	:46	$v
+#(	IeEA	[	25	0	:47	$w
+#)	IeEA	[	25	0	:48	$x
+#*	IeEA	[	25	0	:49	$y
+#+	IeEA	[	25	0	:50	$z
+#,	IeEA	[	25	0	:51	${
+#-	IeEA	[	21	0	:8	$P
+#.	IeEA	[	21	0	:9	$Q
+#/	IeEA	j	21	0	:10	%-
+#0	IeEA	j	21	0	:11	%.
+#1	IeEA	j	21	0	:12	%/
+#2	IeEA	j	21	0	:13	%0
+#3	IeEA	j	21	0	:14	%1
+#4	IeEA	j	21	0	:15	%2
+#5	IeEA	j	22	0	:16	%3
+#6	IeEA	j	22	0	:17	%4
+#7	IeEA	j	22	0	:18	%5
+#8	IeEA	j	22	0	:19	%6
+#9	IeEA	j	22	0	:20	%7
+#:	IeEA	j	22	0	:21	%8
+#;	IeEA	j	22	0	:22	%9
+#<	IeEA	j	22	0	:23	%:
+#=	IeEA	j	23	0	:24	%;
+#>	IeEA	j	23	0	:25	%<
+#?	IeEA	j	23	0	:26	%=
+#@	IeEA	j	23	0	:27	%>
+#A	IeEA	j	23	0	:28	%?
+#B	IeEA	j	23	0	:29	%@
+#C	IeEA	j	23	0	:30	%A
+#D	IeEA	j	23	0	:31	%B
+#E	IeEA	j	24	0	:32	%C
+#F	IeEA	j	24	0	:33	%D
+#G	IeEA	j	24	0	:34	%E
+#H	IeEA	j	24	0	:35	%F
+#I	IeEA	j	24	0	:36	%G
+#J	IeEA	j	24	0	:37	%H
+#K	IeEA	j	24	0	:38	%I
+#L	IeEA	j	24	0	:39	%J
+#M	IeEA	j	21	0	:40	%K
+#N	IeEA	j	21	0	:41	%L
+#O	IeEA	j	21	0	:42	%M
+#P	IeEA	j	25	0	:43	%N
+#Q	IeEA	j	25	0	:44	%O
+#R	IeEA	j	25	0	:45	%P
+#S	IeEA	j	25	0	:46	%Q
+#T	IeEA	j	25	0	:47	%R
+#U	IeEA	j	25	0	:48	%S
+#V	IeEA	j	25	0	:49	%T
+#W	IeEA	j	25	0	:50	%U
+#X	IeEA	j	25	0	:51	%V
+#Y	IeEA	j	21	0	:8	%+
+#Z	IeEA	j	21	0	:9	%,

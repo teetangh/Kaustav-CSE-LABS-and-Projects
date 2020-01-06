@@ -1,0 +1,824 @@
+Project Information                                    d:\64_d2\week4\sbcd.rpt
+
+MAX+plus II Compiler Report File
+Version 10.2 07/10/2002
+Compiled: 08/22/2019 10:21:53
+
+Copyright (C) 1988-2002 Altera Corporation
+Any megafunction design, and related net list (encrypted or decrypted),
+support information, device programming or simulation file, and any other
+associated documentation or information provided by Altera or a partner
+under Altera's Megafunction Partnership Program may be used only to
+program PLD devices (but not masked PLD devices) from Altera.  Any other
+use of such megafunction design, net list, support information, device
+programming or simulation file, or any other related documentation or
+information is prohibited for any other purpose, including, but not
+limited to modification, reverse engineering, de-compiling, or use with
+any other silicon devices, unless such use is explicitly licensed under
+a separate agreement with Altera or a megafunction partner.  Title to
+the intellectual property, including patents, copyrights, trademarks,
+trade secrets, or maskworks, embodied in any such megafunction design,
+net list, support information, device programming or simulation file, or
+any other related documentation or information provided by Altera or a
+megafunction partner, remains with Altera, the megafunction partner, or
+their respective licensors.  No other licenses, including any licenses
+needed under any third party's intellectual property, are provided herein.
+
+
+
+***** Project compilation was successful
+
+
+
+
+** DEVICE SUMMARY **
+
+Chip/                     Input   Output   Bidir         Shareable
+POF       Device          Pins    Pins     Pins     LCs  Expanders  % Utilized
+
+sbcd      EPM7064LC44-7    9        5        0      34      11          53 %
+
+User Pins:                 9        5        0  
+
+
+
+Project Information                                    d:\64_d2\week4\sbcd.rpt
+
+** FILE HIERARCHY **
+
+
+
+|fa:stage0|
+|fa:stage1|
+|fa:stage2|
+|fa:stage3|
+|fa:stage00|
+|fa:stage01|
+|fa:stage02|
+|fa:stage03|
+
+
+Device-Specific Information:                           d:\64_d2\week4\sbcd.rpt
+sbcd
+
+***** Logic for device 'sbcd' compiled without errors.
+
+
+
+
+Device: EPM7064LC44-7
+
+Device Options:
+    Turbo Bit                                    = ON
+    Security Bit                                 = OFF
+
+                                         R     
+                                         E     
+                                         S     
+                                         E     
+                                         R  c  
+                       V  G  G  G  G  G  V  o  
+              y  y  y  C  N  N  N  N  N  E  u  
+              2  1  0  C  D  D  D  D  D  D  t  
+            -----------------------------------_ 
+          /   6  5  4  3  2  1 44 43 42 41 40   | 
+      y3 |  7                                39 | RESERVED 
+      x1 |  8                                38 | RESERVED 
+      x0 |  9                                37 | RESERVED 
+     GND | 10                                36 | s2 
+     cin | 11                                35 | VCC 
+      x3 | 12         EPM7064LC44-7          34 | s1 
+RESERVED | 13                                33 | RESERVED 
+RESERVED | 14                                32 | RESERVED 
+     VCC | 15                                31 | RESERVED 
+RESERVED | 16                                30 | GND 
+RESERVED | 17                                29 | RESERVED 
+         |_  18 19 20 21 22 23 24 25 26 27 28  _| 
+           ------------------------------------ 
+              R  R  s  x  G  V  R  R  R  s  R  
+              E  E  3  2  N  C  E  E  E  0  E  
+              S  S        D  C  S  S  S     S  
+              E  E              E  E  E     E  
+              R  R              R  R  R     R  
+              V  V              V  V  V     V  
+              E  E              E  E  E     E  
+              D  D              D  D  D     D  
+
+
+N.C. = No Connect. This pin has no internal connection to the device.
+VCC = Dedicated power pin, which MUST be connected to VCC.
+GND = Dedicated ground pin or unused dedicated input, which MUST be connected to GND.
+RESERVED = Unused I/O pin, which MUST be left unconnected.
+
+
+
+Device-Specific Information:                           d:\64_d2\week4\sbcd.rpt
+sbcd
+
+** RESOURCE USAGE **
+
+                                                Shareable     External
+Logic Array Block     Logic Cells   I/O Pins    Expanders   Interconnect
+
+A:     LC1 - LC16     0/16(  0%)   8/ 8(100%)   0/16(  0%)   0/36(  0%) 
+B:    LC17 - LC32     2/16( 12%)   2/ 8( 25%)   0/16(  0%)   9/36( 25%) 
+C:    LC33 - LC48    16/16(100%)   1/ 8( 12%)  16/16(100%)  12/36( 33%) 
+D:    LC49 - LC64    16/16(100%)   3/ 8( 37%)  15/16( 93%)  28/36( 77%) 
+
+
+Total dedicated input pins used:                 0/4      (  0%)
+Total I/O pins used:                            14/32     ( 43%)
+Total logic cells used:                         34/64     ( 53%)
+Total shareable expanders used:                 11/64     ( 17%)
+Total Turbo logic cells used:                   34/64     ( 53%)
+Total shareable expanders not available (n/a):  20/64     ( 31%)
+Average fan-in:                                  6.67
+Total fan-in:                                   227
+
+Total input pins required:                       9
+Total output pins required:                      5
+Total bidirectional pins required:               0
+Total logic cells required:                     34
+Total flipflops required:                        0
+Total product terms required:                  147
+Total logic cells lending parallel expanders:    0
+Total shareable expanders in database:          11
+
+Synthesized logic cells:                        29/  64   ( 45%)
+
+
+
+Device-Specific Information:                           d:\64_d2\week4\sbcd.rpt
+sbcd
+
+** INPUTS **
+
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+  11    (3)  (A)      INPUT               0      0   0    0    0    0   20  cin
+   9    (4)  (A)      INPUT               0      0   0    0    0    1   20  x0
+   8    (5)  (A)      INPUT               0      0   0    0    0    0   20  x1
+  21   (17)  (B)      INPUT               0      0   0    0    0    0   12  x2
+  12    (1)  (A)      INPUT               0      0   0    0    0    3    5  x3
+   4   (16)  (A)      INPUT               0      0   0    0    0    1   20  y0
+   5   (14)  (A)      INPUT               0      0   0    0    0    0   20  y1
+   6   (11)  (A)      INPUT               0      0   0    0    0    0   13  y2
+   7    (8)  (A)      INPUT               0      0   0    0    0    3   10  y3
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+
+
+Device-Specific Information:                           d:\64_d2\week4\sbcd.rpt
+sbcd
+
+** OUTPUTS **
+
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+  40     62    D     OUTPUT      t        1      1   0    2    5    0    0  cout
+  27     37    C     OUTPUT      t        0      0   0    2    0    0    0  s0
+  34     51    D     OUTPUT      t        3      2   0    2    8    0    0  s1
+  36     52    D     OUTPUT      t        3      1   1    2   10    0    0  s2
+  20     19    B     OUTPUT      t        0      0   0    0    2    0    0  s3
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+
+
+Device-Specific Information:                           d:\64_d2\week4\sbcd.rpt
+sbcd
+
+** BURIED LOGIC **
+
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+ (28)    40    C       SOFT    s t        0      0   0    3    0    2    3  |FA:stage00|~13~1
+   -     39    C       SOFT    s t        3      1   1    5    0    2    2  |FA:stage1|~7~1
+ (38)    56    D       SOFT    s t        2      1   1    5    4    1    2  |FA:stage01|~9~1
+   -     55    D       SOFT    s t        3      2   1    7    8    1    3  |FA:stage01|~10~1
+ (37)    53    D       SOFT    s t        1      0   1    5    2    0    1  |FA:stage01|~10~2
+   -     61    D       SOFT    s t        0      0   0    5    2    0    1  |FA:stage01|~10~3
+   -     38    C       SOFT    s t        2      0   0    5    0    0    3  |FA:stage1|~14~1
+   -     44    C       SOFT    s t        0      0   0    1    3    3    5  |FA:stage2|~7~1
+   -     45    C       SOFT    s t        1      0   1    6    0    0    1  |FA:stage2|~7~2
+ (29)    41    C       SOFT    s t        1      0   1    6    0    0    1  |FA:stage2|~7~3
+ (32)    48    C       SOFT    s t        0      0   0    6    0    0    1  |FA:stage2|~7~4
+   -     54    D       SOFT    s t        1      1   0    0    6    1    0  |FA:stage02|~13~1
+   -     58    D       SOFT    s t        1      0   1    2    4    0    1  |FA:stage02|~13~2
+ (41)    64    D       SOFT    s t        1      0   1    2    3    0    1  |FA:stage02|~13~3
+   -     63    D       SOFT    s t        1      0   1    2    7    0    1  |FA:stage02|~13~4
+   -     60    D       SOFT    s t        0      0   0    2    4    0    1  |FA:stage02|~13~5
+ (21)    17    B       SOFT    s t        0      0   0    1    6    4    5  |FA:stage3|~7~1
+   -     47    C       SOFT    s t        1      0   1    7    0    0    1  |FA:stage3|~7~2
+   -     59    D       SOFT    s t        1      0   1    8    0    0    1  |FA:stage3|~7~3
+ (39)    57    D       SOFT    s t        1      0   1    8    0    0    1  |FA:stage3|~7~4
+   -     43    C       SOFT    s t        1      0   1    8    0    0    1  |FA:stage3|~7~5
+ (24)    33    C       SOFT    s t        1      0   1    8    0    0    1  |FA:stage3|~7~6
+   -     34    C       SOFT    s t        1      0   1    5    0    0    1  |FA:stage3|~7~7
+ (25)    35    C       SOFT    s t        4      3   1    8    0    3    3  |FA:stage3|~10~1
+ (26)    36    C       SOFT    s t        4      3   1    8    0    3    3  |FA:stage3|~12~1
+   -     50    D       SOFT    s t        1      1   0    2    2    2    5  |FA:stage3|~14~1
+ (33)    49    D       SOFT    s t        1      0   1    5    3    3    1  ~21~1
+   -     42    C       SOFT    s t        1      0   1    5    0    0    2  ~21~2
+ (31)    46    C       SOFT    s t        0      0   0    5    0    0    2  ~21~3
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+
+
+Device-Specific Information:                           d:\64_d2\week4\sbcd.rpt
+sbcd
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'B':
+
+             Logic cells placed in LAB 'B'
+        +--- LC17 |FA:stage3|~7~1
+        | +- LC19 s3
+        | | 
+        | |   Other LABs fed by signals
+        | |   that feed LAB 'B'
+LC      | | | A B C D |     Logic cells that feed LAB 'B':
+LC17 -> - * | - * - * | <-- |FA:stage3|~7~1
+
+Pin
+12   -> * - | - * * * | <-- x3
+LC54 -> - * | - * - - | <-- |FA:stage02|~13~1
+LC47 -> * - | - * - - | <-- |FA:stage3|~7~2
+LC59 -> * - | - * - - | <-- |FA:stage3|~7~3
+LC57 -> * - | - * - - | <-- |FA:stage3|~7~4
+LC43 -> * - | - * - - | <-- |FA:stage3|~7~5
+LC33 -> * - | - * - - | <-- |FA:stage3|~7~6
+LC34 -> * - | - * - - | <-- |FA:stage3|~7~7
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:                           d:\64_d2\week4\sbcd.rpt
+sbcd
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'C':
+
+                                         Logic cells placed in LAB 'C'
+        +------------------------------- LC40 |FA:stage00|~13~1
+        | +----------------------------- LC39 |FA:stage1|~7~1
+        | | +--------------------------- LC38 |FA:stage1|~14~1
+        | | | +------------------------- LC44 |FA:stage2|~7~1
+        | | | | +----------------------- LC45 |FA:stage2|~7~2
+        | | | | | +--------------------- LC41 |FA:stage2|~7~3
+        | | | | | | +------------------- LC48 |FA:stage2|~7~4
+        | | | | | | | +----------------- LC47 |FA:stage3|~7~2
+        | | | | | | | | +--------------- LC43 |FA:stage3|~7~5
+        | | | | | | | | | +------------- LC33 |FA:stage3|~7~6
+        | | | | | | | | | | +----------- LC34 |FA:stage3|~7~7
+        | | | | | | | | | | | +--------- LC35 |FA:stage3|~10~1
+        | | | | | | | | | | | | +------- LC36 |FA:stage3|~12~1
+        | | | | | | | | | | | | | +----- LC37 s0
+        | | | | | | | | | | | | | | +--- LC42 ~21~2
+        | | | | | | | | | | | | | | | +- LC46 ~21~3
+        | | | | | | | | | | | | | | | | 
+        | | | | | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | | | | | |   that feed LAB 'C'
+LC      | | | | | | | | | | | | | | | | | A B C D |     Logic cells that feed LAB 'C':
+LC45 -> - - - * - - - - - - - - - - - - | - - * - | <-- |FA:stage2|~7~2
+LC41 -> - - - * - - - - - - - - - - - - | - - * - | <-- |FA:stage2|~7~3
+LC48 -> - - - * - - - - - - - - - - - - | - - * - | <-- |FA:stage2|~7~4
+
+Pin
+11   -> * * * - * * * * * * - * * - * * | - - * * | <-- cin
+9    -> * * * - * * * * * * - * * * * * | - - * * | <-- x0
+8    -> - * * - * * * * * * * * * - * * | - - * * | <-- x1
+21   -> - - - * - - - * * * * * * - - - | - - * * | <-- x2
+12   -> - - - - - - - - - - - - * - - - | - * * * | <-- x3
+4    -> * * * - * * * * * * - * * * * * | - - * * | <-- y0
+5    -> - * * - * * * * * * * * * - * * | - - * * | <-- y1
+6    -> - - - - * * * - * * * * * - - - | - - * * | <-- y2
+7    -> - - - - - - - * * * * * - - - - | - - * * | <-- y3
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:                           d:\64_d2\week4\sbcd.rpt
+sbcd
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'D':
+
+                                         Logic cells placed in LAB 'D'
+        +------------------------------- LC62 cout
+        | +----------------------------- LC56 |FA:stage01|~9~1
+        | | +--------------------------- LC55 |FA:stage01|~10~1
+        | | | +------------------------- LC53 |FA:stage01|~10~2
+        | | | | +----------------------- LC61 |FA:stage01|~10~3
+        | | | | | +--------------------- LC54 |FA:stage02|~13~1
+        | | | | | | +------------------- LC58 |FA:stage02|~13~2
+        | | | | | | | +----------------- LC64 |FA:stage02|~13~3
+        | | | | | | | | +--------------- LC63 |FA:stage02|~13~4
+        | | | | | | | | | +------------- LC60 |FA:stage02|~13~5
+        | | | | | | | | | | +----------- LC59 |FA:stage3|~7~3
+        | | | | | | | | | | | +--------- LC57 |FA:stage3|~7~4
+        | | | | | | | | | | | | +------- LC50 |FA:stage3|~14~1
+        | | | | | | | | | | | | | +----- LC51 s1
+        | | | | | | | | | | | | | | +--- LC52 s2
+        | | | | | | | | | | | | | | | +- LC49 ~21~1
+        | | | | | | | | | | | | | | | | 
+        | | | | | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | | | | | |   that feed LAB 'D'
+LC      | | | | | | | | | | | | | | | | | A B C D |     Logic cells that feed LAB 'D':
+LC56 -> - - - - - - - * * - - - - - * - | - - - * | <-- |FA:stage01|~9~1
+LC55 -> - - - - - - * * * - - - - - * - | - - - * | <-- |FA:stage01|~10~1
+LC53 -> - - * - - - - - - - - - - - - - | - - - * | <-- |FA:stage01|~10~2
+LC61 -> - - * - - - - - - - - - - - - - | - - - * | <-- |FA:stage01|~10~3
+LC58 -> - - - - - * - - - - - - - - - - | - - - * | <-- |FA:stage02|~13~2
+LC64 -> - - - - - * - - - - - - - - - - | - - - * | <-- |FA:stage02|~13~3
+LC63 -> - - - - - * - - - - - - - - - - | - - - * | <-- |FA:stage02|~13~4
+LC60 -> - - - - - * - - - - - - - - - - | - - - * | <-- |FA:stage02|~13~5
+LC50 -> - * * * * - - - * - - - - * * - | - - - * | <-- |FA:stage3|~14~1
+LC49 -> * - - - - - - - - * - - - * * - | - - - * | <-- ~21~1
+
+Pin
+11   -> - * * * * - - - - - * * - - - * | - - * * | <-- cin
+9    -> - * * * * - - - - - * * - - - * | - - * * | <-- x0
+8    -> - * * * * - - - - - * * - - - * | - - * * | <-- x1
+21   -> - - - - - - * * * - * * - - - - | - - * * | <-- x2
+12   -> * - * - - - - - - * - - * * * - | - * * * | <-- x3
+4    -> - * * * * - - - - - * * - - - * | - - * * | <-- y0
+5    -> - * * * * - - - - - * * - - - * | - - * * | <-- y1
+6    -> - - - - - - * * * - * * - - - - | - - * * | <-- y2
+7    -> * - * - - - - - - * * * * * * - | - - * * | <-- y3
+LC40 -> - - * - - - * - * - - - - * * - | - - - * | <-- |FA:stage00|~13~1
+LC39 -> - - - - - - * - * - - - - * * - | - - - * | <-- |FA:stage1|~7~1
+LC38 -> - - - - - - * * * - - - - - - - | - - - * | <-- |FA:stage1|~14~1
+LC44 -> * - * * * * - - - * - - - * * - | - - - * | <-- |FA:stage2|~7~1
+LC17 -> * * * - - * - - * - - - - * * * | - * - * | <-- |FA:stage3|~7~1
+LC35 -> * - * - - - - - - * - - * * * - | - - - * | <-- |FA:stage3|~10~1
+LC36 -> * - * - - - - - - * - - * * * - | - - - * | <-- |FA:stage3|~12~1
+LC42 -> - * - - - - - - - - - - - - - * | - - - * | <-- ~21~2
+LC46 -> - * - - - - - - - - - - - - - * | - - - * | <-- ~21~3
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:                           d:\64_d2\week4\sbcd.rpt
+sbcd
+
+** EQUATIONS **
+
+cin      : INPUT;
+x0       : INPUT;
+x1       : INPUT;
+x2       : INPUT;
+x3       : INPUT;
+y0       : INPUT;
+y1       : INPUT;
+y2       : INPUT;
+y3       : INPUT;
+
+-- Node name is 'cout' 
+-- Equation name is 'cout', location is LC062, type is output.
+ cout    = LCELL( _EQ001 $  VCC);
+  _EQ001 = !_LC035 & !_LC036 & !_LC044 & !_LC049 &  _X001
+         # !_LC017 & !_LC035 & !_LC036 & !_LC049 &  _X001;
+  _X001  = EXP( x3 &  y3);
+
+-- Node name is 's0' 
+-- Equation name is 's0', location is LC037, type is output.
+ s0      = LCELL( y0 $  x0);
+
+-- Node name is 's1' 
+-- Equation name is 's1', location is LC051, type is output.
+ s1      = LCELL( _EQ002 $  _LC040);
+  _EQ002 = !_LC035 & !_LC036 &  _LC039 & !_LC049 &  _X001 &  _X002
+         #  _LC017 & !_LC039 &  _LC044
+         # !_LC039 &  _X003;
+  _X001  = EXP( x3 &  y3);
+  _X002  = EXP( _LC017 &  _LC044);
+  _X003  = EXP(!_LC049 & !_LC050);
+
+-- Node name is 's2' 
+-- Equation name is 's2', location is LC052, type is output.
+ s2      = LCELL( _EQ003 $  _EQ004);
+  _EQ003 =  _LC017 & !_LC035 & !_LC036 & !_LC049 &  _X001
+         # !_LC035 & !_LC036 & !_LC044 & !_LC049 &  _X001
+         #  _LC044 &  _LC050
+         #  _LC044 &  _LC049;
+  _X001  = EXP( x3 &  y3);
+  _EQ004 = !_LC055 & !_LC056 &  _X004;
+  _X004  = EXP( _LC039 &  _LC040);
+
+-- Node name is 's3' 
+-- Equation name is 's3', location is LC019, type is output.
+ s3      = LCELL( _LC017 $  _LC054);
+
+-- Node name is '|FA:stage00|~13~1' 
+-- Equation name is '_LC040', type is buried 
+-- synthesized logic cell 
+_LC040   = LCELL( _EQ005 $  GND);
+  _EQ005 =  cin &  x0 &  y0
+         #  cin & !x0 & !y0;
+
+-- Node name is '|FA:stage1|~7~1' 
+-- Equation name is '_LC039', type is buried 
+-- synthesized logic cell 
+_LC039   = LCELL( _EQ006 $  x1);
+  _EQ006 =  cin &  x0 & !y1
+         #  _X005 &  y0 & !y1
+         # !x0 &  _X006 &  y1
+         # !cin & !y0 &  y1;
+  _X005  = EXP(!cin & !x0);
+  _X006  = EXP( cin &  y0);
+
+-- Node name is '|FA:stage01|~9~1' 
+-- Equation name is '_LC056', type is buried 
+-- synthesized logic cell 
+_LC056   = LCELL( _EQ007 $  _EQ008);
+  _EQ007 =  cin & !_LC042 & !_LC046 &  x1 &  _X007 &  y0 & !y1
+         # !_LC042 & !_LC046 &  x0 &  x1 &  _X007 &  y0 & !y1
+         #  cin & !_LC042 & !_LC046 &  x0 &  x1 &  _X007 & !y1
+         #  cin & !_LC042 & !_LC046 & !x1 &  _X007 &  y0 &  y1;
+  _X007  = EXP(!_LC017 & !_LC050);
+  _EQ008 = !_LC042 & !_LC046 &  _X007;
+  _X007  = EXP(!_LC017 & !_LC050);
+
+-- Node name is '|FA:stage01|~10~1' 
+-- Equation name is '_LC055', type is buried 
+-- synthesized logic cell 
+_LC055   = LCELL( _EQ009 $  _EQ010);
+  _EQ009 =  cin & !_LC035 & !_LC036 &  _LC040 & !_LC044 & !_LC053 & !_LC061 & 
+              x1 &  _X001 &  _X007 &  y0 & !y1
+         # !_LC035 & !_LC036 &  _LC040 & !_LC044 & !_LC053 & !_LC061 &  x0 & 
+              x1 &  _X001 &  _X007 &  y0 & !y1
+         #  cin & !_LC035 & !_LC036 &  _LC040 & !_LC044 & !_LC053 & !_LC061 & 
+              x0 &  x1 &  _X001 &  _X007 & !y1
+         #  cin & !_LC035 & !_LC036 &  _LC040 & !_LC044 & !_LC053 & !_LC061 & 
+             !x1 &  _X001 &  _X007 &  y0 &  y1;
+  _X001  = EXP( x3 &  y3);
+  _X007  = EXP(!_LC017 & !_LC050);
+  _EQ010 =  _LC040 & !_LC053 & !_LC061 &  _X007;
+  _X007  = EXP(!_LC017 & !_LC050);
+
+-- Node name is '|FA:stage01|~10~2' 
+-- Equation name is '_LC053', type is buried 
+-- synthesized logic cell 
+_LC053   = LCELL( _EQ011 $  GND);
+  _EQ011 = !_LC044 & !_LC050 &  x0 & !x1 &  y0 &  y1
+         #  cin & !_LC044 & !_LC050 &  x0 & !x1 &  y1
+         # !_LC044 & !_LC050 & !x0 &  x1 & !y0 &  y1
+         # !cin & !_LC044 & !_LC050 & !x0 &  x1 &  y1
+         # !cin & !_LC044 & !_LC050 &  x1 & !y0 &  y1;
+
+-- Node name is '|FA:stage01|~10~3' 
+-- Equation name is '_LC061', type is buried 
+-- synthesized logic cell 
+_LC061   = LCELL( _EQ012 $  GND);
+  _EQ012 = !_LC044 & !_LC050 & !x0 & !x1 & !y0 & !y1
+         # !cin & !_LC044 & !_LC050 & !x0 & !x1 & !y1
+         # !cin & !_LC044 & !_LC050 & !x1 & !y0 & !y1;
+
+-- Node name is '|FA:stage1|~14~1' 
+-- Equation name is '_LC038', type is buried 
+-- synthesized logic cell 
+_LC038   = LCELL( _EQ013 $  GND);
+  _EQ013 =  cin &  x1 &  _X008
+         #  x0 &  _X009 &  y0
+         #  cin &  _X008 &  y1
+         #  x1 &  y1;
+  _X008  = EXP(!x0 & !y0);
+  _X009  = EXP(!x1 & !y1);
+
+-- Node name is '|FA:stage2|~7~1' 
+-- Equation name is '_LC044', type is buried 
+-- synthesized logic cell 
+_LC044   = LCELL( _EQ014 $ !x2);
+  _EQ014 = !_LC041 & !_LC045 & !_LC048;
+
+-- Node name is '|FA:stage2|~7~2' 
+-- Equation name is '_LC045', type is buried 
+-- synthesized logic cell 
+_LC045   = LCELL( _EQ015 $  GND);
+  _EQ015 =  x0 &  x1 &  y0 & !y2
+         #  cin &  x1 &  y0 & !y2
+         #  cin &  x0 &  x1 & !y2
+         #  x0 &  y0 &  y1 & !y2
+         #  cin &  y0 &  y1 & !y2;
+
+-- Node name is '|FA:stage2|~7~3' 
+-- Equation name is '_LC041', type is buried 
+-- synthesized logic cell 
+_LC041   = LCELL( _EQ016 $  GND);
+  _EQ016 =  cin &  x0 &  y1 & !y2
+         # !x0 & !x1 & !y0 &  y2
+         # !cin & !x0 & !x1 &  y2
+         # !cin & !x1 & !y0 &  y2
+         # !x0 & !y0 & !y1 &  y2;
+
+-- Node name is '|FA:stage2|~7~4' 
+-- Equation name is '_LC048', type is buried 
+-- synthesized logic cell 
+_LC048   = LCELL( _EQ017 $  GND);
+  _EQ017 = !cin & !x0 & !y1 &  y2
+         # !cin & !y0 & !y1 &  y2
+         #  x1 &  y1 & !y2
+         # !x1 & !y1 &  y2;
+
+-- Node name is '|FA:stage02|~13~1' 
+-- Equation name is '_LC054', type is buried 
+-- synthesized logic cell 
+_LC054   = LCELL( _EQ018 $  VCC);
+  _EQ018 = !_LC058 & !_LC060 & !_LC063 & !_LC064 &  _X002;
+  _X002  = EXP( _LC017 &  _LC044);
+
+-- Node name is '|FA:stage02|~13~2' 
+-- Equation name is '_LC058', type is buried 
+-- synthesized logic cell 
+_LC058   = LCELL( _EQ019 $  GND);
+  _EQ019 =  _LC038 &  _LC039 &  _LC040 &  x2 &  y2
+         # !_LC038 &  _LC039 &  _LC040 &  x2 & !y2
+         # !_LC038 &  _LC039 &  _LC040 & !x2 &  y2
+         #  _LC038 &  _LC039 &  _LC040 & !x2 & !y2
+         #  _LC038 &  _LC055 &  x2 &  y2;
+
+-- Node name is '|FA:stage02|~13~3' 
+-- Equation name is '_LC064', type is buried 
+-- synthesized logic cell 
+_LC064   = LCELL( _EQ020 $  GND);
+  _EQ020 =  _LC038 &  _LC056 &  x2 &  y2
+         # !_LC038 &  _LC055 &  x2 & !y2
+         # !_LC038 &  _LC056 &  x2 & !y2
+         # !_LC038 &  _LC055 & !x2 &  y2
+         # !_LC038 &  _LC056 & !x2 &  y2;
+
+-- Node name is '|FA:stage02|~13~4' 
+-- Equation name is '_LC063', type is buried 
+-- synthesized logic cell 
+_LC063   = LCELL( _EQ021 $  GND);
+  _EQ021 =  _LC038 &  _LC055 & !x2 & !y2
+         #  _LC038 &  _LC056 & !x2 & !y2
+         #  _LC017 &  _LC039
+         #  _LC040 &  _LC050
+         #  _LC039 &  _LC050;
+
+-- Node name is '|FA:stage02|~13~5' 
+-- Equation name is '_LC060', type is buried 
+-- synthesized logic cell 
+_LC060   = LCELL( _EQ022 $  GND);
+  _EQ022 =  _LC044 &  _LC049
+         #  _LC036 &  _LC044
+         #  _LC035 &  _LC044
+         #  _LC044 &  x3 &  y3;
+
+-- Node name is '|FA:stage3|~7~1' 
+-- Equation name is '_LC017', type is buried 
+-- synthesized logic cell 
+_LC017   = LCELL( _EQ023 $ !x3);
+  _EQ023 = !_LC033 & !_LC034 & !_LC043 & !_LC047 & !_LC057 & !_LC059;
+
+-- Node name is '|FA:stage3|~7~2' 
+-- Equation name is '_LC047', type is buried 
+-- synthesized logic cell 
+_LC047   = LCELL( _EQ024 $  GND);
+  _EQ024 =  x0 &  x1 &  x2 &  y0 & !y3
+         #  cin &  x1 &  x2 &  y0 & !y3
+         #  cin &  x0 &  x1 &  x2 & !y3
+         #  x0 &  x2 &  y0 &  y1 & !y3
+         #  cin &  x2 &  y0 &  y1 & !y3;
+
+-- Node name is '|FA:stage3|~7~3' 
+-- Equation name is '_LC059', type is buried 
+-- synthesized logic cell 
+_LC059   = LCELL( _EQ025 $  GND);
+  _EQ025 =  cin &  x0 &  x2 &  y1 & !y3
+         #  x0 &  x1 &  y0 &  y2 & !y3
+         #  cin &  x1 &  y0 &  y2 & !y3
+         #  cin &  x0 &  x1 &  y2 & !y3
+         #  x0 &  y0 &  y1 &  y2 & !y3;
+
+-- Node name is '|FA:stage3|~7~4' 
+-- Equation name is '_LC057', type is buried 
+-- synthesized logic cell 
+_LC057   = LCELL( _EQ026 $  GND);
+  _EQ026 =  cin &  y0 &  y1 &  y2 & !y3
+         #  cin &  x0 &  y1 &  y2 & !y3
+         # !x0 & !x1 & !x2 & !y0 &  y3
+         # !cin & !x0 & !x1 & !x2 &  y3
+         # !cin & !x1 & !x2 & !y0 &  y3;
+
+-- Node name is '|FA:stage3|~7~5' 
+-- Equation name is '_LC043', type is buried 
+-- synthesized logic cell 
+_LC043   = LCELL( _EQ027 $  GND);
+  _EQ027 = !x0 & !x2 & !y0 & !y1 &  y3
+         # !cin & !x0 & !x2 & !y1 &  y3
+         # !cin & !x2 & !y0 & !y1 &  y3
+         # !x0 & !x1 & !y0 & !y2 &  y3
+         # !cin & !x0 & !x1 & !y2 &  y3;
+
+-- Node name is '|FA:stage3|~7~6' 
+-- Equation name is '_LC033', type is buried 
+-- synthesized logic cell 
+_LC033   = LCELL( _EQ028 $  GND);
+  _EQ028 = !cin & !x1 & !y0 & !y2 &  y3
+         # !x0 & !y0 & !y1 & !y2 &  y3
+         # !cin & !x0 & !y1 & !y2 &  y3
+         # !cin & !y0 & !y1 & !y2 &  y3
+         #  x1 &  x2 &  y1 & !y3;
+
+-- Node name is '|FA:stage3|~7~7' 
+-- Equation name is '_LC034', type is buried 
+-- synthesized logic cell 
+_LC034   = LCELL( _EQ029 $  GND);
+  _EQ029 =  x1 &  y1 &  y2 & !y3
+         # !x1 & !x2 & !y1 &  y3
+         # !x1 & !y1 & !y2 &  y3
+         #  x2 &  y2 & !y3
+         # !x2 & !y2 &  y3;
+
+-- Node name is '|FA:stage3|~10~1' 
+-- Equation name is '_LC035', type is buried 
+-- synthesized logic cell 
+_LC035   = LCELL( _EQ030 $  y3);
+  _EQ030 = !x0 &  _X006 &  _X010 &  _X011 &  y3
+         # !cin &  _X010 &  _X011 & !y0 &  y3
+         # !x1 &  _X011 & !y1 &  y3
+         # !x2 & !y2 &  y3;
+  _X006  = EXP( cin &  y0);
+  _X010  = EXP( x1 &  y1);
+  _X011  = EXP( x2 &  y2);
+
+-- Node name is '|FA:stage3|~12~1' 
+-- Equation name is '_LC036', type is buried 
+-- synthesized logic cell 
+_LC036   = LCELL( _EQ031 $  x3);
+  _EQ031 = !x0 &  x3 &  _X006 &  _X010 &  _X011
+         # !cin &  x3 &  _X010 &  _X011 & !y0
+         # !x1 &  x3 &  _X011 & !y1
+         # !x2 &  x3 & !y2;
+  _X006  = EXP( cin &  y0);
+  _X010  = EXP( x1 &  y1);
+  _X011  = EXP( x2 &  y2);
+
+-- Node name is '|FA:stage3|~14~1' 
+-- Equation name is '_LC050', type is buried 
+-- synthesized logic cell 
+_LC050   = LCELL( _EQ032 $  VCC);
+  _EQ032 = !_LC035 & !_LC036 &  _X001;
+  _X001  = EXP( x3 &  y3);
+
+-- Node name is '~21~1' 
+-- Equation name is '~21~1', location is LC049, type is buried.
+-- synthesized logic cell 
+_LC049   = LCELL( _EQ033 $  _EQ034);
+  _EQ033 =  cin &  _LC017 & !_LC042 & !_LC046 &  x1 &  y0 & !y1
+         #  _LC017 & !_LC042 & !_LC046 &  x0 &  x1 &  y0 & !y1
+         #  cin &  _LC017 & !_LC042 & !_LC046 &  x0 &  x1 & !y1
+         #  cin &  _LC017 & !_LC042 & !_LC046 & !x1 &  y0 &  y1;
+  _EQ034 =  _LC017 & !_LC042 & !_LC046;
+
+-- Node name is '~21~2' 
+-- Equation name is '~21~2', location is LC042, type is buried.
+-- synthesized logic cell 
+_LC042   = LCELL( _EQ035 $  GND);
+  _EQ035 =  x0 & !x1 &  y0 &  y1
+         #  cin &  x0 & !x1 &  y1
+         # !x0 &  x1 & !y0 &  y1
+         # !cin & !x0 &  x1 &  y1
+         # !cin &  x1 & !y0 &  y1;
+
+-- Node name is '~21~3' 
+-- Equation name is '~21~3', location is LC046, type is buried.
+-- synthesized logic cell 
+_LC046   = LCELL( _EQ036 $  GND);
+  _EQ036 = !x0 & !x1 & !y0 & !y1
+         # !cin & !x0 & !x1 & !y1
+         # !cin & !x1 & !y0 & !y1;
+
+
+
+--     Shareable expanders that are duplicated in multiple LABs:
+--     (none)
+
+
+
+
+Project Information                                    d:\64_d2\week4\sbcd.rpt
+
+** COMPILATION SETTINGS & TIMES **
+
+Processing Menu Commands
+------------------------
+
+Design Doctor                             = off
+
+Logic Synthesis:
+
+   Synthesis Type Used                    = Standard
+
+   Default Synthesis Style                = NORMAL
+
+      Logic option settings in 'NORMAL' style for 'MAX7000' family
+
+      DECOMPOSE_GATES                     = on
+      DUPLICATE_LOGIC_EXTRACTION          = on
+      MINIMIZATION                        = full
+      MULTI_LEVEL_FACTORING               = on
+      NOT_GATE_PUSH_BACK                  = on
+      PARALLEL_EXPANDERS                  = off
+      REDUCE_LOGIC                        = on
+      REFACTORIZATION                     = on
+      REGISTER_OPTIMIZATION               = on
+      RESYNTHESIZE_NETWORK                = on
+      SLOW_SLEW_RATE                      = off
+      SOFT_BUFFER_INSERTION               = on
+      SUBFACTOR_EXTRACTION                = on
+      TURBO_BIT                           = on
+      XOR_SYNTHESIS                       = on
+      IGNORE_SOFT_BUFFERS                 = off
+      USE_LPM_FOR_AHDL_OPERATORS          = off
+
+   Other logic synthesis settings:
+
+      Automatic Global Clock              = on
+      Automatic Global Clear              = on
+      Automatic Global Preset             = on
+      Automatic Global Output Enable      = on
+      Automatic Fast I/O                  = off
+      Automatic Register Packing          = off
+      Automatic Open-Drain Pins           = on
+      Automatic Implement in EAB          = off
+      One-Hot State Machine Encoding      = off
+      Optimize                            = 5
+
+Default Timing Specifications: None
+
+Cut All Bidir Feedback Timing Paths       = on
+Cut All Clear & Preset Timing Paths       = on
+
+Ignore Timing Assignments                 = on
+
+Functional SNF Extractor                  = off
+
+Linked SNF Extractor                      = off
+Timing SNF Extractor                      = on
+Optimize Timing SNF                       = off
+Generate AHDL TDO File                    = off
+Fitter Settings                           = NORMAL
+Smart Recompile                           = off
+Total Recompile                           = off
+
+Interfaces Menu Commands
+------------------------
+
+EDIF Netlist Writer                       = off
+Verilog Netlist Writer                    = off
+VHDL Netlist Writer                       = off
+
+Compilation Times
+-----------------
+
+   Compiler Netlist Extractor             00:00:00
+   Database Builder                       00:00:00
+   Logic Synthesizer                      00:00:00
+   Partitioner                            00:00:01
+   Fitter                                 00:00:00
+   Timing SNF Extractor                   00:00:00
+   Assembler                              00:00:00
+   --------------------------             --------
+   Total Time                             00:00:01
+
+
+Memory Allocated
+-----------------
+
+Peak memory allocated during compilation  = 5,303K

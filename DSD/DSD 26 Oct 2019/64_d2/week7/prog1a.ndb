@@ -1,0 +1,127 @@
+NDB006
+The number of symbol table entries is: 2
+The length of the symbol table is: 27
+
+Index Hierarchy Path
+----- --------------
+!	&null_hpath&
+.	|mux8to1:st0|
+
+The number of name info structs is : 114
+
+InsOrder BitField SymTableIndex NextSyn SynParent Loc ChainType NextChain ChainParent FanOut DirExp ParExp ShareExp NodeName
+-------- -------- ------------- ------- --------- --- --------- --------- ----------- ------ ------ ------ -------- --------
+"	IeEA	!	24	0	:10	x
+#	IeEA	!	24	0	:11	y
+$	IeEA	!	24	0	:12	z
+%	IeEA	!	24	0	:13	{
+&	IeEA	!	24	0	:14	|
+'	IeEA	!	24	0	:6	t
+(	IeEA	!	24	0	:7	u
+)	IeEA	!	24	0	:8	v
+*	IeEA	!	24	0	:9	w
++	IeE[	!	22	0	f	s
+,	"?%_n	!	21	0	1	+	x0	!	x0	r
+-	"?%_n	!	21	0	1	+	x1	!	x1	q
+.	"?%_n	!	21	0	1	+	x2	!	x2	p
+/	"?%_n	!	21	0	1	+	x3	!	x3	o
+0	IeEA	.	9	0	:13	">
+1	IeEA	.	9	0	:14	"?
+2	IeEA	.	9	0	:15	"@
+3	IeEA	.	9	0	:16	"A
+4	IeEA	.	9	0	:17	"B
+5	IeEA	.	10	0	:18	"C
+6	IeEA	.	10	0	:19	"D
+7	IeEA	.	10	0	:20	"E
+8	IeEA	.	10	0	:21	"F
+9	IeEA	.	10	0	:22	"G
+:	IeEA	.	11	0	:23	"H
+;	IeEA	.	11	0	:24	"I
+<	IeEA	.	11	0	:25	"J
+=	IeEA	.	11	0	:26	"K
+>	IeEA	.	11	0	:27	"L
+?	IeEA	.	12	0	:28	"M
+@	IeEA	.	12	0	:29	"N
+A	IeEA	.	12	0	:30	"O
+B	IeEA	.	12	0	:31	"P
+C	IeEA	.	12	0	:32	"Q
+D	IeEA	.	13	0	:33	"R
+E	IeEA	.	13	0	:34	"S
+F	IeEA	.	13	0	:35	"T
+G	IeEA	.	13	0	:36	"U
+H	IeEA	.	13	0	:37	"V
+I	IeEA	.	13	0	:38	"W
+J	IeEA	.	14	0	:39	"X
+K	IeEA	.	14	0	:40	"Y
+L	IeEA	.	14	0	:41	"Z
+M	IeEA	.	14	0	:42	"[
+N	IeEA	.	14	0	:43	"\
+O	IeEA	.	14	0	:44	"]
+P	IeEA	.	15	0	:45	"^
+Q	IeEA	.	15	0	:46	"_
+R	IeEA	.	15	0	:47	"`
+S	IeEA	.	15	0	:48	"a
+T	IeEA	.	15	0	:49	"b
+U	IeEA	.	15	0	:50	"c
+V	IeEA	.	16	0	:51	"d
+W	IeEA	.	16	0	:52	"e
+X	IeEA	.	16	0	:53	"f
+Y	IeEA	.	16	0	:54	"g
+Z	IeEA	.	16	0	:55	"h
+[	IeEA	.	16	0	:56	"i
+\	IeEA	.	16	0	:57	"j
+]	IeEA	.	16	0	:58	"k
+^	IeEA	.	16	0	:59	"l
+_	IeEA	.	16	0	:60	"m
+`	IeEA	.	16	0	:61	"n
+a	IeEA	.	16	0	:62	"o
+b	IeEA	.	16	0	:63	"p
+c	IeEA	.	16	0	:64	"q
+d	IeEA	.	16	0	:65	"r
+e	IeEA	.	16	0	:66	"s
+f	IdL3	.	9	0	~13~1	">
+g	IdL3	.	9	0	~14~1	"?
+h	IdL3	.	9	0	~15~1	"@
+i	IdL3	.	9	0	~16~1	"A
+j	IdL3	.	9	0	~17~1	"B
+k	IdL3	.	10	0	~18~1	"C
+l	IdL3	.	10	0	~19~1	"D
+m	IdL3	.	10	0	~20~1	"E
+n	IdL3	.	10	0	~21~1	"F
+o	IdL3	.	10	0	~22~1	"G
+p	IdL3	.	11	0	~23~1	"H
+q	IdL3	.	11	0	~24~1	"I
+r	IdL3	.	11	0	~25~1	"J
+s	IdL3	.	11	0	~26~1	"K
+t	IdL3	.	11	0	~27~1	"L
+u	IdL3	.	12	0	~28~1	"M
+v	IdL3	.	12	0	~29~1	"N
+w	IdL3	.	12	0	~30~1	"O
+x	IdL3	.	12	0	~31~1	"P
+y	IdL3	.	12	0	~32~1	"Q
+z	IdL3	.	13	0	~33~1	"R
+{	IdL3	.	13	0	~34~1	"S
+|	IdL3	.	13	0	~35~1	"T
+}	IdL3	.	13	0	~36~1	"U
+~	IdL3	.	13	0	~37~1	"V
+"!	IdL3	.	13	0	~38~1	"W
+""	IdL3	.	14	0	~39~1	"X
+"#	IdL3	.	14	0	~40~1	"Y
+"$	IdL3	.	14	0	~41~1	"Z
+"%	IdL3	.	14	0	~42~1	"[
+"&	IdL3	.	14	0	~43~1	"\
+"'	IdL3	.	14	0	~44~1	"]
+"(	IdL3	.	15	0	~45~1	"^
+")	IdL3	.	15	0	~46~1	"_
+"*	IdL3	.	15	0	~47~1	"`
+"+	IdL3	.	15	0	~48~1	"a
+",	IdL3	.	15	0	~49~1	"b
+"-	IdL3	.	15	0	~50~1	"c
+".	IdL3	.	16	0	~51~1	"d
+"/	IdL3	.	16	0	~52~1	"e
+"0	IdL3	.	16	0	~53~1	"f
+"1	IdL3	.	16	0	~54~1	"g
+"2	IdL3	.	16	0	~55~1	"h
+"3	IdL3	.	16	0	~56~1	"i
+"4	IdL3	.	16	0	~65~1	"r
+"5	IdL3	.	16	0	~66~1	"s

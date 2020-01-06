@@ -1,0 +1,93 @@
+//package mypackage.p1;
+
+public class Maximum 
+{
+ public int max(int a, int b, int c)
+  {
+
+  if (a > b)
+  {
+   if (a > c)
+    return a;
+   else
+    return c;
+  }
+  
+  if (b > a) 
+  {
+   if (b > c)
+     return b;
+   else
+     return c;
+  }
+  public float max(float a, float b, float c) {
+   if (a > b) {
+    if (a > c) {
+     return a;
+    } else
+     return c;
+   }
+
+
+
+   if (b > a) {
+    if (b > c) {
+     return b;
+    } else
+     return c;
+   }
+
+  public int max(int arr[int n]) {
+    int tempmax1 = arr[0];
+    int temporary1;
+    for (i = 0; i < n; i++) {
+     if (arr[i] > tempmax) {
+      temporary1 = arr[i];
+      arr[i] = tempmax1;
+      tempmax1 = temporary1;
+     }
+    }
+   }
+
+  public int max(int arr[int p][int q]) {
+    int tempmax2 = arr[0];
+    int temporary2;
+    for (i = 0; i < p; i++) {
+     for (j = 0; j < q; j++) {
+      if (arr[i] > tempmax) {
+       temporary2 = arr[j];
+       arr[j] = tempmax2;
+       tempmax2 = temporary2;
+      }
+     }
+    }
+   }
+
+  }
+}
+
+import p1.*;
+
+class Testmaximum {
+  public static void main(String Args[])
+   {
+    Maximum ob = new Maximum();
+    int b = ob.max(1,2,3);
+    System.out.println("MAXIMUM INTEGER " + b);
+    
+    
+    float c = ob.max(1,2,3);
+    System.out.println("MAXIMUM FLOAT " + c);
+    
+    
+    int a[5] = {1,2,3,4,5}
+    b=ob.max(a);
+    System.out.println("MAXIMUM INTEGER IN ARRAY " + b);
+    
+    
+    int d[3][3] = {{1,2,3},{4,5,6}}
+    b=ob.max(d);
+    System.out.println("MAXIMUM INTEGER IN MATRIX " + b);
+    
+   }
+}

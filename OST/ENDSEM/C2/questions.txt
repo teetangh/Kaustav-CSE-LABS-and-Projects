@@ -1,0 +1,6 @@
+1 latex write up + 1 web dev for execution 
+
+1 shell script -> Armstrong and perfect number
+	       -> Count vowels and constants in a string
++ Beamer for Writeup
+

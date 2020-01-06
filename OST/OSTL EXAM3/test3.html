@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>Click the button to try out the assessment</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction() {
+        var text;
+        var temp = prompt("Please enter a valid number");
+        // switch (temp) {
+        //   case "2":
+        //     text = "Very Intelligent";
+        //     break;
+        //   case "4":
+        //     text = "Very Brave";
+        //     break;
+        //   case "6":
+        //     text = "Very Smart";
+        //     break;
+        //   case "8":
+        //     text = "Very Beautiful";
+        //     break;
+
+        //   default:
+        //     text = "Sorry it's not a lucky number";
+        // }
+
+        if (temp == 2) text = "Very Intelligent";
+        else if (temp == 4) text = "Very Brave";
+        else if (temp == 6) text = "Very Smart";
+        else if (temp == 8) text = "Very Beautiful";
+        else if (temp > 8 && temp < 100) text = "Sorry Not lucky number";
+        else text = "Error . Dont input string";
+
+        document.getElementById("demo").innerHTML = text;
+      }
+    </script>
+  </body>
+</html>

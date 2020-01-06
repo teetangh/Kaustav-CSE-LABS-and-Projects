@@ -1,0 +1,32 @@
+NDB006
+The number of symbol table entries is: 7
+The length of the symbol table is: 253
+
+Index Hierarchy Path
+----- --------------
+!	&null_hpath&
+.	|dffposclockasynactivehighreset:stage0|
+V	|dffposclockasynactivehighreset:stage1|
+~	|dffposclockasynactivehighreset:stage2|
+"H	|dffposclockasynactivehighreset:stage3|
+"p	|dffposclockasynactivehighreset:stage4|
+#:	|dffposclockasynactivehighreset:stage5|
+
+The number of name info structs is : 14
+
+InsOrder BitField SymTableIndex NextSyn SynParent Loc ChainType NextChain ChainParent FanOut DirExp ParExp ShareExp NodeName
+-------- -------- ------------- ------- --------- --- --------- --------- ----------- ------ ------ ------ -------- --------
+"	"?%_o	!	14	0	1	#	f0	!	f0	v
+#	"?%_o	!	14	0	1	$	f1	!	f1	u
+$	"?%_o	!	14	0	1	%	f2	!	f2	t
+%	"?%_o	!	14	0	1	&	f3	!	f3	s
+&	"?%_o	!	14	0	1	'	f4	!	f4	r
+'	"<R?c	!	14	0	f5	!	f5	q
+(	(@\6H	!	16	0	6	'	&	%	$	#	"	RegisterClock	p
+)	L8ef	!	17	0	1	"	userinput	o
+*	IeE1	.	4	0	:5	"A
++	IeE1	V	4	0	:5	"K
+,	IeE1	~	4	0	:5	"T
+-	IeE1	"H	4	0	:5	"]
+.	IeE1	"p	4	0	:5	"f
+/	IeE1	#:	4	0	:5	"o

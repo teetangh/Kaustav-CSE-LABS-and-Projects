@@ -1,0 +1,171 @@
+NDB006
+The number of symbol table entries is: 1
+The length of the symbol table is: 13
+
+Index Hierarchy Path
+----- --------------
+!	&null_hpath&
+
+The number of name info structs is : 159
+
+InsOrder BitField SymTableIndex NextSyn SynParent Loc ChainType NextChain ChainParent FanOut DirExp ParExp ShareExp NodeName
+-------- -------- ------------- ------- --------- --- --------- --------- ----------- ------ ------ ------ -------- --------
+"	IeEA	!	8	0	:10	x
+#	IeEA	!	8	0	:11	y
+$	IeEA	!	8	0	:12	z
+%	IeEA	!	8	0	:13	{
+&	IeEA	!	8	0	:14	|
+'	IeEA	!	9	0	:15	}
+(	IeEA	!	9	0	:16	~
+)	IeEA	!	9	0	:17	"!
+*	IeEA	!	9	0	:18	""
++	IeEA	!	10	0	:19	"#
+,	IeEA	!	10	0	:20	"$
+-	IeEA	!	10	0	:21	"%
+.	IeEA	!	10	0	:22	"&
+/	IeEA	!	10	0	:23	"'
+0	IeEA	!	10	0	:24	"(
+1	IeEA	!	10	0	:25	")
+2	IeEA	!	10	0	:26	"*
+3	IeEA	!	11	0	:27	"+
+4	IeEA	!	11	0	:28	",
+5	IeEA	!	11	0	:29	"-
+6	IeEA	!	11	0	:30	".
+7	IeEA	!	12	0	:31	"/
+8	IeEA	!	12	0	:32	"0
+9	IeEA	!	12	0	:33	"1
+:	IeEA	!	12	0	:34	"2
+;	IeEA	!	12	0	:35	"3
+<	IeEA	!	12	0	:36	"4
+=	IeEA	!	12	0	:37	"5
+>	IeEA	!	12	0	:38	"6
+?	IeEA	!	12	0	:39	"7
+@	IeEA	!	13	0	:40	"8
+A	IeEA	!	13	0	:41	"9
+B	IeEA	!	13	0	:42	":
+C	IeEA	!	13	0	:43	";
+D	IeEA	!	14	0	:44	"<
+E	IeEA	!	14	0	:45	"=
+F	IeEA	!	14	0	:46	">
+G	IeEA	!	14	0	:47	"?
+H	IeEA	!	14	0	:48	"@
+I	IeEA	!	14	0	:49	"A
+J	IeEA	!	14	0	:50	"B
+K	IeEA	!	14	0	:51	"C
+L	IeEA	!	14	0	:52	"D
+M	IeEA	!	15	0	:53	"E
+N	IeEA	!	15	0	:54	"F
+O	IeEA	!	15	0	:55	"G
+P	IeEA	!	15	0	:56	"H
+Q	IeEA	!	15	0	:57	"I
+R	IeEA	!	15	0	:58	"J
+S	IeEA	!	15	0	:59	"K
+T	IeEA	!	15	0	:60	"L
+U	IeEA	!	15	0	:61	"M
+V	IeEA	!	15	0	:62	"N
+W	IeEA	!	15	0	:63	"O
+X	IeEA	!	15	0	:64	"P
+Y	IeEA	!	15	0	:65	"Q
+Z	IeEA	!	15	0	:66	"R
+[	IeEA	!	15	0	:67	"S
+\	IeEA	!	15	0	:68	"T
+]	IeEA	!	15	0	:69	"U
+^	IeEA	!	15	0	:70	"V
+_	IeEA	!	15	0	:71	"W
+`	IeEA	!	15	0	:72	"X
+a	IeEA	!	15	0	:73	"Y
+b	IeEA	!	15	0	:74	"Z
+c	IeEA	!	15	0	:75	"[
+d	IeEA	!	15	0	:76	"\
+e	IeEA	!	15	0	:77	"]
+f	IeEA	!	15	0	:78	"^
+g	IeEA	!	15	0	:79	"_
+h	IeEA	!	8	0	:8	v
+i	IeEA	!	15	0	:80	"`
+j	IeEA	!	15	0	:81	"a
+k	IeEA	!	15	0	:82	"b
+l	IeEA	!	15	0	:83	"c
+m	IeEA	!	15	0	:84	"d
+n	IeEA	!	15	0	:85	"e
+o	IeEA	!	15	0	:86	"f
+p	IeEA	!	15	0	:87	"g
+q	IeEA	!	15	0	:88	"h
+r	IeEA	!	15	0	:89	"i
+s	IeEA	!	8	0	:9	w
+t	L8ef	!	3	0	12	w	x	y	z	"N	"O	"P	"Q	"^	"_	"`	"a	e	q
+u	"?%_n	!	2	0	10	w	x	y	z	"N	"O	"^	"_	"`	"a	w0	!	w0	p
+v	"?%_n	!	2	0	12	w	x	y	z	"N	"O	"P	"Q	"^	"_	"`	"a	w1	!	w1	o
+w	"F[b5	!	5	0	2	1	2	y0	!	y0	u
+x	"F[b5	!	5	0	2	1	2	y1	!	y1	t
+y	"F[b5	!	5	0	2	1	2	y2	!	y2	s
+z	"F[b5	!	5	0	2	1	2	y3	!	y3	r
+{	IdL3	!	8	0	~10~1	x
+|	IdL3	!	8	0	~12~1	z
+}	IdL3	!	8	0	~13~1	{
+~	IdL3	!	8	0	~14~1	|
+"!	IdL3	!	9	0	~15~1	}
+""	IdL3	!	9	0	~16~1	~
+"#	IdL3	!	9	0	~17~1	"!
+"$	IdL3	!	9	0	~18~1	""
+"%	IdL3	!	10	0	~21~1	"%
+"&	IdL3	!	10	0	~22~1	"&
+"'	IdL3	!	10	0	~24~1	"(
+"(	IdL3	!	10	0	~25~1	")
+")	IdL3	!	10	0	~26~1	"*
+"*	IdL3	!	11	0	~27~1	"+
+"+	IdL3	!	11	0	~28~1	",
+",	IdL3	!	11	0	~29~1	"-
+"-	IdL3	!	11	0	~30~1	".
+".	IdL3	!	12	0	~33~1	"1
+"/	IdL3	!	12	0	~34~1	"2
+"0	IdL3	!	12	0	~35~1	"3
+"1	IdL3	!	12	0	~37~1	"5
+"2	IdL3	!	12	0	~38~1	"6
+"3	IdL3	!	12	0	~39~1	"7
+"4	IdL3	!	13	0	~40~1	"8
+"5	IdL3	!	13	0	~41~1	"9
+"6	IdL3	!	13	0	~42~1	":
+"7	IdL3	!	13	0	~43~1	";
+"8	IdL3	!	14	0	~46~1	">
+"9	IdL3	!	14	0	~47~1	"?
+":	IdL3	!	14	0	~48~1	"@
+";	IdL3	!	14	0	~50~1	"B
+"<	IdL3	!	14	0	~51~1	"C
+"=	IdL3	!	14	0	~52~1	"D
+">	IdL3	!	15	0	~53~1	"E
+"?	IdL3	!	15	0	~54~1	"F
+"@	IdL3	!	15	0	~55~1	"G
+"A	IdL3	!	15	0	~56~1	"H
+"B	IdL3	!	15	0	~58~1	"J
+"C	IdL3	!	15	0	~59~1	"K
+"D	IdL3	!	15	0	~60~1	"L
+"E	IdL3	!	15	0	~61~1	"M
+"F	IdL3	!	15	0	~62~1	"N
+"G	IdL3	!	15	0	~63~1	"O
+"H	IdL3	!	15	0	~64~1	"P
+"I	IdL3	!	15	0	~65~1	"Q
+"J	IdL3	!	15	0	~66~1	"R
+"K	IdL3	!	15	0	~67~1	"S
+"L	IdL3	!	15	0	~68~1	"T
+"M	IdL3	!	15	0	~69~1	"U
+"N	L7m!	!	15	0	2	z	"^	~70~1	"V
+"O	L7m!	!	15	0	2	y	"_	~71~1	"W
+"P	L7m!	!	15	0	2	x	"`	~72~1	"X
+"Q	L7m!	!	15	0	2	w	"a	~73~1	"Y
+"R	IdL3	!	15	0	~74~1	"Z
+"S	IdL3	!	15	0	~75~1	"[
+"T	IdL3	!	15	0	~76~1	"\
+"U	IdL3	!	15	0	~77~1	"]
+"V	IdL3	!	15	0	~78~1	"^
+"W	IdL3	!	15	0	~79~1	"_
+"X	IdL3	!	15	0	~80~1	"`
+"Y	IdL3	!	15	0	~81~1	"a
+"Z	IdL3	!	15	0	~82~1	"b
+"[	IdL3	!	15	0	~83~1	"c
+"\	IdL3	!	15	0	~84~1	"d
+"]	IdL3	!	15	0	~85~1	"e
+"^	VA1Q	!	15	0	1	"N	2	1	2	~86~1	"f
+"_	VA1Q	!	15	0	1	"O	2	1	2	~87~1	"g
+"`	VA1Q	!	15	0	1	"P	2	1	2	~88~1	"h
+"a	VA1Q	!	15	0	1	"Q	2	1	2	~89~1	"i
+"b	IdL3	!	8	0	~9~1	w

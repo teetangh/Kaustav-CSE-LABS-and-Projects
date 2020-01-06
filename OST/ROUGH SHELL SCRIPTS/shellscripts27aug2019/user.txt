@@ -1,0 +1,22 @@
+total 8
+-rw-r--r-- 1 Kaustav 197610 233 Aug 28 03:35 array.sh
+-rw-r--r-- 1 Kaustav 197610  90 Aug 28 03:35 commands.sh
+-rwxr-xr-x 1 Kaustav 197610 335 Aug 28 09:09 genericroot.sh*
+-rw-r--r-- 1 Kaustav 197610 197 Aug 28 10:43 harshgenericroot.sh
+-rw-r--r-- 1 Kaustav 197610 315 Aug 28 03:35 palin.sh
+-rw-r--r-- 1 Kaustav 197610 156 Aug 28 10:41 prep1.sh
+-rw-r--r-- 1 Kaustav 197610  81 Aug 28 03:35 test.sh
+-rw-r--r-- 1 Kaustav 197610  32 Aug 28 03:35 try.sh
+-rw-r--r-- 1 Kaustav 197610   0 Oct 25 11:01 user.txt
+***********
+./
+../
+array.sh
+commands.sh
+genericroot.sh*
+harshgenericroot.sh
+palin.sh
+prep1.sh
+test.sh
+try.sh
+user.txt

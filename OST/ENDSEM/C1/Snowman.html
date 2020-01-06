@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Canvas</title>
+    <style>
+      #can {
+        border: 2px solid black;
+        background: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <input
+      type="submit"
+      id="draw"
+      name="draw"
+      onclick="func()"
+      value="Draw"
+    /><br />
+    <div id="elem"></div>
+    <canvas id="can" width="800" height="600"></canvas>
+    <script>
+      function func() {
+        var canvas = document.getElementById("can");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "white";
+        ctx.strokeStyle = "white";
+        ctx.lineWidth = "3";
+        ctx.save();
+
+        // Snowman Face
+        ctx.beginPath();
+        ctx.arc(350, 250, 40, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fill();
+
+        // Snowman Body
+        ctx.beginPath();
+        ctx.arc(350, 335, 60, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(350, 455, 70, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fill();
+
+        // Snowman Buttons
+        ctx.fillStyle = "black";
+
+        ctx.beginPath();
+        ctx.arc(350, 320, 5, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(350, 370, 5, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(350, 420, 5, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fill();
+
+        //Snowman Eyes
+        //Left Eye
+        ctx.fillStyle = "black";
+        ctx.beginPath();
+        ctx.arc(335, 235, 4, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fill();
+
+        // Right Eye
+        ctx.beginPath();
+        ctx.arc(365, 235, 4, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fill();
+
+        // Snowman Nose
+        ctx.beginPath();
+
+        ctx.lineWidth = "3";
+        ctx.strokeStyle = "orange";
+        ctx.fillStyle = "orange";
+        ctx.moveTo(350, 250);
+        ctx.lineTo(350, 260);
+
+        ctx.moveTo(350, 260);
+        ctx.lineTo(370, 255);
+
+        ctx.moveTo(370, 255);
+        ctx.lineTo(350, 250);
+
+        ctx.stroke();
+        ctx.fill();
+
+        // Snowman Mouth
+
+        ctx.beginPath();
+        ctx.fillStyle = "black";
+        ctx.strokeStyle = "black";
+        ctx.arc(350, 265, 7, 0, 1 * Math.PI, false);
+        ctx.stroke();
+        ctx.fill();
+
+        //Snowman Right Hand
+        ctx.lineWidth = "2";
+        ctx.strokeStyle = "black";
+        ctx.beginPath();
+        ctx.moveTo(385, 320);
+        ctx.lineTo(450, 270);
+
+        // Snowman  Right hand Fingers
+        ctx.moveTo(450, 270);
+        ctx.lineTo(470, 250);
+
+        ctx.moveTo(450, 270);
+        ctx.lineTo(472, 260);
+
+        ctx.moveTo(450, 270);
+        ctx.lineTo(475, 270);
+
+        //Snowman Left Hand
+        ctx.moveTo(315, 320);
+        ctx.lineTo(230, 410);
+
+        // Snowman  Left hand Fingers
+        ctx.moveTo(230, 410);
+        ctx.lineTo(215, 415);
+
+        ctx.moveTo(230, 410);
+        ctx.lineTo(220, 420);
+
+        ctx.moveTo(230, 410);
+        ctx.lineTo(230, 425);
+
+        ctx.stroke();
+
+        //Sun
+        ctx.fillStyle = "yellow";
+        ctx.beginPath();
+        // ctx.arc(805,0,50,1*Math.PI,0.5*Math.PI,true);
+        ctx.arc(805, 0, 80, 0, 2 * Math.PI, true);
+        ctx.fill();
+        ctx.stroke();
+
+        // Ground
+        ctx.fillStyle = "white";
+        ctx.fillRect(0, 525, window.innerWidth, window.innerHeight);
+
+        // Snowman Cap
+        ctx.beginPath();
+        ctx.fillStyle = "black";
+        ctx.arc(350, 205, 20, 0, 1 * Math.PI, true);
+        ctx.stroke();
+        ctx.fill();
+        // ctx.retore();
+
+        // ctx.beginPath();
+        // ctx.moveTo(350,215);
+        // ctx.lineTo(310,215);
+        // ctx.stroke();
+
+        // ctx.moveTo(310,215);
+        // ctx.lineTo(310,205);
+        // ctx.stroke();
+
+        // ctx.moveTo(310,205);
+        // ctx.lineTo(390,205);
+        // ctx.stroke();
+
+        // ctx.moveTo(390,205);
+        // ctx.lineTo(390,215);
+        // ctx.stroke();
+
+        // ctx.moveTo(390,215);
+        // ctx.lineTo(350,215);
+        // ctx.stroke();
+        // ctx.retore();
+
+        ctx.fillRect(310, 205, 80, 10);
+        // ctx.strokeRect(381, 60, 45, 140);
+        ctx.fillStyle = "black";
+        ctx.fill();
+
+        //Ground
+      }
+    </script>
+  </body>
+</html>

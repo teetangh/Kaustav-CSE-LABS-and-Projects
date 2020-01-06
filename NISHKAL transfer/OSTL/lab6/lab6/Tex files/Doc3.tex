@@ -1,0 +1,60 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usetheme{Berlin}
+\usecolortheme{dove}
+\setbeamercovered{highly dynamic}
+\title[About Beamer]{About the beamer class in presentation making}
+\subtitle{A short story}
+\author[Author1, Author2]
+{Faculty 1\inst{1} \and Faculty 2 \inst{2}}
+\institute[MIT Manipal]{\inst{1}MIT, Manipal \inst{2}Dept. of CSE, MIT Manipal}
+\date[Dept of CSE, MIT 2019]{MAHE, July 2019}
+\logo{\includegraphics[height=1cm]{/home/180905174/Desktop/OSTLab/lab6/Mahelogo.png}}
+\begin{document}
+\frame{\titlepage}
+\begin{frame}
+\frametitle{Slide 1}
+\section{Section1}
+This is the first section of the slide.
+\section{Section 2}
+\begin{flushright}
+This is the second section of the slide.
+\end{flushright}
+\end{frame}
+
+\begin{frame}{Slide 2}
+This is slide 2. This is a filler slide.
+\end{frame}
+
+\begin{frame}{Slide 3}
+This is slide 3
+\end{frame}
+
+\begin{frame}{Slide 4}
+\begin{block}{}
+	This is a regular block.
+\end{block}
+\begin{block}{Alertblock}
+	This is an \alert{alertblock}
+\end{block}
+\end{frame}
+
+\begin{frame}{Slide 5}
+\begin{itemize}
+	\item<1-> i)\only{This is demonstrating \pause the pause statement}
+	\item<2-> iv) \uncover{End of overlays}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Slide 6}
+\begin{itemize}
+	\item<1-> i)\only{This is the first sentence in the frame}
+	\item<2-> ii)\onslide{This is the second sentence in the frame}
+	\item<3> iii)\invisible{This is the third sentence in the frame}
+	\item<4-> iv)\uncover{End of overlays}
+\end{itemize}
+\end{frame}
+
+\end{document}
+
+	

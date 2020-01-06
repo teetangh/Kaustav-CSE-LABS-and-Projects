@@ -1,0 +1,137 @@
+Enter 1 for Push1 
+Enter 2 for Push2 
+Enter 3 for Pop1 
+Enter 4 for Pop2 
+Enter 5 for is Full and is Empty 
+Enter 6 for display 
+Enter 7 for exit 
+Enter your choice
+1
+Please enter the integer to push        1
+Enter your choice
+1
+Please enter the integer to push        4
+Enter your choice
+1
+Please enter the integer to push        6
+Enter your choice
+1
+Please enter the integer to push        7
+Enter your choice
+1
+Please enter the integer to push        8
+Enter your choice
+1
+Please enter the integer to push        5
+Enter your choice
+1
+Please enter the integer to push        6
+Enter your choice
+1
+Please enter the integer to push        7
+Enter your choice
+1
+Please enter the integer to push        5
+Enter your choice
+1
+Please enter the integer to push        8
+Enter your choice
+6
+Top1 is at 9 
+Top2 is at 10
+Elements in TwoStacks are:
+0 element is 1
+1 element is 4
+2 element is 6
+3 element is 7
+4 element is 8
+5 element is 5
+6 element is 6
+7 element is 7
+8 element is 5
+9 element is 8
+Enter your choice
+1
+Please enter the integer to push        4
+stack 1 Overflow
+Enter your choice
+2
+Please enter the integer to push        6
+stack  2 Overflow
+Enter your choice
+4
+Stack 2 Underflow 
+Enter your choice
+4
+Stack 2 Underflow 
+Enter your choice
+4
+Stack 2 Underflow 
+Enter your choice
+4
+Stack 2 Underflow 
+Enter your choice
+5
+stack Overflow
+stack Empty
+Enter your choice
+6
+Top1 is at 9 
+Top2 is at 10
+Elements in TwoStacks are:
+0 element is 1
+1 element is 4
+2 element is 6
+3 element is 7
+4 element is 8
+5 element is 5
+6 element is 6
+7 element is 7
+8 element is 5
+9 element is 8
+Enter your choice
+3
+Item popped is 8
+Enter your choice
+3
+Item popped is 5
+Enter your choice
+3
+Item popped is 7
+Enter your choice
+3
+Item popped is 6
+Enter your choice
+3
+Item popped is 5
+Enter your choice
+3
+Item popped is 8
+Enter your choice
+3
+Item popped is 7
+Enter your choice
+2
+Please enter the integer to push        5
+Enter your choice
+2
+Please enter the integer to push        6
+Enter your choice
+2
+Please enter the integer to push        6
+Enter your choice
+6
+Top1 is at 2 
+Top2 is at 7
+Elements in TwoStacks are:
+0 element is 1
+1 element is 4
+2 element is 6
+3 element is -1
+4 element is -1
+5 element is -1
+6 element is -1
+7 element is 6
+8 element is 6
+9 element is 5
+Enter your choice

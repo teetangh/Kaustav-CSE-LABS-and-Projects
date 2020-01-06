@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Page Title</title>
+	<style>
+    #p01
+    {
+    	color: blue;
+        border:1px solid powderblue;
+        margin: 50px;
+    }
+    #p02
+    {
+    	color: DarkGreen;
+        border:1px solid MediumSeaGreen;
+        margin: 50px;
+    }
+    p.error
+    {
+    	color: red;
+        border:3px solid red;
+        margin: 40px;
+        padding: 30px;
+    }
+    a:link
+    {
+    	color:green;
+        background-color:transparent;
+        text-decoration:none;
+    }
+    a:visited
+    {
+    	color:pink;
+        background-color:transparent;
+        text-decoration: none;
+    }
+    a:hover
+    {
+    	color:red;
+        background-color:transparent;
+        text-decoration:underline;
+    }
+    a:active 
+    {
+ 	 	color: yellow;
+  	 	background-color: transparent;
+  	  	text-decoration: underline;
+	}
+    
+    
+    #a02:link,#a02:visited
+    {
+    	color: yellow;
+  	 	background-color: transparent;
+  	  	text-decoration: underline;
+    }
+    
+    #a02:hover,#a02:active
+    {
+    	color: orange;
+  	 	background-color: transparent;
+  	  	text-decoration: underline;
+    }
+   
+   body 
+   {
+  		background-image: url('https://wallpaperaccess.com/full/1182933.jpg');
+  		background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+   }
+    
+
+    </style>
+    
+</head>
+
+<body style="background-color:silver">
+	<h2 id="TOP">Top of page</h2>
+
+    <h1>This is h1</h1>
+    <h2>This is h2</h2>
+    <h3>This is h3</h3>
+    <h4>This is h4</h4>
+    <h5>This is h5</h5>
+    <h6>This is h6</h6>
+
+    <a href="https://www.w3schools.com">
+        This is a link
+        <img src="w3schools.jpg" alt="w3schools.com" width="104" height="142">
+    </a>
+    </br>
+
+    <button>Click me</button>
+
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+
+    <ol>
+        <li>Coffee</li>
+        <li>Milk</li>
+        <li>Tea</li>
+    </ol>
+
+    <p>This is a paragraph.</p>
+    <p>This is <br> a paragraph with a line break</p>
+    <p style="color:red">This is a red paragraph</p>
+    <p title="I'm a tooltip(Coorect)">This is a paragraph with title</p>
+    <p title=About W3Schools>incorrect</p>
+
+
+    <img src="img_girl.jpg" alt="Girl with jacket" height="100">
+
+    <br>
+    HEADINGS Overridden
+    <br>
+    <h1 style="font-size:30px">Heading 1 with font size 30px</h1>
+
+    <h2 style="font-size:30px">Heading 2 with font size 30px</h2>
+
+
+    <p>
+        This paragraph
+        contains a lot of <b>lines
+        </b>in the source code,
+        but the browser
+        ignores it.
+    </p>
+
+    <p>
+        This paragraph
+        contains a lot of <b>spaces</b>
+        in the source code,
+        but the browser
+        ignores it.
+    </p>
+
+    FORGOTTEN ENDTAG
+    <p>This is a paragraph.
+        <p>This is another paragraph.
+
+            <p>This is<br>a paragraph<br>with line breaks.</p>
+
+
+            PREDEFINED TAG
+            <pre>
+    My Bonnie lies over the ocean.
+    
+    My Bonnie lies over the sea.
+    
+    My Bonnie lies over th ocean.
+    
+    Oh,bring back my Bonnie to me.
+</pre>
+
+
+            STYLES
+            <h1 style="color:blue;font-family:verdana; font-size:150%;">This is a colored heading 1 with font family
+                verdana and font size 150%</h1>
+            <p style="color:red;font-family:courier;font-size:120%">This is a colored paragraph with font family courier
+                and font size 120%</p>
+
+            <h2 style="text-align:center">This is a centered heading</h2>
+            <p style="text-align:center">This is a centered paragraph</p>
+
+            TEXT FORMATTING
+            <br>
+            <b>This text is bold</b>
+            <br>
+            <i>This text is italic</i>
+            <br>
+            <u>This text is underlined</u>
+            <br>
+            <strong>This text is strong</strong>
+            <br>
+            <em>This text is emphasized</em>
+            <br>
+            <mark>This text is marked</mark>
+            <br>
+            <small>This text is small</small>
+            <br>
+            <del>This text is deleted</del>
+            <br>
+            <ins>This text is inserted</ins>
+            <br>
+            This text is <sup>superscript</sup>and <sub>subscirpt</sub>
+            <br>
+
+            <h2>h2 <small>Small</small> Formatting</h2>
+
+            QUOTATIONS
+            <p>
+                WWF's goal is to:
+                <q>This is short quotation.<br>
+                    Build a future where people live in harmony with nature.</q>
+            </p>
+
+            <p>
+                Here is a quote from WWF's website
+            </p>
+            <blockquote cite="http://www.worldwildlife.org/who/index.html">
+                Here is a block quote.
+                <br>
+                For 50 years, WWF has been protecting the future of nature.
+                The world's leading conservation organization,
+                WWF works in 100 countries and is supported by
+                1.2 million members in the United States and
+                close to 5 million globally.
+            </blockquote>
+
+            ABBREVIATION
+            <p>The <abbr title="World Heath Organisation"> WHO </abbr>was founded in 1948</p>
+
+
+            ADDRESS
+            <address>
+                Writtten by John Doe<br>
+                Visit us at:<br>
+                google.com<br>
+                Box 564,Disneyland<br>
+                USA<br>
+            </address>
+
+            <br>
+
+            CITATION
+            <p><cite>The Scream </cite> by Edvard Munch. Apinted in 1983</p>
+
+            <br>
+            Bi-Directional Overridden<br>
+            <bdo dir="rtl">This text will be written from right to left</bdo>
+
+            <!--Write your comments here-->
+
+            <!-- This is a comment-->
+            <p>This is a paragraph between comments</p>
+            <!-- Remember to add more information here-->
+
+            <!-- Do not display this image at the moment
+<img border="0" src="pic_trulli.jpg" alt="Trulli">
+-->
+
+            HTML COLORS
+            <h1 style="background-color:DodgerBlue;text-align:center">Hello World</h1>
+            <p style="background-color:Tomato;">This is a paragraph</p>
+
+            <h2 style="color:Tomato">This is Tomato Heading</h2>
+            <p style="color:DodgerBlue">This is Doger Blue paragraph</p>
+            <p style="color:MediumSeaGreen">This is medium Sea Green Paragraph</p>
+
+            <br>
+            BORDERS
+            <br>
+            <h1 style="border:2px solid Tomato;">Solid Tomato</h1>
+            <h1 style="border:2px solid DodgerBlue">Dodger BLue</h1>
+            <h1 style="border:2px solid Violet">Violet</h1>
+
+BACKGROUND COLORS
+<h1 style="background-color:rgb(255, 0, 0);">rgb(255, 0, 0)</h1>
+<h1 style="background-color:rgb(0, 0, 255);">rgb(0, 0, 255)</h1>
+<h1 style="background-color:rgb(60, 179, 113);">rgb(60, 179, 113)</h1>
+<h1 style="background-color:rgb(238, 130, 238);">rgb(238, 130, 238)</h1>
+<h1 style="background-color:rgb(255, 165, 0);">rgb(255, 165, 0)</h1>
+<h1 style="background-color:rgb(106, 90, 205);">rgb(106, 90, 205)</h1>
+
+<p>In HTML, you can specify colors using RGB values.</p>
+
+
+<h1 style="background-color:rgb(0, 0, 0);">rgb(0, 0, 0)</h1>
+<h1 style="background-color:rgb(60, 60, 60);">rgb(60, 60, 60)</h1>
+<h1 style="background-color:rgb(120, 120, 120);">rgb(120, 120, 120)</h1>
+<h1 style="background-color:rgb(180, 180, 180);">rgb(180, 180, 180)</h1>
+<h1 style="background-color:rgb(240, 240, 240);">rgb(240, 240, 240)</h1>
+<h1 style="background-color:rgb(255, 255, 255);">rgb(255, 255, 255)</h1>
+
+<p>By using equal values for red, green, and blue, you will get different shades of gray.</p>
+
+<h1 style="background-color:#000000;">#000000</h1>
+<h1 style="background-color:#3c3c3c;">#3c3c3c</h1>
+<h1 style="background-color:#787878;">#787878</h1>
+<h1 style="background-color:#b4b4b4;">#b4b4b4</h1>
+<h1 style="background-color:#f0f0f0;">#f0f0f0</h1>
+<h1 style="background-color:#ffffff;">#ffffff</h1>
+
+<p>By using equal values for red, green, and blue, you will get different shades of gray.</p>
+
+
+<h1 style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</h1>
+<h1 style="background-color:hsl(240, 100%, 50%);">hsl(240, 100%, 50%)</h1>
+<h1 style="background-color:hsl(147, 50%, 47%);">hsl(147, 50%, 47%)</h1>
+<h1 style="background-color:hsl(300, 76%, 72%);">hsl(300, 76%, 72%)</h1>
+<h1 style="background-color:hsl(39, 100%, 50%);">hsl(39, 100%, 50%)</h1>
+<h1 style="background-color:hsl(248, 53%, 58%);">hsl(248, 53%, 58%)</h1>
+
+<p>In HTML, you can specify colors using HSL values.</p>
+
+<h1 style="background-color:hsl(0, 0%, 0%);">hsl(0, 0%, 0%)</h1>
+<h1 style="background-color:hsl(0, 0%, 24%);">hsl(0, 0%, 24%)</h1>
+<h1 style="background-color:hsl(0, 0%, 47%);">hsl(0, 0%, 47%)</h1>
+<h1 style="background-color:hsl(0, 0%, 71%);">hsl(0, 0%, 71%)</h1>
+<h1 style="background-color:hsl(0, 0%, 94%);">hsl(0, 0%, 94%)</h1>
+<h1 style="background-color:hsl(0, 0%, 100%);">hsl(0, 0%, 100%)</h1>
+
+<p>With HSL colors, shades of gray are made by setting the saturation to 0%, and adjusting the lightness according to how dark/light the gray color should be.</p>
+
+<h1 style="background-color:rgba(255, 99, 71, 0);">rgba(255, 99, 71, 0)</h1>
+<h1 style="background-color:rgba(255, 99, 71, 0.2);">rgba(255, 99, 71, 0.2)</h1>
+<h1 style="background-color:rgba(255, 99, 71, 0.4);">rgba(255, 99, 71, 0.4)</h1>
+<h1 style="background-color:rgba(255, 99, 71, 0.6);">rgba(255, 99, 71, 0.6)</h1>
+<h1 style="background-color:rgba(255, 99, 71, 0.8);">rgba(255, 99, 71, 0.8)</h1>
+<h1 style="background-color:rgba(255, 99, 71, 1);">rgba(255, 99, 71, 1)</h1>
+
+<p>You can make transparent colors by using the RGBA color value.</p>
+
+
+<h1 style="background-color:hsla(9, 100%, 64%, 0);">hsla(9, 100%, 64%, 0)</h1>
+<h1 style="background-color:hsla(9, 100%, 64%, 0.2);">hsla(9, 100%, 64%, 0.2)</h1>
+<h1 style="background-color:hsla(9, 100%, 64%, 0.4);">hsla(9, 100%, 64%, 0.4)</h1>
+<h1 style="background-color:hsla(9, 100%, 64%, 0.6);">hsla(9, 100%, 64%, 0.6)</h1>
+<h1 style="background-color:hsla(9, 100%, 64%, 0.8);">hsla(9, 100%, 64%, 0.8)</h1>
+<h1 style="background-color:hsla(9, 100%, 64%, 1);">hsla(9, 100%, 64%, 1)</h1>
+
+<p>You can make transparent colors by using the HSLA color value.</p>
+
+
+THIS IS FOR CSS
+<p id="p01">This is id p01 for CSS</p>
+<p id="p02">This is if p02 for CSS</p>
+<p class="error">This is for the class</p>
+
+HYPERLINKS
+<br>
+<a href="https://www.w3schools.com">1st Hyperlink</a>
+<br>
+
+<br>
+<a id="a02" href="https://www.w3schools.com/" target="_blank">2nd Hyperlink(Custom States)</a>
+<br>
+
+
+<br>
+<a id="a03" href="default.asp" >
+<img src="smiley.gif" alt="Smiley gif" style="width:42px;height:42px;border:0;">
+</a>
+<br>
+
+<a id="a04" href="https://www.w3schools.com/html/" title="Go to w3schools HTML Section">
+ Hyperlink 3(With title information)
+</a>
+
+
+<br>
+<a href="#TOP">Jump to Top of Page</a>
+<br>
+
+
+IMAGES
+<br>
+<img src="pic_trulli.jpg" alt="Italian Trulli">
+
+<img src="img_girl.jpg" alt="Girl with jacket">
+
+<img src="img_chania.jpg" alt="Flowers in Chania">
+
+<br>
+<img src="wrongname.gif" alt="Wrong Name">
+<br>
+
+<img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+
+<img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3schools.com">
+
+<img src="programming.gif" alt="Computer Man" style="width:100px;height:100px;">
+
+<br>
+
+<p><img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">This image will float to the right</p>
+
+
+<p><img src="smiley.gif" alt="Smiley face" style="float:left;width:42px;height:42px;">This image will float to the left</p>
+
+<h2>Image Maps</h2>
+<p>Click on the computer, the phone, or the cup of coffee to go to a new page and read more about the topic:</p>
+
+<img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+  <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+</map>
+
+
+<div style="background-image: url('html5.gif');">
+This text has backroung image
+<br>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+</div>
+
+
+<picture>
+	<source media="(min-width: 650px)" srcset="img_food.jpg">
+    <source media="(min-width: 650px)" srcset="img_car.jpg">
+    <img src="img_girl.jpg" style="width:auto;">
+</picture>
+
+
+<picture>
+  <source srcset="img_avatar.png">
+  <source srcset="img_girl.jpg">
+  <img src="img_beatles.gif" alt="Beatles" style="width:auto;">
+</picture>
+
+
+</body>
+</html>

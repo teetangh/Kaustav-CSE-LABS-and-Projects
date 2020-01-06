@@ -1,0 +1,67 @@
+NDB006
+The number of symbol table entries is: 5
+The length of the symbol table is: 169
+
+Index Hierarchy Path
+----- --------------
+!	&null_hpath&
+.	|tffposclockasynactivelowreset:stage0|
+U	|tffposclockasynactivelowreset:stage1|
+|	|tffposclockasynactivelowreset:stage2|
+"E	|tffposclockasynactivelowreset:stage3|
+
+The number of name info structs is : 51
+
+InsOrder BitField SymTableIndex NextSyn SynParent Loc ChainType NextChain ChainParent FanOut DirExp ParExp ShareExp NodeName
+-------- -------- ------------- ------- --------- --- --------- --------- ----------- ------ ------ ------ -------- --------
+"	IeEA	!	30	0	:10	x
+#	IeEA	!	24	0	:11	y
+$	IeEA	!	31	0	:12	z
+%	IeEA	!	31	0	:13	{
+&	IeEA	!	31	0	:14	|
+'	IeEA	!	25	0	:15	}
+(	IeEA	!	25	0	:16	~
+)	IeEA	!	32	0	:17	"!
+*	IeEA	!	32	0	:18	""
++	IeEA	!	32	0	:19	"#
+,	IeEA	!	32	0	:20	"$
+-	IeEA	!	32	0	:21	"%
+.	IeEA	!	26	0	:22	"&
+/	IeEA	!	26	0	:23	"'
+0	IeEA	!	26	0	:24	"(
+1	IeEA	!	33	0	:25	")
+2	IeEA	!	33	0	:26	"*
+3	IeEA	!	33	0	:27	"+
+4	IeEA	!	33	0	:28	",
+5	IeEA	!	33	0	:29	"-
+6	IeEA	!	33	0	:30	".
+7	IeEA	!	33	0	:31	"/
+8	IeEA	!	23	0	:7	u
+9	IeEA	!	29	0	:8	v
+:	IeEA	!	30	0	:9	w
+;	(@\6H	!	15	0	4	?	>	=	<	CounterClock	p
+<	"?%_o	!	17	0	4	=	>	?	<	f0	!	f0	t
+=	"I/$A	!	17	0	3	>	?	=	2	1	3	f1	!	f1	s
+>	"I/$A	!	17	0	2	?	>	4	1	2	3	4	f2	!	f2	r
+?	"N3dY	!	17	0	1	?	2	4	1	2	3	4	f3	!	f3	q
+@	L8ef	!	16	0	3	=	>	?	upordown	o
+A	IeEA	.	9	0	:5	"N
+B	IGdW	.	:6	"O
+C	IGdW	.	:7	"P
+D	IeE1	.	4	0	:8	"Q
+E	IeEA	.	4	0	:9	"R
+F	IeEA	U	9	0	:5	"\
+G	IGdW	U	:6	"]
+H	IGdW	U	:7	"^
+I	IeE1	U	4	0	:8	"_
+J	IeEA	U	4	0	:9	"`
+K	IeEA	|	9	0	:5	"i
+L	IGdW	|	:6	"j
+M	IGdW	|	:7	"k
+N	IeE1	|	4	0	:8	"l
+O	IeEA	|	4	0	:9	"m
+P	IeEA	"E	9	0	:5	"v
+Q	IGdW	"E	:6	"w
+R	IGdW	"E	:7	"x
+S	IeE1	"E	4	0	:8	"y
+T	IeEA	"E	4	0	:9	"z

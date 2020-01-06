@@ -1,0 +1,13 @@
+stackmain: stackmain.o pop.o push.o display.o
+	gcc -o stackmain stackmain.o pop.o push.o display.o
+stackmain.o: push.c pop.c display.c stacklib.h
+	gcc -c stackmain.c
+	gcc -c push.c 
+	gcc -c pop.c 
+	gcc -c display.c
+pop.o: pop.c
+	gcc -c pop.c
+push.o: push.c
+	gcc -c push.c
+display.o: display.c
+	gcc -c display.c

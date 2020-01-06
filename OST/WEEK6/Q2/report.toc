@@ -1,0 +1,8 @@
+\contentsline {section}{\numberline {0.1}Introduction}{1}
+\contentsline {section}{\numberline {0.2}Methods}{2}
+\contentsline {subsection}{\numberline {0.2.1}Stage1}{2}
+\contentsline {subsection}{\numberline {0.2.2}Stage2}{2}
+\contentsline {section}{\numberline {0.3}Fruits and Vitamins}{2}
+\contentsline {subsection}{\numberline {0.3.1}Un-ordered}{2}
+\contentsline {section}{\numberline {0.4}Fruits and Vitamins}{2}
+\contentsline {subsection}{\numberline {0.4.1}ordered}{2}

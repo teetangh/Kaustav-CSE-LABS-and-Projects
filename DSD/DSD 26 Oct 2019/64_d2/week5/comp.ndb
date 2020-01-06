@@ -1,0 +1,92 @@
+NDB006
+The number of symbol table entries is: 1
+The length of the symbol table is: 13
+
+Index Hierarchy Path
+----- --------------
+!	&null_hpath&
+
+The number of name info structs is : 80
+
+InsOrder BitField SymTableIndex NextSyn SynParent Loc ChainType NextChain ChainParent FanOut DirExp ParExp ShareExp NodeName
+-------- -------- ------------- ------- --------- --- --------- --------- ----------- ------ ------ ------ -------- --------
+"	IeEA	!	6	0	:14	|
+#	IeEA	!	6	0	:15	}
+$	IeEA	!	6	0	:16	~
+%	IeEA	!	6	0	:17	"!
+&	IeEA	!	6	0	:18	""
+'	IeEA	!	6	0	:19	"#
+(	IeEA	!	6	0	:20	"$
+)	IeEA	!	7	0	:21	"%
+*	IeEA	!	7	0	:22	"&
++	IeEA	!	7	0	:23	"'
+,	IeEA	!	7	0	:24	"(
+-	IeEA	!	7	0	:25	")
+.	IeEA	!	7	0	:26	"*
+/	IeEA	!	7	0	:27	"+
+0	IeEA	!	8	0	:28	",
+1	IeEA	!	8	0	:29	"-
+2	IeEA	!	8	0	:30	".
+3	IeEA	!	8	0	:31	"/
+4	IeEA	!	8	0	:32	"0
+5	IeEA	!	8	0	:33	"1
+6	IeEA	!	8	0	:34	"2
+7	IeEA	!	9	0	:35	"3
+8	IeEA	!	9	0	:36	"4
+9	IeEA	!	9	0	:37	"5
+:	IeEA	!	9	0	:38	"6
+;	IeEA	!	9	0	:39	"7
+<	IeEA	!	9	0	:40	"8
+=	IeEA	!	9	0	:41	"9
+>	IeEA	!	10	0	:42	":
+?	IeEA	!	10	0	:43	";
+@	IeEA	!	10	0	:44	"<
+A	IeEA	!	10	0	:45	"=
+B	IeEA	!	10	0	:46	">
+C	IeEA	!	10	0	:47	"?
+D	IeEA	!	10	0	:48	"@
+E	IeEA	!	13	0	:49	"A
+F	IeEA	!	13	0	:50	"B
+G	IeEA	!	13	0	:51	"C
+H	IeEA	!	13	0	:52	"D
+I	IeEA	!	12	0	:53	"E
+J	IeEA	!	12	0	:54	"F
+K	IeEA	!	12	0	:55	"G
+L	IeEA	!	12	0	:56	"H
+M	IeEA	!	12	0	:57	"I
+N	IeEA	!	12	0	:58	"J
+O	IeEA	!	12	0	:59	"K
+P	IeEA	!	12	0	:60	"L
+Q	IeEA	!	12	0	:61	"M
+R	IeEA	!	12	0	:62	"N
+S	IeEA	!	12	0	:63	"O
+T	IeEA	!	12	0	:64	"P
+U	IeEA	!	12	0	:65	"Q
+V	IeEA	!	12	0	:66	"R
+W	IeEA	!	12	0	:67	"S
+X	IeEA	!	12	0	:68	"T
+Y	IeEA	!	12	0	:69	"U
+Z	IeEA	!	12	0	:70	"V
+[	IeEA	!	12	0	:71	"W
+\	IeEA	!	12	0	:72	"X
+]	IeEA	!	12	0	:73	"Y
+^	IeEA	!	12	0	:74	"Z
+_	IeEA	!	12	0	:75	"[
+`	IeEA	!	12	0	:76	"\
+a	IeEA	!	12	0	:77	"]
+b	IeEA	!	14	0	:78	"^
+c	IeEA	!	14	0	:79	"_
+d	IeEA	!	14	0	:80	"`
+e	"?%_n	!	2	0	1	k	A0	!	A0	s
+f	"?%_n	!	2	0	3	j	k	l	A1	!	A1	r
+g	"?%_n	!	2	0	3	j	k	l	A2	!	A2	q
+h	"?%_n	!	2	0	3	j	k	l	A3	!	A3	p
+i	"?%_n	!	2	0	3	j	k	l	A4	!	A4	o
+j	XsJE	!	4	0	1	4	1	2	3	4	AeqB	y
+k	XsJE	!	4	0	3	2	2	4	AgtB	{
+l	XsJE	!	4	0	1	2	1	3	AltB	z
+m	"?%_n	!	2	0	1	k	B0	!	B0	x
+n	"?%_n	!	2	0	3	j	k	l	B1	!	B1	w
+o	"?%_n	!	2	0	3	j	k	l	B2	!	B2	v
+p	"?%_n	!	2	0	3	j	k	l	B3	!	B3	u
+q	"?%_n	!	2	0	3	j	k	l	B4	!	B4	t

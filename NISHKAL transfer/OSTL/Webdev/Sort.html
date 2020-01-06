@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sort array</title>
+	<script type="text/javascript">
+		function compute()
+		{
+		var arr = [];
+		var size = 3;
+		for(var i=0; i<size; i++)
+		{
+			arr[i] = prompt('Enter Element ' + (i+1));
+		}
+		arr.sort();
+		alert("Array is:"+String(arr[0])+" "+String(arr[1])+" "+String(arr[2]));
+		}
+	</script>
+</head>
+<body onload="compute()">
+</body>
+</html>

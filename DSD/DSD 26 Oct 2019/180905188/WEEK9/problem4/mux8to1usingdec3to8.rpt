@@ -1,0 +1,523 @@
+Project Information        d:\180905188\week9\problem4\mux8to1usingdec3to8.rpt
+
+MAX+plus II Compiler Report File
+Version 10.2 07/10/2002
+Compiled: 10/05/2019 06:10:35
+
+Copyright (C) 1988-2002 Altera Corporation
+Any megafunction design, and related net list (encrypted or decrypted),
+support information, device programming or simulation file, and any other
+associated documentation or information provided by Altera or a partner
+under Altera's Megafunction Partnership Program may be used only to
+program PLD devices (but not masked PLD devices) from Altera.  Any other
+use of such megafunction design, net list, support information, device
+programming or simulation file, or any other related documentation or
+information is prohibited for any other purpose, including, but not
+limited to modification, reverse engineering, de-compiling, or use with
+any other silicon devices, unless such use is explicitly licensed under
+a separate agreement with Altera or a megafunction partner.  Title to
+the intellectual property, including patents, copyrights, trademarks,
+trade secrets, or maskworks, embodied in any such megafunction design,
+net list, support information, device programming or simulation file, or
+any other related documentation or information provided by Altera or a
+megafunction partner, remains with Altera, the megafunction partner, or
+their respective licensors.  No other licenses, including any licenses
+needed under any third party's intellectual property, are provided herein.
+
+
+
+***** Project compilation was successful
+
+
+
+
+** DEVICE SUMMARY **
+
+Chip/                     Input   Output   Bidir         Shareable
+POF       Device          Pins    Pins     Pins     LCs  Expanders  % Utilized
+
+mux8to1usingdec3to8
+      EPM7032LC44-6        12       9        0      17      8           53 %
+
+User Pins:                 12       9        0  
+
+
+
+Project Information        d:\180905188\week9\problem4\mux8to1usingdec3to8.rpt
+
+** FILE HIERARCHY **
+
+
+
+|dec3to8:stage0|
+
+
+Device-Specific Information:d:\180905188\week9\problem4\mux8to1usingdec3to8.rpt
+mux8to1usingdec3to8
+
+***** Logic for device 'mux8to1usingdec3to8' compiled without errors.
+
+
+
+
+Device: EPM7032LC44-6
+
+Device Options:
+    Turbo Bit                                    = ON
+    Security Bit                                 = OFF
+
+                                               
+                                               
+                                               
+                                               
+                                               
+              n  n  n  V  G  G  G  G  G  n  n  
+              s  s  w  C  N  N  N  N  N  f  f  
+              1  0  7  C  D  D  D  D  D  4  5  
+            -----------------------------------_ 
+          /   6  5  4  3  2  1 44 43 42 41 40   | 
+     ns2 |  7                                39 | nf6 
+     en2 |  8                                38 | RESERVED 
+     nw0 |  9                                37 | nf7 
+     GND | 10                                36 | nf3 
+     nw1 | 11                                35 | VCC 
+     nw2 | 12         EPM7032LC44-6          34 | nf0 
+     nw3 | 13                                33 | RESERVED 
+     nw4 | 14                                32 | RESERVED 
+     VCC | 15                                31 | RESERVED 
+     nw5 | 16                                30 | GND 
+     nw6 | 17                                29 | nf1 
+         |_  18 19 20 21 22 23 24 25 26 27 28  _| 
+           ------------------------------------ 
+              F  R  R  R  G  V  n  R  R  R  R  
+                 E  E  E  N  C  f  E  E  E  E  
+                 S  S  S  D  C  2  S  S  S  S  
+                 E  E  E           E  E  E  E  
+                 R  R  R           R  R  R  R  
+                 V  V  V           V  V  V  V  
+                 E  E  E           E  E  E  E  
+                 D  D  D           D  D  D  D  
+
+
+N.C. = No Connect. This pin has no internal connection to the device.
+VCC = Dedicated power pin, which MUST be connected to VCC.
+GND = Dedicated ground pin or unused dedicated input, which MUST be connected to GND.
+RESERVED = Unused I/O pin, which MUST be left unconnected.
+
+
+
+Device-Specific Information:d:\180905188\week9\problem4\mux8to1usingdec3to8.rpt
+mux8to1usingdec3to8
+
+** RESOURCE USAGE **
+
+                                                Shareable     External
+Logic Array Block     Logic Cells   I/O Pins    Expanders   Interconnect
+
+A:     LC1 - LC16     1/16(  6%)  13/16( 81%)   8/16( 50%)  16/36( 44%) 
+B:    LC17 - LC32    16/16(100%)   8/16( 50%)   0/16(  0%)   4/36( 11%) 
+
+
+Total dedicated input pins used:                 0/4      (  0%)
+Total I/O pins used:                            21/32     ( 65%)
+Total logic cells used:                         17/32     ( 53%)
+Total shareable expanders used:                  8/32     ( 25%)
+Total Turbo logic cells used:                   17/32     ( 53%)
+Total shareable expanders not available (n/a):   0/32     (  0%)
+Average fan-in:                                  4.70
+Total fan-in:                                    80
+
+Total input pins required:                      12
+Total output pins required:                      9
+Total bidirectional pins required:               0
+Total logic cells required:                     17
+Total flipflops required:                        0
+Total product terms required:                   25
+Total logic cells lending parallel expanders:    0
+Total shareable expanders in database:           8
+
+Synthesized logic cells:                         8/  32   ( 25%)
+
+
+
+Device-Specific Information:d:\180905188\week9\problem4\mux8to1usingdec3to8.rpt
+mux8to1usingdec3to8
+
+** INPUTS **
+
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+   8    (5)  (A)      INPUT               0      0   0    0    0    8    8  en2
+   5    (2)  (A)      INPUT               0      0   0    0    0    8    8  ns0
+   6    (3)  (A)      INPUT               0      0   0    0    0    8    8  ns1
+   7    (4)  (A)      INPUT               0      0   0    0    0    8    8  ns2
+   9    (6)  (A)      INPUT               0      0   0    0    0    1    0  nw0
+  11    (7)  (A)      INPUT               0      0   0    0    0    1    0  nw1
+  12    (8)  (A)      INPUT               0      0   0    0    0    1    0  nw2
+  13    (9)  (A)      INPUT               0      0   0    0    0    1    0  nw3
+  14   (10)  (A)      INPUT               0      0   0    0    0    1    0  nw4
+  16   (11)  (A)      INPUT               0      0   0    0    0    1    0  nw5
+  17   (12)  (A)      INPUT               0      0   0    0    0    1    0  nw6
+   4    (1)  (A)      INPUT               0      0   0    0    0    1    0  nw7
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+
+
+Device-Specific Information:d:\180905188\week9\problem4\mux8to1usingdec3to8.rpt
+mux8to1usingdec3to8
+
+** OUTPUTS **
+
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+  18     13    A     OUTPUT      t        8      0   0    8    8    0    0  F
+  34     23    B     OUTPUT      t        0      0   0    4    0    0    0  nf0
+  29     27    B     OUTPUT      t        0      0   0    4    0    0    0  nf1
+  24     32    B     OUTPUT      t        0      0   0    4    0    0    0  nf2
+  36     22    B     OUTPUT      t        0      0   0    4    0    0    0  nf3
+  41     17    B     OUTPUT      t        0      0   0    4    0    0    0  nf4
+  40     18    B     OUTPUT      t        0      0   0    4    0    0    0  nf5
+  39     19    B     OUTPUT      t        0      0   0    4    0    0    0  nf6
+  37     21    B     OUTPUT      t        0      0   0    4    0    0    0  nf7
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+
+
+Device-Specific Information:d:\180905188\week9\problem4\mux8to1usingdec3to8.rpt
+mux8to1usingdec3to8
+
+** BURIED LOGIC **
+
+                                         Shareable
+                                         Expanders     Fan-In    Fan-Out
+ Pin     LC  LAB  Primitive    Code   Total Shared n/a INP  FBK  OUT  FBK  Name
+ (38)    20    B      LCELL    s t        0      0   0    4    0    1    0  |dec3to8:stage0|~153~1
+ (25)    31    B      LCELL    s t        0      0   0    4    0    1    0  |dec3to8:stage0|~154~1
+ (26)    30    B      LCELL    s t        0      0   0    4    0    1    0  |dec3to8:stage0|~155~1
+ (28)    28    B      LCELL    s t        0      0   0    4    0    1    0  |dec3to8:stage0|~156~1
+ (31)    26    B      LCELL    s t        0      0   0    4    0    1    0  |dec3to8:stage0|~157~1
+ (27)    29    B      LCELL    s t        0      0   0    4    0    1    0  |dec3to8:stage0|~158~1
+ (32)    25    B      LCELL    s t        0      0   0    4    0    1    0  |dec3to8:stage0|~159~1
+ (33)    24    B      LCELL    s t        0      0   0    4    0    1    0  |dec3to8:stage0|~160~1
+
+
+Code:
+
+s = Synthesized pin or logic cell
+t = Turbo logic cell
++ = Synchronous flipflop
+! = NOT gate push-back
+r = Fitter-inserted logic cell
+
+
+Device-Specific Information:d:\180905188\week9\problem4\mux8to1usingdec3to8.rpt
+mux8to1usingdec3to8
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'A':
+
+           Logic cells placed in LAB 'A'
+        +- LC13 F
+        | 
+        |   Other LABs fed by signals
+        |   that feed LAB 'A'
+LC      | | A B |     Logic cells that feed LAB 'A':
+
+Pin
+9    -> * | * - | <-- nw0
+11   -> * | * - | <-- nw1
+12   -> * | * - | <-- nw2
+13   -> * | * - | <-- nw3
+14   -> * | * - | <-- nw4
+16   -> * | * - | <-- nw5
+17   -> * | * - | <-- nw6
+4    -> * | * - | <-- nw7
+LC20 -> * | * - | <-- |dec3to8:stage0|~153~1
+LC31 -> * | * - | <-- |dec3to8:stage0|~154~1
+LC30 -> * | * - | <-- |dec3to8:stage0|~155~1
+LC28 -> * | * - | <-- |dec3to8:stage0|~156~1
+LC26 -> * | * - | <-- |dec3to8:stage0|~157~1
+LC29 -> * | * - | <-- |dec3to8:stage0|~158~1
+LC25 -> * | * - | <-- |dec3to8:stage0|~159~1
+LC24 -> * | * - | <-- |dec3to8:stage0|~160~1
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:d:\180905188\week9\problem4\mux8to1usingdec3to8.rpt
+mux8to1usingdec3to8
+
+** LOGIC CELL INTERCONNECTIONS **
+
+Logic Array Block 'B':
+
+                                         Logic cells placed in LAB 'B'
+        +------------------------------- LC20 |dec3to8:stage0|~153~1
+        | +----------------------------- LC31 |dec3to8:stage0|~154~1
+        | | +--------------------------- LC30 |dec3to8:stage0|~155~1
+        | | | +------------------------- LC28 |dec3to8:stage0|~156~1
+        | | | | +----------------------- LC26 |dec3to8:stage0|~157~1
+        | | | | | +--------------------- LC29 |dec3to8:stage0|~158~1
+        | | | | | | +------------------- LC25 |dec3to8:stage0|~159~1
+        | | | | | | | +----------------- LC24 |dec3to8:stage0|~160~1
+        | | | | | | | | +--------------- LC23 nf0
+        | | | | | | | | | +------------- LC27 nf1
+        | | | | | | | | | | +----------- LC32 nf2
+        | | | | | | | | | | | +--------- LC22 nf3
+        | | | | | | | | | | | | +------- LC17 nf4
+        | | | | | | | | | | | | | +----- LC18 nf5
+        | | | | | | | | | | | | | | +--- LC19 nf6
+        | | | | | | | | | | | | | | | +- LC21 nf7
+        | | | | | | | | | | | | | | | | 
+        | | | | | | | | | | | | | | | |   Other LABs fed by signals
+        | | | | | | | | | | | | | | | |   that feed LAB 'B'
+LC      | | | | | | | | | | | | | | | | | A B |     Logic cells that feed LAB 'B':
+
+Pin
+8    -> * * * * * * * * * * * * * * * * | - * | <-- en2
+5    -> * * * * * * * * * * * * * * * * | - * | <-- ns0
+6    -> * * * * * * * * * * * * * * * * | - * | <-- ns1
+7    -> * * * * * * * * * * * * * * * * | - * | <-- ns2
+
+
+* = The logic cell or pin is an input to the logic cell (or LAB) through the PIA.
+- = The logic cell or pin is not an input to the logic cell (or LAB).
+
+
+Device-Specific Information:d:\180905188\week9\problem4\mux8to1usingdec3to8.rpt
+mux8to1usingdec3to8
+
+** EQUATIONS **
+
+en2      : INPUT;
+ns0      : INPUT;
+ns1      : INPUT;
+ns2      : INPUT;
+nw0      : INPUT;
+nw1      : INPUT;
+nw2      : INPUT;
+nw3      : INPUT;
+nw4      : INPUT;
+nw5      : INPUT;
+nw6      : INPUT;
+nw7      : INPUT;
+
+-- Node name is 'F' 
+-- Equation name is 'F', location is LC013, type is output.
+ F       = LCELL( _EQ001 $  VCC);
+  _EQ001 =  _X001 &  _X002 &  _X003 &  _X004 &  _X005 &  _X006 &  _X007 & 
+              _X008;
+  _X001  = EXP( _LC031 &  nw6);
+  _X002  = EXP( _LC020 &  nw7);
+  _X003  = EXP( _LC030 &  nw5);
+  _X004  = EXP( _LC028 &  nw4);
+  _X005  = EXP( _LC026 &  nw3);
+  _X006  = EXP( _LC029 &  nw2);
+  _X007  = EXP( _LC025 &  nw1);
+  _X008  = EXP( _LC024 &  nw0);
+
+-- Node name is 'nf0' 
+-- Equation name is 'nf0', location is LC023, type is output.
+ nf0     = LCELL( _EQ002 $  GND);
+  _EQ002 =  en2 & !ns0 & !ns1 & !ns2;
+
+-- Node name is 'nf1' 
+-- Equation name is 'nf1', location is LC027, type is output.
+ nf1     = LCELL( _EQ003 $  GND);
+  _EQ003 =  en2 &  ns0 & !ns1 & !ns2;
+
+-- Node name is 'nf2' 
+-- Equation name is 'nf2', location is LC032, type is output.
+ nf2     = LCELL( _EQ004 $  GND);
+  _EQ004 =  en2 & !ns0 &  ns1 & !ns2;
+
+-- Node name is 'nf3' 
+-- Equation name is 'nf3', location is LC022, type is output.
+ nf3     = LCELL( _EQ005 $  GND);
+  _EQ005 =  en2 &  ns0 &  ns1 & !ns2;
+
+-- Node name is 'nf4' 
+-- Equation name is 'nf4', location is LC017, type is output.
+ nf4     = LCELL( _EQ006 $  GND);
+  _EQ006 =  en2 & !ns0 & !ns1 &  ns2;
+
+-- Node name is 'nf5' 
+-- Equation name is 'nf5', location is LC018, type is output.
+ nf5     = LCELL( _EQ007 $  GND);
+  _EQ007 =  en2 &  ns0 & !ns1 &  ns2;
+
+-- Node name is 'nf6' 
+-- Equation name is 'nf6', location is LC019, type is output.
+ nf6     = LCELL( _EQ008 $  GND);
+  _EQ008 =  en2 & !ns0 &  ns1 &  ns2;
+
+-- Node name is 'nf7' 
+-- Equation name is 'nf7', location is LC021, type is output.
+ nf7     = LCELL( _EQ009 $  GND);
+  _EQ009 =  en2 &  ns0 &  ns1 &  ns2;
+
+-- Node name is '|dec3to8:stage0|~153~1' 
+-- Equation name is '_LC020', type is buried 
+-- synthesized logic cell 
+_LC020   = LCELL( _EQ010 $  GND);
+  _EQ010 =  en2 &  ns0 &  ns1 &  ns2;
+
+-- Node name is '|dec3to8:stage0|~154~1' 
+-- Equation name is '_LC031', type is buried 
+-- synthesized logic cell 
+_LC031   = LCELL( _EQ011 $  GND);
+  _EQ011 =  en2 & !ns0 &  ns1 &  ns2;
+
+-- Node name is '|dec3to8:stage0|~155~1' 
+-- Equation name is '_LC030', type is buried 
+-- synthesized logic cell 
+_LC030   = LCELL( _EQ012 $  GND);
+  _EQ012 =  en2 &  ns0 & !ns1 &  ns2;
+
+-- Node name is '|dec3to8:stage0|~156~1' 
+-- Equation name is '_LC028', type is buried 
+-- synthesized logic cell 
+_LC028   = LCELL( _EQ013 $  GND);
+  _EQ013 =  en2 & !ns0 & !ns1 &  ns2;
+
+-- Node name is '|dec3to8:stage0|~157~1' 
+-- Equation name is '_LC026', type is buried 
+-- synthesized logic cell 
+_LC026   = LCELL( _EQ014 $  GND);
+  _EQ014 =  en2 &  ns0 &  ns1 & !ns2;
+
+-- Node name is '|dec3to8:stage0|~158~1' 
+-- Equation name is '_LC029', type is buried 
+-- synthesized logic cell 
+_LC029   = LCELL( _EQ015 $  GND);
+  _EQ015 =  en2 & !ns0 &  ns1 & !ns2;
+
+-- Node name is '|dec3to8:stage0|~159~1' 
+-- Equation name is '_LC025', type is buried 
+-- synthesized logic cell 
+_LC025   = LCELL( _EQ016 $  GND);
+  _EQ016 =  en2 &  ns0 & !ns1 & !ns2;
+
+-- Node name is '|dec3to8:stage0|~160~1' 
+-- Equation name is '_LC024', type is buried 
+-- synthesized logic cell 
+_LC024   = LCELL( _EQ017 $  GND);
+  _EQ017 =  en2 & !ns0 & !ns1 & !ns2;
+
+
+
+--     Shareable expanders that are duplicated in multiple LABs:
+--     (none)
+
+
+
+
+Project Information        d:\180905188\week9\problem4\mux8to1usingdec3to8.rpt
+
+** COMPILATION SETTINGS & TIMES **
+
+Processing Menu Commands
+------------------------
+
+Design Doctor                             = off
+
+Logic Synthesis:
+
+   Synthesis Type Used                    = Standard
+
+   Default Synthesis Style                = NORMAL
+
+      Logic option settings in 'NORMAL' style for 'MAX7000' family
+
+      DECOMPOSE_GATES                     = on
+      DUPLICATE_LOGIC_EXTRACTION          = on
+      MINIMIZATION                        = full
+      MULTI_LEVEL_FACTORING               = on
+      NOT_GATE_PUSH_BACK                  = on
+      PARALLEL_EXPANDERS                  = off
+      REDUCE_LOGIC                        = on
+      REFACTORIZATION                     = on
+      REGISTER_OPTIMIZATION               = on
+      RESYNTHESIZE_NETWORK                = on
+      SLOW_SLEW_RATE                      = off
+      SOFT_BUFFER_INSERTION               = on
+      SUBFACTOR_EXTRACTION                = on
+      TURBO_BIT                           = on
+      XOR_SYNTHESIS                       = on
+      IGNORE_SOFT_BUFFERS                 = off
+      USE_LPM_FOR_AHDL_OPERATORS          = off
+
+   Other logic synthesis settings:
+
+      Automatic Global Clock              = on
+      Automatic Global Clear              = on
+      Automatic Global Preset             = on
+      Automatic Global Output Enable      = on
+      Automatic Fast I/O                  = off
+      Automatic Register Packing          = off
+      Automatic Open-Drain Pins           = on
+      Automatic Implement in EAB          = off
+      One-Hot State Machine Encoding      = off
+      Optimize                            = 5
+
+Default Timing Specifications: None
+
+Cut All Bidir Feedback Timing Paths       = on
+Cut All Clear & Preset Timing Paths       = on
+
+Ignore Timing Assignments                 = on
+
+Functional SNF Extractor                  = off
+
+Linked SNF Extractor                      = off
+Timing SNF Extractor                      = on
+Optimize Timing SNF                       = off
+Generate AHDL TDO File                    = off
+Fitter Settings                           = NORMAL
+Smart Recompile                           = off
+Total Recompile                           = off
+
+Interfaces Menu Commands
+------------------------
+
+EDIF Netlist Writer                       = off
+Verilog Netlist Writer                    = off
+VHDL Netlist Writer                       = off
+
+Compilation Times
+-----------------
+
+   Compiler Netlist Extractor             00:00:00
+   Database Builder                       00:00:00
+   Logic Synthesizer                      00:00:00
+   Partitioner                            00:00:00
+   Fitter                                 00:00:00
+   Timing SNF Extractor                   00:00:00
+   Assembler                              00:00:00
+   --------------------------             --------
+   Total Time                             00:00:00
+
+
+Memory Allocated
+-----------------
+
+Peak memory allocated during compilation  = 3,898K

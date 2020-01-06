@@ -1,0 +1,495 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.7.15)  17 SEP 2019 17:03
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex"
+(/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count87
+\rotFPtop=\skip43
+\rotFPbot=\skip44
+\rot@float@box=\box26
+\rot@mess@toks=\toks15
+) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2016/04/27 v1.618033 publication quality tables
+\heavyrulewidth=\dimen105
+\lightrulewidth=\dimen106
+\cmidrulewidth=\dimen107
+\belowrulesep=\dimen108
+\belowbottomsep=\dimen109
+\aboverulesep=\dimen110
+\abovetopsep=\dimen111
+\cmidrulesep=\dimen112
+\cmidrulekern=\dimen113
+\defaultaddspace=\dimen114
+\@cmidla=\count88
+\@cmidlb=\count89
+\@aboverulesep=\dimen115
+\@belowrulesep=\dimen116
+\@thisruleclass=\count90
+\@lastruleclass=\count91
+\@thisrulewidth=\dimen117
+) (/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.aux)
+\openout1 = `myfirsttable.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count92
+\scratchdimen=\dimen118
+\scratchbox=\box27
+\nofMPsegments=\count93
+\nofMParguments=\count94
+\everyMPshowfont=\toks16
+\MPscratchCnt=\count95
+\MPscratchDim=\dimen119
+\MPnumerator=\count96
+\makeMPintoPDFobject=\count97
+\everyMPtoPDFconversion=\toks17
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+))) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+))) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 6.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 6.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 6.
+
+
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:7: LaTeX Error: Illegal character in array arg.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7     D
+         ay & 9:00-9:50 & 9:55-10:50 & 10:50-11:05 & 11:05-12 & 12:00-1:00 &...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:7: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.7     Day &
+              9:00-9:50 & 9:55-10:50 & 10:50-11:05 & 11:05-12 & 12:00-1:00 &...
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:7: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.7     Day & 9:00-9:50 &
+                          9:55-10:50 & 10:50-11:05 & 11:05-12 & 12:00-1:00 &...
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:7: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.7     Day & 9:00-9:50 & 9:55-10:50 &
+                                       10:50-11:05 & 11:05-12 & 12:00-1:00 &...
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:7: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.7 ...ay & 9:00-9:50 & 9:55-10:50 & 10:50-11:05 &
+                                                   11:05-12 & 12:00-1:00 & 1...
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:7: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.7 ...:50 & 9:55-10:50 & 10:50-11:05 & 11:05-12 &
+                                                   12:00-1:00 & 1:00-1:50 & ...
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:7: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.7 ...:50 & 10:50-11:05 & 11:05-12 & 12:00-1:00 &
+                                                   1:00-1:50 & 1:55-2:45 & 2...
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:7: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.7 ...11:05 & 11:05-12 & 12:00-1:00 & 1:00-1:50 &
+                                                   1:55-2:45 & 2:45-3:00 & 3...
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:7: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.7 ...5-12 & 12:00-1:00 & 1:00-1:50 & 1:55-2:45 &
+                                                   2:45-3:00 & 3:00-4:00 \\
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:7: Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.7 ...-1:00 & 1:00-1:50 & 1:55-2:45 & 2:45-3:00 &
+                                                   3:00-4:00 \\
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:9: Extra alignment tab has been changed to \cr.
+<template> \endtemplate 
+                        
+l.9     \cline{1-3}
+                   
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+Runaway argument?
+5\@nil  \rotatebox {90}{Lunch} \cline {6-8} \rotatebox {90}{Break} \cline \ETC.
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:17: Paragraph ended before \@cline was complete.
+<to be read again> 
+                   \par 
+l.17 
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:19: Extra alignment tab has been changed to \cr.
+<template> \endtemplate 
+                        
+l.19     \cline{1-3}
+                    
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+Runaway argument?
+5\@nil  \cline {6-8} \cline {9} \\ 
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:24: Paragraph ended before \@cline was complete.
+<to be read again> 
+                   \par 
+l.24 
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:26: Extra alignment tab has been changed to \cr.
+<template> \endtemplate 
+                        
+l.26     \cline{1-3}
+                    
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+Runaway argument?
+5\@nil  \cline {6-8} \cline {9} \hline \\ 
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:32: Paragraph ended before \@cline was complete.
+<to be read again> 
+                   \par 
+l.32 
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:34: Extra alignment tab has been changed to \cr.
+<template> \endtemplate 
+                        
+l.34     \cline{1-3}
+                    
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+Runaway argument?
+5\@nil  \cline {6-8} \cline {9} \\ 
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:39: Paragraph ended before \@cline was complete.
+<to be read again> 
+                   \par 
+l.39 
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:41: Extra alignment tab has been changed to \cr.
+<template> \endtemplate 
+                        
+l.41     \cline{1-3}
+                    
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+Runaway argument?
+5\@nil  \cline {6-8} \cline {9} \\ 
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:46: Paragraph ended before \@cline was complete.
+<to be read again> 
+                   \par 
+l.46 
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:48: Extra alignment tab has been changed to \cr.
+<template> \endtemplate 
+                        
+l.48     \cline{1-3}
+                    
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+Runaway argument?
+5\@nil  \cline {6-8} \cline {9} \hline \\ \end {tabular} 
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:55: Paragraph ended before \@cline was complete.
+<to be read again> 
+                   \par 
+l.55 
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:57: LaTeX Error: \begin{tabular} on input line 6 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 \end{document}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:57: Improper \prevdepth.
+\newpage ...everypar {}\fi \par \ifdim \prevdepth 
+                                                  >\z@ \vskip -\ifdim \prevd...
+l.57 \end{document}
+                   
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:57: Missing } inserted.
+<inserted text> 
+                }
+l.57 \end{document}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:57: Missing } inserted.
+<inserted text> 
+                }
+l.57 \end{document}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:57: Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.57 \end{document}
+                   
+I'm guessing that you meant to end an alignment here.
+
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:57: Missing { inserted.
+<inserted text> 
+                {
+l.57 \end{document}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+(/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.aux)
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:57: You can't use `\end' in internal vertical mode.
+\enddocument ... \endgroup \deadcycles \z@ \@@end 
+                                                  
+l.57 \end{document}
+                   
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:57: LaTeX Error: \begin{tabular} on input line 6 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 \end{document}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:57: Missing } inserted.
+<inserted text> 
+                }
+l.57 \end{document}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:57: Missing $ inserted.
+<inserted text> 
+                $
+l.57 \end{document}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+/home/180905188/KaustavLABS 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex:57: Missing } inserted.
+<inserted text> 
+                }
+l.57 \end{document}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+)
+! Emergency stop.
+<*> ... 17 Sep 2019/OST/WEEK7/Q1/myfirsttable.tex"
+                                                  
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 1593 strings out of 492982
+ 23038 string characters out of 6134896
+ 77974 words of memory out of 5000000
+ 5163 multiletter control sequences out of 15000+600000
+ 6376 words of font info for 23 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,8n,25p,334b,129s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

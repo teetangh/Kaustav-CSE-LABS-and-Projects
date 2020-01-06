@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {I}Introduction}{i}
+\contentsline {section}{\numberline {II}Procedure}{i}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-A}}Step 1}{i}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-B}}Step 2}{i}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-C}}Step 3}{i}
+\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-D}}Step 4}{i}
+\contentsline {section}{\numberline {III}Lorem Ipsum}{i}
+\contentsline {paragraph}{\numberline {\unhbox \voidb@x \hbox {III-}0a}Lorem Ipsum \\}{i}
+\contentsline {section}{\numberline {IV}Another Introduction}{i}

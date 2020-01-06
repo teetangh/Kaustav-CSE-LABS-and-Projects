@@ -1,0 +1,27 @@
+\documentclass[a4paper,12pt]{article}
+	\usepackage{booktabs}
+	\begin{document}
+		\begin{tabular}{r|cl}
+			1st Column & 2nd Column & 3rd Column\\
+			\hline
+			a & b & c \\
+			\cline{2-3}
+			d & e & f\\
+		\end{tabular}
+		
+		
+		\begin{tabular}{llc}
+			\hline%
+			\multicolumn{2}{c}{Sample} & Roughness \\
+				& & (nm)\\
+			\hline
+			A & ring & 385 \\
+			\cline{2-3}
+			& plate & 397 \\ 
+			\hline
+			B & ring & 376 \\
+			\cline {2-3}
+			& plate & 390 \\ 
+			\hline
+		\end{tabular}
+	\end{document}
