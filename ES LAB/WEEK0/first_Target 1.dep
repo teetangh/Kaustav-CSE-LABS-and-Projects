@@ -1,0 +1,5 @@
+Dependencies for Project 'first', Target 'Target 1': (DO NOT MODIFY !)
+F (.\sample.s)(0x5E1404A1)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\sample.lst --xref -o .\sample.o --depend .\sample.d)
+F (.\swapping.s)(0x5E140917)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\swapping.lst --xref -o .\swapping.o --depend .\swapping.d)
+F (.\transfercodetodata.s)(0x5E140FDB)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\transfercodetodata.lst --xref -o .\transfercodetodata.o --depend .\transfercodetodata.d)
+F (.\transfercodetodata2.s)(0x5E14183B)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\transfercodetodata2.lst --xref -o .\transfercodetodata2.o --depend .\transfercodetodata2.d)
