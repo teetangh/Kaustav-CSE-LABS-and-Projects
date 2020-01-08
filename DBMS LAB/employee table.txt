@@ -25,3 +25,9 @@ update employee set salary = 600000 where emp_no=4;
 update employee set salary = 900000 where emp_no=5;
 
 update employee set salary = 999999;
+
+delete from employee where emp_address='Mangalore,India';
+
+rename employee to employee1;
+
+drop table employee1;
