@@ -8,20 +8,26 @@ typedef struct node
 	struct node *rchild;
 } * NODE;
 
-NODE createBinaryTree(NODE root)
+NODE recursiveCreateBinaryTree()
 {
-	NODE temp = (NODE)malloc(sizeof(struct node));
-	printf("Enter the value of the node. \n Enter -1 for returning. \n");
-	scanf(" %d", &temp->data);
-	if (temp->data == -1)
+	NODE temp;
+	int ele;
+
+	printf("Enter the element to be inserted(-1 for no data):");
+	scanf("%d", &ele);
+
+	if (ele == -1)
 		return NULL;
-	else
-	{
-		printf("For left Node of %d \n", temp->data);
-		temp->lchild = createBinaryTree(temp->lchild);
-		printf("For right Node of %d \n", temp->data);
-		temp->rchild = createBinaryTree(temp->rchild);
-	}
+	temp = (NODE)malloc(sizeof(struct node));
+
+	temp->data = ele;
+
+	printf("Enter lchild child of %d: \n ", ele);
+	temp->lchild = recursiveCreateBinaryTree();
+
+	printf("Enter rchild child of %d: \n ", ele);
+	temp->rchild = recursiveCreateBinaryTree();
+
 	return temp;
 }
 NODE createBinarySearchTree(NODE root, int ele)
@@ -88,7 +94,7 @@ void main()
 {
 	NODE root = NULL;
 
-	printf("Enter 0.createBinaryTree \n");
+	printf("Enter 0.createBinaryTree(Recursive) \n");
 	printf("Enter 1.createBinarySearchTree \n");
 	printf("Enter 2.displayTree \n");
 	printf("Enter 3.searchTree \n");
@@ -104,7 +110,7 @@ void main()
 		switch (choice)
 		{
 		case 0:
-			root = createBinaryTree(root);
+			root = recursiveCreateBinaryTree();
 			break;
 
 		case 1:
@@ -112,7 +118,7 @@ void main()
 			scanf(" %d", &tempvalue);
 			while (tempvalue != -1)
 			{
-				root = createBinarySearchTree(root, tempvalue);
+				root = recursiveCreateBinaryTree();
 				break;
 				printf("Enter Next Node.\n Enter -1 to exit\n");
 				scanf(" %d", &tempvalue);
