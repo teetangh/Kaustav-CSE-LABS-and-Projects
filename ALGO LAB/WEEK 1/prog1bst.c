@@ -60,6 +60,18 @@ NODE createBinarySearchTree(NODE root, int ele)
 	return root;
 }
 
+NODE searchBST(int item, NODE root)
+{
+	if (root == NULL)
+		return root;
+	if (item == root->data)
+		return root;
+	if (item < root->data)
+		return searchBST(item, root->lchild);
+	else
+		return searchBST(item, root->rchild);
+}
+
 void inorder(NODE ptr)
 {
 	if (ptr != NULL)
@@ -102,7 +114,8 @@ void main()
 	int choice;
 	printf("Enter your choice\n");
 	scanf(" %d", &choice);
-	int tempvalue;
+
+	int tempvalue, item;
 
 	while (1)
 	{
@@ -134,7 +147,16 @@ void main()
 			printf("\n ********* \n");
 			break;
 		case 3:
+			printf("Please enter the item to find in the BST \n");
+			scanf(" %d", &item);
+			NODE temp = searchBST(item, root);
+			if (temp != NULL)
+				printf("Item Found \n");
+			else
+				printf("Item NOT Found \n");
+		default:
 			exit(0);
+			break;
 		}
 
 		printf("Enter your choice\n");
