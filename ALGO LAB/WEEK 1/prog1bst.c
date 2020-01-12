@@ -18,6 +18,7 @@ NODE recursiveCreateBinaryTree()
 
 	if (ele == -1)
 		return NULL;
+
 	temp = (NODE)malloc(sizeof(struct node));
 
 	temp->data = ele;
@@ -35,28 +36,36 @@ NODE createBinarySearchTree(NODE root, int ele)
 	NODE new_node;
 	new_node = (NODE)malloc(sizeof(struct node));
 	new_node->data = ele;
-	new_node->lchild = new_node = NULL;
 
 	if (root == NULL)
 		return new_node;
 
-	NODE parent = NULL;
 	NODE curr = root;
 
 	while (curr != NULL)
 	{
-		parent = curr;
-		if (curr->data < ele)
-			curr = curr->rchild;
-		else
+		printf("%d\n", curr->data);
+		if (ele < curr->data)
+		{
+			if (curr->lchild == NULL)
+			{
+				printf("inserted %d as left child of %d\n", ele, curr->data);
+				curr->lchild = new_node;
+				return root;
+			}
 			curr = curr->lchild;
+		}
+		else if (ele > curr->data)
+		{
+			if (curr->rchild == NULL)
+			{
+				printf("inserted %d as right child child of %d\n", ele, curr->data);
+				curr->rchild = new_node;
+				return root;
+			}
+			curr = curr->rchild;
+		}
 	}
-
-	if (ele < parent->data)
-		parent->lchild = new_node;
-	else
-		parent->rchild = new_node;
-
 	return root;
 }
 
@@ -102,11 +111,11 @@ void main()
 	int choice;
 	printf("Enter your choice\n");
 	scanf(" %d", &choice);
-
 	int tempvalue;
 
 	while (1)
 	{
+
 		switch (choice)
 		{
 		case 0:
@@ -118,7 +127,7 @@ void main()
 			scanf(" %d", &tempvalue);
 			while (tempvalue != -1)
 			{
-				root = recursiveCreateBinaryTree();
+				root = createBinarySearchTree(root, tempvalue);
 				break;
 				printf("Enter Next Node.\n Enter -1 to exit\n");
 				scanf(" %d", &tempvalue);
@@ -137,5 +146,8 @@ void main()
 		case 3:
 			exit(0);
 		}
+
+		printf("Enter your choice\n");
+		scanf(" %d", &choice);
 	}
 }
