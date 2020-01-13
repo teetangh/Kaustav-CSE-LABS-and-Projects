@@ -1,45 +1,44 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int min (int a , int b)
+int min(int a, int b)
 {
-	return (a<b)?a:b;
+	return (a < b) ? a : b;
 }
 
-int max (int a , int b)
+int max(int a, int b)
 {
-	return (a>b)?a:b;
+	return (a > b) ? a : b;
 }
-unsigned int integerCheckGCD(unsigned int m ,unsigned int n)
+unsigned int integerCheckGCD(unsigned int m, unsigned int n)
 {
-	printf("%d+%d = (%d) \n",m,n,(m+n));
-	int minimum = min (m,n);
+	printf("%d+%d = (%d) \n", m, n, (m + n));
+	int minimum = min(m, n);
 	int t = minimum;
 
-	int maximum = max (m,n);
+	int maximum = max(m, n);
 
 	int remainder;
 	int opcount = 0;
 	while (t > 1)
 	{
 		opcount++;
-		if(maximum % t ==0)
+		if (maximum % t == 0)
 		{
-			if(minimum %t == 0)
+			if (minimum % t == 0)
 			{
-				printf("opcount = %d \n",opcount);
+				printf("opcount = %d \n", opcount);
 				return t;
 			}
 		}
 
-			t--;
+		t--;
 	}
 
-	printf("opcount = %d \n",opcount);
+	printf("opcount = %d \n", opcount);
 	return t;
-
 }
-void main ()
+void main()
 {
 	// unsigned int m,n;
 	// scanf("%d%d",&m,&n);
@@ -53,8 +52,6 @@ void main ()
 		next = curr + prev;
 		prev = curr;
 		curr = next;
-		printf("GCD is %d \n",integerCheckGCD(prev,curr));
+		printf("GCD is %d \n", integerCheckGCD(prev, curr));
 	}
-
-
 }
