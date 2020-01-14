@@ -1,0 +1,145 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,DATA,READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10001000        DCD              0x10001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 ALIGN
+    7 00000008                 AREA             mycode,CODE,READONLY
+    8 00000000                 ENTRY
+    9 00000000                 EXPORT           Reset_Handler
+   10 00000000         Reset_Handler
+   11 00000000 4913            LDR              R1,=SRC     ;Source
+   12 00000002 F04F 0000       MOV              R0,#0       ;Sum
+   13 00000006 F04F 0300       MOV              R3,#0       ;Carry
+   14 0000000A F04F 040A       MOV              R4,#10      ;Counter
+   15 0000000E 4D11            LDR              R5,=DST     ;Destination
+   16 00000010 680A    LOOP    LDR              R2,[R1]
+   17 00000012 1880            ADDS             R0,R0,R2
+   18 00000014 F143 0300       ADC              R3,#0
+   19 00000018 F101 0104       ADD              R1,#4       ;Increment Pointer
+   20 0000001C 3C01            SUBS             R4,#1       ;Decrement Counter
+   21 0000001E D1F7            BNE              LOOP        ;Loop 
+   22 00000020 6028            STR              R0,[R5]     ;Store Final Sum
+   23 00000022 606B            STR              R3,[R5,#4]  ;Store Fianl Carry
+   24 00000024         STOP
+   25 00000024 E7FE            B                STOP
+   26 00000026 00 00 0000000A 
+              00000014 
+              0000001E 
+              00000028 
+              00000032 
+              0000003C 
+              00000046 
+              00000050 
+              0000005A 
+              00000064 SRC     DCD              10,20,30,40,50,60,70,80,90,100
+   27 00000050 00000000 
+              00000000         AREA             mydata,DATA,READWRITE
+   28 00000000 00000000 
+                       DST     DCD              0
+   29 00000004                 END
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\prog1a
+ddten32bitnumbers.d -o.\prog1addten32bitnumbers.o -IC:\Keil\ARM\RV31\INC -IC:\K
+eil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\NXP\LPC17xx --predefine="__EVAL SETA 1"
+ --list=.\prog1addten32bitnumbers.lst prog1addTen32bitNumbers.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file prog1addTen32bitNumbers.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file prog1addTen32bitNumbers.s
+   Uses
+      At line 2 in file prog1addTen32bitNumbers.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+LOOP 00000010
+
+Symbol: LOOP
+   Definitions
+      At line 16 in file prog1addTen32bitNumbers.s
+   Uses
+      At line 21 in file prog1addTen32bitNumbers.s
+Comment: LOOP used once
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 10 in file prog1addTen32bitNumbers.s
+   Uses
+      At line 5 in file prog1addTen32bitNumbers.s
+      At line 9 in file prog1addTen32bitNumbers.s
+
+SRC 00000028
+
+Symbol: SRC
+   Definitions
+      At line 26 in file prog1addTen32bitNumbers.s
+   Uses
+      At line 11 in file prog1addTen32bitNumbers.s
+Comment: SRC used once
+STOP 00000024
+
+Symbol: STOP
+   Definitions
+      At line 24 in file prog1addTen32bitNumbers.s
+   Uses
+      At line 25 in file prog1addTen32bitNumbers.s
+Comment: STOP used once
+mycode 00000000
+
+Symbol: mycode
+   Definitions
+      At line 7 in file prog1addTen32bitNumbers.s
+   Uses
+      None
+Comment: mycode unused
+5 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DST 00000000
+
+Symbol: DST
+   Definitions
+      At line 28 in file prog1addTen32bitNumbers.s
+   Uses
+      At line 15 in file prog1addTen32bitNumbers.s
+Comment: DST used once
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 27 in file prog1addTen32bitNumbers.s
+   Uses
+      None
+Comment: mydata unused
+2 symbols
+342 symbols in table
