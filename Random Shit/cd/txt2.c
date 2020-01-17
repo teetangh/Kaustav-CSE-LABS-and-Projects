@@ -1,6 +1,6 @@
 
 int main()
 {
-	#define
+#define
 	printf("#best");
 }

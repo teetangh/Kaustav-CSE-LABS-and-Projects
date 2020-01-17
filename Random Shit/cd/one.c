@@ -1,26 +1,25 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 int main()
 {
-	FILE*fa,*fb;
-	int ca,cb;
+	FILE *fa, *fb;
+	int ca, cb;
 
-	fa=fopen("txt.c","r");
+	fa = fopen("txt.c", "r");
 
-	if(fa==NULL)
+	if (fa == NULL)
 	{
 		printf("Cannot open\n");
 		exit(0);
 	}
 
-	fb=fopen("txt2.c","w");
-	ca=getc(fa);
+	fb = fopen("txt2.c", "w");
+	ca = getc(fa);
 
-
-	while(ca!=EOF)
+	while (ca != EOF)
 	{
-		if(ca=='\n')
+		if (ca == '\n')
 		{
 			/*putc(ca,fb);
 			cb=getc(fa);
@@ -32,31 +31,30 @@ int main()
 					ca=getc(fa);
 				}while(ca=='\n');
 			}*/
-			ca=' ';
-			putc(ca,fb);
+			ca = ' ';
+			putc(ca, fb);
 		}
-		if(ca==' ')
+		if (ca == ' ')
 		{
-			putc(ca,fb);
-			cb=getc(fa);
-			if(cb=' ')
+			putc(ca, fb);
+			cb = getc(fa);
+			if (cb = ' ')
 			{
 				do
 				{
-					ca=getc(fa);
-				}while(ca==' ');
+					ca = getc(fa);
+				} while (ca == ' ');
 			}
-			putc(ca,fb);
+			putc(ca, fb);
 		}
 		else
-			putc(ca,fb);
+			putc(ca, fb);
 
-		ca=getc(fa);
+		ca = getc(fa);
 	}
 
 	fclose(fa);
 	fclose(fb);
 
 	return 0;
-
 }
