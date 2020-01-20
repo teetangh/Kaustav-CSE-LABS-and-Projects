@@ -5,36 +5,36 @@
 int main()
 {
 	int n;
-	scanf(" %d",&n);
+	scanf(" %d", &n);
 
-	int *arr = (int *)calloc(n,sizeof(int));
+	int *arr = (int *)calloc(n, sizeof(int));
 
 	// for (int i = 0; i < n; ++i)
 	// 	scanf(" %d",&arr[i]);
 
 	int temp = n;
-	for(int i = 0 ; i < n; i++ )
-		arr[i]=(temp--);
+	for (int i = 0; i < n; i++)
+		arr[i] = (temp--);
 
 	time_t t1 = clock();
 
-	for(int i =0 ; i < n ;i++)
+	for (int i = 0; i < n; i++)
 	{
 		int isSorted = 1;
 		// printf("Debug 1 \n");
-		for(int j = 0 ; j < n - i - 1;j++)
+		for (int j = 0; j < n - i - 1; j++)
 		{
 			// printf("Debug 2 \n");
-			if(arr[j]>arr[j+1])
+			if (arr[j] > arr[j + 1])
 			{
 				isSorted = 0;
 				// printf("Debug 3 \n");
 				int temp = arr[j];
-				arr[j] = arr[j+1];
-				arr[j+1] = temp;	
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;
 			}
 		}
-		if(isSorted)
+		if (isSorted)
 		{
 			// printf("Debug 4 \n");
 			break;
@@ -45,8 +45,7 @@ int main()
 
 	printf("After Bubble sorting \n");
 	for (int i = 0; i < n; ++i)
-		printf(" %d ",arr[i]);
+		printf(" %d ", arr[i]);
 
-
-	printf("\n Time Taken %ld milliseconds \n",(t2-t1));
+	printf("\n Time Taken %ld milliseconds \n", (t2 - t1));
 }
