@@ -9,8 +9,12 @@ int main()
 
 	int *arr = (int *)calloc(n,sizeof(int));
 
-	for (int i = 0; i < n; ++i)
-		scanf(" %d",&arr[i]);
+	// for (int i = 0; i < n; ++i)
+	// 	scanf(" %d",&arr[i]);
+
+	int temp = n;
+	for(int i = 0 ; i < n; i++ )
+		arr[i]=(temp--);
 
 	time_t t1 = clock();
 
