@@ -1,0 +1,123 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,DATA,READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10001000        DCD              0x10001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 ALIGN
+    7 00000008                 AREA             mycode,CODE,READONLY
+    8 00000000                 ENTRY
+    9 00000000                 EXPORT           Reset_Handler
+   10 00000000         Reset_Handler
+   11 00000000 4805            LDR              R0,=VAL1
+   12 00000002 6801            LDR              R1,[R0]
+   13 00000004 FB01 1201       MLA              R2,R1,R1,R1
+   14 00000008 EA4F 0252       LSR              R2,#1
+   15 0000000C 4B03            LDR              R3,=DST
+   16 0000000E 601A            STR              R2,[R3]
+   17 00000010 00000005 
+                       VAL1    DCD              5
+   18 00000014         STOP
+   19 00000014 E7FE            B                STOP
+   20 00000016 00 00           ALIGN
+   21 00000018 00000000 
+              00000000         AREA             mydata,DATA,READWRITE
+   22 00000000 00000009 
+                       DST     DCD              9
+   23 00000004                 END
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\prog3s
+umofnusingmla.d -o.\prog3sumofnusingmla.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\
+CMSIS\Include -IC:\Keil\ARM\Inc\NXP\LPC17xx --predefine="__EVAL SETA 1" --list=
+.\prog3sumofnusingmla.lst prog3SumOfNusingMLA.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file prog3SumOfNusingMLA.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file prog3SumOfNusingMLA.s
+   Uses
+      At line 2 in file prog3SumOfNusingMLA.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 10 in file prog3SumOfNusingMLA.s
+   Uses
+      At line 5 in file prog3SumOfNusingMLA.s
+      At line 9 in file prog3SumOfNusingMLA.s
+
+STOP 00000014
+
+Symbol: STOP
+   Definitions
+      At line 18 in file prog3SumOfNusingMLA.s
+   Uses
+      At line 19 in file prog3SumOfNusingMLA.s
+Comment: STOP used once
+VAL1 00000010
+
+Symbol: VAL1
+   Definitions
+      At line 17 in file prog3SumOfNusingMLA.s
+   Uses
+      At line 11 in file prog3SumOfNusingMLA.s
+Comment: VAL1 used once
+mycode 00000000
+
+Symbol: mycode
+   Definitions
+      At line 7 in file prog3SumOfNusingMLA.s
+   Uses
+      None
+Comment: mycode unused
+4 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DST 00000000
+
+Symbol: DST
+   Definitions
+      At line 22 in file prog3SumOfNusingMLA.s
+   Uses
+      At line 15 in file prog3SumOfNusingMLA.s
+Comment: DST used once
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 21 in file prog3SumOfNusingMLA.s
+   Uses
+      None
+Comment: mydata unused
+2 symbols
+341 symbols in table

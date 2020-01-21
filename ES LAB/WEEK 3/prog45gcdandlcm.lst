@@ -1,0 +1,202 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,DATA,READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10001000        DCD              0x10001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 ALIGN
+    7 00000008                 AREA             mycode,CODE,READONLY
+    8 00000000                 ENTRY
+    9 00000000                 EXPORT           Reset_Handler
+   10 00000000         Reset_Handler
+   11 00000000 4810            LDR              R0,=NUM1
+   12 00000002 4911            LDR              R1,=NUM2
+   13 00000004 4A11            LDR              R2,=GCD
+   14 00000006 4B12            LDR              R3,=LCM
+   15 00000008 6804            LDR              R4,[R0]
+   16 0000000A 680D            LDR              R5,[R1]
+   17 0000000C 42AC    UP      CMP              R4,R5
+   18 0000000E D006            BEQ              EXIT
+   19 00000010 D202            BCS              NEXT
+   20 00000012 EBA5 0504       SUB              R5,R5,R4
+   21 00000016 E7F9            B                UP
+   22 00000018 EBA4 0405 
+                       NEXT    SUB              R4,R4,R5
+   23 0000001C E7F6            B                UP
+   24 0000001E 6014    EXIT    STR              R4,[R2]
+   25 00000020         
+   26 00000020 FB00 F601       MUL              R6,R0,R1    ;R6 = NUM1*NUM2
+   27 00000024 4637            MOV              R7,R6       ;R7=R6
+   28 00000026 F04F 0800       MOV              R8,#0
+   29 0000002A F108 0801 
+                       LOOP    ADD              R8,#1
+   30 0000002E EBA7 0702       SUB              R7,R2
+   31 00000032 D1FA            BNE              LOOP
+   32 00000034 F8C3 8000       STR              R8,[R3]
+   33 00000038         STOP
+   34 00000038 E7FE            B                STOP
+   35 0000003A 00 00           ALIGN
+   36 0000003C 00000004 
+                       NUM1    DCD              4
+   37 00000040 00000008 
+                       NUM2    DCD              8
+   38 00000044 00000000 
+              00000000 
+              00000000 
+              00000000         AREA             mydata,DATA,READWRITE
+   39 00000000 00000000 
+                       GCD     DCD              0
+   40 00000004 00000000 
+                       LCM     DCD              0
+   41 00000008                 END
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\prog45
+gcdandlcm.d -o.\prog45gcdandlcm.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\In
+clude -IC:\Keil\ARM\Inc\NXP\LPC17xx --predefine="__EVAL SETA 1" --list=.\prog45
+gcdandlcm.lst prog45GCDandLCM.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file prog45GCDandLCM.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file prog45GCDandLCM.s
+   Uses
+      At line 2 in file prog45GCDandLCM.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+EXIT 0000001E
+
+Symbol: EXIT
+   Definitions
+      At line 24 in file prog45GCDandLCM.s
+   Uses
+      At line 18 in file prog45GCDandLCM.s
+Comment: EXIT used once
+LOOP 0000002A
+
+Symbol: LOOP
+   Definitions
+      At line 29 in file prog45GCDandLCM.s
+   Uses
+      At line 31 in file prog45GCDandLCM.s
+Comment: LOOP used once
+NEXT 00000018
+
+Symbol: NEXT
+   Definitions
+      At line 22 in file prog45GCDandLCM.s
+   Uses
+      At line 19 in file prog45GCDandLCM.s
+Comment: NEXT used once
+NUM1 0000003C
+
+Symbol: NUM1
+   Definitions
+      At line 36 in file prog45GCDandLCM.s
+   Uses
+      At line 11 in file prog45GCDandLCM.s
+Comment: NUM1 used once
+NUM2 00000040
+
+Symbol: NUM2
+   Definitions
+      At line 37 in file prog45GCDandLCM.s
+   Uses
+      At line 12 in file prog45GCDandLCM.s
+Comment: NUM2 used once
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 10 in file prog45GCDandLCM.s
+   Uses
+      At line 5 in file prog45GCDandLCM.s
+      At line 9 in file prog45GCDandLCM.s
+
+STOP 00000038
+
+Symbol: STOP
+   Definitions
+      At line 33 in file prog45GCDandLCM.s
+   Uses
+      At line 34 in file prog45GCDandLCM.s
+Comment: STOP used once
+UP 0000000C
+
+
+
+
+ARM Macro Assembler    Page 2 Alphabetic symbol ordering
+Relocatable symbols
+
+Symbol: UP
+   Definitions
+      At line 17 in file prog45GCDandLCM.s
+   Uses
+      At line 21 in file prog45GCDandLCM.s
+      At line 23 in file prog45GCDandLCM.s
+
+mycode 00000000
+
+Symbol: mycode
+   Definitions
+      At line 7 in file prog45GCDandLCM.s
+   Uses
+      None
+Comment: mycode unused
+9 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+GCD 00000000
+
+Symbol: GCD
+   Definitions
+      At line 39 in file prog45GCDandLCM.s
+   Uses
+      At line 13 in file prog45GCDandLCM.s
+Comment: GCD used once
+LCM 00000004
+
+Symbol: LCM
+   Definitions
+      At line 40 in file prog45GCDandLCM.s
+   Uses
+      At line 14 in file prog45GCDandLCM.s
+Comment: LCM used once
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 38 in file prog45GCDandLCM.s
+   Uses
+      None
+Comment: mydata unused
+3 symbols
+347 symbols in table
