@@ -1,0 +1,2 @@
+Dependencies for Project 'ESLABWEEK3', Target 'Target 1': (DO NOT MODIFY !)
+F (.\prog1multiplyTwo32bitnumbers.s)(0x5E266F23)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\prog1multiplytwo32bitnumbers.lst --xref -o .\prog1multiplytwo32bitnumbers.o --depend .\prog1multiplytwo32bitnumbers.d)
