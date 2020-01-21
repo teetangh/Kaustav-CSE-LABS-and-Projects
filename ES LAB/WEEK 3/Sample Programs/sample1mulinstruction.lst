@@ -34,11 +34,10 @@ ARM Macro Assembler    Page 1
    24 00000000 00000000 
                        RESULT  DCD              0
    25 00000004                 END
-Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\prog1m
-ultiplytwo32bitnumbers.d -o.\prog1multiplytwo32bitnumbers.o -IC:\Keil\ARM\RV31\
-INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\NXP\LPC17xx --predefine="__EV
-AL SETA 1" --list=.\prog1multiplytwo32bitnumbers.lst prog1multiplyTwo32bitnumbe
-rs.s
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\sample
+1mulinstruction.d -o.\sample1mulinstruction.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\
+ARM\CMSIS\Include -IC:\Keil\ARM\Inc\NXP\LPC17xx --predefine="__EVAL SETA 1" --l
+ist=.\sample1mulinstruction.lst sample1MULinstruction.s
 
 
 
@@ -49,7 +48,7 @@ RESET 00000000
 
 Symbol: RESET
    Definitions
-      At line 1 in file prog1multiplyTwo32bitnumbers.s
+      At line 1 in file sample1MULinstruction.s
    Uses
       None
 Comment: RESET unused
@@ -57,9 +56,9 @@ __Vectors 00000000
 
 Symbol: __Vectors
    Definitions
-      At line 3 in file prog1multiplyTwo32bitnumbers.s
+      At line 3 in file sample1MULinstruction.s
    Uses
-      At line 2 in file prog1multiplyTwo32bitnumbers.s
+      At line 2 in file sample1MULinstruction.s
 Comment: __Vectors used once
 2 symbols
 
@@ -72,40 +71,40 @@ NUM1 00000014
 
 Symbol: NUM1
    Definitions
-      At line 21 in file prog1multiplyTwo32bitnumbers.s
+      At line 21 in file sample1MULinstruction.s
    Uses
-      At line 12 in file prog1multiplyTwo32bitnumbers.s
+      At line 12 in file sample1MULinstruction.s
 Comment: NUM1 used once
 NUM2 00000018
 
 Symbol: NUM2
    Definitions
-      At line 22 in file prog1multiplyTwo32bitnumbers.s
+      At line 22 in file sample1MULinstruction.s
    Uses
-      At line 13 in file prog1multiplyTwo32bitnumbers.s
+      At line 13 in file sample1MULinstruction.s
 Comment: NUM2 used once
 Reset_Handler 00000000
 
 Symbol: Reset_Handler
    Definitions
-      At line 10 in file prog1multiplyTwo32bitnumbers.s
+      At line 10 in file sample1MULinstruction.s
    Uses
-      At line 5 in file prog1multiplyTwo32bitnumbers.s
-      At line 9 in file prog1multiplyTwo32bitnumbers.s
+      At line 5 in file sample1MULinstruction.s
+      At line 9 in file sample1MULinstruction.s
 
 STOP 00000010
 
 Symbol: STOP
    Definitions
-      At line 18 in file prog1multiplyTwo32bitnumbers.s
+      At line 18 in file sample1MULinstruction.s
    Uses
-      At line 19 in file prog1multiplyTwo32bitnumbers.s
+      At line 19 in file sample1MULinstruction.s
 Comment: STOP used once
 mycode 00000000
 
 Symbol: mycode
    Definitions
-      At line 7 in file prog1multiplyTwo32bitnumbers.s
+      At line 7 in file sample1MULinstruction.s
    Uses
       None
 Comment: mycode unused
@@ -120,15 +119,15 @@ RESULT 00000000
 
 Symbol: RESULT
    Definitions
-      At line 24 in file prog1multiplyTwo32bitnumbers.s
+      At line 24 in file sample1MULinstruction.s
    Uses
-      At line 11 in file prog1multiplyTwo32bitnumbers.s
+      At line 11 in file sample1MULinstruction.s
 Comment: RESULT used once
 mydata 00000000
 
 Symbol: mydata
    Definitions
-      At line 23 in file prog1multiplyTwo32bitnumbers.s
+      At line 23 in file sample1MULinstruction.s
    Uses
       None
 Comment: mydata unused

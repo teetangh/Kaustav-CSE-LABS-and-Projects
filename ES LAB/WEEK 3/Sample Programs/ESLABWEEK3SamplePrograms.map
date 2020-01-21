@@ -4,8 +4,8 @@ ARM Linker, 5.03 [Build 76] [MDK-ARM Lite]
 
 Section Cross References
 
-    prog1multiplytwo32bitnumbers.o(RESET) refers to prog1multiplytwo32bitnumbers.o(mycode) for Reset_Handler
-    prog1multiplytwo32bitnumbers.o(mycode) refers to prog1multiplytwo32bitnumbers.o(mydata) for RESULT
+    sample2umullinstruction.o(RESET) refers to sample2umullinstruction.o(mycode) for Reset_Handler
+    sample2umullinstruction.o(mycode) refers to sample2umullinstruction.o(mydata) for RESULT
 
 
 ==============================================================================
@@ -16,21 +16,21 @@ Image Symbol Table
 
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
-    RESET                                    0x00000000   Section        8  prog1multiplytwo32bitnumbers.o(RESET)
-    prog1multiplyTwo32bitnumbers.s           0x00000000   Number         0  prog1multiplytwo32bitnumbers.o ABSOLUTE
-    mycode                                   0x00000008   Section       40  prog1multiplytwo32bitnumbers.o(mycode)
-    NUM1                                     0x0000001c   Data           4  prog1multiplytwo32bitnumbers.o(mycode)
-    NUM2                                     0x00000020   Data           4  prog1multiplytwo32bitnumbers.o(mycode)
-    mydata                                   0x10000000   Section        4  prog1multiplytwo32bitnumbers.o(mydata)
-    RESULT                                   0x10000000   Data           4  prog1multiplytwo32bitnumbers.o(mydata)
+    RESET                                    0x00000000   Section        8  sample2umullinstruction.o(RESET)
+    sample2UMULLinstruction.s                0x00000000   Number         0  sample2umullinstruction.o ABSOLUTE
+    mycode                                   0x00000008   Section       44  sample2umullinstruction.o(mycode)
+    NUM1                                     0x00000020   Data           4  sample2umullinstruction.o(mycode)
+    NUM2                                     0x00000024   Data           4  sample2umullinstruction.o(mycode)
+    mydata                                   0x10000000   Section        4  sample2umullinstruction.o(mydata)
+    RESULT                                   0x10000000   Data           4  sample2umullinstruction.o(mydata)
 
     Global Symbols
 
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
     BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$STANDARDLIB$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
-    __Vectors                                0x00000000   Data           0  prog1multiplytwo32bitnumbers.o(RESET)
-    Reset_Handler                            0x00000009   Thumb Code     0  prog1multiplytwo32bitnumbers.o(mycode)
+    __Vectors                                0x00000000   Data           0  sample2umullinstruction.o(RESET)
+    Reset_Handler                            0x00000009   Thumb Code     0  sample2umullinstruction.o(mycode)
 
 
 
@@ -40,21 +40,21 @@ Memory Map of the image
 
   Image Entry point : 0x00000009
 
-  Load Region LR_1 (Base: 0x00000000, Size: 0x00000034, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00000038, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Base: 0x00000000, Size: 0x00000030, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Base: 0x00000000, Size: 0x00000034, Max: 0xffffffff, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x00000000   0x00000008   Data   RO            1    RESET               prog1multiplytwo32bitnumbers.o
-    0x00000008   0x00000028   Code   RO            2  * mycode              prog1multiplytwo32bitnumbers.o
+    0x00000000   0x00000008   Data   RO            1    RESET               sample2umullinstruction.o
+    0x00000008   0x0000002c   Code   RO            2  * mycode              sample2umullinstruction.o
 
 
     Execution Region ER_RW (Base: 0x10000000, Size: 0x00000004, Max: 0xffffffff, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x10000000   0x00000004   Data   RW            3    mydata              prog1multiplytwo32bitnumbers.o
+    0x10000000   0x00000004   Data   RW            3    mydata              sample2umullinstruction.o
 
 
     Execution Region ER_ZI (Base: 0x10000004, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
@@ -69,10 +69,10 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-        40         22          8          4          0        236   prog1multiplytwo32bitnumbers.o
+        44         22          8          4          0        244   sample2umullinstruction.o
 
     ----------------------------------------------------------------------
-        40         22          8          4          0        236   Object Totals
+        44         22          8          4          0        244   Object Totals
          0          0          0          0          0          0   (incl. Generated)
          0          0          0          0          0          0   (incl. Padding)
 
@@ -87,15 +87,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-        40         22          8          4          0        236   Grand Totals
-        40         22          8          4          0        236   ELF Image Totals
-        40         22          8          4          0          0   ROM Totals
+        44         22          8          4          0        244   Grand Totals
+        44         22          8          4          0        244   ELF Image Totals
+        44         22          8          4          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                   48 (   0.05kB)
+    Total RO  Size (Code + RO Data)                   52 (   0.05kB)
     Total RW  Size (RW Data + ZI Data)                 4 (   0.00kB)
-    Total ROM Size (Code + RO Data + RW Data)         52 (   0.05kB)
+    Total ROM Size (Code + RO Data + RW Data)         56 (   0.05kB)
 
 ==============================================================================
 

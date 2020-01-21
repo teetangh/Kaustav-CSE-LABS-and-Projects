@@ -1,3 +1,0 @@
-Dependencies for Project 'ESLABWEEK2', Target 'Target 1': (DO NOT MODIFY !)
-F (.\prog1addTen32bitNumbers.s)(0x5E1D563F)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\prog1addten32bitnumbers.lst --xref -o .\prog1addten32bitnumbers.o --depend .\prog1addten32bitnumbers.d)
-F (.\prog2addTwo128bitNumbers.s)(0x5E1D511B)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\prog2addtwo128bitnumbers.lst --xref -o .\prog2addtwo128bitnumbers.o --depend .\prog2addtwo128bitnumbers.d)
