@@ -1,14 +1,17 @@
-@C:\Users\student.OSLAB-1031\Desktop\DBSLab\UniversityDB\DDL+drop.sql
-@C:\Users\student.OSLAB-1031\Desktop\DBSLab\UniversityDB\smallRelationsInsertFile.sql
+-- @C:\Users\student.OSLAB-1031\Desktop\DBSLab\UniversityDB\DDL+drop.sql
+-- @C:\Users\student.OSLAB-1031\Desktop\DBSLab\UniversityDB\smallRelationsInsertFile.sql
 
-select *
+-- q9
+select name,dept_name
 from student;
 
-select *
+-- q10
+select name
 from instructor
 where dept_name='Comp. Sci.';
 
-select *
+-- q11
+select title
 from course
 where credits = '3';
 
