@@ -15,14 +15,17 @@ select title
 from course
 where credits = '3';
 
+-- q12
 select T.course_id , C.title
 from takes T, course C
 where T.course_id = C.course_id and id='12345';
 
-select *
+-- q13
+select name
 from instructor
-where salary between 40000 and 90000
+where salary between 40000 and 90000;
 
+-- q14
 select instructor.id
 from instructor
 where instructor.ID not in (select teaches.id
