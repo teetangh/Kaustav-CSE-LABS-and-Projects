@@ -122,3 +122,7 @@ from section T
 where T.semester = 'Spring' and T.year = 2010);
 
 -- q14
+
+
+-- q15
+
