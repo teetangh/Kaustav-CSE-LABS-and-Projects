@@ -406,6 +406,11 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
+              <FileName>prog1transferDATAtoDATA.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\prog1transferDATAtoDATA.s</FilePath>
+            </File>
+            <File>
               <FileName>prog3reverseTen32bitNumArray.s</FileName>
               <FileType>2</FileType>
               <FilePath>.\prog3reverseTen32bitNumArray.s</FilePath>

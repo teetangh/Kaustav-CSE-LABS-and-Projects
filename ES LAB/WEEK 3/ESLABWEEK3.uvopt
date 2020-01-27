@@ -161,7 +161,7 @@
         <Mm>
           <WinNumber>1</WinNumber>
           <SubType>0</SubType>
-          <ItemText>0x10000000</ItemText>
+          <ItemText>0x00000020</ItemText>
         </Mm>
       </MemoryWindow1>
       <Tracepoint>
@@ -210,10 +210,10 @@
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>9</ColumnNumber>
+      <ColumnNumber>12</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>12</TopLine>
-      <CurrentLine>28</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>30</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\additiponal2Divide32bitBy16BitusingRepSub.s</PathWithFileName>
       <FilenameWithoutPath>additiponal2Divide32bitBy16BitusingRepSub.s</FilenameWithoutPath>
@@ -242,10 +242,10 @@
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>4</ColumnNumber>
+      <ColumnNumber>1</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>8</TopLine>
-      <CurrentLine>33</CurrentLine>
+      <TopLine>13</TopLine>
+      <CurrentLine>22</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\prog45GCDandLCM.s</PathWithFileName>
       <FilenameWithoutPath>prog45GCDandLCM.s</FilenameWithoutPath>
@@ -274,10 +274,10 @@
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>24</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>1</TopLine>
-      <CurrentLine>9</CurrentLine>
+      <CurrentLine>1</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\sample2UMULLinstruction.s</PathWithFileName>
       <FilenameWithoutPath>sample2UMULLinstruction.s</FilenameWithoutPath>

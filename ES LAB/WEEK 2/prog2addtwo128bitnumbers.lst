@@ -14,41 +14,61 @@ ARM Macro Assembler    Page 1
     8 00000000                 ENTRY
     9 00000000                 EXPORT           Reset_Handler
    10 00000000         Reset_Handler
-   11 00000000 4915            LDR              R1,=VAL1
-   12 00000002 4A16            LDR              R2,=VAL2
-   13 00000004 4B16            LDR              R3,=DST
-   14 00000006 F04F 0400       MOV              R4,#0
-   15 0000000A F04F 0704       MOV              R7,#4
-   16 0000000E 680D            LDR              R5,[R1]
-   17 00000010 6816            LDR              R6,[R2]
-   18 00000012 192D    UP      ADDS             R5,R4
-   19 00000014 F04F 0400       MOV              R4,#0
-   20 00000018 F144 0400       ADC              R4,#0
-   21 0000001C 19AD            ADDS             R5,R6
-   22 0000001E F144 0400       ADC              R4,#0
-   23 00000022 F843 5B04       STR              R5,[R3],#4
-   24 00000026 F101 0104       ADD              R1,#4
-   25 0000002A F102 0204       ADD              R2,#4
-   26 0000002E 3F01            SUBS             R7,#1
-   27 00000030 D1EF            BNE              UP
-   28 00000032 601C            STR              R4,[R3]
-   29 00000034         STOP
-   30 00000034 E7FE            B                STOP
-   31 00000036 00 00           ALIGN
-   32 00000038 00000001 
+   11 00000000 4915            LDR              R1,=VAL1    ;R1 points to Val1 
+                                                            array
+   12 00000002 4A16            LDR              R2,=VAL2    ;R2 points to Val2 
+                                                            array
+   13 00000004 4B16            LDR              R3,=DST     ;R3 Points to Val3 
+                                                            array
+   14 00000006         
+   15 00000006 F04F 0400       MOV              R4,#0       ;R4 acts as carry s
+                                                            torage 
+   16 0000000A F04F 0704       MOV              R7,#4       ;R7 acts as iterato
+                                                            r
+   17 0000000E         
+   18 0000000E 680D    LOOP    LDR              R5,[R1]     ;create temp variab
+                                                            le R5 and store con
+                                                            tent of R1
+   19 00000010 6816            LDR              R6,[R2]     ;create temp variab
+                                                            le R6 and store con
+                                                            tent of R2
+   20 00000012         
+   21 00000012 192D            ADDS             R5,R4
+   22 00000014 F04F 0400       MOV              R4,#0
+   23 00000018 F144 0400       ADC              R4,#0
+   24 0000001C 19AD            ADDS             R5,R6
+   25 0000001E F144 0400       ADC              R4,#0
+   26 00000022 F843 5B04       STR              R5,[R3],#4
+   27 00000026 F101 0104       ADD              R1,#4
+   28 0000002A F102 0204       ADD              R2,#4
+   29 0000002E 3F01            SUBS             R7,#1
+   30 00000030 D1ED            BNE              LOOP
+   31 00000032         
+   32 00000032 601C            STR              R4,[R3]
+   33 00000034         STOP
+   34 00000034 E7FE            B                STOP
+   35 00000036         
+   36 00000036 00 00           ALIGN
+   37 00000038 00000001 
               00000002 
               00000003 
               00000004 VAL1    DCD              1,2,3,4
-   33 00000048 00000003 
+   38 00000048 00000003 
               00000001 
               00000004 
               00000002 VAL2    DCD              3,1,4,2
-   34 00000058 00000000 
+   39 00000058 00000000 
               00000000 
               00000000         AREA             mydata,DATA,READWRITE
-   35 00000000 00000000 
+   40 00000000 00000000 
                        DST     DCD              0
-   36 00000004                 END
+   41 00000004                 END
+
+
+
+ARM Macro Assembler    Page 2 
+
+
 Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\prog2a
 ddtwo128bitnumbers.d -o.\prog2addtwo128bitnumbers.o -IC:\Keil\ARM\RV31\INC -IC:
 \Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\NXP\LPC17xx --predefine="__EVAL SETA 
@@ -82,6 +102,14 @@ Comment: __Vectors used once
 ARM Macro Assembler    Page 1 Alphabetic symbol ordering
 Relocatable symbols
 
+LOOP 0000000E
+
+Symbol: LOOP
+   Definitions
+      At line 18 in file prog2addTwo128bitNumbers.s
+   Uses
+      At line 30 in file prog2addTwo128bitNumbers.s
+Comment: LOOP used once
 Reset_Handler 00000000
 
 Symbol: Reset_Handler
@@ -95,23 +123,15 @@ STOP 00000034
 
 Symbol: STOP
    Definitions
-      At line 29 in file prog2addTwo128bitNumbers.s
+      At line 33 in file prog2addTwo128bitNumbers.s
    Uses
-      At line 30 in file prog2addTwo128bitNumbers.s
+      At line 34 in file prog2addTwo128bitNumbers.s
 Comment: STOP used once
-UP 00000012
-
-Symbol: UP
-   Definitions
-      At line 18 in file prog2addTwo128bitNumbers.s
-   Uses
-      At line 27 in file prog2addTwo128bitNumbers.s
-Comment: UP used once
 VAL1 00000038
 
 Symbol: VAL1
    Definitions
-      At line 32 in file prog2addTwo128bitNumbers.s
+      At line 37 in file prog2addTwo128bitNumbers.s
    Uses
       At line 11 in file prog2addTwo128bitNumbers.s
 Comment: VAL1 used once
@@ -119,7 +139,7 @@ VAL2 00000048
 
 Symbol: VAL2
    Definitions
-      At line 33 in file prog2addTwo128bitNumbers.s
+      At line 38 in file prog2addTwo128bitNumbers.s
    Uses
       At line 12 in file prog2addTwo128bitNumbers.s
 Comment: VAL2 used once
@@ -142,7 +162,7 @@ DST 00000000
 
 Symbol: DST
    Definitions
-      At line 35 in file prog2addTwo128bitNumbers.s
+      At line 40 in file prog2addTwo128bitNumbers.s
    Uses
       At line 13 in file prog2addTwo128bitNumbers.s
 Comment: DST used once
@@ -150,7 +170,7 @@ mydata 00000000
 
 Symbol: mydata
    Definitions
-      At line 34 in file prog2addTwo128bitNumbers.s
+      At line 39 in file prog2addTwo128bitNumbers.s
    Uses
       None
 Comment: mydata unused
