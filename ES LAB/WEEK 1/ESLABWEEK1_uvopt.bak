@@ -206,10 +206,10 @@
       <ColumnNumber>7</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>1</TopLine>
-      <CurrentLine>24</CurrentLine>
+      <CurrentLine>18</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\prog3reverseTen32bitNumArray.s</PathWithFileName>
-      <FilenameWithoutPath>prog3reverseTen32bitNumArray.s</FilenameWithoutPath>
+      <PathWithFileName>.\prog1transferDATAtoDATA.s</PathWithFileName>
+      <FilenameWithoutPath>prog1transferDATAtoDATA.s</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -222,10 +222,10 @@
       <ColumnNumber>7</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>1</TopLine>
-      <CurrentLine>18</CurrentLine>
+      <CurrentLine>24</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\prog1transferDATAtoDATA.s</PathWithFileName>
-      <FilenameWithoutPath>prog1transferDATAtoDATA.s</FilenameWithoutPath>
+      <PathWithFileName>.\prog3reverseTen32bitNumArray.s</PathWithFileName>
+      <FilenameWithoutPath>prog3reverseTen32bitNumArray.s</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

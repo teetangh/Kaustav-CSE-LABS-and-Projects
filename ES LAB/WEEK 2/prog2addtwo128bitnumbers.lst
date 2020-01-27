@@ -33,10 +33,10 @@ ARM Macro Assembler    Page 1
                                                             le R6 and store con
                                                             tent of R2
    20 00000012         
-   21 00000012 192D            ADDS             R5,R4
-   22 00000014 F04F 0400       MOV              R4,#0
+   21 00000012 192D            ADDS             R5,R4       ;R5 = R5 + R4
+   22 00000014 F04F 0400       MOV              R4,#0       ;R4 = 0
    23 00000018 F144 0400       ADC              R4,#0
-   24 0000001C 19AD            ADDS             R5,R6
+   24 0000001C 19AD            ADDS             R5,R6       ;R5 = R5 + R6
    25 0000001E F144 0400       ADC              R4,#0
    26 00000022 F843 5B04       STR              R5,[R3],#4
    27 00000026 F101 0104       ADD              R1,#4
