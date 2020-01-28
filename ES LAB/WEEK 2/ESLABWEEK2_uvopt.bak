@@ -161,7 +161,7 @@
         <Mm>
           <WinNumber>1</WinNumber>
           <SubType>0</SubType>
-          <ItemText>0x10000000</ItemText>
+          <ItemText>0x10000010</ItemText>
         </Mm>
       </MemoryWindow1>
       <Tracepoint>
@@ -210,10 +210,10 @@
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>18</ColumnNumber>
+      <ColumnNumber>13</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>1</TopLine>
-      <CurrentLine>12</CurrentLine>
+      <CurrentLine>18</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\prog1addTen32bitNumbers.s</PathWithFileName>
       <FilenameWithoutPath>prog1addTen32bitNumbers.s</FilenameWithoutPath>
@@ -226,9 +226,9 @@
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>9</ColumnNumber>
+      <ColumnNumber>12</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>2</TopLine>
+      <TopLine>9</TopLine>
       <CurrentLine>23</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\prog2addTwo128bitNumbers.s</PathWithFileName>
@@ -242,13 +242,29 @@
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>10</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>1</TopLine>
       <CurrentLine>19</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\prog3SubtractTwo32bitNumbers.s</PathWithFileName>
       <FilenameWithoutPath>prog3SubtractTwo32bitNumbers.s</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>1</GroupNumber>
+      <FileNumber>4</FileNumber>
+      <FileType>2</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>17</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>1</TopLine>
+      <CurrentLine>20</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\prog4SubtractTwo128bitNumbers.s</PathWithFileName>
+      <FilenameWithoutPath>prog4SubtractTwo128bitNumbers.s</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

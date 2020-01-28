@@ -210,10 +210,10 @@
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>13</ColumnNumber>
+      <ColumnNumber>16</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>1</TopLine>
-      <CurrentLine>18</CurrentLine>
+      <CurrentLine>16</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\prog1addTen32bitNumbers.s</PathWithFileName>
       <FilenameWithoutPath>prog1addTen32bitNumbers.s</FilenameWithoutPath>
@@ -226,10 +226,10 @@
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>12</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>9</TopLine>
-      <CurrentLine>23</CurrentLine>
+      <TopLine>7</TopLine>
+      <CurrentLine>1</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\prog2addTwo128bitNumbers.s</PathWithFileName>
       <FilenameWithoutPath>prog2addTwo128bitNumbers.s</FilenameWithoutPath>
@@ -242,10 +242,10 @@
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>10</ColumnNumber>
+      <ColumnNumber>13</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>1</TopLine>
-      <CurrentLine>19</CurrentLine>
+      <CurrentLine>20</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\prog3SubtractTwo32bitNumbers.s</PathWithFileName>
       <FilenameWithoutPath>prog3SubtractTwo32bitNumbers.s</FilenameWithoutPath>
@@ -258,10 +258,10 @@
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>17</ColumnNumber>
+      <ColumnNumber>18</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>1</TopLine>
-      <CurrentLine>20</CurrentLine>
+      <CurrentLine>18</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\prog4SubtractTwo128bitNumbers.s</PathWithFileName>
       <FilenameWithoutPath>prog4SubtractTwo128bitNumbers.s</FilenameWithoutPath>

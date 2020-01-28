@@ -210,19 +210,35 @@
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>12</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>1</TopLine>
-      <CurrentLine>30</CurrentLine>
+      <CurrentLine>1</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\additiponal2Divide32bitBy16BitusingRepSub.s</PathWithFileName>
-      <FilenameWithoutPath>additiponal2Divide32bitBy16BitusingRepSub.s</FilenameWithoutPath>
+      <PathWithFileName>.\sample1MULinstruction.s</PathWithFileName>
+      <FilenameWithoutPath>sample1MULinstruction.s</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
       <FileNumber>2</FileNumber>
+      <FileType>2</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>0</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>1</TopLine>
+      <CurrentLine>1</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\sample2UMULLinstruction.s</PathWithFileName>
+      <FilenameWithoutPath>sample2UMULLinstruction.s</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>1</GroupNumber>
+      <FileNumber>3</FileNumber>
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -238,33 +254,17 @@
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
-      <FileNumber>3</FileNumber>
-      <FileType>2</FileType>
-      <tvExp>0</tvExp>
-      <Focus>0</Focus>
-      <ColumnNumber>1</ColumnNumber>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>13</TopLine>
-      <CurrentLine>22</CurrentLine>
-      <bDave2>0</bDave2>
-      <PathWithFileName>.\prog45GCDandLCM.s</PathWithFileName>
-      <FilenameWithoutPath>prog45GCDandLCM.s</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>1</GroupNumber>
       <FileNumber>4</FileNumber>
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>13</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
-      <CurrentLine>1</CurrentLine>
+      <TopLine>13</TopLine>
+      <CurrentLine>31</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\sample1MULinstruction.s</PathWithFileName>
-      <FilenameWithoutPath>sample1MULinstruction.s</FilenameWithoutPath>
+      <PathWithFileName>.\prog45GCDandLCM.s</PathWithFileName>
+      <FilenameWithoutPath>prog45GCDandLCM.s</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -274,13 +274,13 @@
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>12</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>1</TopLine>
-      <CurrentLine>1</CurrentLine>
+      <CurrentLine>30</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\sample2UMULLinstruction.s</PathWithFileName>
-      <FilenameWithoutPath>sample2UMULLinstruction.s</FilenameWithoutPath>
+      <PathWithFileName>.\additiponal2Divide32bitBy16BitusingRepSub.s</PathWithFileName>
+      <FilenameWithoutPath>additiponal2Divide32bitBy16BitusingRepSub.s</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
