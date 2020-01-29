@@ -8,18 +8,18 @@ __Vectors
 	ENTRY
 	EXPORT Reset_Handler
 Reset_Handler
-	LDR R1,=SRC ;Source
-	MOV R0,#0 ;Sum
+	LDR R0,=SRC ;Source
+	MOV R1,#0 ;Sum
 	MOV R3,#0 ;Carry
 	MOV R4,#10 ;Counter
 	LDR R5,=DST ;Destination
-LOOP LDR R2,[R1]
-	ADDS R0,R0,R2
+LOOP LDR R2,[R0]
+	ADDS R1,R1,R2
 	ADC R3,#0
-	ADD R1,#4 ;Increment Pointer
+	ADD R0,#4 ;Increment Pointer
 	SUBS R4,#1 ;Decrement Counter
 	BNE LOOP ;Loop 
-	STR R0,[R5] ;Store Final Sum
+	STR R1,[R5] ;Store Final Sum
 	STR R3,[R5,#4] ;Store Fianl Carry
 STOP
 	B STOP

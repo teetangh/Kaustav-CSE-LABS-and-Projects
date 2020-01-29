@@ -4,8 +4,8 @@ ARM Linker, 5.03 [Build 76] [MDK-ARM Lite]
 
 Section Cross References
 
-    prog2addtwo128bitnumbers.o(RESET) refers to prog2addtwo128bitnumbers.o(mycode) for Reset_Handler
-    prog2addtwo128bitnumbers.o(mycode) refers to prog2addtwo128bitnumbers.o(mydata) for DST
+    prog4subtracttwo128bitnumbers.o(RESET) refers to prog4subtracttwo128bitnumbers.o(mycode) for Reset_Handler
+    prog4subtracttwo128bitnumbers.o(mycode) refers to prog4subtracttwo128bitnumbers.o(mydata) for DST
 
 
 ==============================================================================
@@ -16,21 +16,21 @@ Image Symbol Table
 
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
-    RESET                                    0x00000000   Section        8  prog2addtwo128bitnumbers.o(RESET)
-    prog2addTwo128bitNumbers.s               0x00000000   Number         0  prog2addtwo128bitnumbers.o ABSOLUTE
-    mycode                                   0x00000008   Section      100  prog2addtwo128bitnumbers.o(mycode)
-    VAL1                                     0x00000040   Data          16  prog2addtwo128bitnumbers.o(mycode)
-    VAL2                                     0x00000050   Data          16  prog2addtwo128bitnumbers.o(mycode)
-    mydata                                   0x10000000   Section        4  prog2addtwo128bitnumbers.o(mydata)
-    DST                                      0x10000000   Data           4  prog2addtwo128bitnumbers.o(mydata)
+    RESET                                    0x00000000   Section        8  prog4subtracttwo128bitnumbers.o(RESET)
+    prog4SubtractTwo128bitNumbers.s          0x00000000   Number         0  prog4subtracttwo128bitnumbers.o ABSOLUTE
+    mycode                                   0x00000008   Section       96  prog4subtracttwo128bitnumbers.o(mycode)
+    N1                                       0x0000003c   Data          16  prog4subtracttwo128bitnumbers.o(mycode)
+    N2                                       0x0000004c   Data          16  prog4subtracttwo128bitnumbers.o(mycode)
+    mydata                                   0x10000000   Section        4  prog4subtracttwo128bitnumbers.o(mydata)
+    DST                                      0x10000000   Data           4  prog4subtracttwo128bitnumbers.o(mydata)
 
     Global Symbols
 
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
     BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$STANDARDLIB$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
-    __Vectors                                0x00000000   Data           0  prog2addtwo128bitnumbers.o(RESET)
-    Reset_Handler                            0x00000009   Thumb Code     0  prog2addtwo128bitnumbers.o(mycode)
+    __Vectors                                0x00000000   Data           0  prog4subtracttwo128bitnumbers.o(RESET)
+    Reset_Handler                            0x00000009   Thumb Code     0  prog4subtracttwo128bitnumbers.o(mycode)
 
 
 
@@ -40,21 +40,21 @@ Memory Map of the image
 
   Image Entry point : 0x00000009
 
-  Load Region LR_1 (Base: 0x00000000, Size: 0x00000070, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x00000000, Size: 0x0000006c, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Base: 0x00000000, Size: 0x0000006c, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Base: 0x00000000, Size: 0x00000068, Max: 0xffffffff, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x00000000   0x00000008   Data   RO            1    RESET               prog2addtwo128bitnumbers.o
-    0x00000008   0x00000064   Code   RO            2  * mycode              prog2addtwo128bitnumbers.o
+    0x00000000   0x00000008   Data   RO            1    RESET               prog4subtracttwo128bitnumbers.o
+    0x00000008   0x00000060   Code   RO            2  * mycode              prog4subtracttwo128bitnumbers.o
 
 
     Execution Region ER_RW (Base: 0x10000000, Size: 0x00000004, Max: 0xffffffff, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x10000000   0x00000004   Data   RW            3    mydata              prog2addtwo128bitnumbers.o
+    0x10000000   0x00000004   Data   RW            3    mydata              prog4subtracttwo128bitnumbers.o
 
 
     Execution Region ER_ZI (Base: 0x10000004, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
@@ -69,10 +69,10 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       100         46          8          4          0        236   prog2addtwo128bitnumbers.o
+        96         44          8          4          0        316   prog4subtracttwo128bitnumbers.o
 
     ----------------------------------------------------------------------
-       100         46          8          4          0        236   Object Totals
+        96         44          8          4          0        316   Object Totals
          0          0          0          0          0          0   (incl. Generated)
          0          0          0          0          0          0   (incl. Padding)
 
@@ -87,15 +87,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-       100         46          8          4          0        236   Grand Totals
-       100         46          8          4          0        236   ELF Image Totals
-       100         46          8          4          0          0   ROM Totals
+        96         44          8          4          0        316   Grand Totals
+        96         44          8          4          0        316   ELF Image Totals
+        96         44          8          4          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                  108 (   0.11kB)
+    Total RO  Size (Code + RO Data)                  104 (   0.10kB)
     Total RW  Size (RW Data + ZI Data)                 4 (   0.00kB)
-    Total ROM Size (Code + RO Data + RW Data)        112 (   0.11kB)
+    Total ROM Size (Code + RO Data + RW Data)        108 (   0.11kB)
 
 ==============================================================================
 
