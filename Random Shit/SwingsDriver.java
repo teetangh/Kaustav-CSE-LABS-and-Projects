@@ -20,19 +20,17 @@ class FirstSwingExample {
 
     button = new JButton("Click");
 
-    //set bounds defines the region of the UI element to be added to the frame
+    // set bounds defines the region of the UI element to be added to the frame
     button.setBounds(130, 170, 100, 40); // x axis, y axis, width, height
 
     frame = new JFrame();
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-
     frame.setSize(400, 500); // sets the dimension of the frame
     frame.setLayout(null); // using no layout managers
 
-
     nameField = new JTextField();
-    nameField.setBounds(50, 50, 220,50);
+    nameField.setBounds(50, 50, 220, 50);
 
     earningsField = new JTextField();
     earningsField.setBounds(50, 110, 220, 50);
@@ -63,7 +61,6 @@ class FirstSwingExample {
     frame.setVisible(true);
 
   }
-
 
   FirstSwingExample() {
 
@@ -110,7 +107,6 @@ class MovieInfo {
   public int getEarnings() {
     return earnings;
   }
-
 
 }
 
@@ -175,14 +171,13 @@ class CalculatorSwings {
     frame.add(operand1);
     frame.add(operand2);
 
-    //Set result label
+    // Set result label
     result = new JLabel();
     result.setBounds(50, 280, 60, 60);
 
     frame.add(result);
 
   }
-
 
   private void performAddition() {
 
@@ -208,7 +203,7 @@ class CalculatorSwings {
 
 class StringSwings {
 
-  //initialize view
+  // initialize view
 
   JTextField str_field;
   JButton search_button;
@@ -217,11 +212,11 @@ class StringSwings {
   JLabel search_label;
   JFrame frame;
 
-  //model
+  // model
   List<String> string_list;
 
   private void viewDidLoad(List<String> string_list) {
-    //initialize model
+    // initialize model
     this.string_list = string_list;
 
     frame = new JFrame();
@@ -248,7 +243,7 @@ class StringSwings {
     frame.add(search_button);
     frame.add(add_button);
     frame.add(found_label);
-    //frame.add(search_label);
+    // frame.add(search_label);
 
     frame.setVisible(true);
     frame.setLayout(null);
@@ -263,7 +258,7 @@ class StringSwings {
 
   }
 
-  //define controllers
+  // define controllers
 
   private void add_string() {
 
@@ -292,7 +287,7 @@ class StringSwings {
         String text = str_field.getText();
         int index = string_list.indexOf(text);
 
-        if(index != -1) {
+        if (index != -1) {
 
           System.out.println("Found!");
           String search_hit = string_list.get(index);
@@ -304,7 +299,7 @@ class StringSwings {
           found_label.setText("Not found");
         }
 
-        //found_label.setText("");
+        // found_label.setText("");
       }
 
     });
@@ -317,8 +312,8 @@ public class SwingsDriver {
 
     List<String> string_list = new ArrayList<String>();
 
-    //new FirstSwingExample();
+    // new FirstSwingExample();
     new CalculatorSwings();
-    //new StringSwings(string_list);
+    // new StringSwings(string_list);
   }
 }
