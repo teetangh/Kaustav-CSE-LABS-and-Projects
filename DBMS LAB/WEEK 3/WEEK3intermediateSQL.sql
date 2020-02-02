@@ -123,6 +123,43 @@ where T.semester = 'Spring' and T.year = 2010);
 
 -- q14
 
+select distinct S.ID,S.name
+from student S
+where not exists
+((select course_id
+from course
+where dept_name = 'Biology') 
+)
+MINUS
+(select T.course_id
+from takes T
+where S.ID = T.ID)); 
+
+
+-- 
+  select distinct S.ID,S.name
+ from student S 
+ where not exists 
+ ((select course_id 
+ from course
+  where dept_name = 'Biology')
+  minus
+  (select course_id 
+  from takes t
+  where t.id = s.id));
 
 -- q15
 
+select T.course_id
+from course T
+where unique 
+(select R.course_id
+from section R
+where R.year = 2009 and R.course_id = T.course_id);
+
+select T.course_id
+from course T
+where 1>= 
+(select count(R.course_id)
+from section R
+where R.year = 2009 and R.course_id = T.course_id);
