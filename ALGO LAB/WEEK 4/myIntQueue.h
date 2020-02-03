@@ -77,5 +77,5 @@ int dequeue(queue *q)
 void display(queue *q)
 {
     for (int i = q->front; i <= q->rear; i++)
-        printf("%c", q->arr[i]);
+        printf("%d", q->arr[i]);
 }
