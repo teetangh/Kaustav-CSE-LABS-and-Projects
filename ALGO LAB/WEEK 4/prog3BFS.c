@@ -46,7 +46,6 @@ int deleteq(Queue *q1)
         return (q1->q[q1->front++]);
 }
 
-
 // GRAPH ADJACNCY MATRIX CREATION
 int graph(int a[100][100], int v, int ver1, int ver2)
 {
@@ -54,26 +53,26 @@ int graph(int a[100][100], int v, int ver1, int ver2)
     a[ver2][ver1] = 1;
 }
 // BFS
-void myBFS(int a[100][100],int vertices ,int start,int visited[])
+void myBFS(int a[100][100], int vertices, int start, int visited[])
 {
     Queue Q;
 
-    addq(&Q,start);
+    addq(&Q, start);
 
-    while(!isEmpty(Q))
+    while (!isEmpty(Q))
     {
         int p = Q.front;
         int q = deleteq(&Q);
-        visited[p]  = 1;
-        printf("visited %d \n",p);
+        visited[p] = 1;
+        printf("visited %d \n", p);
 
-        for (int k = 0; (k < vertices) ; k++)
+        for (int k = 0; (k < vertices); k++)
         {
-            if(a[p][k] == 1)
+            if (a[p][k] == 1)
             {
-                visited[k]  = 1;
-                printf("visited %d \n",k);
-                addq(&Q,k);
+                visited[k] = 1;
+                printf("visited %d \n", k);
+                addq(&Q, k);
             }
         }
     }
@@ -115,16 +114,14 @@ int main()
         printf("\n");
     }
 
-
-
     // Doing the ACTUAL BFS
-    int* visited = (int *)calloc(v,sizeof(int));
-    
+    int *visited = (int *)calloc(v, sizeof(int));
+
     int start;
     printf("Enter the Start vertex for Breadth First Search\n");
-    scanf(" %d",&start);
+    scanf(" %d", &start);
 
-    myBFS(a,v ,start,visited);
+    myBFS(a, v, start, visited);
 
     return 0;
 }

@@ -7,16 +7,15 @@ int graph(int a[100][100], int v, int ver1, int ver2)
     a[ver2][ver1] = 1;
 }
 
-void myDFS(int a[100][100],int vertices ,int start,int visited[])
+void myDFS(int a[100][100], int vertices, int start, int visited[])
 {
-    	visited[start] = 1;
-    	printf(" visited %d \n", start);
-    	for(int k = 0 ; k < vertices ; k++)
-    	{
-    		if(visited[k] == 0)
-    			myDFS(a,vertices ,k,visited);
-    	}
-
+    visited[start] = 1;
+    printf(" visited %d \n", start);
+    for (int k = 0; k < vertices; k++)
+    {
+        if (visited[k] == 0)
+            myDFS(a, vertices, k, visited);
+    }
 }
 
 int main()
@@ -55,14 +54,13 @@ int main()
     }
 
     // int visited[v] = {0};
-    int* visited = (int *)calloc(v,sizeof(int));
-    
+    int *visited = (int *)calloc(v, sizeof(int));
+
     int start;
     printf("Enter the Start vertex for Depth First Search\n");
-    scanf(" %d",&start);
+    scanf(" %d", &start);
 
-    myDFS(a,v ,start,visited);
+    myDFS(a, v, start, visited);
 
-   
     return 0;
 }
