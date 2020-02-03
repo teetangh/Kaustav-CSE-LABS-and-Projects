@@ -13,19 +13,12 @@ void myDFS(int a[100][100],int vertices ,int start,int visited[])
     	printf(" visited %d \n", start);
     	for(int k = 0 ; k < vertices ; k++)
     	{
-    		printf("\n start vertex %d \n",start );
-    		printf("\n visted array \n");
-    		for (int i = 0; i < vertices ; ++i)
-    			printf("%d ",visited[i]);
-
     		if(visited[k] == 0)
-    		{
-    			// dfs(k);
     			myDFS(a,vertices ,k,visited);
-    		}
     	}
 
 }
+
 int main()
 {
 
