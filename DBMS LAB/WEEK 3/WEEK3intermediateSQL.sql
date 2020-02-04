@@ -123,20 +123,21 @@ where T.semester = 'Spring' and T.year = 2010);
 
 -- q14
 
-select distinct S.ID,S.name
-from student S
-where not exists
-((select course_id
-from course
-where dept_name = 'Biology') 
-)
-MINUS
-(select T.course_id
-from takes T
-where S.ID = T.ID)); 
+-- -- NOT Working
+-- select distinct S.ID,S.name
+-- from student S
+-- where not exists
+-- ((select course_id
+-- from course
+-- where dept_name = 'Biology') 
+-- )
+-- MINUS
+-- (select T.course_id
+-- from takes T
+-- where S.ID = T.ID)); 
 
 
--- 
+-- from Nishkal
   select distinct S.ID,S.name
  from student S 
  where not exists 
@@ -163,3 +164,29 @@ where 1>=
 (select count(R.course_id)
 from section R
 where R.year = 2009 and R.course_id = T.course_id);
+
+-- q16
+-- select * from student;
+-- select * from takes;
+
+
+-- select *
+-- from student S inner join takes T on (S.id = T.id);  
+
+-- Cheap Trick
+select name
+from student S , takes T, course C
+where
+S.ID = T.ID
+and T.course_id = C.course_id 
+and T.course_id like 'CS%'
+group by name
+having count(name) >=2;
+
+
+-- select *
+-- from course C
+-- where C.dept_name = 'Comp. Sci.';
+
+
+-- q17
