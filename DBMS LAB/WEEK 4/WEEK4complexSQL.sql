@@ -83,9 +83,46 @@ group by sec_id;
 -- from teaches inner join takes 
 -- using (course_id,sec_id,semester,year);
 
+
+select *
+from instructor natural join teaches
+where teaches.course_id in
+(
+select course_id 
+from student natural join takes
+where student.dept_name = 'Comp. Sci.' 
+);
+
+select distinct (name)
+from
+(select instructor.name
+from instructor natural join teaches,student natural join takes
+where instructor.dept_name = student.dept_name
+and student.dept_name = 'Comp. Sci.'
+);
+select distinct (name)
+from
+(select instructor.name
+from instructor natural join teaches,student natural join takes
+where student.dept_name = 'Comp. Sci.'
+);
+
 -- q12
 
 select dept_name,avg(salary)
 from instructor
 group by dept_name
-having avg(salary)>50000 and count(id)>5;
+having avg(salary)>50000 and count(id)>2;
+
+
+
+-- select dept_name,avg_sal,count
+-- from
+-- (
+-- select dept_name,avg(salary)
+-- from avg_sal,count(*) as count_i from instructor
+-- group by dept_name
+-- )
+-- where avg_sal > 50000 and count_i > 5;
+
+-- q13

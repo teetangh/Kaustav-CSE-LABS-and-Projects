@@ -189,4 +189,32 @@ having count(name) >=2;
 -- where C.dept_name = 'Comp. Sci.';
 
 
--- q17
+-- q17 (Be careful with the inner table)
+
+select dept_name, AVG_SALARY
+from (select dept_name,avg(salary) as AVG_SALARY
+from instructor
+group by dept_name)
+where AVG_SALARY > 42000;
+
+
+-- q18
+
+create view all_courses as
+  (select course.course_id,sec_id,building,room_number
+  from course,section
+  where 
+  course.course_id = section.course_id
+  and section.semester='Fall'
+  and section.year=2009
+  and course.dept_name='Physics');
+
+  -- q19
+  select course_id
+  from all_courses;
+
+  -- q20
+  create view department_total_salary as
+    (select dept_name,sum(salary) as total_salary
+    from instructor
+    group by dept_name);
