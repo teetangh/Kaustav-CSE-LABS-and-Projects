@@ -17,7 +17,7 @@ Reset_Handler
 	
 	MOV R0,#4
 	MOV R1,#1
-	CMP R1,R0
+L3	CMP R1,R0
 	BHI L1
 	
 	MOV R2,R13
@@ -41,6 +41,8 @@ SWAP
 	LDMDB R10!,{R9}
 	STM R2,{R9}
 	STM R10,{R8}
-	
+	ADD R1,#1
+	B L3
+
 L1 LDMDB R13!,{R0,R4}
 	END

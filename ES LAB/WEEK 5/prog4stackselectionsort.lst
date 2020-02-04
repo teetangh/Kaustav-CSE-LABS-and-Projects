@@ -23,8 +23,8 @@ ARM Macro Assembler    Page 1
    17 00000018         
    18 00000018 F04F 0004       MOV              R0,#4
    19 0000001C F04F 0101       MOV              R1,#1
-   20 00000020 4281            CMP              R1,R0
-   21 00000022 D81B            BHI              L1
+   20 00000020 4281    L3      CMP              R1,R0
+   21 00000022 D81E            BHI              L1
    22 00000024         
    23 00000024 466A            MOV              R2,R13
    24 00000026 466B            MOV              R3,R13
@@ -47,10 +47,12 @@ ARM Macro Assembler    Page 1
    41 00000050 F85A 9D04       LDMDB            R10!,{R9}
    42 00000054 F8C2 9000       STM              R2,{R9}
    43 00000058 F8CA 8000       STM              R10,{R8}
-   44 0000005C         
-   45 0000005C E93D 0011 
+   44 0000005C F101 0101       ADD              R1,#1
+   45 00000060 E7DE            B                L3
+   46 00000062         
+   47 00000062 E93D 0011 
                        L1      LDMDB            R13!,{R0,R4}
-   46 00000060                 END
+   48 00000066                 END
 Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\prog4s
 tackselectionsort.d -o.\prog4stackselectionsort.o -IC:\Keil\ARM\RV31\INC -IC:\K
 eil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\NXP\LPC17xx --predefine="__EVAL SETA 1"
@@ -84,11 +86,11 @@ Comment: __Vectors used once
 ARM Macro Assembler    Page 1 Alphabetic symbol ordering
 Relocatable symbols
 
-L1 0000005C
+L1 00000062
 
 Symbol: L1
    Definitions
-      At line 45 in file prog4stackSelectionSort.s
+      At line 47 in file prog4stackSelectionSort.s
    Uses
       At line 21 in file prog4stackSelectionSort.s
 Comment: L1 used once
@@ -100,6 +102,14 @@ Symbol: L2
    Uses
       At line 37 in file prog4stackSelectionSort.s
 Comment: L2 used once
+L3 00000020
+
+Symbol: L3
+   Definitions
+      At line 20 in file prog4stackSelectionSort.s
+   Uses
+      At line 45 in file prog4stackSelectionSort.s
+Comment: L3 used once
 Reset_Handler 00000000
 
 Symbol: Reset_Handler
@@ -125,5 +135,5 @@ Symbol: mycode
    Uses
       None
 Comment: mycode unused
-5 symbols
-338 symbols in table
+6 symbols
+339 symbols in table
