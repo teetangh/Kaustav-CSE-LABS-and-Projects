@@ -161,7 +161,7 @@
         <Mm>
           <WinNumber>1</WinNumber>
           <SubType>0</SubType>
-          <ItemText>0x00000004</ItemText>
+          <ItemText>0x10000000</ItemText>
         </Mm>
       </MemoryWindow1>
       <Tracepoint>
@@ -226,10 +226,10 @@
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>13</ColumnNumber>
+      <ColumnNumber>2</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>6</TopLine>
-      <CurrentLine>26</CurrentLine>
+      <CurrentLine>24</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\prog2factorialOfUnsignedNumber.s</PathWithFileName>
       <FilenameWithoutPath>prog2factorialOfUnsignedNumber.s</FilenameWithoutPath>
@@ -244,7 +244,7 @@
       <Focus>0</Focus>
       <ColumnNumber>7</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>27</TopLine>
+      <TopLine>22</TopLine>
       <CurrentLine>51</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\prog4stackSelectionSort.s</PathWithFileName>

@@ -34,8 +34,8 @@ ARM Macro Assembler    Page 1
    28 0000002A         STOP
    29 0000002A E7FE            B                STOP
    30 0000002C                 ALIGN
-   31 0000002C 00000004 
-                       NUM     DCD              4
+   31 0000002C 00000003 
+                       NUM     DCD              3
    32 00000030 00000000 
               00000000         AREA             mydata,DATA,READWRITE
    33 00000000 00000000 
