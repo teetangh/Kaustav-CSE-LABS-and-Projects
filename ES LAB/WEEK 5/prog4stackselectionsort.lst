@@ -52,7 +52,10 @@ ARM Macro Assembler    Page 1
    46 00000062         
    47 00000062 E93D 0011 
                        L1      LDMDB            R13!,{R0,R4}
-   48 00000066                 END
+   48 00000066         
+   49 00000066         STOP
+   50 00000066 E7FE            B                STOP
+   51 00000068                 END
 Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\prog4s
 tackselectionsort.d -o.\prog4stackselectionsort.o -IC:\Keil\ARM\RV31\INC -IC:\K
 eil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\NXP\LPC17xx --predefine="__EVAL SETA 1"
@@ -119,6 +122,14 @@ Symbol: Reset_Handler
       At line 5 in file prog4stackSelectionSort.s
       At line 9 in file prog4stackSelectionSort.s
 
+STOP 00000066
+
+Symbol: STOP
+   Definitions
+      At line 49 in file prog4stackSelectionSort.s
+   Uses
+      At line 50 in file prog4stackSelectionSort.s
+Comment: STOP used once
 SWAP 0000004C
 
 Symbol: SWAP
@@ -135,5 +146,5 @@ Symbol: mycode
    Uses
       None
 Comment: mycode unused
-6 symbols
-339 symbols in table
+7 symbols
+340 symbols in table

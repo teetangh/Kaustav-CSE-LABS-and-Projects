@@ -45,4 +45,7 @@ SWAP
 	B L3
 
 L1 LDMDB R13!,{R0,R4}
+
+STOP 
+	B STOP
 	END

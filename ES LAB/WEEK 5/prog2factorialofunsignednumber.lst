@@ -1,0 +1,160 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,DATA,READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10001000        DCD              0x10001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 ALIGN
+    7 00000008                 AREA             mycode,CODE,READONLY
+    8 00000000                 ENTRY
+    9 00000000                 EXPORT           Reset_Handler
+   10 00000000         Reset_Handler
+   11 00000000 480B            LDR              R0,=NUM
+   12 00000002 490C            LDR              R1,=RESULT
+   13 00000004 6801            LDR              R1,[R0]
+   14 00000006 F000 F802       BL               FACT
+   15 0000000A 600A            STR              R2,[R1]
+   16 0000000C E7FE    HERE    B                HERE
+   17 0000000E         FACT
+   18 0000000E 2A00            CMP              R2,#0
+   19 00000010 BF08 2201       MOVEQ            R2,#1
+   20 00000014 D004            BEQ              L1
+   21 00000016 B504            PUSH             {R2,LR}
+   22 00000018 F1A2 0201       SUB              R2,#1
+   23 0000001C F7FF FFF7       BL               FACT
+   24 00000020         L1
+   25 00000020 E8BD 4008       POP              {R3,LR}
+   26 00000024 FB02 F203       MUL              R2,R3
+   27 00000028 4770            BX               LR
+   28 0000002A         STOP
+   29 0000002A E7FE            B                STOP
+   30 0000002C                 ALIGN
+   31 0000002C 00000004 
+                       NUM     DCD              4
+   32 00000030 00000000 
+              00000000         AREA             mydata,DATA,READWRITE
+   33 00000000 00000000 
+                       RESULT  DCD              0
+   34 00000004                 END
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\prog2f
+actorialofunsignednumber.d -o.\prog2factorialofunsignednumber.o -IC:\Keil\ARM\R
+V31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\NXP\LPC17xx --predefine="
+__EVAL SETA 1" --list=.\prog2factorialofunsignednumber.lst prog2factorialOfUnsi
+gnedNumber.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file prog2factorialOfUnsignedNumber.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file prog2factorialOfUnsignedNumber.s
+   Uses
+      At line 2 in file prog2factorialOfUnsignedNumber.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+FACT 0000000E
+
+Symbol: FACT
+   Definitions
+      At line 17 in file prog2factorialOfUnsignedNumber.s
+   Uses
+      At line 14 in file prog2factorialOfUnsignedNumber.s
+      At line 23 in file prog2factorialOfUnsignedNumber.s
+
+HERE 0000000C
+
+Symbol: HERE
+   Definitions
+      At line 16 in file prog2factorialOfUnsignedNumber.s
+   Uses
+      At line 16 in file prog2factorialOfUnsignedNumber.s
+Comment: HERE used once
+L1 00000020
+
+Symbol: L1
+   Definitions
+      At line 24 in file prog2factorialOfUnsignedNumber.s
+   Uses
+      At line 20 in file prog2factorialOfUnsignedNumber.s
+Comment: L1 used once
+NUM 0000002C
+
+Symbol: NUM
+   Definitions
+      At line 31 in file prog2factorialOfUnsignedNumber.s
+   Uses
+      At line 11 in file prog2factorialOfUnsignedNumber.s
+Comment: NUM used once
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 10 in file prog2factorialOfUnsignedNumber.s
+   Uses
+      At line 5 in file prog2factorialOfUnsignedNumber.s
+      At line 9 in file prog2factorialOfUnsignedNumber.s
+
+STOP 0000002A
+
+Symbol: STOP
+   Definitions
+      At line 28 in file prog2factorialOfUnsignedNumber.s
+   Uses
+      At line 29 in file prog2factorialOfUnsignedNumber.s
+Comment: STOP used once
+mycode 00000000
+
+Symbol: mycode
+   Definitions
+      At line 7 in file prog2factorialOfUnsignedNumber.s
+   Uses
+      None
+Comment: mycode unused
+7 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESULT 00000000
+
+Symbol: RESULT
+   Definitions
+      At line 33 in file prog2factorialOfUnsignedNumber.s
+   Uses
+      At line 12 in file prog2factorialOfUnsignedNumber.s
+Comment: RESULT used once
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 32 in file prog2factorialOfUnsignedNumber.s
+   Uses
+      None
+Comment: mydata unused
+2 symbols
+344 symbols in table
