@@ -92,4 +92,54 @@ insert into employee values (3,'Ranjan','Bangalore,India');
 insert into employee values (4,'Ashray','Mangalore,India');
 insert into employee values (5,'Sahaj','Manipal,India');
 
+alter table employee add Emp_DOB DATE ;
+
+update employee set Emp_DOB = '04-FEB-20';
+
+SELECT TO_CHAR( Emp_DOB, 'DD-MON-YYYY' ) FROM employee;
+SELECT TO_CHAR( Emp_DOB, 'DD-MON-YY' ) FROM employee;
+SELECT TO_CHAR( Emp_DOB, 'DD-MM-YY' ) FROM employee;
+
+-- q25
+select TO_CHAR(Emp_DOB,'YEAR') from employee;
+select TO_CHAR(Emp_DOB,'Year') from employee;
+select TO_CHAR(Emp_DOB,'year') from employee;
+
+-- q26
+select TO_CHAR(Emp_DOB,'DAY') from employee;
+select TO_CHAR(Emp_DOB,'Day') from employee;
+
+-- q27
+select TO_CHAR(Emp_DOB,'MONTH') from employee;
+select TO_CHAR(Emp_DOB,'Month') from employee;
+
+-- q28
+select last_day(Emp_DOB) from employee where emp_no = 1;
+select TO_CHAR(last_day(Emp_DOB),'DAY') from employee where emp_no = 1;
+
+-- q29
+select emp_name,ROUND((sysdate -Emp_DOB )/365)as Emp_age
+from employee;
+
+-- q30
+select emp_name,next_day(add_months(Emp_DOB,60*12),'Saturday') as result
+from employee;
+
+-- q31
+select emp_name,Emp_DOB
+from employee
+where extract(year from Emp_DOB) = 2020;
+
+-- q32
+select emp_name,Emp_DOB
+from employee
+where extract(year from Emp_DOB) between 2019 and 2021;
+
+-- q33
+select emp_name,Emp_DOB
+from employee
+where (extract(year from Emp_DOB)) + 60 = 2080;
+
+
+
 
