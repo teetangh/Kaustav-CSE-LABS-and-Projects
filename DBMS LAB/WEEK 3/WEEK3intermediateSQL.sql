@@ -19,6 +19,17 @@ select course_id from section where semester = 'Spring' and year = 2010;
 -- from takes
 -- group by course_id;
 
+select * 
+from course natural join takes
+where takes.course_id = NULL;
+
+select title 
+from course
+where course_id not in
+(
+  select course_id
+  from takes
+);
 
 -- q5
 select distinct course_id
