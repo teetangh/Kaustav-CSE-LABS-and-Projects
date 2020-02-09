@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define MAX 10
+#define MAX 50
 #define true 1
 #define false 0
 

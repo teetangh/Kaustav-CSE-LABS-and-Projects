@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include "IntStack.h"
 
-void constructDirectedAcyclicGraph(int **adjacencyMatrix, int ver1, int ver2)
+void constructDirectedAcyclicGraph(int adjacencyMatrix[100][100], int ver1, int ver2)
 {
     adjacencyMatrix[ver1][ver2] = 1;
 }
@@ -21,19 +21,32 @@ int printGraph(int adjacencyMatrix[100][100], int vertices)
 
 void topologicalDFSHelper(int adjacencyMatrix[100][100], int vertices, int *visitedArray, stack *visitedSet, stack *sortedSet)
 {
-    int stackTop = visitedSet->top;
+    printf("\nIn topologicalDFS Helper\n");
+    printf("\n Visited Array\n");
+    for (int i = 0; i < vertices; i++)
+        printf(" %d", visitedArray[i]);
+    printf("\n");
 
+    int stackTop = visitedSet->arr[visitedSet->top];
+
+    bool flagAllvisited = true;
     for (int col = 0; col < vertices; col++)
     {
         if (adjacencyMatrix[stackTop][col] == 1 && !visitedArray[col])
         {
-            push(&visitedSet, stackTop);
+            visitedArray[col]++;
+            flagAllvisited = false;
+            printf("\n pushing stackTop %d \n", stackTop);
+            push(visitedSet, stackTop);
             topologicalDFSHelper(adjacencyMatrix, vertices, visitedArray, visitedSet, sortedSet);
         }
     }
+    if (flagAllvisited)
+        push(sortedSet, pop(visitedSet));
 }
 void topologicalDFS(int adjacencyMatrix[100][100], int vertices, int *visitedArray, stack *visitedSet, stack *sortedSet)
 {
+    printf("\nIn topologicalDFS\n");
     int vertexIndegree0 = 0;
 
     for (int col = 0; (col % vertices) < vertices; col = ((col + 1) % vertices))
@@ -55,12 +68,15 @@ void topologicalDFS(int adjacencyMatrix[100][100], int vertices, int *visitedArr
                 visitedArray[vertexIndegree0] = 1;
                 printf("Visited vertex %d\n", vertexIndegree0);
 
-                push(&visitedSet, vertexIndegree0);
+                push(visitedSet, vertexIndegree0);
                 break;
             }
         }
     }
 
+    printf("\nTemp deisplay\n");
+    display(visitedSet);
+    display(sortedSet);
     topologicalDFSHelper(adjacencyMatrix, vertices, visitedArray, visitedSet, sortedSet);
 }
 int main()
@@ -80,7 +96,11 @@ int main()
 
     printGraph(adjacencyMatrix, vertices);
 
-    int *visited = (int *)calloc(vertices, sizeof(int));
+    int *visitedArray = (int *)calloc(vertices, sizeof(int));
 
     stack visitedSet, sortedSet;
+
+    topologicalDFS(adjacencyMatrix, vertices, visitedArray, &visitedSet, &sortedSet);
+    printf("\nDisplaying the sortedSet\n");
+    display(&sortedSet);
 }
