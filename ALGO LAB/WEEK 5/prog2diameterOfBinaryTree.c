@@ -6,11 +6,27 @@ typedef struct node
     int data;
     struct node *lchild;
     struct node *rchild;
-} * NODE;
+} * Nodeptr;
 
-NODE recursiveCreateBinaryTree()
+int max2(int a, int b)
 {
-    NODE temp;
+    int c = (a > b) ? a : b;
+    return c;
+}
+
+int max3(int a, int b, int c)
+{
+    if (a > b && a > c)
+        return a;
+    else if (b > a && b > c)
+        return b;
+    else
+        return c;
+}
+
+Nodeptr recursiveCreateBinaryTree()
+{
+    Nodeptr temp;
     int ele;
 
     printf("Enter the element to be inserted(-1 for no data):");
@@ -19,7 +35,7 @@ NODE recursiveCreateBinaryTree()
     if (ele == -1)
         return NULL;
 
-    temp = (NODE)malloc(sizeof(struct node));
+    temp = (Nodeptr)malloc(sizeof(struct node));
 
     temp->data = ele;
 
@@ -31,22 +47,54 @@ NODE recursiveCreateBinaryTree()
 
     return temp;
 }
+int numberOfNodesBinaryTree(Nodeptr root)
+{
+    int leftValue = 0;
+    int rightValue = 0;
+    if (root == NULL)
+        return 0;
+    else
+    {
+        /* code */
+        leftValue = numberOfNodesBinaryTree(root->lchild);
+        rightValue = numberOfNodesBinaryTree(root->rchild);
+        return leftValue + rightValue + 1;
+    }
+}
 
+int heightOfBinaryTree(Nodeptr root)
+{
+    if (root == NULL)
+        return 0;
+    else
+        return 1 + max2(heightOfBinaryTree(root->lchild), heightOfBinaryTree(root->lchild));
+}
+int diameterOfBinaryTree(Nodeptr root)
+{
+    if (root == NULL)
+        return 0;
+
+    int option1 = heightOfBinaryTree(root->lchild) + heightOfBinaryTree(root->rchild);
+    int option2 = diameterOfBinaryTree(root->lchild);
+    int option3 = diameterOfBinaryTree(root->rchild);
+
+    return max2(option1, max2(option2, option3));
+}
 void main()
 {
-    NODE root = NULL;
+    Nodeptr root = NULL;
 
     printf("Enter 0.createBinaryTree(Recursive) \n");
-    printf("Enter 1.createBinarySearchTree \n");
-    printf("Enter 2.displayTree \n");
-    printf("Enter 3.searchTree \n");
+    printf("Enter 1.numberOfNodes(Recursive) \n");
+    printf("Enter 2.HeightOfBinaryTree(Recursive) \n");
+    printf("Enter 3.DiamterOfBianryTree(Recursive) \n");
 
     int choice;
     printf("Enter your choice\n");
     scanf(" %d", &choice);
 
     int tempvalue, item;
-
+    int numberOfNodes, height, diameter;
     while (1)
     {
 
@@ -55,35 +103,19 @@ void main()
         case 0:
             root = recursiveCreateBinaryTree();
             break;
-
         case 1:
-            printf("Enter Root Node\n");
-            scanf(" %d", &tempvalue);
-            while (tempvalue != -1)
-            {
-                root = createBinarySearchTree(root, tempvalue);
-                printf("Enter Next Node.\n Enter -1 to exit\n");
-                scanf(" %d", &tempvalue);
-            }
+            numberOfNodes = numberOfNodesBinaryTree(root);
+            printf("\nNumber of Nodes are: %d\n", numberOfNodes);
             break;
-
         case 2:
-            printf("\n Inorder Traversals \n");
-            inorder(root);
-            printf("\n Postorder Traversals \n");
-            postorder(root);
-            printf("\n Preorder Traversals \n");
-            preorder(root);
-            printf("\n ********* \n");
+            height = heightOfBinaryTree(root);
+            printf("\nHeight of Bianry Tree is : %d\n", height);
             break;
         case 3:
-            printf("Please enter the item to find in the BST \n");
-            scanf(" %d", &item);
-            NODE temp = searchBST(item, root);
-            if (temp != NULL)
-                printf("Item Found \n");
-            else
-                printf("Item NOT Found \n");
+            diameter = diameterOfBinaryTree(root);
+            printf("\nDiamter of Bianry Tree is : %d\n", diameter);
+            break;
+
         default:
             exit(0);
             break;

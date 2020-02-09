@@ -1,66 +1,70 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int graph(int a[100][100], int v, int ver1, int ver2)
+int constructGraph(int adjacencyMatrix[100][100], int vertices, int ver1, int ver2)
 {
-    a[ver1][ver2] = 1;
-    a[ver2][ver1] = 1;
+	adjacencyMatrix[ver1][ver2] = 1;
+	adjacencyMatrix[ver2][ver1] = 1;
 }
 
-void myDFS(int a[100][100], int vertices, int start, int visited[])
+int printGraph(int adjacencyMatrix[100][100], int vertices)
 {
-    visited[start] = 1;
-    printf(" visited %d \n", start);
-    for (int k = 0; k < vertices; k++)
-    {
-        if (visited[k] == 0)
-            myDFS(a, vertices, k, visited);
-    }
+	for (int i = 0; i < vertices; ++i)
+	{
+		for (int j = 0; j < vertices; j++)
+		{
+			printf(" %d ", adjacencyMatrix[i][j]);
+		}
+		printf(" \n");
+	}
 }
 
+void myDFSnew(int adjacencyMatrix[100][100], int vertices, int start, int visited[])
+{
+	visited[start] = 1;
+	printf(" visited %d \n", start);
+
+	for (int k = 0; k < vertices; k++)
+	{
+		if (adjacencyMatrix[start][k] == 1 && visited[k] == 0)
+			myDFSnew(adjacencyMatrix, vertices, k, visited);
+	}
+}
 int main()
 {
 
-    int a[100][100];
-    int v;
-    int ver1;
-    int ver2;
-    int ex = 0;
-    printf("Enter the number of vertices of the graph\n");
-    scanf("%d", &v);
+	int adjacencyMatrix[100][100];
+	int vertices;
+	int edges;
+	int ver1, ver2;
 
-    for (int i = 0; i < v; i++)
-    {
-        for (int j = 0; j < v; j++)
-        {
-            a[i][j] = 0;
-        }
-    }
-    while (ex != 1)
-    {
-        printf("Enter the vertices that have an edge\n");
-        scanf("%d%d", &ver1, &ver2);
-        graph(a, v, ver1, ver2);
-        printf("1: to exit.\n0.to continue\n");
-        scanf("%d", &ex);
-    }
-    for (int i = 0; i < v; i++)
-    {
-        for (int j = 0; j < v; j++)
-        {
-            printf("%d      ", a[i][j]);
-        }
-        printf("\n");
-    }
+	printf("Please Enter the number of vertices  and edges \n");
+	scanf(" %d%d", &vertices, &edges);
 
-    // int visited[v] = {0};
-    int *visited = (int *)calloc(v, sizeof(int));
+	printf("constructGraph\n");
+	for (int i = 0; i < edges; ++i)
+	{
+		scanf(" %d%d", &ver1, &ver2);
+		constructGraph(adjacencyMatrix, vertices, ver1, ver2);
+	}
 
-    int start;
-    printf("Enter the Start vertex for Depth First Search\n");
-    scanf(" %d", &start);
+	printGraph(adjacencyMatrix, vertices);
 
-    myDFS(a, v, start, visited);
+	int *visited = (int *)calloc(vertices, sizeof(int));
 
-    return 0;
+	printf(" printing visited array\n");
+	for (int i = 0; i < vertices; ++i)
+		printf(" %d ", visited[i]);
+	printf("\n");
+
+	int start;
+	printf(" Just enter the start vertex \n");
+	scanf(" %d", &start);
+	myDFSnew(adjacencyMatrix, vertices, start, visited);
+
+	// for (int j = 0; j < vertices; j++)
+	// {
+	// 	if (!visited[j])
+	// 		myDFSnew(adjacencyMatrix, vertices, j, visited);
+	// }
 }
