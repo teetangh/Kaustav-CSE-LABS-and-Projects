@@ -35,4 +35,6 @@ int main()
     printGraph(adjacencyMatrix, vertices);
 
     int *visited = (int *)calloc(vertices, sizeof(int));
+
+    stack visitedSet, sortedSet;
 }
