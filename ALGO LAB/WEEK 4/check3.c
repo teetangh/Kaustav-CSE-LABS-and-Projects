@@ -80,15 +80,15 @@ int main()
 		printf(" %d ", visited[i]);
 	printf("\n");
 
+	queue Q;
 	int start;
 	printf(" Just enter the start vertex \n");
 	scanf(" %d", &start);
-
-	queue Q;
 	myBFSnew(&Q, adjacencyMatrix, vertices, start, visited);
-	// for (int j = 0; j < vertices ; j++)
+	
+	// for (int j = 0; j < vertices; j++)
 	// {
-	// 	if(!visited[j])
-	// 		myBFSnew(&Q,adjacencyMatrix,vertices,j,visited);
+	// 	if (!visited[j])
+	// 		myBFSnew(&Q, adjacencyMatrix, vertices, j, visited);
 	// }
 }

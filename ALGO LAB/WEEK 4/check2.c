@@ -57,15 +57,15 @@ int main()
 		printf(" %d ", visited[i]);
 	printf("\n");
 
-	int start;
-	printf(" Just enter the start vertex \n");
-	scanf(" %d", &start);
-	myDFSnew(adjacencyMatrix, vertices, start, visited);
+	// int start;
+	// printf(" Just enter the start vertex \n");
+	// scanf(" %d", &start);
+	// myDFSnew(adjacencyMatrix, vertices, start, visited);
 
-	// for(int j = 0 ; j < vertices ; j++)
-	// {
-	// 	if(!visited[j])
-	// 		myDFSnew(adjacencyMatrix,vertices,j,visited);
+	for(int j = 0 ; j < vertices ; j++)
+	{
+		if(!visited[j])
+			myDFSnew(adjacencyMatrix,vertices,j,visited);
 
-	// }
+	}
 }
