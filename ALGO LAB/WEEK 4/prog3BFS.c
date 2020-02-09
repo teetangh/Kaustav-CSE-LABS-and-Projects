@@ -32,10 +32,14 @@ void myBFSnew(queue *q, int adjacencyMatrix[100][100], int vertices, int start, 
 
 	while (!isEmpty(q))
 	{
+		// printf("\n Displaying queue \n");
+		// display(q);
+		// printf("\n FR %d%d\n",q->front,q->rear);
 		for (int k = 0; k < vertices; k++)
 		{
-			// printf("\n  K value is %d \n",k);
-			if (adjacencyMatrix[q->front][k] == 1 && !visited[k])
+			// printf("\n  K value is %d \n", k);
+			// printf("\n  q->front value is %d \n", q->front);
+			if (adjacencyMatrix[q->arr[(q->front)]][k] == 1 && !visited[k])
 			{
 				visited[k]++;
 				printf(" Visited %d \n", k);
@@ -43,11 +47,9 @@ void myBFSnew(queue *q, int adjacencyMatrix[100][100], int vertices, int start, 
 			}
 		}
 		// myBFSnew(q,adjacencyMatrix,vertices,dequeue(q),visited);
-		// printf("\n Displaying queue \n");
-		// display(q);
 		// printf("\n Displaying Visited Array\n");
-		// for(int i = 0; i<vertices; i++)
-		// 	printf(" %d ",visited[i]);
+		// for (int i = 0; i < vertices; i++)
+		// 	printf(" %d ", visited[i]);
 		// printf("\n");
 		dequeue(q);
 	}
