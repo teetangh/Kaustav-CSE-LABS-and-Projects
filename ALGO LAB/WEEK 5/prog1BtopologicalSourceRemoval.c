@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include "IntStack.h"
 
-void constructDirectedAcyclicGraph(int **adjacencyMatrix, int ver1, int ver2)
+void constructDirectedAcyclicGraph(int adjacencyMatrix[100][100], int ver1, int ver2)
 {
     adjacencyMatrix[ver1][ver2] = 1;
 }
@@ -19,7 +19,7 @@ int printGraph(int adjacencyMatrix[100][100], int vertices)
     }
 }
 
-void topologicalSourceRemoval(int **adjacencyMatrix, int vertices, int *visitedArray)
+void topologicalSourceRemoval(int adjacencyMatrix[100][100], int vertices, int *visitedArray)
 {
     // bool completed = true;
     // for (int i = 0; i < vertices; i++)
@@ -35,24 +35,44 @@ void topologicalSourceRemoval(int **adjacencyMatrix, int vertices, int *visitedA
 
     int vertexIndegree0 = 0;
 
-    for (int col = 0; col < vertices; col++)
+    for (int col = 0; (col % vertices) < vertices; col = ((col + 1) % vertices))
     {
         if (adjacencyMatrix[0][col] == 0 && !visitedArray[col])
         {
+            // printf("\n selected vertex %d for scanning \n", col);
+            // printGraph(adjacencyMatrix, vertices);
             bool flag = true;
             for (int row = 0; row < vertices; row++)
             {
                 if (adjacencyMatrix[row][col] == 1)
+                {
+                    // printf("\n Broken vertex %d while scanning \n", row);
                     flag = false;
-                break;
+                    break;
+                }
             }
             if (flag == true)
             {
                 vertexIndegree0 = col;
                 visitedArray[vertexIndegree0] = 1;
-                printf("Visited vertex %d", vertexIndegree0);
+                printf("Visited vertex %d\n", vertexIndegree0);
+
+                for (int col2 = 0; col2 < vertices; col2++)
+                    adjacencyMatrix[vertexIndegree0][col2] = 0;
             }
         }
+
+        bool completed = true;
+        for (int i = 0; i < vertices; i++)
+        {
+            if (!visitedArray[i])
+            {
+                completed = false;
+                break;
+            }
+        }
+        if (completed)
+            return;
     }
 }
 
@@ -73,5 +93,6 @@ int main()
 
     printGraph(adjacencyMatrix, vertices);
 
-    int *visited = (int *)calloc(vertices, sizeof(int));
+    int *visitedArray = (int *)calloc(vertices, sizeof(int));
+    topologicalSourceRemoval(adjacencyMatrix, vertices, visitedArray);
 }
