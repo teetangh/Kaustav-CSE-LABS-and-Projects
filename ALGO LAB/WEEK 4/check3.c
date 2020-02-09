@@ -85,7 +85,7 @@ int main()
 	printf(" Just enter the start vertex \n");
 	scanf(" %d", &start);
 	myBFSnew(&Q, adjacencyMatrix, vertices, start, visited);
-	
+
 	// for (int j = 0; j < vertices; j++)
 	// {
 	// 	if (!visited[j])
