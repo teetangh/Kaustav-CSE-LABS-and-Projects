@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include "IntStack.h"
 
 void constructDirectedAcyclicGraph(int **adjacencyMatrix, int ver1, int ver2)
@@ -16,6 +17,51 @@ int printGraph(int adjacencyMatrix[100][100], int vertices)
         }
         printf(" \n");
     }
+}
+
+void topologicalDFSHelper(int adjacencyMatrix[100][100], int vertices, int *visitedArray, stack *visitedSet, stack *sortedSet)
+{
+    int stackTop = visitedSet->top;
+
+    for (int col = 0; col < vertices; col++)
+    {
+        if (adjacencyMatrix[stackTop][col] == 1 && !visitedArray[col])
+        {
+            push(&visitedSet, stackTop);
+            topologicalDFSHelper(adjacencyMatrix, vertices, visitedArray, visitedSet, sortedSet);
+        }
+    }
+}
+void topologicalDFS(int adjacencyMatrix[100][100], int vertices, int *visitedArray, stack *visitedSet, stack *sortedSet)
+{
+    int vertexIndegree0 = 0;
+
+    for (int col = 0; (col % vertices) < vertices; col = ((col + 1) % vertices))
+    {
+        if (adjacencyMatrix[0][col] == 0 && !visitedArray[col])
+        {
+            bool flagEmptyColumn = true;
+            for (int row = 0; row < vertices; row++)
+            {
+                if (adjacencyMatrix[row][col] == 1)
+                {
+                    flagEmptyColumn = false;
+                    break;
+                }
+            }
+            if (flagEmptyColumn == true)
+            {
+                vertexIndegree0 = col;
+                visitedArray[vertexIndegree0] = 1;
+                printf("Visited vertex %d\n", vertexIndegree0);
+
+                push(&visitedSet, vertexIndegree0);
+                break;
+            }
+        }
+    }
+
+    topologicalDFSHelper(adjacencyMatrix, vertices, visitedArray, visitedSet, sortedSet);
 }
 int main()
 {

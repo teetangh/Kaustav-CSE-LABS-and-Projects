@@ -21,18 +21,6 @@ int printGraph(int adjacencyMatrix[100][100], int vertices)
 
 void topologicalSourceRemoval(int adjacencyMatrix[100][100], int vertices, int *visitedArray)
 {
-    // bool completed = true;
-    // for (int i = 0; i < vertices; i++)
-    // {
-    //     if (!visitedArray[i])
-    //     {
-    //         completed = false;
-    //         break;
-    //     }
-    // }
-    // if (completed)
-    //     return;
-
     int vertexIndegree0 = 0;
 
     for (int col = 0; (col % vertices) < vertices; col = ((col + 1) % vertices))
@@ -41,17 +29,17 @@ void topologicalSourceRemoval(int adjacencyMatrix[100][100], int vertices, int *
         {
             // printf("\n selected vertex %d for scanning \n", col);
             // printGraph(adjacencyMatrix, vertices);
-            bool flag = true;
+            bool flagEmptyColumn = true;
             for (int row = 0; row < vertices; row++)
             {
                 if (adjacencyMatrix[row][col] == 1)
                 {
                     // printf("\n Broken vertex %d while scanning \n", row);
-                    flag = false;
+                    flagEmptyColumn = false;
                     break;
                 }
             }
-            if (flag == true)
+            if (flagEmptyColumn == true)
             {
                 vertexIndegree0 = col;
                 visitedArray[vertexIndegree0] = 1;
