@@ -54,19 +54,23 @@ void display(stack *ps)
     }
 }
 
-void isFull(stack *ps)
+int isFull(stack *ps)
 {
     if (ps->top == MAX - 1)
     {
         printf("stack Overflow\n");
-        return;
+        return true;
     }
+    else
+        return false;
 }
-void isEmpty(stack *ps)
+int isEmpty(stack *ps)
 {
     if (ps->top == -1)
     {
         printf("stack Empty\n");
-        return;
+        return true;
     }
+    else
+        return false;
 }

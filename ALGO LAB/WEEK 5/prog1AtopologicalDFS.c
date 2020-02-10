@@ -42,12 +42,25 @@ void topologicalDFSHelper(int adjacencyMatrix[100][100], int vertices, int *visi
         }
     }
     if (flagAllvisited)
+    {
+        printf("Backtracking on all visited \n");
         push(sortedSet, pop(visitedSet));
+        // return;
+    }
+    // else
+    //     topologicalDFSHelper(adjacencyMatrix, vertices, visitedArray, visitedSet, sortedSet);
+
 }
 void topologicalDFS(int adjacencyMatrix[100][100], int vertices, int *visitedArray, stack *visitedSet, stack *sortedSet)
 {
     printf("\nIn topologicalDFS\n");
     int vertexIndegree0 = 0;
+
+    while(!isEmpty(visitedSet))
+        pop(visitedSet);
+
+    while(!isEmpty(sortedSet))
+        pop(sortedSet);
 
     for (int col = 0; (col % vertices) < vertices; col = ((col + 1) % vertices))
     {
@@ -74,8 +87,12 @@ void topologicalDFS(int adjacencyMatrix[100][100], int vertices, int *visitedArr
         }
     }
 
-    printf("\nTemp deisplay\n");
+    printf("\nTemp display\n");
+
+    printf("\n visitedSet \n");
     display(visitedSet);
+    
+    printf("\n sortedSet \n");
     display(sortedSet);
     topologicalDFSHelper(adjacencyMatrix, vertices, visitedArray, visitedSet, sortedSet);
 }
