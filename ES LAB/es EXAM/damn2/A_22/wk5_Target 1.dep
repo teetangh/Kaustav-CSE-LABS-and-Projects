@@ -1,3 +1,0 @@
-Dependencies for Project 'wk5', Target 'Target 1': (DO NOT MODIFY !)
-F (.\fact.s)(0x5E3A083B)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\fact.lst --xref -o .\fact.o --depend .\fact.d)
-F (D:\c55\test.s)(0x5E3C8CCC)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\test.lst --xref -o .\test.o --depend .\test.d)

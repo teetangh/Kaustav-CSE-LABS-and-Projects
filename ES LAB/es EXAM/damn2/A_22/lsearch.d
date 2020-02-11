@@ -1,1 +1,0 @@
-.\lsearch.o: lsearch.s

@@ -1,5 +1,0 @@
-Dependencies for Project 'project_1', Target 'Target 1': (DO NOT MODIFY !)
-F (.\mycode_1.s)(0x5E105C6D)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\mycode_1.lst --xref -o .\mycode_1.o --depend .\mycode_1.d)
-F (.\mycode_2.s)(0x5E10644A)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\mycode_2.lst --xref -o .\mycode_2.o --depend .\mycode_2.d)
-F (.\mycode_3.s)(0x5E106D22)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\mycode_3.lst --xref -o .\mycode_3.o --depend .\mycode_3.d)
-F (.\mycode_4.s)(0x5E107171)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\mycode_4.lst --xref -o .\mycode_4.o --depend .\mycode_4.d)

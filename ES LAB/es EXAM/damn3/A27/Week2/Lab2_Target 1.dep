@@ -1,6 +1,0 @@
-Dependencies for Project 'Lab2', Target 'Target 1': (DO NOT MODIFY !)
-F (.\startup_LPC17xx.s)(0x532C1658)()
-F (.\p1.s)(0x5E1E54A4)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\p1.lst --xref -o .\p1.o --depend .\p1.d)
-F (.\p2.s)(0x5E1E58DC)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\p2.lst --xref -o .\p2.o --depend .\p2.d)
-F (.\p4.s)(0x5E1E5399)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\p4.lst --xref -o .\p4.o --depend .\p4.d)
-F (.\p3.s)(0x5E1E52D1)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\p3.lst --xref -o .\p3.o --depend .\p3.d)

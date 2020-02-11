@@ -1,1 +1,0 @@
-.\reverse.o: reverse.s

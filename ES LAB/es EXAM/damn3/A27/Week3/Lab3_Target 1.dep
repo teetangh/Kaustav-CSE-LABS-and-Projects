@@ -1,8 +1,0 @@
-Dependencies for Project 'Lab3', Target 'Target 1': (DO NOT MODIFY !)
-F (.\gcd.s)(0x5E278FF7)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\gcd.lst --xref -o .\gcd.o --depend .\gcd.d)
-F (.\h_ascii.s)(0x5E278D8C)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\h_ascii.lst --xref -o .\h_ascii.o --depend .\h_ascii.d)
-F (.\fib.s)(0x5E278B65)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\fib.lst --xref -o .\fib.o --depend .\fib.d)
-F (.\bcd.s)(0x5E278B67)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\bcd.lst --xref -o .\bcd.o --depend .\bcd.d)
-F (.\mult.s)(0x5E278B68)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\mult.lst --xref -o .\mult.o --depend .\mult.d)
-F (.\div.s)(0x5E278E2B)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\div.lst --xref -o .\div.o --depend .\div.d)
-F (.\sumn.s)(0x5E2796BF)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\sumn.lst --xref -o .\sumn.o --depend .\sumn.d)

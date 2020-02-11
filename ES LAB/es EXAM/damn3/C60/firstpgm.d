@@ -1,1 +1,0 @@
-.\firstpgm.o: firstpgm.s

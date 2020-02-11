@@ -1,1 +1,0 @@
-.\factorial.o: factorial.s

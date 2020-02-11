@@ -1,6 +1,0 @@
-f1.txt
-f2.txt
-f3.txt
-op.txt
-Tue Jul 23 16:32:37 IST 2019
-/home/170905142/Ajeya/sub1

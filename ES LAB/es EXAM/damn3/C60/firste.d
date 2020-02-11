@@ -1,1 +1,0 @@
-.\firste.o: firste.s

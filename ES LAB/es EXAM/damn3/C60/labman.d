@@ -1,1 +1,0 @@
-.\labman.o: LABMAN.S
