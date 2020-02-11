@@ -1,0 +1,150 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,DATA,READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 40001000        DCD              0X40001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 ALIGN
+    7 00000008                 AREA             mycode,CODE,READONLY
+    8 00000000                 ENTRY
+    9 00000000                 EXPORT           Reset_Handler
+   10 00000000         Reset_Handler
+   11 00000000 480D            LDR              R0,=NUM
+   12 00000002 6801            LDR              R1,[R0]
+   13 00000004 4E0D            LDR              R6,=RES
+   14 00000006 F04F 020A       MOV              R2,#0XA
+   15 0000000A F04F 0500       MOV              R5,#0
+   16 0000000E 4291    LOOP    CMP              R1,R2
+   17 00000010 D304            BCC              ADD10
+   18 00000012 EBA1 0102       SUB              R1,R1,R2
+   19 00000016 F104 0401       ADD              R4,R4,#1
+   20 0000001A E7F8            B                LOOP
+   21 0000001C F101 0330 
+                       ADD10   ADD              R3,R1,#0X30
+   22 00000020 F806 3B01       STRB             R3,[R6],#1
+   23 00000024 4621            MOV              R1,R4
+   24 00000026 4291            CMP              R1,R2
+   25 00000028 D2F1            BCS              LOOP
+   26 0000002A F101 0330       ADD              R3,R1,#0X30
+   27 0000002E F806 3B01       STRB             R3,[R6],#1
+   28 00000032         STOP
+   29 00000032 E7FE            B                STOP
+   30 00000034 0000000C 
+                       NUM     DCD              12
+   31 00000038 00000000 
+              00000000         AREA             mydata,DATA,READWRITE
+   32 00000000 00000000 
+                       RES     DCD              0
+   33 00000004                 END
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\prg5.d
+ -o.\prg5.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\In
+c\NXP\LPC17xx --predefine="__EVAL SETA 1" --list=.\prg5.lst prg5.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file prg5.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file prg5.s
+   Uses
+      At line 2 in file prg5.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ADD10 0000001C
+
+Symbol: ADD10
+   Definitions
+      At line 21 in file prg5.s
+   Uses
+      At line 17 in file prg5.s
+Comment: ADD10 used once
+LOOP 0000000E
+
+Symbol: LOOP
+   Definitions
+      At line 16 in file prg5.s
+   Uses
+      At line 20 in file prg5.s
+      At line 25 in file prg5.s
+
+NUM 00000034
+
+Symbol: NUM
+   Definitions
+      At line 30 in file prg5.s
+   Uses
+      At line 11 in file prg5.s
+Comment: NUM used once
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 10 in file prg5.s
+   Uses
+      At line 5 in file prg5.s
+      At line 9 in file prg5.s
+
+STOP 00000032
+
+Symbol: STOP
+   Definitions
+      At line 28 in file prg5.s
+   Uses
+      At line 29 in file prg5.s
+Comment: STOP used once
+mycode 00000000
+
+Symbol: mycode
+   Definitions
+      At line 7 in file prg5.s
+   Uses
+      None
+Comment: mycode unused
+6 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RES 00000000
+
+Symbol: RES
+   Definitions
+      At line 32 in file prg5.s
+   Uses
+      At line 13 in file prg5.s
+Comment: RES used once
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 31 in file prg5.s
+   Uses
+      None
+Comment: mydata unused
+2 symbols
+343 symbols in table

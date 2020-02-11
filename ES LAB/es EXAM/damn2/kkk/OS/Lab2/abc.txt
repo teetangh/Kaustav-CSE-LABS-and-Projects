@@ -1,0 +1,11 @@
+abc.txt
+copyf.txt
+Desktop
+Documents
+Downloads
+examples.desktop
+lab.txt
+Music
+Pictures
+Templates
+Videos

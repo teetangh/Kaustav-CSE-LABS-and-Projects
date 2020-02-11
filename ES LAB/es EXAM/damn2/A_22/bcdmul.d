@@ -1,0 +1,1 @@
+.\bcdmul.o: bcdmul.s

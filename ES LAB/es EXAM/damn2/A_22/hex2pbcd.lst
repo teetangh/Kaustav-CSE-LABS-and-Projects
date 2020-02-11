@@ -1,0 +1,193 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,DATA,READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10001000        DCD              0X10001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 ALIGN
+    7 00000008                 AREA             mycode,CODE,READONLY
+    8 00000000                 ENTRY
+    9 00000000                 EXPORT           Reset_Handler
+   10 00000000         Reset_Handler
+   11 00000000 F8DF 905C       ldr              r9,=temp
+   12 00000004 4817            ldr              r0,=src
+   13 00000006 6801            ldr              r1,[r0]
+   14 00000008 F04F 0200       mov              r2,#0
+   15 0000000C         up
+   16 0000000C 290A            cmp              r1,#0xA
+   17 0000000E D304            bcc              store
+   18 00000010 F1A1 010A       sub              r1,#0xA
+   19 00000014 F102 0201       add              r2,#1
+   20 00000018 E7F8            b                up
+   21 0000001A         store
+   22 0000001A F809 1B01       strb             r1,[r9],#1
+   23 0000001E 4611            mov              r1,r2
+   24 00000020 F04F 0200       mov              r2,#0
+   25 00000024 290A            cmp              r1,#0xA
+   26 00000026 D2F1            bcs              up
+   27 00000028 F889 1000       strb             r1,[r9]
+   28 0000002C         ;bl pack
+   29 0000002C         
+   30 0000002C 4F0C            ldr              r7,=temp
+   31 0000002E 6839            ldr              r1,[r7]
+   32 00000030 F8DF 9034       ldr              r9,=dest
+   33 00000034 F04F 030F       mov              r3,#0xF
+   34 00000038 F04F 0400       mov              r4,#0
+   35 0000003C F04F 0504       mov              r5,#4
+   36 00000040         bch
+   37 00000040 EA01 0603       and              r6,r1,r3
+   38 00000044 EA4F 1303       lsl              r3,#4
+   39 00000048 EA4F 1111       lsr              r1,#4
+   40 0000004C EA44 0406       orr              r4,r6
+   41 00000050 3D01            subs             r5,#1
+   42 00000052 D1F5            bne              bch
+   43 00000054 F8C9 4000       str              r4,[r9]
+   44 00000058         stop
+   45 00000058 E7FE            b                stop
+   46 0000005A 00 00 0000012B 
+                       src     dcd              0x12B
+   47 00000060 00000000 
+              00000000 
+              00000000 
+              00000000         AREA             mydata,DATA,READWRITE
+   48 00000000 00000000 
+                       temp    dcd              0
+   49 00000004 00000000 
+                       dest    dcd              0
+   50 00000008                 END
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\hex2pb
+cd.d -o.\hex2pbcd.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Kei
+l\ARM\Inc\NXP\LPC17xx --predefine="__EVAL SETA 1" --list=.\hex2pbcd.lst hex2pbc
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+d.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file hex2pbcd.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file hex2pbcd.s
+   Uses
+      At line 2 in file hex2pbcd.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 10 in file hex2pbcd.s
+   Uses
+      At line 5 in file hex2pbcd.s
+      At line 9 in file hex2pbcd.s
+
+bch 00000040
+
+Symbol: bch
+   Definitions
+      At line 36 in file hex2pbcd.s
+   Uses
+      At line 42 in file hex2pbcd.s
+Comment: bch used once
+mycode 00000000
+
+Symbol: mycode
+   Definitions
+      At line 7 in file hex2pbcd.s
+   Uses
+      None
+Comment: mycode unused
+src 0000005C
+
+Symbol: src
+   Definitions
+      At line 46 in file hex2pbcd.s
+   Uses
+      At line 12 in file hex2pbcd.s
+Comment: src used once
+stop 00000058
+
+Symbol: stop
+   Definitions
+      At line 44 in file hex2pbcd.s
+   Uses
+      At line 45 in file hex2pbcd.s
+Comment: stop used once
+store 0000001A
+
+Symbol: store
+   Definitions
+      At line 21 in file hex2pbcd.s
+   Uses
+      At line 17 in file hex2pbcd.s
+Comment: store used once
+up 0000000C
+
+Symbol: up
+   Definitions
+      At line 15 in file hex2pbcd.s
+   Uses
+      At line 20 in file hex2pbcd.s
+      At line 26 in file hex2pbcd.s
+
+7 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+dest 00000004
+
+Symbol: dest
+   Definitions
+      At line 49 in file hex2pbcd.s
+   Uses
+      At line 32 in file hex2pbcd.s
+Comment: dest used once
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 47 in file hex2pbcd.s
+   Uses
+      None
+Comment: mydata unused
+temp 00000000
+
+Symbol: temp
+   Definitions
+      At line 48 in file hex2pbcd.s
+   Uses
+      At line 11 in file hex2pbcd.s
+      At line 30 in file hex2pbcd.s
+
+3 symbols
+345 symbols in table

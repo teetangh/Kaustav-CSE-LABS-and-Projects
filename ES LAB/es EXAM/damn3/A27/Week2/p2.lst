@@ -1,0 +1,168 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,DATA,READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10001000        DCD              0x10001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 AREA             ad,CODE,READONLY
+    7 00000000                 EXPORT           Reset_Handler
+    8 00000000                 ENTRY
+    9 00000000         Reset_Handler
+   10 00000000 481D            LDR              R0,=FIR
+   11 00000002 491E            LDR              R1,=SEC
+   12 00000004 4E1E            LDR              R6,=RES
+   13 00000006 F04F 0203       MOV              R2,#3
+   14 0000000A 6803            LDR              R3,[R0]
+   15 0000000C 680C            LDR              R4,[R1]
+   16 0000000E F04F 0500       MOV              R5,#0
+   17 00000012 F04F 0700       MOV              R7,#0
+   18 00000016 18E5            ADDS             R5,R4,R3
+   19 00000018 F147 0700       ADC              R7,R7,#0
+   20 0000001C F100 0004       ADD              R0,R0,#0x00000004
+   21 00000020 F101 0104       ADD              R1,R1,#0x00000004
+   22 00000024 6035            STR              R5,[R6]
+   23 00000026 F106 0604       ADD              R6,R6,#0x00000004
+   24 0000002A         LOOP
+   25 0000002A F04F 0500       MOV              R5,#0
+   26 0000002E 6803            LDR              R3,[R0]
+   27 00000030 680C            LDR              R4,[R1]
+   28 00000032 18E5            ADDS             R5,R4,R3
+   29 00000034 F147 0700       ADC              R7,R7,#0
+   30 00000038 19ED            ADDS             R5,R7
+   31 0000003A F04F 0700       MOV              R7,#0
+   32 0000003E F147 0700       ADC              R7,R7,#0
+   33 00000042 F100 0004       ADD              R0,R0,#0x00000004
+   34 00000046 F101 0104       ADD              R1,R1,#0x00000004
+   35 0000004A 6035            STR              R5,[R6]
+   36 0000004C F106 0604       ADD              R6,R6,#0x00000004
+   37 00000050 1E52            SUBS             R2,R2,#1
+   38 00000052 D1EA            BNE              LOOP
+   39 00000054         STOP
+   40 00000054 E7FE            B                STOP
+   41 00000056 00 00 00000001 
+              00000003 
+              00000005 
+              00000004 FIR     DCD              1,3,5,4
+   42 00000068 00000006 
+              00000008 
+              00000004 
+              00000003 SEC     DCD              6,8,4,3
+   43 00000078 00000000 
+              00000000 
+              00000000         AREA             mydata,DATA,READWRITE
+   44 00000000 00000000 
+              00000000 
+              00000000 
+              00000000 RES     DCD              0,0,0,0
+   45 00000010                 END
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\p2.d -
+o.\p2.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\NX
+P\LPC17xx --predefine="__EVAL SETA 1" --list=.\p2.lst p2.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file p2.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file p2.s
+   Uses
+      At line 2 in file p2.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+FIR 00000058
+
+Symbol: FIR
+   Definitions
+      At line 41 in file p2.s
+   Uses
+      At line 10 in file p2.s
+Comment: FIR used once
+LOOP 0000002A
+
+Symbol: LOOP
+   Definitions
+      At line 24 in file p2.s
+   Uses
+      At line 38 in file p2.s
+Comment: LOOP used once
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 9 in file p2.s
+   Uses
+      At line 5 in file p2.s
+      At line 7 in file p2.s
+
+SEC 00000068
+
+Symbol: SEC
+   Definitions
+      At line 42 in file p2.s
+   Uses
+      At line 11 in file p2.s
+Comment: SEC used once
+STOP 00000054
+
+Symbol: STOP
+   Definitions
+      At line 39 in file p2.s
+   Uses
+      At line 40 in file p2.s
+Comment: STOP used once
+ad 00000000
+
+Symbol: ad
+   Definitions
+      At line 6 in file p2.s
+   Uses
+      None
+Comment: ad unused
+6 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RES 00000000
+
+Symbol: RES
+   Definitions
+      At line 44 in file p2.s
+   Uses
+      At line 12 in file p2.s
+Comment: RES used once
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 43 in file p2.s
+   Uses
+      None
+Comment: mydata unused
+2 symbols
+343 symbols in table

@@ -1,0 +1,122 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,DATA,READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10001000        DCD              0x10001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 AREA             sumn,CODE,READONLY
+    7 00000000                 EXPORT           Reset_Handler
+    8 00000000                 ENTRY
+    9 00000000         Reset_Handler
+   10 00000000 4807            LDR              R0,SRC
+   11 00000002 4601            MOV              R1,R0
+   12 00000004 F101 0101       ADD              R1,R1,#1
+   13 00000008 FBA0 2301       UMULL            R2,R3,R0,R1
+   14 0000000C EA4F 0553       LSR              R5,R3,#1
+   15 00000010 EA4F 0452       LSR              R4,R2,#1
+   16 00000014 4803            LDR              R0,=DST
+   17 00000016 F840 4B04       STR              R4,[R0],#4
+   18 0000001A 6005            STR              R5,[R0]
+   19 0000001C         STOP
+   20 0000001C E7FE            B                STOP
+   21 0000001E 00 00 00000004 
+                       SRC     DCD              4
+   22 00000024 00000000        AREA             mydata,DATA,READWRITE
+   23 00000000 00000000 
+              00000000 DST     DCD              0,0
+   24 00000008                 END
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\sumn.d
+ -o.\sumn.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\In
+c\NXP\LPC17xx --predefine="__EVAL SETA 1" --list=.\sumn.lst sumn.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file sumn.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file sumn.s
+   Uses
+      At line 2 in file sumn.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 9 in file sumn.s
+   Uses
+      At line 5 in file sumn.s
+      At line 7 in file sumn.s
+
+SRC 00000020
+
+Symbol: SRC
+   Definitions
+      At line 21 in file sumn.s
+   Uses
+      At line 10 in file sumn.s
+Comment: SRC used once
+STOP 0000001C
+
+Symbol: STOP
+   Definitions
+      At line 19 in file sumn.s
+   Uses
+      At line 20 in file sumn.s
+Comment: STOP used once
+sumn 00000000
+
+Symbol: sumn
+   Definitions
+      At line 6 in file sumn.s
+   Uses
+      None
+Comment: sumn unused
+4 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DST 00000000
+
+Symbol: DST
+   Definitions
+      At line 23 in file sumn.s
+   Uses
+      At line 16 in file sumn.s
+Comment: DST used once
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 22 in file sumn.s
+   Uses
+      None
+Comment: mydata unused
+2 symbols
+341 symbols in table
