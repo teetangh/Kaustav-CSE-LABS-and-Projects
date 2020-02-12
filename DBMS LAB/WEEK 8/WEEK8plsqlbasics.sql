@@ -72,7 +72,7 @@ BEGIN
         DBMS_OUTPUT.PUT_LINE(i);
     END LOOP;
 
-    DBMS_OUTPUT.PUT_LINE('Reverse Loop');
+    DBMS_OUTPUT.PUT_LINE('Reverse LOOP');
     FOR i IN REVERSE 1..3 LOOP
         DBMS_OUTPUT.PUT_LINE(i);
     END LOOP;
@@ -80,4 +80,19 @@ END;
 /
 
 
+DECLARE
+    p varchar2(30);
+    n PLS_INTEGER := 100;
+BEGIN
+    FOR j in 2..ROUND(SQRT(n)) LOOP
+        IF n MOD j = 0 THEN
+            p := ' is not a prime number';
+            GOTO print_now;
+        END IF;
+    END LOOP;
+    p := ' is a prime number';
+<<print_now>>
+    DBMS_OUTPUT.PUT_LINE(TO_CHAR(n) || p);
+END;
+/
 

@@ -18,3 +18,5 @@ DECLARE
     x NUMBER := 0;
 BEGIN
     while x < count(StudentTable.ID)
+        LOOP
+            DBMS_OUTPUT.PUT_LINE(srollno(x) || sgpa );
