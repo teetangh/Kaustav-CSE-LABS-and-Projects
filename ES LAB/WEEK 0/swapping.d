@@ -1,1 +1,0 @@
-.\swapping.o: swapping.s

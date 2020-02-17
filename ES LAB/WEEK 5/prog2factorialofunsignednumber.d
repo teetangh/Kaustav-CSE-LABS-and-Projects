@@ -1,1 +1,0 @@
-.\prog2factorialofunsignednumber.o: prog2factorialOfUnsignedNumber.s

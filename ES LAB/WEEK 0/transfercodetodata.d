@@ -1,1 +1,0 @@
-.\transfercodetodata.o: transfercodetodata.s

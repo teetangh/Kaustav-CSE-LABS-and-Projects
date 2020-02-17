@@ -1,5 +1,0 @@
---cpu Cortex-M3
-".\prog4subtracttwo128bitnumbers.o"
---ro-base 0x00000000 --entry 0x00000000 --rw-base 0x10000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols
---info sizes --info totals --info unused --info veneers
---list ".\ESLABWEEK2.map" -o .\ESLABWEEK2.axf
