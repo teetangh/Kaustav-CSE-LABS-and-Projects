@@ -3,6 +3,9 @@
 Oracle Database 18c (18.3) JDBC Driver and UCP Downloads
 https://www.oracle.com/database/technologies/appdev/jdbc-ucp-183-downloads.html
 
+Liberica JDK version 13.0.2
+https://bell-sw.com/pages/java-13.0.2/
+
 ************Standalone Videos************
 
 JDBC Tutorial | Complete Course for Beginners
@@ -13,3 +16,6 @@ https://www.youtube.com/watch?v=E8lZD3O2a68
 PL/SQL Tutorial for beginners By Manish Sharma RebellionRider
 Manish Sharma
 https://www.youtube.com/watch?v=rbarR4_gaH8&list=PLL_LQvNX4xKyiExzq9GKwORoH6nvaRnOQ
+
+DevOps Training Videos | Tutorial Vid (24hrs)
+https://www.youtube.com/watch?v=cOnZwWJ5Zms&list=PLsyINwlXJxrp9SHoGV5sHJNDcKuB9_OgK
