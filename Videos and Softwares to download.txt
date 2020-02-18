@@ -1,2 +1,15 @@
-//Oracle Database 18c (18.3) JDBC Driver and UCP Downloads
+************Softwares************
+
+Oracle Database 18c (18.3) JDBC Driver and UCP Downloads
 https://www.oracle.com/database/technologies/appdev/jdbc-ucp-183-downloads.html
+
+************Standalone Videos************
+
+JDBC Tutorial | Complete Course for Beginners
+https://www.youtube.com/watch?v=E8lZD3O2a68
+
+********Youtube Playlists************
+
+PL/SQL Tutorial for beginners By Manish Sharma RebellionRider
+Manish Sharma
+https://www.youtube.com/watch?v=rbarR4_gaH8&list=PLL_LQvNX4xKyiExzq9GKwORoH6nvaRnOQ
