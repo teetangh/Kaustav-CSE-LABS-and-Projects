@@ -34,12 +34,30 @@
     where e1.super_ssn = e2.ssn;
 
 -- q5
-    select * 
-    from employee E,works_on W,project P
-    where E.ssn = W.essn
-    and W.pno = P.pnumber 
-    and E.lname = 'Smith';
+    -- select P.pnumber 
+    -- from employee E,works_on W,project P
+    -- where E.ssn = W.essn
+    -- and W.pno = P.pnumber 
+    -- and E.lname = 'Smith';
 
+
+    select P.pnumber
+    from project P
+    where P.dnum in
+    (select D.dnumber
+    from department D 
+    where D.mgr_ssn in 
+    (select e1.ssn 
+    from employee e1
+    where e1.lname = 'Smith'))
+    OR
+    P.dnum in 
+    (select W.pno
+    from works_on W
+    where W.essn in
+    (select e2.ssn
+    from employee e2
+    where e2.lname = 'Smith'));
     -- select * 
     -- from works_on;
 
@@ -84,26 +102,45 @@
 -- 18FEB2020
 -- q11
 
-    select e1.fname as employee ,e2.fname as supervisee
-    from employee e1 full outer join employee e2
-        on e1.ssn = e2.super_ssn
-    where e1.fname = e2.fname
-    and e1.sex = e2.sex;
+    -- select e1.fname as employee ,e2.fname as supervisee
+    -- from employee e1 full outer join employee e2
+    --     on e1.ssn = e2.super_ssn
+    -- where e1.fname = e2.fname
+    -- and e1.sex = e2.sex;
 
--- q12()
-    select e1.fname as employee ,e2.fname as supervisee
-    from employee e1 full outer join employee e2
-        on e1.ssn = e2.super_ssn
-    where e2.fname is NULL;
+
+    select E.fname,E.lname
+    from employee E,dependent D
+    where E.ssn = D.essn and
+    E.fname = D.dependent_name and
+    E.sex = D.sex;
+
+-- q12
+    -- select e1.fname as employee ,e2.fname as supervisee
+    -- from employee e1 full outer join employee e2
+    --     on e1.ssn = e2.super_ssn
+    -- where e2.fname is NULL;
+    
+    select e.fname as employee -- ,d.dependent_name as dependent
+    from employee e full outer join dependent d
+        on e.ssn = d.essn
+    where d.essn is NULL;
 
 -- q13
 
-    select e1.fname as man_super,e2.fname as supervisee
-    from employee e1 full outer join employee e2 on e1.ssn = e2.super_ssn,department D
-    where e1.ssn = D.mgr_ssn
-    and e2.fname is NOT NULL
-    order by e1.fname;
+    -- select e1.fname as man_super,e2.fname as supervisee
+    -- from employee e1 full outer join employee e2 on e1.ssn = e2.super_ssn,department D
+    -- where e1.ssn = D.mgr_ssn
+    -- and e2.fname is NOT NULL
+    -- order by e1.fname;
 
+
+    select E.fname,E.minit,E.lname
+    from employee E
+    where 
+    E.ssn in (select essn from dependent)
+    AND
+    E.ssn in (select mgr_ssn from department);
 
 -- q14
 
