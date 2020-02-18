@@ -26,7 +26,10 @@
     from employee;
 
 -- q4
-    select e1.Fname as employee_Fname ,e1.lname as employee_lastname,e2.Fname as super_Fname,e2.lname as super_Lname 
+    select e1.Fname as employee_Fname ,
+            e1.lname as employee_lastname,
+            e2.Fname as super_Fname,
+            e2.lname as super_Lname 
     from employee e1,employee e2
     where e1.super_ssn = e2.ssn;
 
@@ -73,7 +76,83 @@
 -- q10
 
 
-    select e1.fname,e2.fname
-    from employee e1 left outer join employee e2
-    on e1.super_ssn = e2.ssn
+    select e1.fname as employee ,e2.fname as supervisor
+    from employee e1 full outer join employee e2
+        on e1.super_ssn = e2.ssn
     where e2.fname is NULL;
+
+-- 18FEB2020
+-- q11
+
+    select e1.fname as employee ,e2.fname as supervisee
+    from employee e1 full outer join employee e2
+        on e1.ssn = e2.super_ssn
+    where e1.fname = e2.fname
+    and e1.sex = e2.sex;
+
+-- q12()
+    select e1.fname as employee ,e2.fname as supervisee
+    from employee e1 full outer join employee e2
+        on e1.ssn = e2.super_ssn
+    where e2.fname is NULL;
+
+-- q13
+
+    select e1.fname as man_super,e2.fname as supervisee
+    from employee e1 full outer join employee e2 on e1.ssn = e2.super_ssn,department D
+    where e1.ssn = D.mgr_ssn
+    and e2.fname is NOT NULL
+    order by e1.fname;
+
+
+-- q14
+
+    select E.ssn as emp_ssn
+    from employee E,works_on W,project P
+    where E.ssn = W.essn
+    and W.pno = P.pnumber
+    and P.pnumber in (1,2,3);
+
+-- q15
+
+    -- select salary,MAX(salary),MIN(salary),AVG(salary)
+    -- from employee;
+    select count(ssn),SUM(salary),MAX(salary),MIN(salary),AVG(salary)
+    from employee;
+
+
+-- q16 
+
+    select count(ssn),SUM(salary),MAX(salary),MIN(salary),AVG(salary)
+    from employee E,department D
+    where E.dno = D.dnumber
+    and D.dname = 'Research';
+
+-- q17
+
+    select P.PNAME,P.PNUMBER,count(E.ssn)
+    from employee E,works_on W,project P
+    where E.ssn = W.essn
+        and W.pno = P.pnumber
+    group by (p.PNAME,p.PNUMBER);
+
+
+-- q18
+
+    select P.PNAME,P.PNUMBER,count(E.ssn)
+    from employee E,works_on W,project P
+    where E.ssn = W.essn
+        and W.pno = P.pnumber
+    group by (p.PNAME,p.PNUMBER)
+    having count(E.ssn) > 2;
+
+-- q19
+
+    select dname,dno,count(E.ssn)
+    from employee E,department D
+    where E.dno = D.dnumber
+        and E.salary > 40000
+    group by (dname,dno)
+    having count(E.ssn) > 5;
+
+    
