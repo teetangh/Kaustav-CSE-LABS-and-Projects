@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="320.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.InstructorController">
+   <children>
+      <TextField fx:id="txtName" layoutX="65.0" layoutY="128.0" />
+      <TextField fx:id="txtId" layoutX="66.0" layoutY="36.0" />
+      <Button fx:id="btnId" layoutX="114.0" layoutY="75.0" mnemonicParsing="false" onAction="#onShow" text="Show" />
+      <Button fx:id="btnNext" layoutX="114.0" layoutY="172.0" mnemonicParsing="false" onAction="#onNext" text="Next" />
+   </children>
+</AnchorPane>

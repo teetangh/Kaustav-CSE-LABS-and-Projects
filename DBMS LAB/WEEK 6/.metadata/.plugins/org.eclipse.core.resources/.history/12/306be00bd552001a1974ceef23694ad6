@@ -1,0 +1,28 @@
+package application;
+import java.sql.*;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+
+public class CourseController {
+
+    @FXML
+    private TableView<Course> tblCourses;
+
+    @FXML
+    private TextField txtId;
+
+    @FXML
+    private TableColumn<Course, String> tblColCourseId;
+
+    @FXML
+    private Button btnId;
+
+    @FXML
+    void onShow() {
+
+    }
+
+}
