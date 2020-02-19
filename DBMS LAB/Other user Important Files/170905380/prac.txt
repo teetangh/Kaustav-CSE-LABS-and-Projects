@@ -1,0 +1,26 @@
+CREATE OR REPLACE PROCEDURE proc(name student.name%type) is
+cursor c(name student.name%type) is select name from student;
+
+begin
+for temp in c(name) loop
+
+dbms_output.put_line('student name:' || temp.name);
+end loop;
+
+
+
+end;
+/
+
+declare
+begin
+proc('zhang');
+end;
+/
+
+declare
+a number;
+begin
+a := '&enter a number:';
+end;
+/

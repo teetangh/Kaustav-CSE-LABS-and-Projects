@@ -1,0 +1,228 @@
+
+1. SELECT course_id FROM teaches WHERE semester = 'Fall' AND year = '2009' UNION 
+(SELECT course_id FROM teaches WHERE semester = 'Spring' and year = 2010);
+
+op:
+
+COURSE_I
+--------
+CS-101
+CS-315
+CS-319
+CS-347
+FIN-201
+HIS-351
+MU-199
+PHY-101
+
+8 rows selected.
+
+============================================================================================
+
+2. SELECT course_id FROM teaches WHERE semester = 'Fall' AND year = '2009' INTERSECT
+(SELECT course_id FROM teaches WHERE semester = 'Spring' and year = 2010);
+
+op:
+
+COURSE_I
+--------
+CS-101
+
+==============================================================================================
+
+
+3. SELECT course_id FROM teaches WHERE semester = 'Fall' AND year = '2009' MINUS
+(SELECT course_id FROM teaches WHERE semester = 'Spring' and year = 2010);
+
+op:
+
+COURSE_I
+--------
+CS-347
+PHY-101
+
+==============================================================================================
+
+4. SELECT title from course WHERE 
+course_id IN (SELECT course_id from course minus SELECT course_id FROM takes);
+
+op:
+
+TITLE
+--------------------------------------------------
+Computational Biology
+
+=============================================================================================
+
+5. SELECT course_id, title from course WHERE course_id IN
+(SELECT course_id FROM teaches WHERE semester = 'Fall' AND year = '2009' INTERSECT
+(SELECT course_id FROM teaches WHERE semester = 'Spring' and year = 2010));
+
+op:
+
+COURSE_I TITLE
+-------- --------------------------------------------------
+CS-101   Intro. to Computer Science
+
+=============================================================================================
+
+6. SELECT count(DISTINCT ID) FROM takes 
+WHERE course_id in (SELECT course_id FROM teaches WHERE ID = 10101);
+
+op:
+
+COUNT(DISTINCTID)
+-----------------
+                6
+=============================================================================================
+
+7. SELECT course_id FROM teaches WHERE semester = 'Fall' AND year = '2009' AND course_id 
+NOT IN
+(SELECT course_id FROM teaches WHERE semester = 'Spring' and year = 2010);
+
+op:
+
+COURSE_I
+--------
+CS-347
+PHY-101
+
+==============================================================================================
+
+8. SELECT name FROM Student WHERE name IN (SELECT name FROM instructor);
+
+op:
+
+NAME
+--------------------
+Brandt
+
+==============================================================================================
+
+
+9. SELECT name FROM instructor WHERE salary > SOME 
+(SELECT salary FROM instructor WHERE DEPT_NAME = 'Biology');
+
+op:
+
+NAME
+--------------------
+Wu
+Einstein
+Gold
+Katz
+Singh
+Brandt
+Kim
+
+7 rows selected.
+
+==============================================================================================
+
+
+10. SELECT name FROM instructor WHERE salary > ALL 
+(SELECT salary FROM instructor WHERE DEPT_NAME = 'Biology');
+
+op:
+
+NAME
+--------------------
+Katz
+Singh
+Kim
+Gold
+Wu
+Brandt
+Einstein
+
+7 rows selected.
+
+==============================================================================================
+
+11. SELECT dept_name, AVG(salary) FROM instructor GROUP BY dept_name HAVING AVG(salary) >= ALL 
+    (SELECT avg(salary) FROM instructor GROUP BY dept_name);
+
+op:
+
+DEPT_NAME            AVG(SALARY)
+-------------------- -----------
+Physics                    91000
+
+============================================================================================
+
+12. SELECT dept_name FROM department WHERE budget < (SELECT AVG(salary) FROM instructor);
+
+ o/p: 
+
+DEPT_NAME
+--------------------
+History
+Physics
+
+============================================================================================
+
+13. //wrong// SELECT DISTINCT course_id FROM teaches WHERE EXISTS 
+(SELECT course_id FROM teaches WHERE semester = 'Fall' and year = 2009 INTERSECT (SELECT course_id FROM teaches
+WHERE semester = 'Spring' AND year = 2010));
+
+14. SELECT name FROM student S WHERE NOT EXISTS
+(SELECT course_id FROM course WHERE dept_name = 'Biology' MINUS 
+(SELECT t.course_id FROM takes T WHERE S.ID = T.ID));
+
+op:
+
+no rows selected
+
+==============================================================================================
+
+15. SELECT title FROM course WHERE course_id 
+NOT IN
+(SELECT course_id FROM section WHERE year = 2009 GROUP BY course_id HAVING COUNT(course_id) > 1);
+
+op:
+
+TITLE
+--------------------------------------------------
+Intro. to Biology
+Genetics
+Computational Biology
+Intro. to Computer Science
+Robotics
+Image Processing
+Database System Concepts
+Intro. to Digital Systems
+Investment Banking
+World History
+Music Video Production
+
+TITLE
+--------------------------------------------------
+Physical Principles
+
+12 rows selected.
+
+==============================================================================================
+
+16. 
+
+
+
+17. SELECT dept_name 
+FROM (SELECT dept_name FROM instructor GROUP BY dept_name HAVING AVG(salary) > 42000); 
+
+op:
+
+DEPT_NAME
+--------------------
+Elec. Eng.
+Physics
+Comp. Sci.
+Finance
+Biology
+History
+
+6 rows selected.
+
+==============================================================================================
+
+
