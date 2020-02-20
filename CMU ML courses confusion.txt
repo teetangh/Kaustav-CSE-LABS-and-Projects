@@ -1,0 +1,26 @@
+==================================================
+10-601 Machine Learning | CMU | Fall 2017
+https://www.youtube.com/watch?v=GEopUIvfJmA&list=PL7k0r4t5c10-g7CWCnHfZOAxLaiNinChk
+
+ML 10- 601 - Tom Mitchell and Maria-Florina Balcan | CMU (2015)
+https://www.youtube.com/watch?v=m4NlfvrRCdg&list=PLEAYkSg4uSQ0SLS-odyKk4ImGKjDTZCqo
+===============================================
+CMU 10-605 Machine Learning With Large Datasets
+https://www.youtube.com/watch?v=tdKz9COYwWM&list=PLnfBqXRW5MRhPtfkadfwQ0VcuSi2IwEcW
+
+=================================================
+10-701 Machine Learning Fall 2014
+https://www.youtube.com/watch?v=JTFWvcUnLz0&list=PLAJ0alZrN8rC-QCaaZ0Z-brjoWyIO8CKd
+
+10-701 Machine Learning CMU Spring 2015 
+https://www.youtube.com/watch?v=UtcKm8i5Xro&list=PLZSO_6-bSqHTTV7w9u7grTXBHMH-mw3qn
+======================================================
+(10-702/36-702) Spring 2017: Statistical Machine Learning 
+https://www.youtube.com/playlist?list=PLjbUi5mgii6B7A0nM74zHTOVQtTC9DaCv
+
+(10-725/36-725) Fall 2016: Convex Optimization 
+https://www.youtube.com/watch?v=XFKBNJ14UmY&list=PLjbUi5mgii6AVdvImLB9-Hako68p9MpIC
+========================================================
+15-780 Graduate Artificial Intelligence | CMU
+https://www.youtube.com/watch?v=p0Piq03ZKTw&list=PL_Ig1a5kxu55zgIn3Tb5Pc5C62Yo2sYHf
+============================================
