@@ -102,9 +102,16 @@ Nodeptr insert(Nodeptr node, int key)
 
 	//Left Right Case
 	if (balance > 1 && key > node->lchild->data)
+	{
+		node->lchild = leftRotate(node->lchild);
 		return rightRotate(node);
+	}
 
-	
+	// Right Left Case
+	if (balance < -1 & key < node->rchild->data)
+	{
+		
+	}
 }
 
 int heightOfBinaryTree(Nodeptr root)
