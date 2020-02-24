@@ -110,8 +110,11 @@ Nodeptr insert(Nodeptr node, int key)
 	// Right Left Case
 	if (balance < -1 & key < node->rchild->data)
 	{
-		
+		node->rchild = rightRotate(node->rchild);
+		return leftRotate(node);
 	}
+
+	return node;
 }
 
 int heightOfBinaryTree(Nodeptr root)
@@ -120,6 +123,53 @@ int heightOfBinaryTree(Nodeptr root)
 		return 0;
 	else
 		return 1 + max2(heightOfBinaryTree(root->lchild), heightOfBinaryTree(root->rchild));
+}
+
+Nodeptr minValueNode(Nodeptr node)
+{
+	Nodeptr current = node;
+
+	while (current->lchild != NULL)
+		current = current->lchild;
+	return current;
+}
+
+Nodeptr deleteNode(Nodeptr root, int key)
+{
+	if (root == NULL)
+		return root;
+
+	if (key < root->data)
+		root->lchild = deleteNode(root->lchild, key);
+
+	else if (key > root->data)
+		root->rchild = deleteNode(root->rchild, key);
+
+	else
+	{
+		if ((root->lchild) || (root->rchild))
+		{
+			Nodeptr temp = root->lchild ? root->lchild : root->rchild;
+
+			if (temp == NULL)
+
+			{
+				temp = root;
+				root = NULL;
+			}
+			else
+				root = temp;
+
+			free(temp);
+		}
+
+		else
+		{
+			Nodeptr temp = minValueNode(root->rchild);
+			root->data = temp->data;
+			root->rchild = deleteNode(root->rchild, root->lchild);
+		}
+	}
 }
 
 int main()
