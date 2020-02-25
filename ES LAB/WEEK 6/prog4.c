@@ -4,7 +4,7 @@ unsigned int c = 0xFF;
 int main()
 {
     unsigned int j;
-    unsigned long LED = 0x00000000;
+-    unsigned long LED = 0x00000000;
     LPC_PINCON->PINSEL0 &= 0xFF0000FF;
     LPC_GPIO0->FIODIR |= 0x00000FF0;
     LPC_PINCON->PINSEL2 &= 0xFFFFFFF;
