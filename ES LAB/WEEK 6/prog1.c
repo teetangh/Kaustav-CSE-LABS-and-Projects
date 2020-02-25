@@ -1,7 +1,7 @@
 #include <LPC17xx.h>
 
 unsigned int i, j;
-unsigned long LEG = 0x00000010;
+unsigned long LED = 0x00000010;
 
 int main()
 {
@@ -17,8 +17,8 @@ int main()
 
         for (i = 0; i < 9; i++)
         {
-            LPC_GPFO0->FIOSET = LED;
-            for (j = 0; j < count; j++)
+            LPC_GPIO0->FIOSET = LED;
+            for (j = 0; j < 10000; j++)
                 ;
             LED <<= 1;
         }
@@ -26,7 +26,7 @@ int main()
         for (i = 0; i < 9; i++)
         {
             LPC_GPIO0->FIOCLR = LED;
-            for (j = 0; j < count; j++)
+            for (j = 0; j < 10000; j++)
                 ;
             LED <<= 1;
         }

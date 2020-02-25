@@ -11,7 +11,7 @@ int main()
     {
         LPC_GPIO0->FIOPIN = c << 4;
         c <<= 1;
-        if (c = 0x00000100)
+        if (c == 0x00000100)
             c = 1;
         for (j = 0; j < 60000; j++)
             ;

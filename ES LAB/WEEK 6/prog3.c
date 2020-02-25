@@ -10,7 +10,7 @@ int main()
     while (1)
     {
         c--;
-        LPC_GPIO->FIOPIN = c << 4;
+        LPC_GPIO0->FIOPIN = c << 4;
         if (c == -1)
             c = 0xFF;
         for (j = 0; j < 30000; j++)
