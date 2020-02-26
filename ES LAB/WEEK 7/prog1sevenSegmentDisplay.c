@@ -22,11 +22,12 @@ int main()
     LPC_PINCON->PINSEL3 &= 0xFFC03FFF;
     LPC_GPIO0->FIODIR |= 0xFF << 4;
     LPC_GPIO1->FIODIR |= 0xFF << 23;
-    while(1)
-		{dig_c++;
-    delay();
-    if (dig_c == 5)
-        dig_c = 0;
-    display();
-	}
+    while (1)
+    {
+        dig_c++;
+        delay();
+        if (dig_c == 5)
+            dig_c = 0;
+        display();
+    }
 }
