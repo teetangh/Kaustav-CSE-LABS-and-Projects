@@ -7,6 +7,8 @@ Liberica JDK version 13.0.2
 https://bell-sw.com/pages/java-13.0.2/
 
 ************Standalone Videos************
+RCNN, FAST RCNN, FASTER RCNN : OBJECT DETECTION AND LOCALIZATION THROUGH DEEP NEURAL NETWORKS
+https://www.youtube.com/watch?v=a9_8wqMxVkY
 
 
 ************Standalone FULL COURSES************
@@ -38,4 +40,7 @@ https://www.youtube.com/watch?v=nVvhkVLh60o&list=PLc2rvfiptPSR3iwFp1VHVJFK4yAMo0
 
 5. Natural Language Processing (NLP) Tutorials
 https://www.youtube.com/watch?v=mrF9MD56-wk&list=PLc2rvfiptPSQgsORc7iuv7UxhbRJox-pW
+
+COGNEETHI
+https://www.youtube.com/watch?v=9I6nzfx_kpE&list=PL1GQaVhO4f_jLxOokW7CS5kY_J1t1T17S&index=1
 
