@@ -44,3 +44,15 @@ https://www.youtube.com/watch?v=mrF9MD56-wk&list=PLc2rvfiptPSQgsORc7iuv7UxhbRJox
 COGNEETHI
 https://www.youtube.com/watch?v=9I6nzfx_kpE&list=PL1GQaVhO4f_jLxOokW7CS5kY_J1t1T17S&index=1
 
+
+
+AI Student(Remove Numbering and be Careful)
+
+Master Deep Learning TensorFlow2.0
+https://www.youtube.com/watch?v=AvUezpQ5dvk&list=PLsdK9vddRUaZHmYva8gSq6uuFNC1u4GDG
+
+Data Analytics with Pandas
+https://www.youtube.com/playlist?list=PLsdK9vddRUaa82vt9ZJTETKP5cgipI8Zq
+
+R Programming Data Science
+https://www.youtube.com/watch?v=S4tOxW2tfWY&list=PLsdK9vddRUaagQNsmVMWAcbEQQ6LOBVHY
