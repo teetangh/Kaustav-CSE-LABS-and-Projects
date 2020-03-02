@@ -26,10 +26,7 @@ Learn Complete Data Science with these 5 video series.
 1. Python for Beginners
 https://www.youtube.com/watch?v=b42eTWkEIfA&list=PLc2rvfiptPSRmd4eWpRmzRIPebX3W9mju
 
-2A.Feature Selection
-https://www.youtube.com/watch?v=kA4mD3y4aqA&list=PLc2rvfiptPSQYzmDIFuq2PqN2n28ZjxDH
-
-2B. Machine Learning for Beginners
+2. Machine Learning for Beginners
 https://www.youtube.com/watch?v=ZeM2tHtjGy4&list=PLc2rvfiptPSTvPFbNlT_TGRupzKKhJSIv
 
 3. Feature Selection in Machine Learning
