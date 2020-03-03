@@ -6,24 +6,26 @@
 void lcd_init(void);
 void wr_cn(void);
 void clr_disp(void);
-void delay_lcd(void);
+void delay_lcd(unsigned int);
 void lcd_com(void);
-void we_dn(void);
+void wr_dn(void);
 void clear_ports(void);
-void lcd_puts(void);
+void lcd_puts(unsigned char *);
 
-extern long int temp1 = 0, temp2 = 0;
+extern unsigned long int temp1, temp2;
+unsigned long int temp1 = 0, temp2 = 0;
+
 int main()
 {
     unsigned long adc_temp;
     unsigned int i;
     float in_vtg;
     unsigned char vtg[7], dval[7];
-    unsigned char Msg3[11] = {"MIT"};
-    unsigned char Msg4[12] = {"Department of ICT"};
+    unsigned char Msg3[10] = {"MIT"};
+    unsigned char Msg4[10] = {"Depart ICT"};
 
     SystemInit();
-    SystemCoreClock();
+    //SystemCoreClock();
 
     lcd_init();
     temp1 = 0x80;
@@ -118,7 +120,7 @@ void lcd_data(void)
     temp2 = temp1 & 0xF0;
     temp2 = temp2 << 19;
     wr_dn();
-    temp2 = temp1 && 0x0F;
+    temp2 = temp1 & 0x0F;
     temp2 = temp2 << 23;
     wr_dn();
     delay_lcd(1000);
