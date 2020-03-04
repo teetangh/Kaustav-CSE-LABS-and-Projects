@@ -18,7 +18,7 @@ create TABLE team_member(
   email varchar2(25),
   hostel numeric(1),
   blood_gp char NOT NULL,
-  check (gender in ('M', 'F'));
+  check (gender in ('M', 'F'))
 );
 create TABLE outdoor_activities (
   pass_id varchar2(10) primary key,
@@ -34,14 +34,14 @@ create TABLE team (
   cap_start_date date NOT NULL,
   cap_reg_no numeric(10) NOT NULL,
   pass_id varchar2(10) NOT NULL,
-  FOREIGN KEY (pass_id) REFERENCES outdoor_activities(pass_id) ON DELETE CASCADE ON UPDATE CASCADE
+  FOREIGN KEY (pass_id) REFERENCES outdoor_activities(pass_id) ON DELETE CASCADE
 );
 create TABLE Belongs_to (
   reg_no numeric(10),
   team_name varchar2(10),
   primary key(reg_no, team_name),
-  FOREIGN KEY (reg_no) REFERENCES team_member(reg_no) ON DELETE CASCADE ON UPDATE CASCADE,
-  FOREIGN KEY (team_name) REFERENCES team(team_name) ON DELETE CASCADE ON UPDATE CASCADE
+  FOREIGN KEY (reg_no) REFERENCES team_member(reg_no) ON DELETE CASCADE,
+  FOREIGN KEY (team_name) REFERENCES team(team_name) ON DELETE CASCADE
 );
 create TABLE Coach (
   coach_id varchar2(10) primary key,
@@ -51,7 +51,7 @@ create TABLE Coach (
   join_date date NOT NULL,
   salary numeric(6) NOT NULL,
   team_name varchar2(10) NOT NULL,
-  FOREIGN KEY (team_name) REFERENCES team(team_name) ON DELETE CASCADE ON UPDATE CASCADE,
+  FOREIGN KEY (team_name) REFERENCES team(team_name) ON DELETE CASCADE,
   check (salary > 10000)
 );
 create TABLE Equipments (
@@ -66,8 +66,8 @@ create TABLE Issues (
   issue_amount numeric(3) NOT NULL,
   return_date date,
   primary key(reg_no, item_name),
-  FOREIGN KEY (reg_no) REFERENCES team_member(reg_no) ON DELETE CASCADE ON UPDATE CASCADE,
-  FOREIGN KEY (item_name) REFERENCES Equipments(item_name) ON DELETE CASCADE ON UPDATE CASCADE
+  FOREIGN KEY (reg_no) REFERENCES team_member(reg_no) ON DELETE CASCADE,
+  FOREIGN KEY (item_name) REFERENCES Equipments(item_name) ON DELETE CASCADE
 );
 create TABLE Manages (
   manager_id varchar2(10) primary key,
@@ -85,14 +85,13 @@ create TABLE Events (
   venue varchar2(10) NOT NULL,
   chief_guest varchar2(10) NOT NULL,
   manager_id varchar2(10) NOT NULL,
-  FOREIGN KEY (manager_id) REFERENCES Manages(manager_id) ON DELETE CASCADE ON UPDATE CASCADE
+  FOREIGN KEY (manager_id) REFERENCES Manages(manager_id) ON DELETE CASCADE
 );
 create TABLE Competes (
   team_name varchar2(10),
   event_id varchar2(10),
   year numeric(4) NOT NULL,
   primary key(team_name, event_id),
-  FOREIGN KEY (team_name) REFERENCES team(team_name) ON DELETE CASCADE ON UPDATE CASCADE,
-  FOREIGN KEY (event_id) REFERENCES Events(event_id) ON DELETE CASCADE ON UPDATE CASCADE
+  FOREIGN KEY (team_name) REFERENCES team(team_name) ON DELETE CASCADE,
+  FOREIGN KEY (event_id) REFERENCES Events(event_id) ON DELETE CASCADE
 );
--- ON DELETE CASCADE ON UPDATE CASCADE
