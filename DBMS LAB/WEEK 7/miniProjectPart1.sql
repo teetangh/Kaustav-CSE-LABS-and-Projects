@@ -34,7 +34,8 @@ create TABLE team (
   cap_start_date date NOT NULL,
   cap_reg_no numeric(10) NOT NULL,
   pass_id varchar2(10) NOT NULL,
-  FOREIGN KEY (pass_id) REFERENCES outdoor_activities(pass_id) ON DELETE CASCADE
+  FOREIGN KEY (pass_id) REFERENCES outdoor_activities(pass_id) ON DELETE CASCADE,
+  FOREIGN KEY (cap_reg_no) REFERENCES team_member(reg_no) ON DELETE CASCADE
 );
 create TABLE Belongs_to (
   reg_no numeric(10),
