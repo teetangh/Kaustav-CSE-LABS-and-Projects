@@ -1,0 +1,26 @@
+set linesize 200
+cl scr
+
+@"C:\Users\Kaustav\Desktop\week7_mini_proj_v2\week7_mini_proj_v3\miniProjectPart2.sql"
+@"C:\Users\Kaustav\Desktop\week7_mini_proj_v2\week7_mini_proj_v3\verified datasets\TABLE1teamMemberDataset(verified).sql"
+@"C:\Users\Kaustav\Desktop\week7_mini_proj_v2\week7_mini_proj_v3\verified datasets\TABLE2outdoorActivitesDataset(verified).sql"
+@"C:\Users\Kaustav\Desktop\week7_mini_proj_v2\week7_mini_proj_v3\verified datasets\TABLE3teamDataset(verified).sql"
+@"C:\Users\Kaustav\Desktop\week7_mini_proj_v2\week7_mini_proj_v3\verified datasets\TABLE4BelongsToDataset(verified).sql"
+@"C:\Users\Kaustav\Desktop\week7_mini_proj_v2\week7_mini_proj_v3\verified datasets\TABLE5CoachDataset(verified).sql"
+@"C:\Users\Kaustav\Desktop\week7_mini_proj_v2\week7_mini_proj_v3\verified datasets\TABLE6EquipmentsDataset(verified).sql"
+@"C:\Users\Kaustav\Desktop\week7_mini_proj_v2\week7_mini_proj_v3\verified datasets\TABLE7IssuesDataset(verified).sql"
+@"C:\Users\Kaustav\Desktop\week7_mini_proj_v2\week7_mini_proj_v3\verified datasets\TABLE8ManagesDataset(verified).sql"
+@"C:\Users\Kaustav\Desktop\week7_mini_proj_v2\week7_mini_proj_v3\verified datasets\TABLE9EventsDataset(verified).sql"
+@"C:\Users\Kaustav\Desktop\week7_mini_proj_v2\week7_mini_proj_v3\verified datasets\TABLE10CompetesDataset(verified).sql"
+
+select * from team_member;
+select * from outdoor_activities;
+select * from team;
+select * from belongs_to;
+select * from coach;
+select * from equipments;
+select * from issues;
+select * from manages;
+select * from events;
+select * from Competes;
+
