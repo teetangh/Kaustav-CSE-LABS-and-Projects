@@ -41,4 +41,19 @@ END;
 
 -- q2
 
+
+
+DECLARE
+    roll numeric(1) :=1;
+BEGIN
+    IF roll = 1 THEN
+    DBMS_OUTPUT.PUT_LINE('Hello');
+    ELSE
+    DBMS_OUTPUT.PUT_LINE('Hi');
+    END if;
+END;
+/
+    
+
+
     

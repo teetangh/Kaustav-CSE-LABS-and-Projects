@@ -168,4 +168,6 @@ create TABLE Competes
     where amount = (SELECT MAX(amount) FROM equipments );
 
 -- q8
-    -- 
+    -- Find the members who are member of more than one team
+
+    
