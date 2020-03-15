@@ -21,29 +21,21 @@ JERRY BANFIELD & JOSEPH DELGADILO
 
 ********Youtube Playlists************
 
-KGP TALKIE
-Learn Complete Data Science with these 5 video series.
-1. Python for Beginners
-https://www.youtube.com/watch?v=b42eTWkEIfA&list=PLc2rvfiptPSRmd4eWpRmzRIPebX3W9mju
-
-2. Machine Learning for Beginners
-https://www.youtube.com/watch?v=ZeM2tHtjGy4&list=PLc2rvfiptPSTvPFbNlT_TGRupzKKhJSIv
-
-3. Feature Selection in Machine Learning
-https://www.youtube.com/watch?v=kA4mD3y4aqA&list=PLc2rvfiptPSQYzmDIFuq2PqN2n28ZjxDH
-
-4. Deep Learning with TensorFlow 2.0 and Keras
-https://www.youtube.com/watch?v=nVvhkVLh60o&list=PLc2rvfiptPSR3iwFp1VHVJFK4yAMo0wuF
-
-5. Natural Language Processing (NLP) Tutorials
-https://www.youtube.com/watch?v=mrF9MD56-wk&list=PLc2rvfiptPSQgsORc7iuv7UxhbRJox-pW
-
-COGNEETHI
-https://www.youtube.com/watch?v=9I6nzfx_kpE&list=PL1GQaVhO4f_jLxOokW7CS5kY_J1t1T17S&index=1
+Jeff Heaton
+2020 Version of Applications of Deep Neural Networks
+https://www.youtube.com/watch?v=LCXEuJSwd1E&list=PLjy4p-07OYzulelvJ5KVaT2pDlxivl_BN&index=1
 
 
+Complete Machine Learning playlist
+https://www.youtube.com/watch?v=7S865QCGL74&list=PLZoTAELRMXVPBTrWtJkn3wWQxZkmTXGwe
 
-AI Student(Remove Numbering and be Careful)
+Complete Deep Learning
+https://www.youtube.com/watch?v=DKSZHN7jftI&list=PLZoTAELRMXVPGU70ZGsckrMdr0FteeRUi
+
+Complete Big Data
+https://www.youtube.com/watch?v=mGaEzA3SkDg&list=PLZoTAELRMXVNN0r4lasvXlVqirAr5ltaM
+
+AI Student[check updates] 
 
 Master Deep Learning TensorFlow2.0
 https://www.youtube.com/watch?v=AvUezpQ5dvk&list=PLsdK9vddRUaZHmYva8gSq6uuFNC1u4GDG
