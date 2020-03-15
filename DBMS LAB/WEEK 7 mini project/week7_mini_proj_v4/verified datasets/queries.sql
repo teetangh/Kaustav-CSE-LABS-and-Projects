@@ -169,5 +169,22 @@ create TABLE Competes
 
 -- q8
     -- Find the members who are member of more than one team
+    SELECT reg_no,count (reg_no) 
+    FROM team_member natural join belongs_to 
+    group by reg_no
+    having count(reg_no)>1;
 
+-- q9
+  -- Find Regno of team mebers who captain of more than one teams
+  SELECT cap_reg_no,count(cap_reg_no) 
+  from team
+  GROUP BY cap_reg_no
+  HAVING count(cap_reg_no) > 1;
     
+
+-- q10
+  -- Find the team members who have issued more than one item
+    SELECT issues.reg_no,mem_name,item_name,issue_amount 
+    FROM team_member,issues
+    WHERE team_member.reg_no = issues.reg_no
+      and issues.issue_amount > 2;

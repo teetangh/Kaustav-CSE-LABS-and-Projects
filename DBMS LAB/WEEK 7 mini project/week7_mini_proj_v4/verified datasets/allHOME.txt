@@ -13,6 +13,8 @@ cl scr
 @"C:\Users\Kaustav\Desktop\MY CODE\All Kaustav Labs Latest\KaustavLABS2 06 Jan 2019\DBMS LAB\WEEK 7 mini project\week7_mini_proj_v4\verified datasets\TABLE9EventsDataset(verified).sql"
 @"C:\Users\Kaustav\Desktop\MY CODE\All Kaustav Labs Latest\KaustavLABS2 06 Jan 2019\DBMS LAB\WEEK 7 mini project\week7_mini_proj_v4\verified datasets\TABLE10CompetesDataset(verified).sql"
 
+
+
 select * from team_member;
 select * from outdoor_activities;
 select * from team;
