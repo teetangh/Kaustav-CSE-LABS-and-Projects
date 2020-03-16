@@ -21,6 +21,9 @@ JERRY BANFIELD & JOSEPH DELGADILO
 
 ********Youtube Playlists************
 
+CHERNO C++ Playlist
+https://www.youtube.com/watch?v=18c3MTX0PK0&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb
+
 JEFF HEATON
 2020 Version of Applications of Deep Neural Networks
 https://www.youtube.com/watch?v=LCXEuJSwd1E&list=PLjy4p-07OYzulelvJ5KVaT2pDlxivl_BN&index=1
