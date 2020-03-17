@@ -28,6 +28,8 @@ JEFF HEATON
 2020 Version of Applications of Deep Neural Networks
 https://www.youtube.com/watch?v=LCXEuJSwd1E&list=PLjy4p-07OYzulelvJ5KVaT2pDlxivl_BN&index=1
 
+*************************
+
 KRISH NAIK
 Complete Machine Learning playlist
 https://www.youtube.com/watch?v=7S865QCGL74&list=PLZoTAELRMXVPBTrWtJkn3wWQxZkmTXGwe
@@ -37,6 +39,21 @@ https://www.youtube.com/watch?v=DKSZHN7jftI&list=PLZoTAELRMXVPGU70ZGsckrMdr0Ftee
 
 Complete Big Data
 https://www.youtube.com/watch?v=mGaEzA3SkDg&list=PLZoTAELRMXVNN0r4lasvXlVqirAr5ltaM
+
+
+*************************
+
+CloudxLab
+Machine Learning & Deep Learning Specialization with Python, Scikit-Learn and TensforFlow | CloudxLab(140 hours)
+https://www.youtube.com/watch?v=4C82CQz40bE&list=PLFhNzVKP1pVrNU8cTL_t-8YzPLF8i8PaS
+
+
+
+Big Data with Hadoop & Spark Training | Live Sessions | CloudxLab(82 hours)
+https://www.youtube.com/watch?v=aMxFwKs6HoQ&list=PLFhNzVKP1pVqrZ-vjHvUHfUrHG0bCyqeo&index=2&t=0s
+
+
+*************************
 
 AI Student[check updates] 
 
