@@ -3,6 +3,9 @@
  *
  * Copyright (c) 2020 Kaustav Ghosh
  */
+
+
+// MINOR BUGS
 #include <stdio.h>
 #include <stdlib.h>
 
