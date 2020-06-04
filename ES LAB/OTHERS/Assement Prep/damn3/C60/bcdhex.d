@@ -1,0 +1,1 @@
+.\bcdhex.o: bcdhex.s

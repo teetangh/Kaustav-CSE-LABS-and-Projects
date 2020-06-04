@@ -1,0 +1,157 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,DATA,READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10001000        DCD              0X10001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 ALIGN
+    7 00000008                 AREA             mycode,CODE,READONLY
+    8 00000000                 ENTRY
+    9 00000000                 EXPORT           Reset_Handler
+   10 00000000         Reset_Handler
+   11 00000000 480A            LDR              R0,=SRC
+   12 00000002         
+   13 00000002         
+   14 00000002 F04F 0405       mov              r4,#5
+   15 00000006 F04F 0500       mov              r5,#0
+   16 0000000A FB04 F605 
+                       UP      mul              r6,r4,r5
+   17 0000000E F840 6B04       str              r6,[r0],#4
+   18 00000012 F105 0501       add              r5,#1
+   19 00000016 2D0A            cmp              r5,#10
+   20 00000018 D3F7            bcc              UP
+   21 0000001A F1A0 0028       sub              r0,#40
+   22 0000001E         LOOP
+   23 0000001E F850 3B04       ldr              r3,[r0],#4
+   24 00000022 F841 3B04       str              r3,[r1],#4
+   25 00000026 3A01            subs             r2,#1
+   26 00000028 D1F9            bne              LOOP
+   27 0000002A         STOP
+   28 0000002A E7FE            b                STOP
+   29 0000002C         
+   30 0000002C 00000000        AREA             mydata,DATA,READWRITE
+   31 00000000 00000001 
+              00000002 
+              00000003 
+              00000004 
+              00000005 
+              00000006 
+              00000007 
+              00000008 
+              00000009 
+              0000000A SRC     dcd              1,2,3,4,5,6,7,8,9,10
+   32 00000028 00000000 
+                       DEST    dcd              0
+   33 0000002C                 end
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\l1_ove
+rlap_a.d -o.\l1_overlap_a.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include 
+-IC:\Keil\ARM\Inc\NXP\LPC17xx --predefine="__EVAL SETA 1" --list=.\l1_overlap_a
+.lst L1_overlap_a.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file L1_overlap_a.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file L1_overlap_a.s
+   Uses
+      At line 2 in file L1_overlap_a.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+LOOP 0000001E
+
+Symbol: LOOP
+   Definitions
+      At line 22 in file L1_overlap_a.s
+   Uses
+      At line 26 in file L1_overlap_a.s
+Comment: LOOP used once
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 10 in file L1_overlap_a.s
+   Uses
+      At line 5 in file L1_overlap_a.s
+      At line 9 in file L1_overlap_a.s
+
+STOP 0000002A
+
+Symbol: STOP
+   Definitions
+      At line 27 in file L1_overlap_a.s
+   Uses
+      At line 28 in file L1_overlap_a.s
+Comment: STOP used once
+UP 0000000A
+
+Symbol: UP
+   Definitions
+      At line 16 in file L1_overlap_a.s
+   Uses
+      At line 20 in file L1_overlap_a.s
+Comment: UP used once
+mycode 00000000
+
+Symbol: mycode
+   Definitions
+      At line 7 in file L1_overlap_a.s
+   Uses
+      None
+Comment: mycode unused
+5 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DEST 00000028
+
+Symbol: DEST
+   Definitions
+      At line 32 in file L1_overlap_a.s
+   Uses
+      None
+Comment: DEST unused
+SRC 00000000
+
+Symbol: SRC
+   Definitions
+      At line 31 in file L1_overlap_a.s
+   Uses
+      At line 11 in file L1_overlap_a.s
+Comment: SRC used once
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 30 in file L1_overlap_a.s
+   Uses
+      None
+Comment: mydata unused
+3 symbols
+343 symbols in table

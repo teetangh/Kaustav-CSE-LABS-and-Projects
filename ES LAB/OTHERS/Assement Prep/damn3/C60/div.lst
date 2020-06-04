@@ -1,0 +1,168 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,DATA,READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10000000        DCD              0X10000000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 ALIGN
+    7 00000008                 AREA             mycode,CODE,READONLY
+    8 00000000                 ENTRY
+    9 00000000                 EXPORT           Reset_Handler
+   10 00000000         Reset_Handler
+   11 00000000 480A            LDR              R0,=NU
+   12 00000002 490B            LDR              R1,=DE
+   13 00000004 6802            LDR              R2,[R0]
+   14 00000006 680B            LDR              R3,[R1]
+   15 00000008 F04F 0400       MOV              R4,#0
+   16 0000000C 4D09            LDR              R5,=QU
+   17 0000000E 4E0A            LDR              R6,=RE
+   18 00000010         LOOP
+   19 00000010 429A            CMP              R2,R3
+   20 00000012 D304            BCC              ST
+   21 00000014 EBA2 0203       SUB              R2,R2,R3
+   22 00000018 F104 0401       ADD              R4,#1
+   23 0000001C E7F8            B                LOOP
+   24 0000001E 602C    ST      STR              R4,[R5]
+   25 00000020 6032            STR              R2,[R6]
+   26 00000022         STOP
+   27 00000022 E7FE            B                STOP
+   28 00000024 00000009 
+                       NU      DCD              0x00000009
+   29 00000028 00000003 
+                       DE      DCD              0x00000003
+   30 0000002C 00000000 
+              00000000 
+              00000000 
+              00000000         AREA             mydata,DATA,READWRITE
+   31 00000000 00000000 
+                       QU      DCD              0
+   32 00000004 00000000 
+                       RE      DCD              0
+   33 00000008                 END
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\div.d 
+-o.\div.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\
+NXP\LPC17xx --predefine="__EVAL SETA 1" --list=.\div.lst div.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file div.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file div.s
+   Uses
+      At line 2 in file div.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DE 00000028
+
+Symbol: DE
+   Definitions
+      At line 29 in file div.s
+   Uses
+      At line 12 in file div.s
+Comment: DE used once
+LOOP 00000010
+
+Symbol: LOOP
+   Definitions
+      At line 18 in file div.s
+   Uses
+      At line 23 in file div.s
+Comment: LOOP used once
+NU 00000024
+
+Symbol: NU
+   Definitions
+      At line 28 in file div.s
+   Uses
+      At line 11 in file div.s
+Comment: NU used once
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 10 in file div.s
+   Uses
+      At line 5 in file div.s
+      At line 9 in file div.s
+
+ST 0000001E
+
+Symbol: ST
+   Definitions
+      At line 24 in file div.s
+   Uses
+      At line 20 in file div.s
+Comment: ST used once
+STOP 00000022
+
+Symbol: STOP
+   Definitions
+      At line 26 in file div.s
+   Uses
+      At line 27 in file div.s
+Comment: STOP used once
+mycode 00000000
+
+Symbol: mycode
+   Definitions
+      At line 7 in file div.s
+   Uses
+      None
+Comment: mycode unused
+7 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+QU 00000000
+
+Symbol: QU
+   Definitions
+      At line 31 in file div.s
+   Uses
+      At line 16 in file div.s
+Comment: QU used once
+RE 00000004
+
+Symbol: RE
+   Definitions
+      At line 32 in file div.s
+   Uses
+      At line 17 in file div.s
+Comment: RE used once
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 30 in file div.s
+   Uses
+      None
+Comment: mydata unused
+3 symbols
+345 symbols in table

@@ -1,0 +1,140 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,DATA,READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10001000        DCD              0x10001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 AREA             hex_bcd,CODE,READONLY
+    7 00000000                 EXPORT           Reset_Handler
+    8 00000000                 ENTRY
+    9 00000000         Reset_Handler
+   10 00000000 4808            LDR              R0,=VAL
+   11 00000002 6801            LDR              R1,[R0]
+   12 00000004 4808            LDR              R0,=RES
+   13 00000006 F04F 0208       MOV              R2,#8
+   14 0000000A         LOOP
+   15 0000000A F001 040F       AND              R4,R1,#0xF
+   16 0000000E F104 0430       ADD              R4,#0x30
+   17 00000012 F840 4B04       STR              R4,[R0],#4
+   18 00000016 EA4F 1111       LSR              R1,#4
+   19 0000001A 1E52            SUBS             R2,R2,#1
+   20 0000001C D1F5            BNE              LOOP
+   21 0000001E         STOP
+   22 0000001E E7FE            B                STOP
+   23 00000020 12345678 
+                       VAL     DCD              0x12345678
+   24 00000024 00000000 
+              00000000         AREA             mydata,DATA,READWRITE
+   25 00000000 00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 RES     DCD              0,0,0,0,0,0,0,0
+   26 00000020                 END
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\bcd_as
+cii.d -o.\bcd_ascii.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\K
+eil\ARM\Inc\NXP\LPC17xx --predefine="__EVAL SETA 1" --list=.\bcd_ascii.lst bcd_
+ascii.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file bcd_ascii.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file bcd_ascii.s
+   Uses
+      At line 2 in file bcd_ascii.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+LOOP 0000000A
+
+Symbol: LOOP
+   Definitions
+      At line 14 in file bcd_ascii.s
+   Uses
+      At line 20 in file bcd_ascii.s
+Comment: LOOP used once
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 9 in file bcd_ascii.s
+   Uses
+      At line 5 in file bcd_ascii.s
+      At line 7 in file bcd_ascii.s
+
+STOP 0000001E
+
+Symbol: STOP
+   Definitions
+      At line 21 in file bcd_ascii.s
+   Uses
+      At line 22 in file bcd_ascii.s
+Comment: STOP used once
+VAL 00000020
+
+Symbol: VAL
+   Definitions
+      At line 23 in file bcd_ascii.s
+   Uses
+      At line 10 in file bcd_ascii.s
+Comment: VAL used once
+hex_bcd 00000000
+
+Symbol: hex_bcd
+   Definitions
+      At line 6 in file bcd_ascii.s
+   Uses
+      None
+Comment: hex_bcd unused
+5 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RES 00000000
+
+Symbol: RES
+   Definitions
+      At line 25 in file bcd_ascii.s
+   Uses
+      At line 12 in file bcd_ascii.s
+Comment: RES used once
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 24 in file bcd_ascii.s
+   Uses
+      None
+Comment: mydata unused
+2 symbols
+342 symbols in table

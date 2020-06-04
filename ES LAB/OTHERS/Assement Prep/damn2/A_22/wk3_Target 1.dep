@@ -1,0 +1,7 @@
+Dependencies for Project 'wk3', Target 'Target 1': (DO NOT MODIFY !)
+F (.\prg3_6.s)(0x5E27937C)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\prg3_6.lst --xref -o .\prg3_6.o --depend .\prg3_6.d)
+F (D:\c55\ascii.s)(0x5E2A1AEF)()
+F (D:\c55\UNPACKED.s)(0x5E2A364A)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\unpacked.lst --xref -o .\unpacked.o --depend .\unpacked.d)
+F (D:\c55\PACKED.s)(0x5E2A2E4C)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\packed.lst --xref -o .\packed.o --depend .\packed.d)
+F (D:\c55\ADDITION.s)(0x5E2A3675)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\addition.lst --xref -o .\addition.o --depend .\addition.d)
+F (D:\c55\add.s)(0x5E2A3BCA)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\add.lst --xref -o .\add.o --depend .\add.d)

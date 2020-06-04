@@ -1,0 +1,159 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,DATA,READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10001000        DCD              0x10001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 AREA             factorial,CODE,READONLY
+    7 00000000                 EXPORT           Reset_Handler
+    8 00000000                 ENTRY
+    9 00000000         Reset_Handler
+   10 00000000 480C            LDR              R0,=SRC
+   11 00000002 6802            LDR              R2,[R0]
+   12 00000004 480C            LDR              R0,=DST
+   13 00000006 F000 F802       BL               FACT
+   14 0000000A 6002            STR              R2,[R0]
+   15 0000000C         STOP
+   16 0000000C E7FE            B                STOP
+   17 0000000E         FACT
+   18 0000000E B508            PUSH             {R3,LR}
+   19 00000010 4613            MOV              R3,R2
+   20 00000012 2A00            CMP              R2,#0
+   21 00000014 D102            BNE              DOWN
+   22 00000016 F04F 0201       MOV              R2,#1
+   23 0000001A E005            B                DOWN1
+   24 0000001C         DOWN
+   25 0000001C F1A2 0201       SUB              R2,#1
+   26 00000020 F7FF FFF5       BL               FACT
+   27 00000024 FB02 F203       MUL              R2,R3
+   28 00000028         DOWN1
+   29 00000028 E8BD 4008       POP              {R3,LR}
+   30 0000002C 4770            BX               LR
+   31 0000002E 00 00 00000006 
+                       SRC     DCD              6
+   32 00000034 00000000 
+              00000000         AREA             mydata,DATA,READWRITE
+   33 00000000 00000000 
+                       DST     DCD              0
+   34 00000004                 END
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\factor
+ial.d -o.\factorial.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\K
+eil\ARM\Inc\NXP\LPC17xx --predefine="__EVAL SETA 1" --list=.\factorial.lst fact
+orial.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file factorial.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file factorial.s
+   Uses
+      At line 2 in file factorial.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DOWN 0000001C
+
+Symbol: DOWN
+   Definitions
+      At line 24 in file factorial.s
+   Uses
+      At line 21 in file factorial.s
+Comment: DOWN used once
+DOWN1 00000028
+
+Symbol: DOWN1
+   Definitions
+      At line 28 in file factorial.s
+   Uses
+      At line 23 in file factorial.s
+Comment: DOWN1 used once
+FACT 0000000E
+
+Symbol: FACT
+   Definitions
+      At line 17 in file factorial.s
+   Uses
+      At line 13 in file factorial.s
+      At line 26 in file factorial.s
+
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 9 in file factorial.s
+   Uses
+      At line 5 in file factorial.s
+      At line 7 in file factorial.s
+
+SRC 00000030
+
+Symbol: SRC
+   Definitions
+      At line 31 in file factorial.s
+   Uses
+      At line 10 in file factorial.s
+Comment: SRC used once
+STOP 0000000C
+
+Symbol: STOP
+   Definitions
+      At line 15 in file factorial.s
+   Uses
+      At line 16 in file factorial.s
+Comment: STOP used once
+factorial 00000000
+
+Symbol: factorial
+   Definitions
+      At line 6 in file factorial.s
+   Uses
+      None
+Comment: factorial unused
+7 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DST 00000000
+
+Symbol: DST
+   Definitions
+      At line 33 in file factorial.s
+   Uses
+      At line 12 in file factorial.s
+Comment: DST used once
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 32 in file factorial.s
+   Uses
+      None
+Comment: mydata unused
+2 symbols
+344 symbols in table

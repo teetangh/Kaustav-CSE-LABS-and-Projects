@@ -1,0 +1,73 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,DATA,READONLY
+    2 00000000                 EXPORT           __Vectors1
+    3 00000000         __Vectors1
+    4 00000000 10001000        DCD              0x10001000
+    5 00000004 00000000        DCD              Reset_Handler1
+    6 00000008                 AREA             mycode2,CODE,READONLY
+    7 00000000                 ENTRY
+    8 00000000                 EXPORT           Reset_Handler1
+    9 00000000         Reset_Handler1
+   10 00000000 F04F 000A       MOV              R0,#10
+   11 00000004 F04F 011E       MOV              R1,#30
+   12 00000008 460A            MOV              R2,R1
+   13 0000000A 4601            MOV              R1,R0
+   14 0000000C 4610            MOV              R0,R2
+   15 0000000E                 END
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\mycode
+_2.d -o.\mycode_2.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Kei
+l\ARM\Inc\NXP\LPC17xx --predefine="__EVAL SETA 1" --list=.\mycode_2.lst mycode_
+2.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file mycode_2.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors1 00000000
+
+Symbol: __Vectors1
+   Definitions
+      At line 3 in file mycode_2.s
+   Uses
+      At line 2 in file mycode_2.s
+Comment: __Vectors1 used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Reset_Handler1 00000000
+
+Symbol: Reset_Handler1
+   Definitions
+      At line 9 in file mycode_2.s
+   Uses
+      At line 5 in file mycode_2.s
+      At line 8 in file mycode_2.s
+
+mycode2 00000000
+
+Symbol: mycode2
+   Definitions
+      At line 6 in file mycode_2.s
+   Uses
+      None
+Comment: mycode2 unused
+2 symbols
+335 symbols in table

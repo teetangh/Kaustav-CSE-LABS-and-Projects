@@ -1,0 +1,124 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,DATA,READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10001000        DCD              0X10001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 ALIGN
+    7 00000008                 AREA             mycode,CODE,READONLY
+    8 00000000                 ENTRY
+    9 00000000                 EXPORT           Reset_Handler
+   10 00000000         Reset_Handler
+   11 00000000 4D06            LDR              R5,=RESULT
+   12 00000002 4807            LDR              R0,=NUM1
+   13 00000004 4907            LDR              R1,=NUM2
+   14 00000006 6802            LDR              R2,[R0]
+   15 00000008 680B            LDR              R3,[R1]
+   16 0000000A FBA2 6703       UMULL            R6,R7,R2,R3
+   17 0000000E F845 6B04       STR              R6,[R5],#4
+   18 00000012 602F            STR              R7,[R5]
+   19 00000014 10000000 
+                       NUM1    DCD              0x10000000
+   20 00000018 54000000 
+                       NUM2    DCD              0x54000000
+   21 0000001C 00000000 
+              00000000 
+              00000000         AREA             mydata,DATA,READWRITE
+   22 00000000 00000000 
+                       RESULT  DCD              0
+   23 00000004                 END
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\l3_q1.
+d -o.\l3_q1.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\
+Inc\NXP\LPC17xx --predefine="__EVAL SETA 1" --list=.\l3_q1.lst l3_q1.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file l3_q1.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file l3_q1.s
+   Uses
+      At line 2 in file l3_q1.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+NUM1 00000014
+
+Symbol: NUM1
+   Definitions
+      At line 19 in file l3_q1.s
+   Uses
+      At line 12 in file l3_q1.s
+Comment: NUM1 used once
+NUM2 00000018
+
+Symbol: NUM2
+   Definitions
+      At line 20 in file l3_q1.s
+   Uses
+      At line 13 in file l3_q1.s
+Comment: NUM2 used once
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 10 in file l3_q1.s
+   Uses
+      At line 5 in file l3_q1.s
+      At line 9 in file l3_q1.s
+
+mycode 00000000
+
+Symbol: mycode
+   Definitions
+      At line 7 in file l3_q1.s
+   Uses
+      None
+Comment: mycode unused
+4 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESULT 00000000
+
+Symbol: RESULT
+   Definitions
+      At line 22 in file l3_q1.s
+   Uses
+      At line 11 in file l3_q1.s
+Comment: RESULT used once
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 21 in file l3_q1.s
+   Uses
+      None
+Comment: mydata unused
+2 symbols
+341 symbols in table

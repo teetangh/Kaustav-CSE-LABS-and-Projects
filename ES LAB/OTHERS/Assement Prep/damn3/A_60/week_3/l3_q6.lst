@@ -1,0 +1,125 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,DATA,READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10001000        DCD              0X10001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 ALIGN
+    7 00000008                 AREA             mycode,CODE,READONLY
+    8 00000000                 ENTRY
+    9 00000000                 EXPORT           Reset_Handler
+   10 00000000         Reset_Handler
+   11 00000000 F44F 7081       MOV              R0,#0x0102
+   12 00000004 4908            LDR              R1,=RES
+   13 00000006 F04F 020F       MOV              R2,#0x0000000F
+   14 0000000A F04F 0300       MOV              R3,#0
+   15 0000000E F04F 0402       MOV              R4,#2       ;COUNTER
+   16 00000012         UP
+   17 00000012 EA00 0502       AND              R5,R0,R2
+   18 00000016 EA4F 1202       LSL              R2,#4
+   19 0000001A EA4F 1010       LSR              R0,#4
+   20 0000001E 442B            ADD              R3,R5
+   21 00000020 3C01            SUBS             R4,#1
+   22 00000022 D1F6            BNE              UP
+   23 00000024 600B            STR              R3,[R1]
+   24 00000026         STOP
+   25 00000026 E7FE            B                STOP
+   26 00000028 00000000        AREA             mc,DATA,READWRITE
+   27 00000000 00000000 
+                       RES     DCD              0
+   28 00000004                 END
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\l3_q6.
+d -o.\l3_q6.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\
+Inc\NXP\LPC17xx --predefine="__EVAL SETA 1" --list=.\l3_q6.lst L3_q6.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file L3_q6.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file L3_q6.s
+   Uses
+      At line 2 in file L3_q6.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 10 in file L3_q6.s
+   Uses
+      At line 5 in file L3_q6.s
+      At line 9 in file L3_q6.s
+
+STOP 00000026
+
+Symbol: STOP
+   Definitions
+      At line 24 in file L3_q6.s
+   Uses
+      At line 25 in file L3_q6.s
+Comment: STOP used once
+UP 00000012
+
+Symbol: UP
+   Definitions
+      At line 16 in file L3_q6.s
+   Uses
+      At line 22 in file L3_q6.s
+Comment: UP used once
+mycode 00000000
+
+Symbol: mycode
+   Definitions
+      At line 7 in file L3_q6.s
+   Uses
+      None
+Comment: mycode unused
+4 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RES 00000000
+
+Symbol: RES
+   Definitions
+      At line 27 in file L3_q6.s
+   Uses
+      At line 12 in file L3_q6.s
+Comment: RES used once
+mc 00000000
+
+Symbol: mc
+   Definitions
+      At line 26 in file L3_q6.s
+   Uses
+      None
+Comment: mc unused
+2 symbols
+341 symbols in table

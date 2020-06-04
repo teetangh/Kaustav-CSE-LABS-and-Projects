@@ -1,0 +1,197 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,DATA,READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10001000        DCD              0x10001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 AREA             gcd,CODE,READONLY
+    7 00000000                 EXPORT           Reset_Handler
+    8 00000000                 ENTRY
+    9 00000000         Reset_Handler
+   10 00000000 F04F 000A       MOV              R0,#10
+   11 00000004 F04F 010F       MOV              R1,#15
+   12 00000008 FB01 F300       MUL              R3,R1,R0
+   13 0000000C         LOOP
+   14 0000000C 4288            CMP              R0,R1
+   15 0000000E D004            BEQ              EN
+   16 00000010 D301            BLO              NEXT
+   17 00000012 1A40            SUBS             R0,R0,R1
+   18 00000014 D1FA            BNE              LOOP
+   19 00000016         NEXT
+   20 00000016 1A09            SUBS             R1,R1,R0
+   21 00000018 D1F8            BNE              LOOP
+   22 0000001A 4602    EN      MOV              R2,R0
+   23 0000001C 4807            LDR              R0,=GCD
+   24 0000001E 4908            LDR              R1,=LCM
+   25 00000020 6002            STR              R2,[R0]
+   26 00000022 F04F 0400       MOV              R4,#0
+   27 00000026         LOOPI
+   28 00000026 4293            CMP              R3,R2
+   29 00000028 D201            BCS              SKIP
+   30 0000002A 461D            MOV              R5,R3
+   31 0000002C E004            B                ENI
+   32 0000002E         SKIP
+   33 0000002E EBA3 0302       SUB              R3,R3,R2
+   34 00000032 F104 0401       ADD              R4,R4,#1
+   35 00000036 E7F6            B                LOOPI
+   36 00000038         ENI
+   37 00000038 600C            STR              R4,[R1]
+   38 0000003A         STOP
+   39 0000003A E7FE            B                STOP
+   40 0000003C 00000000 
+              00000000         AREA             mydata,DATA,READWRITE
+   41 00000000 00000000 
+                       GCD     DCD              0
+   42 00000004 00000000 
+                       LCM     DCD              0
+   43 00000008                 END
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\gcd.d 
+-o.\gcd.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\
+NXP\LPC17xx --predefine="__EVAL SETA 1" --list=.\gcd.lst gcd.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file gcd.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file gcd.s
+   Uses
+      At line 2 in file gcd.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+EN 0000001A
+
+Symbol: EN
+   Definitions
+      At line 22 in file gcd.s
+   Uses
+      At line 15 in file gcd.s
+Comment: EN used once
+ENI 00000038
+
+Symbol: ENI
+   Definitions
+      At line 36 in file gcd.s
+   Uses
+      At line 31 in file gcd.s
+Comment: ENI used once
+LOOP 0000000C
+
+Symbol: LOOP
+   Definitions
+      At line 13 in file gcd.s
+   Uses
+      At line 18 in file gcd.s
+      At line 21 in file gcd.s
+
+LOOPI 00000026
+
+Symbol: LOOPI
+   Definitions
+      At line 27 in file gcd.s
+   Uses
+      At line 35 in file gcd.s
+Comment: LOOPI used once
+NEXT 00000016
+
+Symbol: NEXT
+   Definitions
+      At line 19 in file gcd.s
+   Uses
+      At line 16 in file gcd.s
+Comment: NEXT used once
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 9 in file gcd.s
+   Uses
+      At line 5 in file gcd.s
+      At line 7 in file gcd.s
+
+SKIP 0000002E
+
+Symbol: SKIP
+   Definitions
+      At line 32 in file gcd.s
+   Uses
+      At line 29 in file gcd.s
+Comment: SKIP used once
+STOP 0000003A
+
+
+
+ARM Macro Assembler    Page 2 Alphabetic symbol ordering
+Relocatable symbols
+
+
+Symbol: STOP
+   Definitions
+      At line 38 in file gcd.s
+   Uses
+      At line 39 in file gcd.s
+Comment: STOP used once
+gcd 00000000
+
+Symbol: gcd
+   Definitions
+      At line 6 in file gcd.s
+   Uses
+      None
+Comment: gcd unused
+9 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+GCD 00000000
+
+Symbol: GCD
+   Definitions
+      At line 41 in file gcd.s
+   Uses
+      At line 23 in file gcd.s
+Comment: GCD used once
+LCM 00000004
+
+Symbol: LCM
+   Definitions
+      At line 42 in file gcd.s
+   Uses
+      At line 24 in file gcd.s
+Comment: LCM used once
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 40 in file gcd.s
+   Uses
+      None
+Comment: mydata unused
+3 symbols
+347 symbols in table

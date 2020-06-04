@@ -1,0 +1,6 @@
+Dependencies for Project 'Lab1', Target 'Target 1': (DO NOT MODIFY !)
+F (.\add.s)(0x5E1511B1)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\add.lst --xref -o .\add.o --depend .\add.d)
+F (.\p2.s)(0x5E1E364C)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\p2.lst --xref -o .\p2.o --depend .\p2.d)
+F (.\reverse.s)(0x5E17BA9F)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\reverse.lst --xref -o .\reverse.o --depend .\reverse.d)
+F (.\transfer.s)(0x5E277259)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\transfer.lst --xref -o .\transfer.o --depend .\transfer.d)
+F (.\transfer_.s)(0x5E27773C)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\transfer_.lst --xref -o .\transfer_.o --depend .\transfer_.d)

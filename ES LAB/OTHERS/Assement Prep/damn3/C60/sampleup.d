@@ -1,0 +1,1 @@
+.\sampleup.o: sampleup.s
