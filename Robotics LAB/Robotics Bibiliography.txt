@@ -1,0 +1,26 @@
+https://demonstrations.wolfram.com/ForwardAndInverseKinematicsOfTheSCARARobot/
+
+https://www.mathworks.com/matlabcentral/fileexchange/45365-scara-with-path-trajectory
+
+https://users.cs.duke.edu/~brd/Teaching/Bio/asmb/current/Papers/chap3-forward-kinematics.pdf
+
+http://faculty.salina.k-state.edu/tim/robotics_sg/Arm_robots/inverseKin.html
+
+
+PAPERS
+https://www.researchgate.net/publication/297918515_VIBRATION_AND_KINEMATIC_ANALYSIS_OF_SCARA_ROBOT_STRUCTURE
+https://www.researchgate.net/publication/255567251_Disturbance_Observer-based_Trajectory_Following_Control_of_Nonlinear_Robotic_Manipulators
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.873.9543&rep=rep1&type=pdf
+
+SCARA DYNAMICS
+http://www.mate.tue.nl/mate/pdfs/8944.pdf
+
+https://ethz.ch/content/dam/ethz/special-interest/mavt/robotics-n-intelligent-systems/rsl-dam/documents/RobotDynamics2017/RD_HS2017script.pdf
+
+YOTUBE
+https://www.youtube.com/watch?v=TPjclVs4RIY
+
+https://www.youtube.com/watch?v=moKhLEvAgU4
+
+IMAGES
+https://www.google.com/search?q=scara+robot+dynamics&sa=N&rlz=1C1SQJL_enIN880IN880&biw=1920&bih=920&sxsrf=ALeKk008RP_WkGV03qEeYk6NdrlIVfqzoQ:1590182941331&tbm=isch&source=iu&ictx=1&fir=5OK-o2aM0NrtFM%253A%252CQ5TgHUYgMA_UpM%252C_&vet=1&usg=AI4_-kTvBBr2yWDg4Vm_YPol7yasdE6PhQ&ved=2ahUKEwjU6uGKtcjpAhVHWysKHardCEc4ChD1ATADegQIChAe#imgrc=NL9WTWjcraqmhM
