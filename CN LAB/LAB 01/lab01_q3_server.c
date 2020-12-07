@@ -5,7 +5,7 @@
 #include <string.h>
 #include <sys/socket.h>
 #include <sys/types.h>
-#include<unistd.h>
+#include <unistd.h>
 #define MAX 80
 #define PORT 8080
 #define SA struct sockaddr
@@ -16,58 +16,60 @@ void servfunc(int sockfd)
 	char buff[MAX];
 	int n;
 	// infinite loop for chat
-	for (;;) {
+	for (;;)
+	{
 		bzero(buff, MAX);
 
 		// read the message from client and copy it in buffer
 		read(sockfd, buff, sizeof(buff));
 		// print buffer which contains the client contents
 		printf("From client: %s\t To client : ", buff);
-		
-// Read server message from keyboard in the buffer
-		n=0;
-		int op1=0;
-		int op2=0;
+
+		// Read server message from keyboard in the buffer
+		n = 0;
+		int op1 = 0;
+		int op2 = 0;
 		int res;
 		char sep[10];
-		int i=0;
-		while(buff[n]!='\0')
+		int i = 0;
+		while (buff[n] != '\0')
 		{
-			if(buff[n]!=' ' && buff[n]!='\n')
+			if (buff[n] != ' ' && buff[n] != '\n')
 			{
-				sep[i++]=buff[n];
+				sep[i++] = buff[n];
 			}
 			else
 			{
-				if(op1==0)
+				if (op1 == 0)
 				{
-					sep[i]='\0';
-					op1=atoi(sep);
-					i=0;
+					sep[i] = '\0';
+					op1 = atoi(sep);
+					i = 0;
 				}
-				else if(op2==0)
+				else if (op2 == 0)
 				{
-					sep[i]='\0';
-					op2=atoi(sep);
-					i=0;
+					sep[i] = '\0';
+					op2 = atoi(sep);
+					i = 0;
 				}
 				else
 				{
-					char op=sep[0];
-					if(op=='+')
+					char op = sep[0];
+					if (op == '+')
 					{
-						res=op1+op2;
+						res = op1 + op2;
 					}
 				}
 			}
 			n++;
 		}
 		sprintf(buff, "%d", res);
-// and send that buffer to client
+		// and send that buffer to client
 		write(sockfd, buff, sizeof(buff));
 
 		// if msg contains "Exit" then server exit and session ended.
-		if (strncmp("quit", buff, 4) == 0) {
+		if (strncmp("quit", buff, 4) == 0)
+		{
 			printf("Server Exit...\n");
 			break;
 		}
@@ -82,7 +84,8 @@ int main()
 
 	// socket create and verification
 	sockfd = socket(AF_INET, SOCK_STREAM, 0);
-	if (sockfd == -1) {
+	if (sockfd == -1)
+	{
 		printf("socket creation failed...\n");
 		exit(0);
 	}
@@ -96,7 +99,8 @@ int main()
 	servaddr.sin_port = htons(PORT);
 
 	// Binding newly created socket to given IP and verification
-	if ((bind(sockfd, (SA*)&servaddr, sizeof(servaddr))) != 0) {
+	if ((bind(sockfd, (SA *)&servaddr, sizeof(servaddr))) != 0)
+	{
 		printf("socket bind failed...\n");
 		exit(0);
 	}
@@ -104,7 +108,8 @@ int main()
 		printf("Socket successfully binded..\n");
 
 	// Now server is ready to listen and verification
-	if ((listen(sockfd, 5)) != 0) {
+	if ((listen(sockfd, 5)) != 0)
+	{
 		printf("Listen failed...\n");
 		exit(0);
 	}
@@ -113,15 +118,16 @@ int main()
 	len = sizeof(cli);
 
 	// Accept the data packet from client and verification
-	connfd = accept(sockfd, (SA*)&cli, &len);
-	if (connfd < 0) {
+	connfd = accept(sockfd, (SA *)&cli, &len);
+	if (connfd < 0)
+	{
 		printf("server acccept failed...\n");
 		exit(0);
 	}
 	else
 		printf("server acccept the client...\n");
-	int prt=ntohs (cli.sin_port);
-	printf("%d\n",prt);
+	int prt = ntohs(cli.sin_port);
+	printf("%d\n", prt);
 
 	// Function for chatting between client and server
 	servfunc(connfd);

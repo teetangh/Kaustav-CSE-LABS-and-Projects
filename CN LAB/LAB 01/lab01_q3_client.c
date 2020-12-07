@@ -1,10 +1,10 @@
 //TCP Client program
 
-#include<unistd.h>
+#include <unistd.h>
 #include <netdb.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include<arpa/inet.h>
+#include <arpa/inet.h>
 #include <string.h>
 #include <sys/socket.h>
 #define MAX 80
@@ -14,7 +14,8 @@ void clifunc(int sockfd)
 {
 	char buff[MAX];
 	int n;
-	for (;;) {
+	for (;;)
+	{
 		bzero(buff, sizeof(buff));
 		printf("Enter the string : ");
 		n = 0;
@@ -24,7 +25,8 @@ void clifunc(int sockfd)
 		bzero(buff, sizeof(buff));
 		read(sockfd, buff, sizeof(buff));
 		printf("From Server : %s\n", buff);
-		if ((strncmp(buff, "quit", 4)) == 0) {
+		if ((strncmp(buff, "quit", 4)) == 0)
+		{
 			printf("Client Exit...\n");
 			break;
 		}
@@ -38,7 +40,8 @@ int main()
 
 	// socket create and verification
 	sockfd = socket(AF_INET, SOCK_STREAM, 0);
-	if (sockfd == -1) {
+	if (sockfd == -1)
+	{
 		printf("socket creation failed...\n");
 		exit(0);
 	}
@@ -52,7 +55,8 @@ int main()
 	servaddr.sin_port = htons(PORT);
 
 	// connect the client socket to server socket
-	if (connect(sockfd, (SA*)&servaddr, sizeof(servaddr)) != 0) {
+	if (connect(sockfd, (SA *)&servaddr, sizeof(servaddr)) != 0)
+	{
 		printf("connection with the server failed...\n");
 		exit(0);
 	}
