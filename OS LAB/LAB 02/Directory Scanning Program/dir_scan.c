@@ -18,7 +18,7 @@ void printdir(char *dir, int depth)
     }
 
     chdir(dir);
-    while ((entry == readdir(dp)) != NULL)
+    while ((entry = readdir(dp)) != NULL)
     {
         lstat(entry->d_name, &statbuf);
         if (S_ISDIR(statbuf.st_mode))
@@ -26,15 +26,21 @@ void printdir(char *dir, int depth)
             // Found a directory but ignore . and ..
             if ((strcmp(".", entry->d_name) == 0) || (strcmp("..", entry->d_name) == 0))
                 continue;
-            printf("%*s%s/\n", depth, entry->d_name);
+            printf(" %*s %s/\n", depth, "", entry->d_name);
 
             // Recure at a new indent level
             printdir(entry->d_name, depth + 4);
         }
         else
-            printf("%*s%s\n", depth, entry->d_name);
+            printf(" %*s %s\n", depth, "", entry->d_name);
     }
 
     chdir("..");
     closedir(dp);
+}
+
+int main(int argc, char const *argv[])
+{
+    printdir("/home/student/Desktop/KaustavLABS3/OS LAB/LAB 02/Directory Scanning Program", 1);
+    return 0;
 }
