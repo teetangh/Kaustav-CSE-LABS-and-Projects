@@ -42,6 +42,6 @@ void print_installed_files(char *dir, int depth)
 
 int main(int argc, char const *argv[])
 {
-    print_installed_files("/var/lib/rpm", 1);
+    print_installed_files("/var/lib/dpkg/info", 1);
     return 0;
 }
