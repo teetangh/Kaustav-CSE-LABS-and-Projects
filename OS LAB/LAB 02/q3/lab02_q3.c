@@ -6,7 +6,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 
-void print_directory(char *dir, int depth)
+void print_installed_files(char *dir, int depth)
 {
     DIR *dp;
     struct dirent *entry;
@@ -29,7 +29,7 @@ void print_directory(char *dir, int depth)
             printf(" %*s %s/ \n", depth, "", entry->d_name);
 
             // Recur at a new indent level
-            print_directory(entry->d_name, depth + 4);
+            print_installed_files(entry->d_name, depth + 4);
         }
 
         else
@@ -42,6 +42,6 @@ void print_directory(char *dir, int depth)
 
 int main(int argc, char const *argv[])
 {
-    print_directory("/home/kaustav/Desktop/KaustavLABS3/OS LAB/LAB 02/Directory Scanning Program", 1);
+    print_installed_files("/usr/bin", 1);
     return 0;
 }
