@@ -2,7 +2,7 @@
 /* *****This is a
 ******Multiline Comment
 **** */
-#afgndfg
+
 #include <stdio.h>
 void main()
 {
