@@ -340,7 +340,7 @@ struct token getNextToken(FILE *f1)
 }
 int main()
 {
-    FILE *f1 = fopen("prog1InputFile.c", "r");
+    FILE *f1 = fopen("lab03_q1_input_all_operators.c", "r");
     if (f1 == NULL)
     {
         printf("Error! File cannot be opened!\n");
