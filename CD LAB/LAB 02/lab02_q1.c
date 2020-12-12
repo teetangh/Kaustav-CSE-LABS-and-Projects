@@ -4,14 +4,19 @@ int main()
 {
 	FILE *fa, *fb;
 	int ca, cb;
-	fa = fopen("input.c", "r");
+	fa = fopen("lab02_q1_input.c", "r");
 	if (fa == NULL)
 	{
 		printf("Cannot open file \n");
 		exit(0);
 	}
-	fb = fopen("output.c", "w");
+	fb = fopen("lab02_q1_output.c", "w");
+
+	int space = ' ';
+	int newline = '\n';
+
 	ca = getc(fa);
+
 	while (ca != EOF)
 	{
 		if (ca == ' ')
@@ -23,8 +28,7 @@ int main()
 
 		if (ca == '\t')
 		{
-			int temp_space = ' ';
-			putc(temp_space, fb);
+			putc(space, fb);
 			while (ca == ' ' || ca == '\t')
 				ca = getc(fa);
 		}
@@ -36,6 +40,7 @@ int main()
 			{
 				while (ca != '\n')
 					ca = getc(fa);
+				putc(newline, fb);
 			}
 			else if (cb == '*')
 			{
