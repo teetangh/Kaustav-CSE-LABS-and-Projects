@@ -26,11 +26,11 @@ void valid()
 
 void S()
 {
-	if(str[curr] == '(')
+	if (str[curr] == '(')
 	{
 		curr++;
 		L();
-		if(str[curr] == ')')
+		if (str[curr] == ')')
 		{
 			curr++;
 			return;
@@ -38,7 +38,7 @@ void S()
 		else
 			invalid();
 	}
-	else if(str[curr] == 'a')
+	else if (str[curr] == 'a')
 	{
 		curr++;
 		return;
@@ -54,7 +54,7 @@ void L()
 }
 void Lprime()
 {
-	if(str[curr] == ',')
+	if (str[curr] == ',')
 	{
 		curr++;
 		S();
@@ -65,14 +65,14 @@ void Lprime()
 int main(int argc, char const *argv[])
 {
 	printf("Enter the string \n");
-	scanf(" %s",str);
+	scanf(" %s", str);
 
 	S();
-	if(str[curr] == '$')
+	if (str[curr] == '$')
 		valid();
 	else
 	{
-		printf("%c\n" , str[curr]);
+		printf("%c\n", str[curr]);
 		invalid();
 	}
 

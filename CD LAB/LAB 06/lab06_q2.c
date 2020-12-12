@@ -34,11 +34,11 @@ void S()
 }
 void U()
 {
-	if(str[curr] == '(')
+	if (str[curr] == '(')
 	{
 		curr++;
 		S();
-		if(str[curr] == ')')
+		if (str[curr] == ')')
 		{
 			curr++;
 			return;
@@ -46,11 +46,11 @@ void U()
 		else
 			invalid();
 	}
-	else if(str[curr] == 'a')
+	else if (str[curr] == 'a')
 	{
 		curr++;
 		S();
-		if(str[curr] == 'b')
+		if (str[curr] == 'b')
 		{
 			curr++;
 			return;
@@ -69,7 +69,7 @@ void U()
 
 void V()
 {
-	if(str[curr] == 'a')
+	if (str[curr] == 'a')
 	{
 		curr++;
 		V();
@@ -77,7 +77,7 @@ void V()
 }
 void W()
 {
-	if(str[curr] == 'c')
+	if (str[curr] == 'c')
 	{
 		curr++;
 		W();
@@ -87,14 +87,14 @@ void W()
 int main(int argc, char const *argv[])
 {
 	printf("Enter the string \n");
-	scanf(" %s",str);
+	scanf(" %s", str);
 
 	S();
-	if(str[curr] == '$')
+	if (str[curr] == '$')
 		valid();
 	else
 	{
-		printf("%c\n" , str[curr]);
+		printf("%c\n", str[curr]);
 		invalid();
 	}
 

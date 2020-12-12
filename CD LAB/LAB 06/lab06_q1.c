@@ -27,7 +27,7 @@ void valid()
 
 void S()
 {
-	if(str[curr] == 'a' || str[curr] == '>')
+	if (str[curr] == 'a' || str[curr] == '>')
 	{
 		curr++;
 		return;
@@ -36,7 +36,7 @@ void S()
 	{
 		curr++;
 		T();
-		if(str[curr] == ')')
+		if (str[curr] == ')')
 		{
 			curr++;
 			return;
@@ -46,7 +46,6 @@ void S()
 	}
 	else
 		invalid();
-
 }
 
 void T()
@@ -57,7 +56,7 @@ void T()
 
 void Tprime()
 {
-	if(str[curr] == ',' )
+	if (str[curr] == ',')
 	{
 		curr++;
 		S();
@@ -70,14 +69,14 @@ void Tprime()
 int main(int argc, char const *argv[])
 {
 	printf("Enter the string \n");
-	scanf(" %s",str);
+	scanf(" %s", str);
 
 	S();
-	if(str[curr] == '$')
+	if (str[curr] == '$')
 		valid();
 	else
 	{
-		printf("%c\n" , str[curr]);
+		printf("%c\n", str[curr]);
 		invalid();
 	}
 

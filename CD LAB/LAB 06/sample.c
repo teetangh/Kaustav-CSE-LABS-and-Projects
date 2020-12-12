@@ -34,9 +34,9 @@ void E()
 
 void Eprime()
 {
-	if(str[curr] == '+')
+	if (str[curr] == '+')
 	{
-		curr ++;
+		curr++;
 		T();
 		Eprime();
 	}
@@ -50,7 +50,7 @@ void T()
 
 void Tprime()
 {
-	if(str[curr] == '*')
+	if (str[curr] == '*')
 	{
 		curr++;
 		F();
@@ -60,19 +60,19 @@ void Tprime()
 
 void F()
 {
-	if(str[curr] == '(')
+	if (str[curr] == '(')
 	{
 		curr++;
 		E();
-		if(str[curr] == ')')
+		if (str[curr] == ')')
 		{
 			curr++;
 			return;
 		}
 		else
-			invalid();	
+			invalid();
 	}
-	else if(str[curr] == 'i')
+	else if (str[curr] == 'i')
 	{
 		curr++;
 		return;
@@ -84,14 +84,14 @@ void F()
 int main(int argc, char const *argv[])
 {
 	printf("Enter the string \n");
-	scanf(" %s",str);
+	scanf(" %s", str);
 
 	E();
-	if(str[curr] == '$')
+	if (str[curr] == '$')
 		valid();
 	else
 	{
-		printf("%c\n" , str[curr]);
+		printf("%c\n", str[curr]);
 		invalid();
 	}
 

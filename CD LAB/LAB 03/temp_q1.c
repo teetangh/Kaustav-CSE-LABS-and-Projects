@@ -1,84 +1,56 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
+#include <stdbool.h>
+
+int index = 0;
+char buffer[100];
+char keywords_table[32][10] = {
+	"auto", "break", "case", "char", "const", "continue", "default", "do",
+	"double", "else", "enum", "extern", "float", "for", "goto", "if", "int", "long", "register",
+	"return", "short", "signed", "sizeof", "static", "struct",
+	"switch", "typedef", "union", "unsigned", "void", "volatile", "while"};
 
 struct token
 {
-	char lexeme[100];
-	int row,col;
-	char token_type[100];
+	int row, col;
+	char type[50];
+	char lexeme[50];
 };
 
-
-// void fillToken()
-
-token getNextToken(FILE* fp)
+struct token *getNextToken(FILE *fp, int *ca)
 {
+	memset(buffer, 0, sizeof(buffer));
+	index = 0;
 
-	ca = fgetc(fp);
-	while(ca != EOF)
+	struct token *retToken;
+
+	while (true)
 	{
-		int i = 0;
-		buffer[0] = '\0';
-
-		if(ca == '=')
-		{
-			buffer[i++] = ca;
-			ca = fgetc(fp);
-
-			if(ca == '=')
-			{
-					buffer[i++] = ca;
-				buffer[i] = '\0';
-				printf("\n Relational operator %s \n" , buffer);
-			} 
-
-			else
-			{
-				buffer[i] = '\0';
-				printf("\n Assignment Operator %s \n" , buffer);
-			}
-		}
-		else
-		{
-			if(ca == '<' || ca == '>' || ca == '!')
-			{
-				buffer[i++] = ca;
-				ca = fgetc(fp);
-
-				if(ca == '=')
-					buffer[i++] = ca;
-
-				buffer[i] = '\0';
-				printf("\n Relational operator %s \n",buffer);
-			}
-			else
-				buffer[i] = '\0';
-
-		}
-
 		ca = fgetc(fp);
-	}	
+		
 
-	return 
+		return retToken;
+	}
 }
-
 
 int main(int argc, char const *argv[])
 {
-	char ca,buffer[10];
-	FILE *fp = fopen("sampleInputFile.c","r");
+	char buffer[10];
+	static int ca, cb;
 
-	if(fp == NULL)
+	FILE *fp = fopen("sampleInputFile.c", "r");
+	if (fp == NULL)
 	{
-		printf("cannot open File \n");
+		printf("Cannot Open File \n Exiting... \n");
 		exit(0);
 	}
 
-	while(getNextToken)
+	while (ca != NULL)
 	{
-		printf("%s\n", );
+		struct token *tkn = getNextToken(fp, &ca);
+		printf("< %d,%d,%s,%s >", tkn->row, tkn->col, tkn->lexeme, tkn->type);
 	}
 
-
+	return 0;
 }

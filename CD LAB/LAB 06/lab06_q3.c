@@ -28,15 +28,15 @@ void valid()
 
 void S()
 {
-	if(str[curr] == 'a')
+	if (str[curr] == 'a')
 	{
 		curr++;
 		A();
-		if(str[curr] == 'c')
+		if (str[curr] == 'c')
 		{
 			curr++;
 			B();
-			if(str[curr] == 'e')
+			if (str[curr] == 'e')
 			{
 				curr++;
 				return;
@@ -49,12 +49,10 @@ void S()
 	}
 	else
 		invalid();
-
-
 }
 void A()
 {
-	if(str[curr] == 'b')
+	if (str[curr] == 'b')
 	{
 		curr++;
 		Aprime();
@@ -65,7 +63,7 @@ void A()
 
 void Aprime()
 {
-	if(str[curr] == 'b')
+	if (str[curr] == 'b')
 	{
 		curr++;
 		Aprime();
@@ -76,7 +74,7 @@ void Aprime()
 
 void B()
 {
-	if(str[curr] == 'd')
+	if (str[curr] == 'd')
 	{
 		curr++;
 		return;
@@ -85,18 +83,17 @@ void B()
 		invalid();
 }
 
-
 int main(int argc, char const *argv[])
 {
 	printf("Enter the string \n");
-	scanf(" %s",str);
+	scanf(" %s", str);
 
 	S();
-	if(str[curr] == '$')
+	if (str[curr] == '$')
 		valid();
 	else
 	{
-		printf("%c\n" , str[curr]);
+		printf("%c\n", str[curr]);
 		invalid();
 	}
 
