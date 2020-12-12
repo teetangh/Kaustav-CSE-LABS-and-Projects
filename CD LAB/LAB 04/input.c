@@ -1,4 +1,3 @@
-// Addition of Two Numbers
 #include <stdio.h>
 int main()
 {
