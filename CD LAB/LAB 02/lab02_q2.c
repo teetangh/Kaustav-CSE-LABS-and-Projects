@@ -3,6 +3,9 @@
 #include <stdbool.h>
 #include <string.h>
 
+#define PI
+#define PI 3
+
 int main(int argc, char const *argv[])
 {
 	FILE *fa, *fb;
@@ -44,8 +47,8 @@ int main(int argc, char const *argv[])
 					// while (cb != ' ' && cb != '\n')
 					while (cb != '\n')
 					{
-						cb = fgetc(fa);
 						buffer[index++] = cb;
+						cb = fgetc(fa);
 					}
 				}
 				else

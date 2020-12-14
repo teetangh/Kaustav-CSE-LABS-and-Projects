@@ -3,7 +3,10 @@
 #include <string.h>
 #include <stdbool.h>
 
-int index = 0;
+int row = 0;
+int col = 0;
+int ca = 0, cb = 0;
+
 char buffer[100];
 char keywords_table[32][10] = {
 	"auto", "break", "case", "char", "const", "continue", "default", "do",
@@ -18,27 +21,166 @@ struct token
 	char lexeme[50];
 };
 
-struct token *getNextToken(FILE *fp, int *ca)
+struct token *fillToken(struct token *retToken, int row, int col, char *type, char *lexeme)
 {
-	memset(buffer, 0, sizeof(buffer));
-	index = 0;
+	retToken->row = row;
+	retToken->col = col;
+	strcpy(retToken->lexeme, lexeme);
+	strcpy(retToken->type, type);
+	return retToken;
+}
 
-	struct token *retToken;
+struct token *getNextToken(FILE *fp)
+{
 
-	while (true)
+	struct token *retToken = NULL;
+
+	ca = fgetc(fp);
+	col++;
+	// while (ca != '\n' && ca != EOF)
+	while (ca != EOF)
 	{
-		ca = fgetc(fp);
-		
+		memset(buffer, 0, sizeof(buffer));
+		int index = 0;
+		do
+		{
+			if (ca == ' ')
+				col++;
+			if (ca == '\t')
+				col = col + 4;
 
-		return retToken;
+			ca = fgetc(fp);
+		} while (ca == ' ' || ca == '\t');
+
+		// if (isalpha(ca))
+		// {
+		// 	while (isalpha(ca))
+		// 	{
+		// 		ca = fgetc(fp);
+		// 	}
+		// }
+
+		if (ca == '+')
+		{
+			buffer[index++] = ca;
+			ca = fgetc(fp);
+			col++;
+
+			if (ca == '+')
+			{
+				col++;
+				buffer[index++] = ca;
+				buffer[index] = '\0';
+				fillToken(retToken, row, col, "increment operator", "++");
+				return retToken;
+			}
+			else if (ca == '=')
+			{
+				col++;
+				buffer[index++] = ca;
+				buffer[index] = '\0';
+				fillToken(retToken, row, col, "assignment operator", "+=");
+				return retToken;
+			}
+			else
+			{
+				fillToken(retToken, row, col, "arithmetic operator", "+");
+				return retToken;
+			}
+		}
+		else if (ca == '-')
+		{
+			buffer[index++] = ca;
+			ca = fgetc(fp);
+			col++;
+
+			if (ca == '-')
+			{
+				col++;
+				buffer[index++] = ca;
+				buffer[index] = '\0';
+				fillToken(retToken, row, col, "decrement operator", "--");
+				return retToken;
+			}
+			else if (ca == '=')
+			{
+				col++;
+				buffer[index++] = ca;
+				buffer[index] = '\0';
+				fillToken(retToken, row, col, "assignment operator", "-=");
+				return retToken;
+			}
+			else
+			{
+				fillToken(retToken, row, col, "arithmetic operator", "-");
+				return retToken;
+			}
+		}
+		else if (ca == '*')
+		{
+			buffer[index++] = ca;
+			ca = fgetc(fp);
+			col++;
+
+			if (ca == '*')
+			{
+				col++;
+				buffer[index++] = ca;
+				buffer[index] = '\0';
+				fillToken(retToken, row, col, "exponentiation operator", "**");
+				return retToken;
+			}
+			else if (ca == '=')
+			{
+				col++;
+				buffer[index++] = ca;
+				buffer[index] = '\0';
+				fillToken(retToken, row, col, "assignment operator", "*=");
+				return retToken;
+			}
+			else
+			{
+				fillToken(retToken, row, col, "arithmetic operator", "*");
+				return retToken;
+			}
+		}
+
+		else if (ca == '=')
+		{
+			buffer[index++] = ca;
+			ca = fgetc(fp);
+			col++;
+
+			if (ca == '=')
+			{
+				col++;
+				buffer[index++] = ca;
+				buffer[index] = '\0';
+				fillToken(retToken, row, col, "relational operator", "==");
+				return retToken;
+			}
+			else
+			{
+				fillToken(retToken, row, col, "assignment operator", "=");
+				return retToken;
+			}
+		}
+
+		else if (ca == ';')
+		{
+			buffer[index++] = ca;
+			fillToken(retToken, row, col, "semi-colon", ";");
+			return retToken;
+		}
+
+		ca = fgetc(fp);
 	}
+
+	return retToken;
 }
 
 int main(int argc, char const *argv[])
 {
-	char buffer[10];
-	static int ca, cb;
-
 	FILE *fp = fopen("sampleInputFile.c", "r");
 	if (fp == NULL)
 	{
@@ -46,9 +188,9 @@ int main(int argc, char const *argv[])
 		exit(0);
 	}
 
-	while (ca != NULL)
+	while (ca != EOF)
 	{
-		struct token *tkn = getNextToken(fp, &ca);
+		struct token *tkn = getNextToken(fp);
 		printf("< %d,%d,%s,%s >", tkn->row, tkn->col, tkn->lexeme, tkn->type);
 	}
 

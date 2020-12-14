@@ -8,7 +8,7 @@ void main()
 {
 	FILE *fopen(), *fp;
 	int c;
-	fp = fopen("prog.c", "r"); //Comment
+  	  fp = fopen("prog.c", "r"); //Comment
 	c = getc(fp);
 	while (c != EOF)
 	{

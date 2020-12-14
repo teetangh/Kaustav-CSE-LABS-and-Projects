@@ -8,13 +8,13 @@ int main()
 	// File Handling  operations
 	FILE *fa, *fb;
 	int ca, cb;
-	fa = fopen("input.c", "r");
+	fa = fopen("lab02_q3_input.c", "r");
 	if (fa == NULL)
 	{
 		printf("Cannot open file \n");
 		exit(0);
 	}
-	fb = fopen("tempoutput1.c", "w");
+	fb = fopen("tempoutput1.c", "w+");
 
 	// For the keywords
 	char buffer[100];

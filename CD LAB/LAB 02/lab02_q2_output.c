@@ -5,6 +5,7 @@
 
 
 
+#incl <stdlib.h>
 
 void func1()
 {

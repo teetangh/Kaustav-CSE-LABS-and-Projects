@@ -19,14 +19,7 @@ int main()
 
 	while (ca != EOF)
 	{
-		if (ca == ' ')
-		{
-			putc(ca, fb);
-			while (ca == ' ')
-				ca = getc(fa);
-		}
-
-		if (ca == '\t')
+		if (ca == ' ' || ca == '\t')
 		{
 			putc(space, fb);
 			while (ca == ' ' || ca == '\t')
