@@ -5,7 +5,7 @@
 
 int main(int argc, char const *argv[])
 {
-    struct stat sb;
+    struct stat statbuf;
     int ret;
     if (argc < 2)
     {
@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
         return 1;
     }
 
-    ret = stat(argv[1], &sb);
+    ret = stat(argv[1], &statbuf);
     if (ret)
     {
         perror("stat");
@@ -21,7 +21,7 @@ int main(int argc, char const *argv[])
     }
 
     printf("File type: ");
-    switch (sb.st_mode & S_IFMT)
+    switch (statbuf.st_mode & S_IFMT)
     {
     case S_IFBLK:
         printf("Block device node\n");

@@ -15,21 +15,22 @@ int main(int argc, char const *argv[])
         printf(" USAGE: filename pattern \n");
         return 0;
     }
+    int in = open(argv[1], O_RDONLY);
+
     // Prereqs
     char ch;
     char buffer[100];
-
     int line_no = 0;
-
-    int in = open(argv[1], O_RDONLY);
 
     while (read(in, &ch, 1) == 1)
     {
         if (ch == '\n')
             line_no++;
 
-        printf("%c", ch);
+        // printf("%c", ch);
+        write(2, &ch, 1);
 
+        // Take a pause after 20 lines
         if (line_no == 20)
         {
 

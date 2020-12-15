@@ -5,7 +5,7 @@
 
 int main(int argc, char const *argv[])
 {
-    struct stat sb;
+    struct stat statbuf;
     int ret;
     if (argc < 2)
     {
@@ -13,14 +13,14 @@ int main(int argc, char const *argv[])
         return 1;
     }
 
-    ret = stat(argv[1], &sb);
+    ret = stat(argv[1], &statbuf);
     if (ret)
     {
         perror("stat");
         return 1;
     }
 
-    printf("%s is %ld bytes\n", argv[1], sb.st_size);
+    printf("%s is %ld bytes\n", argv[1], statbuf.st_size);
 
     return 0;
 }

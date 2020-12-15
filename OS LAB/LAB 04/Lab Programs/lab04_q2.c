@@ -22,7 +22,7 @@
 
 int main(int argc, char const *argv[])
 {
-    struct stat sb;
+    struct stat statbuf;
     int ret;
     if (argc < 2)
     {
@@ -30,26 +30,26 @@ int main(int argc, char const *argv[])
         return 1;
     }
 
-    ret = stat(argv[1], &sb);
+    ret = stat(argv[1], &statbuf);
     if (ret)
     {
         perror("stat");
         return 1;
     }
 
-    printf(" ID of device containing file  %d \n", sb.st_dev);
-    printf(" inode number  %d \n", sb.st_ino);
-    printf(" permissions  %d \n", sb.st_mode);
-    printf(" number of hard links  %d \n", sb.st_nlink);
-    printf(" user ID of owner  %d \n", sb.st_uid);
-    printf(" group ID of owner  %d \n", sb.st_gid);
-    printf(" device ID (if special file)  %d \n", sb.st_rdev);
-    printf(" total size in bytes  %d \n", sb.st_size);
-    printf(" blocksize for filesystem I/O  %d \n", sb.st_blksize);
-    printf(" number of blocks allocated  %d \n", sb.st_blocks);
-    printf(" last access time  %d \n", sb.st_atime);
-    printf(" last modification time  %d \n", sb.st_mtime);
-    printf(" last status change time  %d \n", sb.st_ctime);
+    printf(" ID of device containing file  %d \n", statbuf.st_dev);
+    printf(" inode number  %d \n", statbuf.st_ino);
+    printf(" permissions  %d \n", statbuf.st_mode);
+    printf(" number of hard links  %d \n", statbuf.st_nlink);
+    printf(" user ID of owner  %d \n", statbuf.st_uid);
+    printf(" group ID of owner  %d \n", statbuf.st_gid);
+    printf(" device ID (if special file)  %d \n", statbuf.st_rdev);
+    printf(" total size in bytes  %d \n", statbuf.st_size);
+    printf(" blocksize for filesystem I/O  %d \n", statbuf.st_blksize);
+    printf(" number of blocks allocated  %d \n", statbuf.st_blocks);
+    printf(" last access time  %d \n", statbuf.st_atime);
+    printf(" last modification time  %d \n", statbuf.st_mtime);
+    printf(" last status change time  %d \n", statbuf.st_ctime);
 
     return 0;
 }

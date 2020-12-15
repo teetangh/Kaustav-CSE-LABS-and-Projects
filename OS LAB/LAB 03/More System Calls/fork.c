@@ -34,6 +34,5 @@ int main(int argc, char const *argv[])
         puts(message);
         sleep(1);
     }
-
     exit(0);
 }

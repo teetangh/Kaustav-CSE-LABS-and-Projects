@@ -9,8 +9,6 @@
 
 int main(int argc, char const *argv[])
 {
-    struct stat sb;
-    int ret;
     if (argc < 2)
     {
         fprintf(stderr, "usage: %s <file> \n", argv[0]);
@@ -31,11 +29,10 @@ int main(int argc, char const *argv[])
     {
         puts("After symlink()");
         system("readlink -f test.*");
-
         unlink(argv[1]);
+
         puts("after first unlink()");
         system("readlink -f test.*");
-
         unlink(sln);
     }
 

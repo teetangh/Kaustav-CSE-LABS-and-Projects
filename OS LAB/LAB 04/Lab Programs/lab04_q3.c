@@ -9,8 +9,6 @@
 
 int main(int argc, char const *argv[])
 {
-    struct stat sb;
-    int ret;
     if (argc < 2)
     {
         fprintf(stderr, "usage: %s <file> \n", argv[0]);

@@ -5,7 +5,7 @@
 
 int main(int argc, char const *argv[])
 {
-    struct stat sb;
+    struct stat statbuf;
     int ret;
     if (argc < 2)
     {
@@ -13,14 +13,14 @@ int main(int argc, char const *argv[])
         return 1;
     }
 
-    ret = stat(argv[1], &sb);
+    ret = stat(argv[1], &statbuf);
     if (ret)
     {
         perror("stat");
         return 1;
     }
 
-    printf("File inode number is %d \n", argv[1], sb.st_ino);
+    printf("File inode number is %d \n", argv[1], statbuf.st_ino);
 
     return 0;
 }
