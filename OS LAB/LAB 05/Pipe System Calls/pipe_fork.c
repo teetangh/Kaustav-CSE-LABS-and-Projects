@@ -1,17 +1,18 @@
-#include <sys/wait.h>
-#include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 #include <string.h>
+#include <assert.h>
+#include <unistd.h>
+#include <sys/wait.h>
 
 int main(int argc, char const *argv[])
 {
     int pfd[2];
+    char buffer[1024];
     pid_t cpid;
 
-    char buf;
     assert(argc == 2);
+    pipe(pfd);
 
     if (pipe(pfd) == -1)
     {
@@ -25,12 +26,11 @@ int main(int argc, char const *argv[])
         perror("fork");
         exit(EXIT_FAILURE);
     }
-
-    if (cpid == 0)
+    else if (cpid == 0)
     {
         close(pfd[1]);
-        while (read(pfd[0], &buf, 1) > 0)
-            write(STDOUT_FILENO, &buf, 1);
+        while (read(pfd[0], &buffer, 1) > 0)
+            write(STDOUT_FILENO, &buffer, 1);
         write(STDOUT_FILENO, "\n", 1);
         close(pfd[0]);
         exit(EXIT_SUCCESS);
