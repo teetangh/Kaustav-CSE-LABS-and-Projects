@@ -9,7 +9,10 @@ int main(int argc, char const *argv[])
 {
     int res = mkfifo("/tmp/myfifo", 0777);
     if (res == 0)
-        printf("FIFO CREATED  \n");
+        printf("FIFO CREATED \n");
+    else
+        printf("FIFO CREATION FAILED \n");
+
     exit(EXIT_SUCCESS);
     return 0;
 }

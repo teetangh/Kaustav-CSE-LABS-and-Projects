@@ -25,9 +25,9 @@ int main(int argc, char const *argv[])
     if (pipe_fd != -1)
     {
         res = read(pipe_fd, &buffer, sizeof(buffer));
-        while(res > 0)
+        while (res > 0)
         {
-            printf(" Hello %d \n",buffer);
+            printf(" Hello %d \n", buffer);
             res = read(pipe_fd, &buffer, sizeof(buffer));
             bytes_read += res;
         }
