@@ -1,3 +1,23 @@
+// Copyright (c) 16 December 2020 Kaustav Ghosh
+
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -88,7 +108,7 @@ struct token *getNextToken(FILE *fp)
 			// ungetc(ca, fp);
 
 			strcpy(retToken->lexeme, buffer);
-			strcpy(retToken->type, "string");
+			strcpy(retToken->type, "string_literal");
 			return retToken;
 		}
 
@@ -118,6 +138,7 @@ struct token *getNextToken(FILE *fp)
 				// strcpy(retToken->type, "special_symbols");
 				// return retToken;
 
+				// Checking if the special symbol has multiple characters
 				cb = fgetc(fp);
 				bool multiple_char_symbol = false;
 				for (int j = 0; j < sizeof(special_symbols) / sizeof(special_symbols[0]); ++j)
@@ -132,6 +153,7 @@ struct token *getNextToken(FILE *fp)
 					special_symbol_array[2] = '\0';
 				}
 
+				// Finding the category of the special symbol
 				for (int k = 0; k < sizeof(arithmetic_operators) / sizeof(arithmetic_operators[0]); ++k)
 				{
 					if (strncmp(special_symbol_array, arithmetic_operators[k], strlen(special_symbol_array)) == 0)
@@ -189,6 +211,7 @@ struct token *getNextToken(FILE *fp)
 					}
 				}
 
+				// In-case the special symbol is not multiple characters,push the scanned character back into the file stream
 				if (!multiple_char_symbol)
 					ungetc(cb, fp);
 
@@ -224,14 +247,16 @@ struct token *getNextToken(FILE *fp)
 				buffer[i++] = ca;
 				ca = fgetc(fp);
 			}
+			// Terminating the string
 			buffer[i] = '\0';
+
 			// ungetc(ca, fp);
 			// printf("After ungetting %c \n", ca);
 
+			// Checking for alaphabet and digits in the scanned string
 			int alphabet = 0;
 			int digits = 0;
 			bool contains_keyword = false;
-
 			for (int i = 0; i < strlen(buffer); ++i)
 			{
 				// Check for letters
@@ -275,7 +300,7 @@ struct token *getNextToken(FILE *fp)
 					}
 				}
 			}
-
+			// The only remaining condition (Can also make the condition "else")
 			if (contains_keyword == false)
 			{
 				strcpy(retToken->lexeme, buffer);
