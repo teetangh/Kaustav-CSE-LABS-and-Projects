@@ -189,8 +189,8 @@ struct token *getNextToken(FILE *fp)
 					}
 				}
 
-				ungetc(cb, fp);
-				ca = fgetc(fp);
+				if (!multiple_char_symbol)
+					ungetc(cb, fp);
 
 				return retToken;
 			}
@@ -290,7 +290,7 @@ struct token *getNextToken(FILE *fp)
 
 int main(int argc, char const *argv[])
 {
-	FILE *fp = fopen("small.c", "r");
+	FILE *fp = fopen("lab03_q1_input_all_operators.c", "r");
 	if (fp == NULL)
 	{
 		printf("Cannot open file \n Exiting.. \n");
