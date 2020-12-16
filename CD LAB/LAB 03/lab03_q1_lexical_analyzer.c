@@ -136,7 +136,7 @@ struct token *getNextToken(FILE *fp)
 				special_symbol_array[0] = retToken->lexeme[0] = ca;
 				special_symbol_array[1] = retToken->lexeme[1] = '\0';
 
-				// strcpy(retToken->type, "special_symbols");
+				strcpy(retToken->type, "special_symbols");
 				// return retToken;
 
 				// Checking if the special symbol has multiple characters
@@ -145,13 +145,11 @@ struct token *getNextToken(FILE *fp)
 				for (int j = 0; j < sizeof(special_symbols) / sizeof(special_symbols[0]); ++j)
 				{
 					if (cb == special_symbols[j][0])
+					{
 						multiple_char_symbol = true;
-				}
-
-				if (multiple_char_symbol == true)
-				{
-					special_symbol_array[1] = cb;
-					special_symbol_array[2] = '\0';
+						special_symbol_array[1] = cb;
+						special_symbol_array[2] = '\0';
+					}
 				}
 
 				// Finding the category of the special symbol
@@ -213,7 +211,7 @@ struct token *getNextToken(FILE *fp)
 				}
 
 				// In-case the special symbol is not multiple characters,push the scanned character back into the file stream
-				if (!multiple_char_symbol)
+				if (multiple_char_symbol == false)
 					ungetc(cb, fp);
 
 				return retToken;
