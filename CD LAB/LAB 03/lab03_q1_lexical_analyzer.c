@@ -27,13 +27,13 @@
 struct token
 {
 	int index;
-	int row, col;
+	int row, column;
 	char type[100];
 	char lexeme[100];
 };
 
 int row = 1;
-int col = 1;
+int column = 0;
 char ca, cb;
 char buffer[100];
 
@@ -43,9 +43,9 @@ char keywords_table[32][10] = {
 	"return", "short", "signed", "sizeof", "static", "struct",
 	"switch", "typedef", "union", "unsigned", "void", "volatile", "while"};
 
-char special_symbols[26][2] = {
+char special_symbols[25][2] = {
 	"`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_",
-	"+", "-", "=", "[", "]", "|", ";", ":", ",", ".", "?", "/", "\\"};
+	"+", "-", "=", "[", "]", "|", ";", ":", ",", ".", "?", "\\"};
 
 char arithmetic_operators[5][1] = {
 	"+", "-", "*", "/", "%"};
@@ -73,25 +73,71 @@ struct token *getNextToken(FILE *fp)
 	while ((ca = fgetc(fp)) != EOF)
 	{
 		memset(buffer, '\0', sizeof(buffer));
+		column++;
+
+		// Eliminating Blank Spaces and Tabs
+		if (ca == ' ' || ca == '\t')
+		{
+			while (ca == ' ' || ca == '\t')
+			{
+				ca = fgetc(fp);
+				if (ca == ' ')
+					column = column + 1;
+				else if (ca == '\t')
+					column = column + 4;
+
+				if (feof(fp))
+					break;
+			}
+		}
+
+		if (ca == '\n')
+		{
+			column = 0;
+			row++;
+		}
 
 		// Eliminating Single and Multiline Comments
 		if (ca == '/')
 		{
 			ca = fgetc(fp);
+			column++;
+
 			if (ca == '/')
 			{
 				while (ca != '\n')
+				{
 					ca = fgetc(fp);
+					column++;
+				}
+				// column = 0;
+				// row++;
 			}
 			else if (ca == '*')
 			{
 				do
 				{
 					while (ca != '*')
+					{
 						ca = fgetc(fp);
+						column++;
+						if (ca == '\n')
+						{
+							column = 0;
+							row++;
+						}
+					}
+
 					ca = fgetc(fp);
+					column++;
+					if (ca == '\n')
+					{
+						column = 0;
+						row++;
+					}
 				} while (ca != '/');
 			}
+
 			ungetc(ca, fp);
 		}
 
@@ -103,6 +149,7 @@ struct token *getNextToken(FILE *fp)
 			{
 				buffer[i++] = ca;
 				ca = fgetc(fp);
+				column++;
 				if (feof(fp))
 					break;
 			} while (ca != '"');
@@ -110,18 +157,9 @@ struct token *getNextToken(FILE *fp)
 
 			strcpy(retToken->lexeme, buffer);
 			strcpy(retToken->type, "string_literal");
+			retToken->row = row;
+			retToken->column = column;
 			return retToken;
-		}
-
-		// Eliminating Blank Spaces and Tabs
-		if (ca == ' ' || ca == '\t')
-		{
-			while (ca == ' ' || ca == '\t')
-			{
-				ca = fgetc(fp);
-				if (feof(fp))
-					break;
-			}
 		}
 
 		// Checking for Special Symbols
@@ -137,10 +175,11 @@ struct token *getNextToken(FILE *fp)
 				special_symbol_array[1] = retToken->lexeme[1] = '\0';
 
 				strcpy(retToken->type, "special_symbols");
-				// return retToken;
 
 				// Checking if the special symbol has multiple characters
 				cb = fgetc(fp);
+				column++;
+
 				bool multiple_char_symbol = false;
 				for (int j = 0; j < sizeof(special_symbols) / sizeof(special_symbols[0]); ++j)
 				{
@@ -212,8 +251,13 @@ struct token *getNextToken(FILE *fp)
 
 				// In-case the special symbol is not multiple characters,push the scanned character back into the file stream
 				if (multiple_char_symbol == false)
+				{
 					ungetc(cb, fp);
+					column--;
+				}
 
+				retToken->row = row;
+				retToken->column = column;
 				return retToken;
 			}
 		}
@@ -244,7 +288,9 @@ struct token *getNextToken(FILE *fp)
 					break;
 
 				buffer[i++] = ca;
+
 				ca = fgetc(fp);
+				column++;
 			}
 			// Terminating the string
 			buffer[i] = '\0';
@@ -271,6 +317,8 @@ struct token *getNextToken(FILE *fp)
 			{
 				strcpy(retToken->lexeme, buffer);
 				strcpy(retToken->type, "identifier");
+				retToken->row = row;
+				retToken->column = column;
 				return retToken;
 			}
 
@@ -279,6 +327,8 @@ struct token *getNextToken(FILE *fp)
 				// int number = atoi(buffer);
 				strcpy(retToken->lexeme, buffer);
 				strcpy(retToken->type, "constant");
+				retToken->row = row;
+				retToken->column = column;
 				return retToken;
 			}
 
@@ -295,6 +345,8 @@ struct token *getNextToken(FILE *fp)
 						// retToken->lexeme = keywords_table[i];
 						strcpy(retToken->lexeme, keywords_table[i]);
 						strcpy(retToken->type, "keyword");
+						retToken->row = row;
+						retToken->column = column;
 						return retToken;
 					}
 				}
@@ -304,6 +356,8 @@ struct token *getNextToken(FILE *fp)
 			{
 				strcpy(retToken->lexeme, buffer);
 				strcpy(retToken->type, "identifier");
+				retToken->row = row;
+				retToken->column = column;
 				return retToken;
 			}
 		}
@@ -323,7 +377,7 @@ int main(int argc, char const *argv[])
 
 	struct token *retToken;
 	while ((retToken = getNextToken(fp)) != NULL)
-		printf("< %d,%d,'%s',%s >\n", retToken->row, retToken->col, retToken->lexeme, retToken->type);
+		printf("< %d,%d,'%s',%s >\n", retToken->row, retToken->column, retToken->lexeme, retToken->type);
 
 	printf("Finished Lexical analysis");
 	return 0;
