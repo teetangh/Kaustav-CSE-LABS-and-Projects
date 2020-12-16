@@ -6,7 +6,7 @@
 
 struct token
 {
-	char index;
+	int index;
 	int row, col;
 	char type[100];
 	char lexeme[100];
@@ -16,6 +16,7 @@ int row = 1;
 int col = 1;
 char ca, cb;
 char buffer[100];
+
 char keywords_table[32][10] = {
 	"auto", "break", "case", "char", "const", "continue", "default", "do",
 	"double", "else", "enum", "extern", "float", "for", "goto", "if", "int", "long", "register",
@@ -26,6 +27,24 @@ char special_symbols[26][2] = {
 	"`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_",
 	"+", "-", "=", "[", "]", "|", ";", ":", ",", ".", "?", "/", "\\"};
 
+char arithmetic_operators[5][1] = {
+	"+", "-", "*", "/", "%"};
+
+char increment_decrement_operators[2][2] = {
+	"++", "--"};
+
+char assignment_operators[5][2] = {
+	"+=", "-=", "**", "/=", "%="};
+
+char relational_operators[12][2] = {
+	"==", "==", ">", ">", "<", "<", "!=", "!=", ">=", ">=", "<=", "<="};
+
+char logical_operators[3][2] = {
+	"&&", "||", "!="};
+
+char bitwise_operators[6][2] = {
+	"&", "|", "^", "~", "<<", ">>"};
+
 struct token *getNextToken(FILE *fp)
 {
 	// Dynamic Memory Allocation
@@ -35,7 +54,7 @@ struct token *getNextToken(FILE *fp)
 	{
 		memset(buffer, '\0', sizeof(buffer));
 
-		// Checking for comments
+		// Eliminating Single and Multiline Comments
 		if (ca == '/')
 		{
 			ca = fgetc(fp);
@@ -55,6 +74,7 @@ struct token *getNextToken(FILE *fp)
 			}
 		}
 
+		// Checking for String Literals
 		if (ca == '"')
 		{
 			int i = 0;
@@ -72,6 +92,7 @@ struct token *getNextToken(FILE *fp)
 			return retToken;
 		}
 
+		// Eliminating Blank Spaces and Tabs
 		if (ca == ' ' || ca == '\t')
 		{
 			while (ca == ' ' || ca == '\t')
@@ -82,19 +103,100 @@ struct token *getNextToken(FILE *fp)
 			}
 		}
 
+		// Checking for Special Symbols
+		char special_symbol_array[3];
+		memset(special_symbol_array, '\0', sizeof(special_symbol_array));
 		for (int i = 0; i < sizeof(special_symbols) / sizeof(special_symbols[0]); ++i)
 		{
 			// printf("\n CHECK THIS \t %c \n", ca);
 			// if (strcmp(&ca, special_symbols[i]) == 0)
 			if (ca == special_symbols[i][0])
 			{
-				retToken->lexeme[0] = ca;
-				retToken->lexeme[1] = '\0';
-				strcpy(retToken->type, "special_symbols");
+				special_symbol_array[0] = retToken->lexeme[0] = ca;
+				special_symbol_array[1] = retToken->lexeme[1] = '\0';
+
+				// strcpy(retToken->type, "special_symbols");
+				// return retToken;
+
+				cb = fgetc(fp);
+				bool multiple_char_symbol = false;
+				for (int j = 0; j < sizeof(special_symbols) / sizeof(special_symbols[0]); ++j)
+				{
+					if (cb == special_symbols[j][0])
+						multiple_char_symbol = true;
+				}
+
+				if (multiple_char_symbol == true)
+				{
+					special_symbol_array[1] = cb;
+					special_symbol_array[2] = '\0';
+				}
+
+				for (int k = 0; k < sizeof(arithmetic_operators) / sizeof(arithmetic_operators[0]); ++k)
+				{
+					if (strncmp(special_symbol_array, arithmetic_operators[k], strlen(special_symbol_array)) == 0)
+					{
+						multiple_char_symbol = true;
+						strcpy(retToken->lexeme, special_symbol_array);
+						strcpy(retToken->type, "arithmetic_operators");
+					}
+				}
+
+				for (int k = 0; k < sizeof(increment_decrement_operators) / sizeof(increment_decrement_operators[0]); ++k)
+				{
+					if (strncmp(special_symbol_array, increment_decrement_operators[k], strlen(special_symbol_array)) == 0)
+					{
+						multiple_char_symbol = true;
+						strcpy(retToken->lexeme, special_symbol_array);
+						strcpy(retToken->type, "increment_decrement_operators");
+					}
+				}
+				for (int k = 0; k < sizeof(assignment_operators) / sizeof(assignment_operators[0]); ++k)
+				{
+					if (strncmp(special_symbol_array, assignment_operators[k], strlen(special_symbol_array)) == 0)
+					{
+						multiple_char_symbol = true;
+						strcpy(retToken->lexeme, special_symbol_array);
+						strcpy(retToken->type, "assignment_operators");
+					}
+				}
+				for (int k = 0; k < sizeof(relational_operators) / sizeof(relational_operators[0]); ++k)
+				{
+					if (strncmp(special_symbol_array, relational_operators[k], strlen(special_symbol_array)) == 0)
+					{
+						multiple_char_symbol = true;
+						strcpy(retToken->lexeme, special_symbol_array);
+						strcpy(retToken->type, "relational_operators");
+					}
+				}
+				for (int k = 0; k < sizeof(logical_operators) / sizeof(logical_operators[0]); ++k)
+				{
+					if (strncmp(special_symbol_array, logical_operators[k], strlen(special_symbol_array)) == 0)
+					{
+						multiple_char_symbol = true;
+						strcpy(retToken->lexeme, special_symbol_array);
+						strcpy(retToken->type, "logical_operators");
+					}
+				}
+
+				for (int k = 0; k < sizeof(bitwise_operators) / sizeof(bitwise_operators[0]); ++k)
+				{
+					if (strncmp(special_symbol_array, bitwise_operators[k], strlen(special_symbol_array)) == 0)
+					{
+						multiple_char_symbol = true;
+						strcpy(retToken->lexeme, special_symbol_array);
+						strcpy(retToken->type, "bitwise_operators");
+					}
+				}
+
+				ungetc(cb, fp);
+				ca = fgetc(fp);
+
 				return retToken;
 			}
 		}
 
+		// Checking for Keywords, Identifiers and Constants
 		if (isalnum(ca))
 		{
 			int i = 0;
