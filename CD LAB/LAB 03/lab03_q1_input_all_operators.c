@@ -1,4 +1,10 @@
-// Working of arithmetic operators
+// Single Line Comments
+/*
+These are 
+multi-line
+comments
+*/
+
 #include <stdio.h>
 int main()
 {

@@ -83,7 +83,7 @@ struct token *getNextToken(FILE *fp)
 				while (ca != '\n')
 					ca = fgetc(fp);
 			}
-			else if (cb = '*')
+			else if (ca == '*')
 			{
 				do
 				{
@@ -92,6 +92,7 @@ struct token *getNextToken(FILE *fp)
 					ca = fgetc(fp);
 				} while (ca != '/');
 			}
+			ungetc(ca, fp);
 		}
 
 		// Checking for String Literals
