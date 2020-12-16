@@ -26,9 +26,11 @@ void exec_ls_l(char *dir, int depth)
         {
             if ((strcmp(".", entry->d_name) != 0) && (strcmp("..", entry->d_name) != 0))
                 printf(" %*s %s/ \t\t\t", 1, "", entry->d_name);
+            else
+                continue;
         }
         else
-            printf("%*s  %s \t\t\t\t", depth, "", entry->d_name);
+            printf("%*s  %s \t\t\t", depth, "", entry->d_name);
 
         printf(S_ISDIR(statbuf.st_mode) ? "d" : "_");
         printf((statbuf.st_mode & S_IRUSR) ? "r" : "-");
