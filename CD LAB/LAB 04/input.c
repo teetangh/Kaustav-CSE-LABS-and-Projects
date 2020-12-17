@@ -1,15 +1,26 @@
-#include <stdio.h>
-int main()
+int sum(int a, int b)
 {
-
-    int number1, number2, sum;
-
-    printf("Enter two integers: ");
-    scanf("%d %d", &number1, &number2);
-
-    // calculating sum
-    sum = number1 + number2;
-
-    printf("%d + %d = %d", number1, number2, sum);
-    return 0;
+    int s = a + b;
+    return s;
 }
+bool search(int *arr, int key)
+{
+    int i;
+    for (i = 0; i < 10; i++)
+    {
+        if (arr[i] == key)
+            return true;
+        else
+            return false;
+    }
+}
+void main()
+{
+    int a[20], i, sum;
+    bool status;
+    printf("Enter array elements:");
+    for (i = 0; i < 10; ++i)
+        scanf("%d", &a[i]);
+    sum = a[0] + a[4];
+    status = search(a, sum);
+    printf("%d", status);
