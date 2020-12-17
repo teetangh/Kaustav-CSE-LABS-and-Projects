@@ -3,9 +3,6 @@
 #include <stdbool.h>
 #include <string.h>
 
-#define PI
-#define PI 3
-
 int main(int argc, char const *argv[])
 {
 	FILE *fa, *fb;
