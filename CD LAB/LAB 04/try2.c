@@ -24,6 +24,7 @@
 #include <string.h>
 #include <ctype.h>
 
+// Creating Necessary Structures
 struct token
 {
     int index;
@@ -38,32 +39,41 @@ struct global_symbol_table_data
     int size;
 };
 
+// Creating Symbol Tables
 struct global_symbol_table_data global_symbol_table[10];
 struct token local_symbol_table[10][100];
 
-int global_symbol_table_number = -1; // Denotes which Function
+int function_number = -1;          // Denotes which Function and ALL tokens within that function
+int local_symbol_table_index = -1; // Denotes the token INDEX within that function
 
-int local_symbol_table_number = -1; // Denotes ALL tokens within that function
-int local_symbol_table_index = -1;  // Denotes the token INDEX within that function
-
+// Symbol Table Functions
 void insert_into_local_symbol_table(struct token *retToken)
 {
-    for (int i = 0; i < global_symbol_table[global_symbol_table_number].size; i++)
+    for (int i = 0; i < global_symbol_table[function_number].size; i++)
     {
-        if (strcmp(retToken->lexeme, local_symbol_table[local_symbol_table_number][i].lexeme) == 0)
+        if (strcmp(retToken->lexeme, local_symbol_table[function_number][i].lexeme) == 0)
             return;
 
-        // if (strcmp(retToken->lexeme, local_symbol_table[local_symbol_table_number][i].lexeme) == 0 && strcmp(retToken->type, local_symbol_table[local_symbol_table_number][i].type))
+        // if (strcmp(retToken->lexeme, local_symbol_table[function_number][i].lexeme) == 0 && strcmp(retToken->type, local_symbol_table[function_number][i].type))
         //     return;
     }
 
     retToken->index = local_symbol_table_index + 1;
-    local_symbol_table[local_symbol_table_number][local_symbol_table_index++] = *retToken;
-    global_symbol_table[global_symbol_table_number].size++;
+    local_symbol_table[function_number][local_symbol_table_index++] = *retToken;
+    global_symbol_table[function_number].size++;
 }
 
 void display_all_symbol_tables()
 {
+
+    for (int i = 0; i < function_number; i++)
+    {
+        printf("\nSymbol Table for Function: %s\n", global_symbol_table[i].function_name);
+        printf("\nIndex\tLexeme\tType\tSize\n");
+
+        for (int j = 0; j < global_symbol_table[i].size; j++)
+            printf("%d\t%s\t%s\t%d", local_symbol_table[i][j]);
+    }
 }
 
 int row = 1;
@@ -77,9 +87,9 @@ char keywords_table[32][10] = {
     "return", "short", "signed", "sizeof", "static", "struct",
     "switch", "typedef", "union", "unsigned", "void", "volatile", "while"};
 
-char special_symbols[25][2] = {
+char special_symbols[27][2] = {
     "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_",
-    "+", "-", "=", "[", "]", "|", ";", ":", ",", ".", "?", "\\"};
+    "+", "-", "=", "[", "]", "{", "}", "|", ";", ":", ",", ".", "?", "\\"};
 
 char arithmetic_operators[5][1] = {
     "+", "-", "*", "/", "%"};

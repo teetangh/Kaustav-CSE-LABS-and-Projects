@@ -5,9 +5,12 @@
 int curr = 0;
 char str[100];
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-void S();
-void L();
-void Lprime();
+void E();
+void Eprime();
+void T();
+void Tprime();
+void F();
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void success()
 {
@@ -22,12 +25,42 @@ void invalid()
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-void S()
+
+void E()
+{
+    T();
+    Eprime();
+}
+void Eprime()
+{
+    if (str[curr] == '+')
+    {
+        curr++;
+        T();
+        Eprime();
+    }
+}
+void T()
+{
+    F();
+    Tprime();
+}
+
+void Tprime()
+{
+    if (str[curr] == '*')
+    {
+        curr++;
+        F();
+        Tprime();
+    }
+}
+void F()
 {
     if (str[curr] == '(')
     {
         curr++;
-        L();
+        E();
         if (str[curr] == ')')
         {
             curr++;
@@ -36,7 +69,7 @@ void S()
         else
             invalid();
     }
-    else if (str[curr] == 'a')
+    else if (str[curr] == 'i')
     {
         curr++;
         return;
@@ -44,22 +77,6 @@ void S()
     else
         invalid();
 }
-
-void L()
-{
-    S();
-    Lprime();
-}
-void Lprime()
-{
-    if (str[curr] == ',')
-    {
-        curr++;
-        S();
-        Lprime();
-    }
-}
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 int main(int argc, char const *argv[])
@@ -67,8 +84,7 @@ int main(int argc, char const *argv[])
     printf("Enter the string to be parsed \n");
     scanf("%s", str);
 
-    S();
-
+    E();
     if (str[curr] == '$')
         success();
     else

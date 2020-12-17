@@ -43,9 +43,9 @@ char keywords_table[32][10] = {
 	"return", "short", "signed", "sizeof", "static", "struct",
 	"switch", "typedef", "union", "unsigned", "void", "volatile", "while"};
 
-char special_symbols[25][2] = {
+char special_symbols[27][2] = {
 	"`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_",
-	"+", "-", "=", "[", "]", "|", ";", ":", ",", ".", "?", "\\"};
+	"+", "-", "=", "[", "]", "{", "}", "|", ";", ":", ",", ".", "?", "\\"};
 
 char arithmetic_operators[5][1] = {
 	"+", "-", "*", "/", "%"};
