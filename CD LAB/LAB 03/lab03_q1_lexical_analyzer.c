@@ -312,16 +312,7 @@ struct token *getNextToken(FILE *fp)
 					digits++;
 			}
 
-			if (alphabet != 0 && digits != 0)
-			{
-				strcpy(retToken->lexeme, buffer);
-				strcpy(retToken->type, "identifier");
-				retToken->row = row;
-				retToken->column = column;
-				return retToken;
-			}
-
-			else if (alphabet == 0 && digits != 0)
+			if (alphabet == 0 && digits != 0)
 			{
 				// int number = atoi(buffer);
 				strcpy(retToken->lexeme, buffer);
@@ -351,7 +342,7 @@ struct token *getNextToken(FILE *fp)
 				}
 			}
 			// The only remaining condition (Can also make the condition "else")
-			if (contains_keyword == false)
+			else if ((alphabet != 0 && digits != 0))
 			{
 				strcpy(retToken->lexeme, buffer);
 				strcpy(retToken->type, "identifier");

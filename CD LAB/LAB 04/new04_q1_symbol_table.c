@@ -87,6 +87,7 @@ int row = 1;
 int column = 1;
 char ca, cb;
 char buffer[100];
+char dataType_buffer[100]; // For symbol Table Entry
 
 char datatypes_table[][10] = {"int", "char", "float", "double", "short", "long"};
 
@@ -366,16 +367,7 @@ struct token *getNextToken(FILE *fp)
                     digits++;
             }
 
-            if (alphabet != 0 && digits != 0)
-            {
-                strcpy(retToken->lexeme, buffer);
-                strcpy(retToken->type, "identifier");
-                retToken->row = row;
-                retToken->column = column;
-                return retToken;
-            }
-
-            else if (alphabet == 0 && digits != 0)
+            if (alphabet == 0 && digits != 0)
             {
                 // int number = atoi(buffer);
                 strcpy(retToken->lexeme, buffer);
@@ -400,12 +392,28 @@ struct token *getNextToken(FILE *fp)
                         strcpy(retToken->type, "keyword");
                         retToken->row = row;
                         retToken->column = column;
+
+                        /*****************************************
+                        TODO: Type of the Keyword
+                        *****************************************/
+                        bool contains_keyword_datatype = false;
+                        for (int j = 0; j < (sizeof(datatypes_table) / sizeof(datatypes_table[0])); ++j)
+                        {
+                            if (strcmp(buffer, datatypes_table[j]) == 0)
+                            {
+                                contains_keyword_datatype = true;
+                                strcpy(dataType_buffer, buffer);
+                                memset(buffer, '\0', sizeof(buffer));
+                                strcpy(retToken->type, datatypes_table[j]); // Being specific
+                            }
+                        }
+
                         return retToken;
                     }
                 }
             }
             // The only remaining condition (Can also make the condition "else")
-            if (contains_keyword == false)
+            else if ((alphabet != 0 && digits != 0))
             {
                 strcpy(retToken->lexeme, buffer);
                 strcpy(retToken->type, "identifier");
@@ -433,7 +441,13 @@ int main(int argc, char const *argv[])
 
     struct token *retToken;
     while ((retToken = getNextToken(fp)) != NULL)
+    {
         printf("< %d,%d,'%s',%s >\n", retToken->row, retToken->column, retToken->lexeme, retToken->type);
+        /*
+            if(varaible | function) -> insert
+            else dont
+        */
+    }
 
     printf("Finished Lexical analysis");
     return 0;
