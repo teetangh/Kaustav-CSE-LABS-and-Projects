@@ -26,14 +26,13 @@
 
 struct token
 {
-	int index;
 	int row, column;
 	char type[100];
 	char lexeme[100];
 };
 
 int row = 1;
-int column = 0;
+int column = 1;
 char ca, cb;
 char buffer[100];
 

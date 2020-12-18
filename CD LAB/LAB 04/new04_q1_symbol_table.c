@@ -27,10 +27,16 @@
 // Creating Necessary Structures
 struct token
 {
-    int index;
     int row, column;
     char type[100];
     char lexeme[100];
+};
+
+struct symbol_table_entry
+{
+    int index;
+    struct token token;
+    int size;
 };
 
 struct global_symbol_table_data
@@ -41,7 +47,7 @@ struct global_symbol_table_data
 
 // Creating Symbol Tables
 struct global_symbol_table_data global_symbol_table[10];
-struct token local_symbol_table[10][100];
+struct symbol_table_entry local_symbol_table[10][100];
 
 int function_number = -1;          // Denotes which Function and ALL tokens within that function
 int local_symbol_table_index = -1; // Denotes the token INDEX within that function
@@ -49,35 +55,50 @@ int local_symbol_table_index = -1; // Denotes the token INDEX within that functi
 // Symbol Table Functions
 void insert_into_local_symbol_table(struct token *retToken)
 {
+    struct symbol_table_entry *ste;
+
     for (int i = 0; i < global_symbol_table[function_number].size; i++)
     {
-        if (strcmp(retToken->lexeme, local_symbol_table[function_number][i].lexeme) == 0)
+        if (strcmp(retToken->lexeme, local_symbol_table[function_number][i].token.lexeme) == 0)
             return;
-
-        // if (strcmp(retToken->lexeme, local_symbol_table[function_number][i].lexeme) == 0 && strcmp(retToken->type, local_symbol_table[function_number][i].type))
-        //     return;
     }
 
     retToken->index = local_symbol_table_index + 1;
-    local_symbol_table[function_number][local_symbol_table_index++] = *retToken;
-    global_symbol_table[function_number].size++;
 }
 
-void display_all_symbol_tables()
-{
+// // Symbol Table Functions
+// void insert_into_local_symbol_table(struct token *retToken)
+// {
+//     for (int i = 0; i < global_symbol_table[function_number].size; i++)
+//     {
+//         if (strcmp(retToken->lexeme, local_symbol_table[function_number][i].lexeme) == 0)
+//             return;
 
-    for (int i = 0; i < function_number; i++)
-    {
-        printf("\nSymbol Table for Function: %s\n", global_symbol_table[i].function_name);
-        printf("\nIndex\tLexeme\tType\tSize\n");
+//         // if (strcmp(retToken->lexeme, local_symbol_table[function_number][i].lexeme) == 0 && strcmp(retToken->type, local_symbol_table[function_number][i].type))
+//         //     return;
+//     }
 
-        for (int j = 0; j < global_symbol_table[i].size; j++)
-            printf("%d\t%s\t%s\t%d", local_symbol_table[i][j]);
-    }
-}
+//     retToken->index = local_symbol_table_index + 1;
+//     local_symbol_table[function_number][local_symbol_table_index++] = *retToken;
+//     global_symbol_table[function_number].size++;
+// }
+
+// void display_all_symbol_tables()
+// {
+
+//     for (int i = 0; i < function_number; i++)
+//     {
+//         printf("\nSymbol Table for Function: %s\n", global_symbol_table[i].function_name);
+//         printf("\nIndex\tLexeme\tType\tSize\n");
+
+//         for (int j = 0; j < global_symbol_table[i].size; j++)
+//             printf("%d\t%s\t%s\t%d", local_symbol_table[i][j].index,
+//                    local_symbol_table[i][j].lexeme, local_symbol_table[i][j].type, local_symbol_table[i][j].size);
+//     }
+// }
 
 int row = 1;
-int column = 0;
+int column = 1;
 char ca, cb;
 char buffer[100];
 
@@ -414,6 +435,8 @@ int main(int argc, char const *argv[])
 {
     // FILE *fp = fopen("lab04_q1_input.c", "r");
     FILE *fp = fopen("input.c", "r");
+    freopen("tempoutput.txt", "w", stdout);
+
     if (fp == NULL)
     {
         printf("Cannot open file \n Exiting.. \n");

@@ -24,3 +24,4 @@ void main()
     sum = a[0] + a[4];
     status = search(a, sum);
     printf("%d", status);
+}
