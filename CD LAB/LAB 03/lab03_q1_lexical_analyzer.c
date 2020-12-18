@@ -36,32 +36,32 @@ int column = 1;
 char ca, cb;
 char buffer[100];
 
-char keywords_table[32][10] = {
+char keywords_table[][10] = {
 	"auto", "break", "case", "char", "const", "continue", "default", "do",
 	"double", "else", "enum", "extern", "float", "for", "goto", "if", "int", "long", "register",
 	"return", "short", "signed", "sizeof", "static", "struct",
 	"switch", "typedef", "union", "unsigned", "void", "volatile", "while"};
 
-char special_symbols[27][2] = {
+char special_symbols[][2] = {
 	"`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_",
 	"+", "-", "=", "[", "]", "{", "}", "|", ";", ":", ",", ".", "?", "\\"};
 
-char arithmetic_operators[5][2] = {
+char arithmetic_operators[][2] = {
 	"+", "-", "*", "/", "%"};
 
-char increment_decrement_operators[2][2] = {
+char increment_decrement_operators[][2] = {
 	"++", "--"};
 
-char assignment_operators[5][2] = {
+char assignment_operators[][2] = {
 	"+=", "-=", "**", "/=", "%="};
 
-char relational_operators[12][2] = {
+char relational_operators[][2] = {
 	"==", "==", ">", ">", "<", "<", "!=", "!=", ">=", ">=", "<=", "<="};
 
-char logical_operators[3][2] = {
+char logical_operators[][2] = {
 	"&&", "||", "!="};
 
-char bitwise_operators[6][2] = {
+char bitwise_operators[][2] = {
 	"&", "|", "^", "~", "<<", ">>"};
 
 struct token *getNextToken(FILE *fp)

@@ -48,13 +48,13 @@ struct global_symbol_table_data
 struct global_symbol_table_data global_symbol_table[10];
 struct symbol_table_entry local_symbol_table[10][100];
 
-int function_number = -1;          // Denotes which Function and ALL tokens within that function
-int local_symbol_table_index = -1; // Denotes the token INDEX within that function
+int local_symbol_table_index = 0; // Denotes the token INDEX within that function
+int function_number = 0;          // Denotes which Function and ALL tokens within that function
 
 // Symbol Table Functions
 void insert_into_local_symbol_table(struct token *retToken)
 {
-    struct symbol_table_entry *ste;
+    struct symbol_table_entry ste;
 
     for (int i = 0; i < global_symbol_table[function_number].number_of_functions; i++)
     {
@@ -62,8 +62,8 @@ void insert_into_local_symbol_table(struct token *retToken)
             return;
     }
 
-    ste->index = local_symbol_table_index + 1;
-    local_symbol_table[function_number][local_symbol_table_index++] = *ste;
+    ste.index = local_symbol_table_index + 1;
+    local_symbol_table[function_number][local_symbol_table_index++] = ste;
     // global_symbol_table[function_number].number_of_functions++;
     local_symbol_table_index++;
 }
@@ -89,35 +89,37 @@ char ca, cb;
 char buffer[100];
 char dataType_buffer[100]; // For symbol Table Entry
 
-char datatypes_table[][10] = {"int", "char", "float", "double", "short", "long"};
-
-char keywords_table[32][10] = {
+char keywords_table[][10] = {
     "auto", "break", "case", "char", "const", "continue", "default", "do",
     "double", "else", "enum", "extern", "float", "for", "goto", "if", "int", "long", "register",
     "return", "short", "signed", "sizeof", "static", "struct",
     "switch", "typedef", "union", "unsigned", "void", "volatile", "while"};
 
-char special_symbols[27][2] = {
+char special_symbols[][3] = {
     "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_",
     "+", "-", "=", "[", "]", "{", "}", "|", ";", ":", ",", ".", "?", "\\"};
 
-char arithmetic_operators[5][2] = {
+char arithmetic_operators[][3] = {
     "+", "-", "*", "/", "%"};
 
-char increment_decrement_operators[2][2] = {
+char increment_decrement_operators[][3] = {
     "++", "--"};
 
-char assignment_operators[5][2] = {
+char assignment_operators[][3] = {
     "+=", "-=", "**", "/=", "%="};
 
-char relational_operators[12][2] = {
+char relational_operators[][3] = {
     "==", "==", ">", ">", "<", "<", "!=", "!=", ">=", ">=", "<=", "<="};
 
-char logical_operators[3][2] = {
+char logical_operators[][3] = {
     "&&", "||", "!="};
 
-char bitwise_operators[6][2] = {
+char bitwise_operators[][3] = {
     "&", "|", "^", "~", "<<", ">>"};
+
+char datatypes_table[][10] = {"int", "char", "float", "double", "struct", "bool", "void", "short", "long"};
+
+char looping_keywords[][10] = {"for", "while"};
 
 struct token *getNextToken(FILE *fp)
 {
@@ -430,21 +432,21 @@ struct token *getNextToken(FILE *fp)
                         //Variables
                         if (ca == '[')
                         {
-                            char array_size_string[] = "";
+                            int array_size = 0;
                             while (ca != ']')
                             {
                                 ca = fgetc(fp);
-                                strcat(array_size_string, ca); // array_size_string += ca;
+                                array_size = (array_size * 10) + (ca - '0');
                             }
-                            int array_size = atoi(array_size_string);
-
                             // // Being specific about the return type
                             // strcpy(retToken->type, dataType_buffer);
+                            return retToken;
                         }
                         else if (ca == ',')
                         {
                             // // Being specific about the return type
                             // strcpy(retToken->type, dataType_buffer);
+                            return retToken;
                         }
                         //Function
                         // else if (ca == '(')
@@ -456,6 +458,8 @@ struct token *getNextToken(FILE *fp)
                     if (ca == ';')
                     {
                         contains_keyword_datatype = false;
+                        memset(dataType_buffer, '\0', sizeof(*dataType_buffer));
+                        return retToken;
                     }
                 }
 
@@ -493,6 +497,13 @@ int main(int argc, char const *argv[])
     while ((retToken = getNextToken(fp)) != NULL)
     {
         printf("< %d,%d,'%s',%s >\n", retToken->row, retToken->column, retToken->lexeme, retToken->type);
+
+        for (int x = 0; x < (sizeof(datatypes_table) / sizeof(datatypes_table[0])); x++)
+        {
+            if (strncmp(retToken->type, datatypes_table[x], strlen(datatypes_table[x])) == 0)
+                insert_into_local_symbol_table(retToken);
+        }
+
         /*
             if(varaible | function) -> insert
             else dont
@@ -500,5 +511,8 @@ int main(int argc, char const *argv[])
     }
 
     printf("Finished Lexical analysis");
+
+    display_local_symbol_tables();
+
     return 0;
 }
