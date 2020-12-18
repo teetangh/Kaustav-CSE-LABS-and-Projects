@@ -46,7 +46,7 @@ char special_symbols[27][2] = {
 	"`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_",
 	"+", "-", "=", "[", "]", "{", "}", "|", ";", ":", ",", ".", "?", "\\"};
 
-char arithmetic_operators[5][1] = {
+char arithmetic_operators[5][2] = {
 	"+", "-", "*", "/", "%"};
 
 char increment_decrement_operators[2][2] = {

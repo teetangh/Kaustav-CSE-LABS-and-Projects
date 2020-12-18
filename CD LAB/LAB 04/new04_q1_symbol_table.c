@@ -42,7 +42,7 @@ struct symbol_table_entry
 struct global_symbol_table_data
 {
     char function_name[10];
-    int size;
+    int number_of_functions;
 };
 
 // Creating Symbol Tables
@@ -57,50 +57,38 @@ void insert_into_local_symbol_table(struct token *retToken)
 {
     struct symbol_table_entry *ste;
 
-    for (int i = 0; i < global_symbol_table[function_number].size; i++)
+    for (int i = 0; i < global_symbol_table[function_number].number_of_functions; i++)
     {
         if (strcmp(retToken->lexeme, local_symbol_table[function_number][i].token.lexeme) == 0)
             return;
     }
 
-    retToken->index = local_symbol_table_index + 1;
+    ste->index = local_symbol_table_index + 1;
+    local_symbol_table[function_number][local_symbol_table_index++] = *ste;
+    global_symbol_table[function_number].number_of_functions++;
 }
 
-// // Symbol Table Functions
-// void insert_into_local_symbol_table(struct token *retToken)
-// {
-//     for (int i = 0; i < global_symbol_table[function_number].size; i++)
-//     {
-//         if (strcmp(retToken->lexeme, local_symbol_table[function_number][i].lexeme) == 0)
-//             return;
+void display_local_symbol_tables()
+{
+    for (int i = 0; i < function_number; i++)
+    {
+        printf("\nSymbol Table for Function: %s\n", global_symbol_table[i].function_name);
+        printf("\nIndex\tLexeme\tType\tSize\n");
 
-//         // if (strcmp(retToken->lexeme, local_symbol_table[function_number][i].lexeme) == 0 && strcmp(retToken->type, local_symbol_table[function_number][i].type))
-//         //     return;
-//     }
-
-//     retToken->index = local_symbol_table_index + 1;
-//     local_symbol_table[function_number][local_symbol_table_index++] = *retToken;
-//     global_symbol_table[function_number].size++;
-// }
-
-// void display_all_symbol_tables()
-// {
-
-//     for (int i = 0; i < function_number; i++)
-//     {
-//         printf("\nSymbol Table for Function: %s\n", global_symbol_table[i].function_name);
-//         printf("\nIndex\tLexeme\tType\tSize\n");
-
-//         for (int j = 0; j < global_symbol_table[i].size; j++)
-//             printf("%d\t%s\t%s\t%d", local_symbol_table[i][j].index,
-//                    local_symbol_table[i][j].lexeme, local_symbol_table[i][j].type, local_symbol_table[i][j].size);
-//     }
-// }
+        for (int j = 0; j < global_symbol_table[i].number_of_functions; j++)
+        {
+            printf("%d\t%s\t%s\t%d", local_symbol_table[i][j].index, local_symbol_table[i][j].token.lexeme,
+                   local_symbol_table[i][j].token.type, local_symbol_table[i][j].size);
+        }
+    }
+}
 
 int row = 1;
 int column = 1;
 char ca, cb;
 char buffer[100];
+
+char datatypes_table[][10] = {"int", "char", "float", "double", "short", "long"};
 
 char keywords_table[32][10] = {
     "auto", "break", "case", "char", "const", "continue", "default", "do",
@@ -112,7 +100,7 @@ char special_symbols[27][2] = {
     "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_",
     "+", "-", "=", "[", "]", "{", "}", "|", ";", ":", ",", ".", "?", "\\"};
 
-char arithmetic_operators[5][1] = {
+char arithmetic_operators[5][2] = {
     "+", "-", "*", "/", "%"};
 
 char increment_decrement_operators[2][2] = {
