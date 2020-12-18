@@ -340,9 +340,14 @@ struct token *getNextToken(FILE *fp)
 						return retToken;
 					}
 				}
+				strcpy(retToken->lexeme, buffer);
+				strcpy(retToken->type, "identifier");
+				retToken->row = row;
+				retToken->column = column;
+				return retToken;
 			}
 			// The only remaining condition (Can also make the condition "else")
-			else if ((alphabet != 0 && digits != 0))
+			else if (alphabet != 0 && digits != 0)
 			{
 				strcpy(retToken->lexeme, buffer);
 				strcpy(retToken->type, "identifier");

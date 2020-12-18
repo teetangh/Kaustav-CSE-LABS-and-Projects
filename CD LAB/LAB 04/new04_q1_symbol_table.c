@@ -379,7 +379,7 @@ struct token *getNextToken(FILE *fp)
                 return retToken;
             }
 
-            else if (alphabet != 0 && digits == 0)
+            else if ((alphabet != 0 && digits == 0) || (contains_keyword_datatype == true))
             {
                 for (int i = 0; i < (sizeof(keywords_table) / sizeof(keywords_table[0])); ++i)
                 {
@@ -396,11 +396,11 @@ struct token *getNextToken(FILE *fp)
                         retToken->column = column;
 
                         /*****************************************
-                        TODO: Type of the Keyword
+                        TODO: Type of the Keyword(int,char,float,.....)
                         *****************************************/
                         for (int j = 0; j < (sizeof(datatypes_table) / sizeof(datatypes_table[0])); ++j)
                         {
-                            if (strcmp(buffer, datatypes_table[j]) == 0)
+                            if (strncmp(buffer, datatypes_table[j], strlen(datatypes_table[j])) == 0)
                             {
                                 contains_keyword_datatype = true;
                                 strcpy(dataType_buffer, buffer);
@@ -412,16 +412,14 @@ struct token *getNextToken(FILE *fp)
                         return retToken;
                     }
                 }
-            }
-            // The only remaining condition (Can also make the condition "else")
-            else if ((alphabet != 0 && digits != 0) || (contains_keyword_datatype == true))
-            {
+
                 strcpy(retToken->lexeme, buffer);
                 strcpy(retToken->type, "identifier");
                 retToken->row = row;
                 retToken->column = column;
+
                 /*****************************************
-                TODO: Type of the Identifier
+                TODO: Type of the Identifier(variable(int,char,float...),function...)
                 *****************************************/
                 if ((contains_keyword_datatype == true)) // && strlen(dataType_buffer) > 0)
                 {
@@ -436,21 +434,40 @@ struct token *getNextToken(FILE *fp)
                             while (ca != ']')
                             {
                                 ca = fgetc(fp);
-                                // array_size_string += ca;
-                                strcat(array_size_string, ca);
+                                strcat(array_size_string, ca); // array_size_string += ca;
                             }
                             int array_size = atoi(array_size_string);
+
+                            // // Being specific about the return type
+                            // strcpy(retToken->type, dataType_buffer);
                         }
                         else if (ca == ',')
                         {
+                            // // Being specific about the return type
+                            // strcpy(retToken->type, dataType_buffer);
                         }
                         //Function
-                        else if (ca == '(')
-                        {
-                            if (function_scope)
-                        }
+                        // else if (ca == '(')
+                        // {
+                        //     if (function_scope)
+                        // }
+                    }
+
+                    if (ca == ';')
+                    {
+                        contains_keyword_datatype = false;
                     }
                 }
+
+                return retToken;
+            }
+            // The only remaining condition (Can also make the condition "else")
+            else if (alphabet != 0 && digits != 0)
+            {
+                strcpy(retToken->lexeme, buffer);
+                strcpy(retToken->type, "identifier");
+                retToken->row = row;
+                retToken->column = column;
 
                 return retToken;
             }
