@@ -23,7 +23,7 @@
 #include <stdbool.h>
 #include <string.h>
 #include <ctype.h>
-
+// Creating Necessary Structures
 struct token
 {
 	int row, column;

@@ -23,7 +23,6 @@
 #include <stdbool.h>
 #include <string.h>
 #include <ctype.h>
-
 // Creating Necessary Structures
 struct token
 {
@@ -65,7 +64,8 @@ void insert_into_local_symbol_table(struct token *retToken)
 
     ste->index = local_symbol_table_index + 1;
     local_symbol_table[function_number][local_symbol_table_index++] = *ste;
-    global_symbol_table[function_number].number_of_functions++;
+    // global_symbol_table[function_number].number_of_functions++;
+    local_symbol_table_index++;
 }
 
 void display_local_symbol_tables()
@@ -356,6 +356,8 @@ struct token *getNextToken(FILE *fp)
             int alphabet = 0;
             int digits = 0;
             bool contains_keyword = false;
+            bool contains_keyword_datatype = false;
+
             for (int i = 0; i < strlen(buffer); ++i)
             {
                 // Check for letters
@@ -396,7 +398,6 @@ struct token *getNextToken(FILE *fp)
                         /*****************************************
                         TODO: Type of the Keyword
                         *****************************************/
-                        bool contains_keyword_datatype = false;
                         for (int j = 0; j < (sizeof(datatypes_table) / sizeof(datatypes_table[0])); ++j)
                         {
                             if (strcmp(buffer, datatypes_table[j]) == 0)
@@ -413,12 +414,44 @@ struct token *getNextToken(FILE *fp)
                 }
             }
             // The only remaining condition (Can also make the condition "else")
-            else if ((alphabet != 0 && digits != 0))
+            else if ((alphabet != 0 && digits != 0) || (contains_keyword_datatype == true))
             {
                 strcpy(retToken->lexeme, buffer);
                 strcpy(retToken->type, "identifier");
                 retToken->row = row;
                 retToken->column = column;
+                /*****************************************
+                TODO: Type of the Identifier
+                *****************************************/
+                if ((contains_keyword_datatype == true)) // && strlen(dataType_buffer) > 0)
+                {
+                    while (ca == ' ' || ca == '\n' || ca == '\t')
+                    {
+                        ca = fgetc(fp);
+
+                        //Variables
+                        if (ca == '[')
+                        {
+                            char array_size_string[] = "";
+                            while (ca != ']')
+                            {
+                                ca = fgetc(fp);
+                                // array_size_string += ca;
+                                strcat(array_size_string, ca);
+                            }
+                            int array_size = atoi(array_size_string);
+                        }
+                        else if (ca == ',')
+                        {
+                        }
+                        //Function
+                        else if (ca == '(')
+                        {
+                            if (function_scope)
+                        }
+                    }
+                }
+
                 return retToken;
             }
         }
