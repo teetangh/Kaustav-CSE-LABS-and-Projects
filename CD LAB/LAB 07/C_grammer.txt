@@ -4,7 +4,9 @@ declarations -> data_type identifier_list ; declarations | EPSILON
 
 data_type -> int | char
 
-identifier_list -> id | id , identifier_list | id [ number ] , identifier_list | id [ number ]
+identifier_list -> id identifier_list_factors 
+
+identifier_list_factors -> EPSILON | , identifier_list | [ number ] , identifier_list | [ number ]
 
 statement_list -> statement statement_list | EPSILON
 
