@@ -42,26 +42,26 @@ char keywords_table[][10] = {
 	"return", "short", "signed", "sizeof", "static", "struct",
 	"switch", "typedef", "true", "union", "unsigned", "void", "volatile", "while"};
 
-char special_symbols[][2] = {
+char special_symbols[][3] = {
 	"`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_",
 	"+", "-", "=", "[", "]", "{", "}", "|", ";", ":", ",", ".", "?", "\\"};
 
-char arithmetic_operators[][2] = {
+char arithmetic_operators[][3] = {
 	"+", "-", "*", "/", "%"};
 
-char increment_decrement_operators[][2] = {
+char increment_decrement_operators[][3] = {
 	"++", "--"};
 
-char assignment_operators[][2] = {
+char assignment_operators[][3] = {
 	"+=", "-=", "**", "/=", "%="};
 
-char relational_operators[][2] = {
+char relational_operators[][3] = {
 	"==", "==", ">", ">", "<", "<", "!=", "!=", ">=", ">=", "<=", "<="};
 
-char logical_operators[][2] = {
+char logical_operators[][3] = {
 	"&&", "||", "!="};
 
-char bitwise_operators[][2] = {
+char bitwise_operators[][3] = {
 	"&", "|", "^", "~", "<<", ">>"};
 
 struct token *getNextToken(FILE *fp)
@@ -187,64 +187,70 @@ struct token *getNextToken(FILE *fp)
 						// multiple_char_symbol = true;
 						special_symbol_array[1] = cb;
 						special_symbol_array[2] = '\0';
-					}
-				}
 
-				// Finding the category of the special symbol
-				for (int k = 0; k < sizeof(arithmetic_operators) / sizeof(arithmetic_operators[0]); ++k)
-				{
-					if (strncmp(special_symbol_array, arithmetic_operators[k], strlen(special_symbol_array)) == 0)
-					{
-						multiple_char_symbol = true;
-						strcpy(retToken->lexeme, special_symbol_array);
-						strcpy(retToken->type, "arithmetic_operators");
-					}
-				}
+						// Finding the category of the special symbol
+						for (int k = 0; k < sizeof(arithmetic_operators) / sizeof(arithmetic_operators[0]); ++k)
+						{
+							if (strncmp(special_symbol_array, arithmetic_operators[k], strlen(special_symbol_array)) == 0)
+							{
+								multiple_char_symbol = true;
+								strcpy(retToken->lexeme, special_symbol_array);
+								strcpy(retToken->type, "arithmetic_operators");
+								break;
+							}
+						}
 
-				for (int k = 0; k < sizeof(increment_decrement_operators) / sizeof(increment_decrement_operators[0]); ++k)
-				{
-					if (strncmp(special_symbol_array, increment_decrement_operators[k], strlen(special_symbol_array)) == 0)
-					{
-						multiple_char_symbol = true;
-						strcpy(retToken->lexeme, special_symbol_array);
-						strcpy(retToken->type, "increment_decrement_operators");
-					}
-				}
-				for (int k = 0; k < sizeof(assignment_operators) / sizeof(assignment_operators[0]); ++k)
-				{
-					if (strncmp(special_symbol_array, assignment_operators[k], strlen(special_symbol_array)) == 0)
-					{
-						multiple_char_symbol = true;
-						strcpy(retToken->lexeme, special_symbol_array);
-						strcpy(retToken->type, "assignment_operators");
-					}
-				}
-				for (int k = 0; k < sizeof(relational_operators) / sizeof(relational_operators[0]); ++k)
-				{
-					if (strncmp(special_symbol_array, relational_operators[k], strlen(special_symbol_array)) == 0)
-					{
-						multiple_char_symbol = true;
-						strcpy(retToken->lexeme, special_symbol_array);
-						strcpy(retToken->type, "relational_operators");
-					}
-				}
-				for (int k = 0; k < sizeof(logical_operators) / sizeof(logical_operators[0]); ++k)
-				{
-					if (strncmp(special_symbol_array, logical_operators[k], strlen(special_symbol_array)) == 0)
-					{
-						multiple_char_symbol = true;
-						strcpy(retToken->lexeme, special_symbol_array);
-						strcpy(retToken->type, "logical_operators");
-					}
-				}
+						for (int k = 0; k < sizeof(increment_decrement_operators) / sizeof(increment_decrement_operators[0]); ++k)
+						{
+							if (strncmp(special_symbol_array, increment_decrement_operators[k], strlen(special_symbol_array)) == 0)
+							{
+								multiple_char_symbol = true;
+								strcpy(retToken->lexeme, special_symbol_array);
+								strcpy(retToken->type, "increment_decrement_operators");
+								break;
+							}
+						}
+						for (int k = 0; k < sizeof(assignment_operators) / sizeof(assignment_operators[0]); ++k)
+						{
+							if (strncmp(special_symbol_array, assignment_operators[k], strlen(special_symbol_array)) == 0)
+							{
+								multiple_char_symbol = true;
+								strcpy(retToken->lexeme, special_symbol_array);
+								strcpy(retToken->type, "assignment_operators");
+								break;
+							}
+						}
+						for (int k = 0; k < sizeof(relational_operators) / sizeof(relational_operators[0]); ++k)
+						{
+							if (strncmp(special_symbol_array, relational_operators[k], strlen(special_symbol_array)) == 0)
+							{
+								multiple_char_symbol = true;
+								strcpy(retToken->lexeme, special_symbol_array);
+								strcpy(retToken->type, "relational_operators");
+								break;
+							}
+						}
+						for (int k = 0; k < sizeof(logical_operators) / sizeof(logical_operators[0]); ++k)
+						{
+							if (strncmp(special_symbol_array, logical_operators[k], strlen(special_symbol_array)) == 0)
+							{
+								multiple_char_symbol = true;
+								strcpy(retToken->lexeme, special_symbol_array);
+								strcpy(retToken->type, "logical_operators");
+								break;
+							}
+						}
 
-				for (int k = 0; k < sizeof(bitwise_operators) / sizeof(bitwise_operators[0]); ++k)
-				{
-					if (strncmp(special_symbol_array, bitwise_operators[k], strlen(special_symbol_array)) == 0)
-					{
-						multiple_char_symbol = true;
-						strcpy(retToken->lexeme, special_symbol_array);
-						strcpy(retToken->type, "bitwise_operators");
+						for (int k = 0; k < sizeof(bitwise_operators) / sizeof(bitwise_operators[0]); ++k)
+						{
+							if (strncmp(special_symbol_array, bitwise_operators[k], strlen(special_symbol_array)) == 0)
+							{
+								multiple_char_symbol = true;
+								strcpy(retToken->lexeme, special_symbol_array);
+								strcpy(retToken->type, "bitwise_operators");
+								break;
+							}
+						}
 					}
 				}
 

@@ -52,11 +52,11 @@ void Program()
                 currentToken = getNextToken(fp), tokenDebug();
                 if (strcmp(currentToken->lexeme, "{") == 0)
                 {
-                    currentToken = getNextToken(fp), tokenDebug();
 
                     declarations();
                     assign_stat();
 
+                    currentToken = getNextToken(fp), tokenDebug();
                     if (strcmp(currentToken->lexeme, "}") == 0)
                         return;
                     else
@@ -91,11 +91,14 @@ void Program()
 };
 void declarations()
 {
+
+    currentToken = getNextToken(fp), tokenDebug();
+
     char *first_of_declarations[2] = {"int", "char"};
     int flag = 0;
     for (int i = 0; i < sizeof(first_of_declarations) / sizeof(first_of_declarations[0]); i++)
     {
-        if (strcmp(currentToken->type, first_of_declarations[i]) == 0)
+        if (strcmp(currentToken->lexeme, first_of_declarations[i]) == 0)
             flag++;
     }
 
@@ -103,8 +106,6 @@ void declarations()
     {
         data_type();
         identifier_list();
-
-        currentToken = getNextToken(fp), tokenDebug();
         if (strcmp(currentToken->lexeme, ";") == 0)
         {
             declarations();
@@ -118,8 +119,8 @@ void declarations()
 }
 void data_type()
 {
-    currentToken = getNextToken(fp), tokenDebug();
-    if ((strcmp(currentToken->type, "int") == 0) || (strcmp(currentToken->type, "char") == 0))
+    // currentToken = getNextToken(fp), tokenDebug();
+    if ((strcmp(currentToken->lexeme, "int") == 0) || (strcmp(currentToken->lexeme, "char") == 0))
         return;
 
     else
@@ -147,21 +148,28 @@ void identifier_list_factors()
 }
 void assign_stat()
 {
-    currentToken = getNextToken(fp), tokenDebug();
-    if (strcmp(currentToken->type, "identifier") == 0)
+    // currentToken = getNextToken(fp), tokenDebug();
+    if ((strcmp(currentToken->type, "identifier") == 0))
     {
         currentToken = getNextToken(fp), tokenDebug();
         if (strcmp(currentToken->lexeme, "=") == 0)
             assign_stat_factors();
+        else
+        {
+            printf("= expected\n");
+            invalid();
+        }
     }
     else
     {
-        printf("identifier expected\n");
+        printf("hi identifier expected\n");
         invalid();
     }
 }
 void assign_stat_factors()
 {
+    currentToken = getNextToken(fp), tokenDebug();
+
     if ((strcmp(currentToken->type, "identifier") == 0) || (strcmp(currentToken->type, "constant") == 0))
     {
         currentToken = getNextToken(fp), tokenDebug();
@@ -183,7 +191,9 @@ void assign_stat_factors()
 int main(int argc, char const *argv[])
 {
 
-    fp = fopen("lab07_input.c", "r");
+    fp = fopen("lab07_RDP_input.c", "r");
+    freopen("lab07_RDP_output.txt", "w", stdout);
+
     if (fp == NULL)
     {
         printf("Cannot open file \n Exiting.. \n");

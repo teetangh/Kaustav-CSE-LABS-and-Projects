@@ -388,7 +388,6 @@ struct token *getNextToken(FILE *fp)
             int alphabet = 0;
             int digits = 0;
             bool contains_keyword = false;
-
             for (int i = 0; i < strlen(buffer); ++i)
             {
                 // Check for letters
@@ -457,7 +456,7 @@ struct token *getNextToken(FILE *fp)
                     strcpy(retToken->type, "function");
                     if (!function_scope) // Function Definition
                     {
-                        printf("\nDEBUG 3 FUNC inserted %s\n", buffer);
+                        // printf("\nDEBUG 3 FUNC inserted %s\n", buffer);
                         function_number++;
                         strcpy(global_symbol_table[function_number].function_name, buffer);
                         // global_symbol_table->number_of_tokens++;
@@ -468,7 +467,7 @@ struct token *getNextToken(FILE *fp)
                 /*****************************************
                 TODO: Type of the Identifier(variable(int,char,float...),function...)
                 *****************************************/
-                printf("\nDEBUG 1\t contains key %d\n", contains_keyword_datatype);
+                // printf("\nDEBUG 1\t contains key %d\n", contains_keyword_datatype);
                 if (contains_keyword_datatype == true) // && strlen(dataType_buffer) > 0)
                 {
 
@@ -498,10 +497,10 @@ struct token *getNextToken(FILE *fp)
                     else if (ca == '(')
                     {
                         ungetc(ca, fp);
-                        printf("\nDEBUG 2 : %c \n", ca);
+                        // printf("\nDEBUG 2 : %c \n", ca);
                         if (!function_scope) // Function Definition
                         {
-                            printf("\nDEBUG 4 FUNC inserted %s\n", buffer);
+                            // printf("\nDEBUG 4 FUNC inserted %s\n", buffer);
                             function_number++;
                             strcpy(global_symbol_table[function_number].function_name, buffer);
                             // global_symbol_table->number_of_tokens++;
@@ -526,7 +525,6 @@ struct token *getNextToken(FILE *fp)
                 strcpy(retToken->type, "identifier");
                 retToken->row = row;
                 retToken->column = column;
-
                 return retToken;
             }
         }

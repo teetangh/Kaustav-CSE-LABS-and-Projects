@@ -1,0 +1,16 @@
+Token Scanned < main , function > 
+ Token Scanned < ( , special_symbols > 
+ Token Scanned < ) , special_symbols > 
+ Token Scanned < { , special_symbols > 
+ Token Scanned < int , keyword > 
+ Token Scanned < a , identifier > 
+ Token Scanned < ; , special_symbols > 
+ Token Scanned < char , keyword > 
+ Token Scanned < c , identifier > 
+ Token Scanned < ; , special_symbols > 
+ Token Scanned < a , identifier > 
+ Token Scanned < = , special_symbols > 
+ Token Scanned < 23 , constant > 
+ Token Scanned < } , special_symbols > 
+ ; expected
+Error at Row 4 : Column 7 ::
