@@ -13,11 +13,13 @@ bool search(int *arr, int key)
         else
             return false;
     }
+
+    hello();
 }
 void main()
 {
     int a[20], i, res;
-    bool status;
+    bool x, yz,status,bcd;
     printf("Enter array elements:");
     for (i = 0; i < 10; ++i)
         scanf("%d", &a[i]);
