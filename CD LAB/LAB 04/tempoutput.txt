@@ -1,134 +1,154 @@
-< 1,5,'int',int >
-< 1,9,'sum',identifier >
-< 1,10,'(',special_symbols >
-< 1,14,'int',int >
-< 1,16,'a',identifier >
-< 1,17,',',special_symbols >
-< 1,21,'int',int >
-< 1,23,'b',identifier >
-< 1,24,')',special_symbols >
-< 2,1,'{',special_symbols >
-< 3,7,'int',int >
-< 3,9,'s',identifier >
-< 3,11,'=',relational_operators >
-< 3,13,'a',identifier >
-< 3,15,'+',assignment_operators >
-< 3,17,'b',identifier >
-< 3,18,';',special_symbols >
-< 4,10,'return',keyword >
-< 4,12,'s',identifier >
-< 4,13,';',special_symbols >
-< 5,1,'}',special_symbols >
-< 6,5,'bool',identifier >
-< 6,12,'search',identifier >
-< 6,13,'(',special_symbols >
-< 6,17,'int',int >
-< 6,19,'*',assignment_operators >
-< 6,22,'rr',identifier >
-< 6,23,',',special_symbols >
-< 6,27,'int',int >
-< 6,31,'key',identifier >
-< 6,32,')',special_symbols >
-< 7,1,'{',special_symbols >
-< 8,7,'int',int >
-< 8,9,'i',identifier >
-< 8,10,';',special_symbols >
-< 9,7,'for',keyword >
-< 9,8,'(',special_symbols >
-< 9,10,'i',identifier >
-< 9,12,'=',relational_operators >
-< 9,14,'0',constant >
-< 9,15,';',special_symbols >
-< 9,17,'i',identifier >
-< 9,21,'10',constant >
-< 9,22,';',special_symbols >
-< 9,24,'i',identifier >
-< 9,26,'++',increment_decrement_operators >
-< 9,27,')',special_symbols >
-< 10,4,'{',special_symbols >
-< 11,10,'if',keyword >
-< 11,11,'(',special_symbols >
-< 11,15,'arr',identifier >
-< 11,16,'[',special_symbols >
-< 11,18,'i',identifier >
-< 11,19,']',special_symbols >
-< 11,21,'==',relational_operators >
-< 11,25,'key',identifier >
-< 11,26,')',special_symbols >
-< 12,18,'return',keyword >
-< 12,23,'true',identifier >
-< 12,24,';',special_symbols >
-< 13,12,'else',keyword >
-< 13,30,'return',keyword >
-< 13,36,'false',identifier >
-< 13,37,';',special_symbols >
-< 14,4,'}',special_symbols >
-< 15,1,'}',special_symbols >
-< 16,5,'void',keyword >
-< 16,10,'main',identifier >
-< 16,12,'(',special_symbols >
-< 17,1,'{',special_symbols >
-< 18,7,'int',int >
-< 18,9,'a',identifier >
-< 18,10,'[',special_symbols >
-< 18,13,'20',constant >
-< 18,15,']',special_symbols >
-< 18,17,'i',identifier >
-< 18,18,',',special_symbols >
-< 18,22,'sum',identifier >
-< 18,23,';',special_symbols >
-< 19,8,'bool',identifier >
-< 19,15,'status',identifier >
-< 19,16,';',special_symbols >
-< 20,10,'int',keyword >
-< 20,11,'(',special_symbols >
-< 20,34,'"Enter array elements:',string_literal >
-< 20,36,')',special_symbols >
-< 21,7,'for',keyword >
-< 21,8,'(',special_symbols >
-< 21,10,'i',identifier >
-< 21,12,'=',relational_operators >
-< 21,14,'0',constant >
-< 21,15,';',special_symbols >
-< 21,17,'i',identifier >
-< 21,21,'10',constant >
-< 21,22,';',special_symbols >
-< 21,24,'++',increment_decrement_operators >
-< 21,26,'i',identifier >
-< 21,27,')',special_symbols >
-< 22,13,'scanf',identifier >
-< 22,14,'(',special_symbols >
-< 22,18,'"%d',string_literal >
-< 22,19,',',special_symbols >
-< 22,21,'&',bitwise_operators >
-< 22,22,'[',special_symbols >
-< 22,24,'i',identifier >
-< 22,26,']',special_symbols >
-< 22,27,';',special_symbols >
-< 23,7,'sum',identifier >
-< 23,9,'=',relational_operators >
-< 23,11,'a',identifier >
-< 23,12,'[',special_symbols >
-< 23,14,'0',constant >
-< 23,15,']',special_symbols >
-< 23,17,'+',assignment_operators >
-< 23,19,'a',identifier >
-< 23,20,'[',special_symbols >
-< 23,22,'4',constant >
-< 23,24,']',special_symbols >
-< 24,10,'status',identifier >
-< 24,12,'=',relational_operators >
-< 24,19,'search',identifier >
-< 24,20,'(',special_symbols >
-< 24,22,'a',identifier >
-< 24,23,',',special_symbols >
-< 24,27,'sum',identifier >
-< 24,29,')',special_symbols >
-< 25,10,'int',keyword >
-< 25,11,'(',special_symbols >
-< 25,15,'"%d',string_literal >
-< 25,16,',',special_symbols >
-< 25,23,'status',identifier >
-< 25,25,')',special_symbols >
-< 26,1,'}',special_symbols >
+FNO 0 FSCOPE 0	< 1,5,'int',int >
+FNO 0 FSCOPE 0	< 1,9,'sum',identifier >
+FNO 0 FSCOPE 0	< 1,10,'(',special_symbols >
+FNO 0 FSCOPE 0	< 1,14,'int',int >
+FNO 0 FSCOPE 0	< 1,16,'a',identifier >
+FNO 0 FSCOPE 0	< 1,17,',',special_symbols >
+FNO 0 FSCOPE 0	< 1,21,'int',int >
+FNO 0 FSCOPE 0	< 1,23,'b',identifier >
+FNO 0 FSCOPE 0	< 1,24,')',special_symbols >
+FNO 0 FSCOPE 1	< 2,1,'{',special_symbols >
+FNO 0 FSCOPE 1	< 3,7,'int',int >
+FNO 0 FSCOPE 1	< 3,9,'s',identifier >
+FNO 0 FSCOPE 1	< 3,11,'=',relational_operators >
+FNO 0 FSCOPE 1	< 3,13,'a',identifier >
+FNO 0 FSCOPE 1	< 3,15,'+',assignment_operators >
+FNO 0 FSCOPE 1	< 3,17,'b',identifier >
+FNO 0 FSCOPE 1	< 3,18,';',special_symbols >
+FNO 0 FSCOPE 1	< 4,10,'return',keyword >
+FNO 0 FSCOPE 1	< 4,12,'s',identifier >
+FNO 0 FSCOPE 1	< 4,13,';',special_symbols >
+FNO 0 FSCOPE 0	< 5,1,'}',special_symbols >
+FNO 0 FSCOPE 0	< 6,5,'bool',bool >
+FNO 0 FSCOPE 0	< 6,12,'search',identifier >
+FNO 0 FSCOPE 0	< 6,13,'(',special_symbols >
+FNO 0 FSCOPE 0	< 6,17,'int',int >
+FNO 0 FSCOPE 0	< 6,19,'*',assignment_operators >
+FNO 0 FSCOPE 0	< 6,22,'rr',identifier >
+FNO 0 FSCOPE 0	< 6,23,',',special_symbols >
+FNO 0 FSCOPE 0	< 6,27,'int',int >
+FNO 0 FSCOPE 0	< 6,31,'key',identifier >
+FNO 0 FSCOPE 0	< 6,32,')',special_symbols >
+FNO 0 FSCOPE 1	< 7,1,'{',special_symbols >
+FNO 0 FSCOPE 1	< 8,7,'int',int >
+FNO 0 FSCOPE 1	< 8,9,'i',identifier >
+FNO 0 FSCOPE 1	< 8,10,';',special_symbols >
+FNO 0 FSCOPE 1	< 9,7,'for',keyword >
+FNO 0 FSCOPE 1	< 9,8,'(',special_symbols >
+FNO 0 FSCOPE 1	< 9,10,'i',identifier >
+FNO 0 FSCOPE 1	< 9,12,'=',relational_operators >
+FNO 0 FSCOPE 1	< 9,14,'0',constant >
+FNO 0 FSCOPE 1	< 9,15,';',special_symbols >
+FNO 0 FSCOPE 1	< 9,17,'i',identifier >
+FNO 0 FSCOPE 1	< 9,21,'10',constant >
+FNO 0 FSCOPE 1	< 9,22,';',special_symbols >
+FNO 0 FSCOPE 1	< 9,24,'i',identifier >
+FNO 0 FSCOPE 1	< 9,26,'++',increment_decrement_operators >
+FNO 0 FSCOPE 1	< 9,27,')',special_symbols >
+FNO 0 FSCOPE 2	< 10,4,'{',special_symbols >
+FNO 0 FSCOPE 2	< 11,10,'if',keyword >
+FNO 0 FSCOPE 2	< 11,11,'(',special_symbols >
+FNO 0 FSCOPE 2	< 11,15,'arr',identifier >
+FNO 0 FSCOPE 2	< 11,16,'[',special_symbols >
+FNO 0 FSCOPE 2	< 11,18,'i',identifier >
+FNO 0 FSCOPE 2	< 11,19,']',special_symbols >
+FNO 0 FSCOPE 2	< 11,21,'==',relational_operators >
+FNO 0 FSCOPE 2	< 11,25,'key',identifier >
+FNO 0 FSCOPE 2	< 11,26,')',special_symbols >
+FNO 0 FSCOPE 2	< 12,18,'return',keyword >
+FNO 0 FSCOPE 2	< 12,23,'true',keyword >
+FNO 0 FSCOPE 2	< 12,24,';',special_symbols >
+FNO 0 FSCOPE 2	< 13,12,'else',keyword >
+FNO 0 FSCOPE 2	< 13,30,'return',keyword >
+FNO 0 FSCOPE 2	< 13,36,'false',keyword >
+FNO 0 FSCOPE 2	< 13,37,';',special_symbols >
+FNO 0 FSCOPE 1	< 14,4,'}',special_symbols >
+FNO 0 FSCOPE 0	< 15,1,'}',special_symbols >
+FNO 0 FSCOPE 0	< 16,5,'void',void >
+FNO 0 FSCOPE 0	< 16,10,'main',identifier >
+FNO 0 FSCOPE 0	< 16,12,'(',special_symbols >
+FNO 0 FSCOPE 1	< 17,1,'{',special_symbols >
+FNO 0 FSCOPE 1	< 18,7,'int',int >
+FNO 0 FSCOPE 1	< 18,9,'a',identifier >
+FNO 0 FSCOPE 1	< 18,10,'[',special_symbols >
+FNO 0 FSCOPE 1	< 18,13,'20',constant >
+FNO 0 FSCOPE 1	< 18,15,']',special_symbols >
+FNO 0 FSCOPE 1	< 18,17,'i',identifier >
+FNO 0 FSCOPE 1	< 18,18,',',special_symbols >
+FNO 0 FSCOPE 1	< 18,22,'sum',identifier >
+FNO 0 FSCOPE 1	< 18,23,';',special_symbols >
+FNO 0 FSCOPE 1	< 19,8,'bool',bool >
+FNO 0 FSCOPE 1	< 19,15,'status',identifier >
+FNO 0 FSCOPE 1	< 19,16,';',special_symbols >
+FNO 0 FSCOPE 1	< 20,10,'int',keyword >
+FNO 0 FSCOPE 1	< 20,11,'(',special_symbols >
+FNO 0 FSCOPE 1	< 20,34,'"Enter array elements:',string_literal >
+FNO 0 FSCOPE 1	< 20,36,')',special_symbols >
+FNO 0 FSCOPE 1	< 21,7,'for',keyword >
+FNO 0 FSCOPE 1	< 21,8,'(',special_symbols >
+FNO 0 FSCOPE 1	< 21,10,'i',identifier >
+FNO 0 FSCOPE 1	< 21,12,'=',relational_operators >
+FNO 0 FSCOPE 1	< 21,14,'0',constant >
+FNO 0 FSCOPE 1	< 21,15,';',special_symbols >
+FNO 0 FSCOPE 1	< 21,17,'i',identifier >
+FNO 0 FSCOPE 1	< 21,21,'10',constant >
+FNO 0 FSCOPE 1	< 21,22,';',special_symbols >
+FNO 0 FSCOPE 1	< 21,24,'++',increment_decrement_operators >
+FNO 0 FSCOPE 1	< 21,26,'i',identifier >
+FNO 0 FSCOPE 1	< 21,27,')',special_symbols >
+FNO 0 FSCOPE 1	< 22,13,'scanf',identifier >
+FNO 0 FSCOPE 1	< 22,14,'(',special_symbols >
+FNO 0 FSCOPE 1	< 22,18,'"%d',string_literal >
+FNO 0 FSCOPE 1	< 22,19,',',special_symbols >
+FNO 0 FSCOPE 1	< 22,21,'&',bitwise_operators >
+FNO 0 FSCOPE 1	< 22,22,'[',special_symbols >
+FNO 0 FSCOPE 1	< 22,24,'i',identifier >
+FNO 0 FSCOPE 1	< 22,26,']',special_symbols >
+FNO 0 FSCOPE 1	< 22,27,';',special_symbols >
+FNO 0 FSCOPE 1	< 23,7,'sum',identifier >
+FNO 0 FSCOPE 1	< 23,9,'=',relational_operators >
+FNO 0 FSCOPE 1	< 23,11,'a',identifier >
+FNO 0 FSCOPE 1	< 23,12,'[',special_symbols >
+FNO 0 FSCOPE 1	< 23,14,'0',constant >
+FNO 0 FSCOPE 1	< 23,15,']',special_symbols >
+FNO 0 FSCOPE 1	< 23,17,'+',assignment_operators >
+FNO 0 FSCOPE 1	< 23,19,'a',identifier >
+FNO 0 FSCOPE 1	< 23,20,'[',special_symbols >
+FNO 0 FSCOPE 1	< 23,22,'4',constant >
+FNO 0 FSCOPE 1	< 23,24,']',special_symbols >
+FNO 0 FSCOPE 1	< 24,10,'status',identifier >
+FNO 0 FSCOPE 1	< 24,12,'=',relational_operators >
+FNO 0 FSCOPE 1	< 24,19,'search',identifier >
+FNO 0 FSCOPE 1	< 24,20,'(',special_symbols >
+FNO 0 FSCOPE 1	< 24,22,'a',identifier >
+FNO 0 FSCOPE 1	< 24,23,',',special_symbols >
+FNO 0 FSCOPE 1	< 24,27,'sum',identifier >
+FNO 0 FSCOPE 1	< 24,29,')',special_symbols >
+FNO 0 FSCOPE 1	< 25,10,'int',keyword >
+FNO 0 FSCOPE 1	< 25,11,'(',special_symbols >
+FNO 0 FSCOPE 1	< 25,15,'"%d',string_literal >
+FNO 0 FSCOPE 1	< 25,16,',',special_symbols >
+FNO 0 FSCOPE 1	< 25,23,'status',identifier >
+FNO 0 FSCOPE 1	< 25,25,')',special_symbols >
+FNO 0 FSCOPE 0	< 26,1,'}',special_symbols >
 Finished Lexical analysis
+
+Symbol Table for Function: 
+
+	Index	Lexeme		Type	Size
+        0                          0
+        1      sum      int    22038
+        2        a      int    22038
+        3        b      int    22038
+        4        s      int    22038
+        5        s      int    22038
+        6   search     bool    22038
+        7       rr      int    22038
+        8      key      int    22038
+        9        i      int    22038
+       10        i      int    22038
+       11      arr      int    22038
+       12     main     void    22038
+       13   status     bool    22038
+       14    scanf     bool    22038
+Finished Symbol Table Entries

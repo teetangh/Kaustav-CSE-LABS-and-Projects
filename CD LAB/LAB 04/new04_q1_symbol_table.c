@@ -41,43 +41,46 @@ struct symbol_table_entry
 struct global_symbol_table_data
 {
     char function_name[10];
-    int number_of_functions;
+    int number_of_tokens;
 };
 
 // Creating Symbol Tables
 struct global_symbol_table_data global_symbol_table[10];
 struct symbol_table_entry local_symbol_table[10][100];
 
-int local_symbol_table_index = 0; // Denotes the token INDEX within that function
 int function_number = 0;          // Denotes which Function and ALL tokens within that function
+int local_symbol_table_index = 0; // Denotes the token INDEX within that function
 
 // Symbol Table Functions
 void insert_into_local_symbol_table(struct token *retToken)
 {
     struct symbol_table_entry ste;
 
-    for (int i = 0; i < global_symbol_table[function_number].number_of_functions; i++)
+    for (int i = 0; i < global_symbol_table[function_number].number_of_tokens; i++)
     {
         if (strcmp(retToken->lexeme, local_symbol_table[function_number][i].token.lexeme) == 0)
             return;
     }
 
-    ste.index = local_symbol_table_index + 1;
-    local_symbol_table[function_number][local_symbol_table_index++] = ste;
-    // global_symbol_table[function_number].number_of_functions++;
+    ste.token = *retToken;
+
     local_symbol_table_index++;
+
+    ste.index = local_symbol_table_index;
+    local_symbol_table[function_number][local_symbol_table_index] = ste;
+    global_symbol_table[function_number].number_of_tokens++;
 }
 
 void display_local_symbol_tables()
 {
-    for (int i = 0; i < function_number; i++)
+    for (int i = 0; i <= function_number; i++)
     {
-        printf("\nSymbol Table for Function: %s\n", global_symbol_table[i].function_name);
-        printf("\nIndex\tLexeme\tType\tSize\n");
+        printf("\n\nSymbol Table for Function: %s\n\n", global_symbol_table[i].function_name);
+        printf("\tIndex\tLexeme\t\tType\tSize\n");
 
-        for (int j = 0; j < global_symbol_table[i].number_of_functions; j++)
+        for (int j = 0; j <= global_symbol_table[i].number_of_tokens; j++)
         {
-            printf("%d\t%s\t%s\t%d", local_symbol_table[i][j].index, local_symbol_table[i][j].token.lexeme,
+            printf("%9d%9s%9s%9d\n", local_symbol_table[i][j].index, local_symbol_table[i][j].token.lexeme,
                    local_symbol_table[i][j].token.type, local_symbol_table[i][j].size);
         }
     }
@@ -85,15 +88,16 @@ void display_local_symbol_tables()
 
 int row = 1;
 int column = 1;
+int function_scope = 0;
 char ca, cb;
 char buffer[100];
 char dataType_buffer[100]; // For symbol Table Entry
 
 char keywords_table[][10] = {
-    "auto", "break", "case", "char", "const", "continue", "default", "do",
-    "double", "else", "enum", "extern", "float", "for", "goto", "if", "int", "long", "register",
+    "auto", "break", "bool", "case", "char", "const", "continue", "default", "do",
+    "double", "else", "enum", "extern", "false", "float", "for", "goto", "if", "int", "long", "register",
     "return", "short", "signed", "sizeof", "static", "struct",
-    "switch", "typedef", "union", "unsigned", "void", "volatile", "while"};
+    "switch", "typedef", "true", "union", "unsigned", "void", "volatile", "while"};
 
 char special_symbols[][3] = {
     "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_",
@@ -217,6 +221,11 @@ struct token *getNextToken(FILE *fp)
             retToken->column = column;
             return retToken;
         }
+        // Function Scoping
+        if (ca == '{')
+            function_scope++;
+        else if (ca == '}')
+            function_scope--;
 
         // Checking for Special Symbols
         char special_symbol_array[3];
@@ -415,10 +424,18 @@ struct token *getNextToken(FILE *fp)
                     }
                 }
 
+                // If it is not a keyword obviously it cannot be datatype.Checking to see if it is an identifier
                 strcpy(retToken->lexeme, buffer);
                 strcpy(retToken->type, "identifier");
                 retToken->row = row;
                 retToken->column = column;
+
+                // bool contains_looping_construct = false;
+                // for (int x = 0; x < (sizeof(looping_keywords) / sizeof(looping_keywords[0])); x++)
+                // {
+                //     if (strncmp(buffer, looping_keywords[x], strlen(looping_keywords[x])) == 0)
+                //         contains_looping_construct = true;
+                // }
 
                 /*****************************************
                 TODO: Type of the Identifier(variable(int,char,float...),function...)
@@ -449,10 +466,22 @@ struct token *getNextToken(FILE *fp)
                             return retToken;
                         }
                         //Function
-                        // else if (ca == '(')
-                        // {
-                        //     if (function_scope)
-                        // }
+                        else if (ca == '(')
+                        {
+                            ungetc(ca, fp);
+                            if (function_scope) // Function Calling
+                            {
+                                strcpy(retToken->type, "function");
+                                return retToken;
+                            }
+                            else // Function Definition
+                            {
+                                strcpy(global_symbol_table[++function_number].function_name, buffer);
+                                global_symbol_table->number_of_tokens++;
+                                local_symbol_table_index = 0;
+                                return retToken;
+                            }
+                        }
                     }
 
                     if (ca == ';')
@@ -496,23 +525,19 @@ int main(int argc, char const *argv[])
     struct token *retToken;
     while ((retToken = getNextToken(fp)) != NULL)
     {
+        printf("FNO %d FSCOPE %d\t", function_number, function_scope);
         printf("< %d,%d,'%s',%s >\n", retToken->row, retToken->column, retToken->lexeme, retToken->type);
 
-        for (int x = 0; x < (sizeof(datatypes_table) / sizeof(datatypes_table[0])); x++)
+        if (strncmp(retToken->type, "identifier", strlen("identifier")) == 0)
         {
-            if (strncmp(retToken->type, datatypes_table[x], strlen(datatypes_table[x])) == 0)
-                insert_into_local_symbol_table(retToken);
+            strcpy(retToken->type, dataType_buffer);
+            insert_into_local_symbol_table(retToken);
         }
-
-        /*
-            if(varaible | function) -> insert
-            else dont
-        */
     }
 
     printf("Finished Lexical analysis");
-
     display_local_symbol_tables();
+    printf("Finished Symbol Table Entries");
 
     return 0;
 }
