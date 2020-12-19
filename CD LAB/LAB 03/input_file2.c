@@ -1,59 +1,14 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-
-int main(int argc, char const *argv[])
+int main()
 {
-	char ca, buffer[10];
-	FILE *fp = fopen("sampleInputFile.c", "r");
-	ca = fgetc(fp);
 
-	if (fp == NULL)
-	{
-		printf("cannot open File \n");
-		exit(0);
-	}
+    int number1, number2, sum;
 
-	while (ca != EOF)
-	{
-		int i = 0;
-		buffer[0] = '\0';
+    printf("Enter two integers: ");
+    scanf("%d %d", &number1, &number2);
 
-		if (ca == '=')
-		{
-			buffer[i++] = ca;
-			ca = fgetc(fp);
+    // calculating sum
+    sum = number1 + number2;
 
-			if (ca == '=')
-			{
-				buffer[i++] = ca;
-				buffer[i] = '\0';
-				printf("\n Relational operator %s \n", buffer);
-			}
-
-			else
-			{
-				buffer[i] = '\0';
-				printf("\n Assignment Operator %s \n", buffer);
-			}
-		}
-		else
-		{
-			if (ca == '<' || ca == '>' || ca == '!')
-			{
-				buffer[i++] = ca;
-				ca = fgetc(fp);
-
-				if (ca == '=')
-					buffer[i++] = ca;
-
-				buffer[i] = '\0';
-				printf("\n Relational operator %s \n", buffer);
-			}
-			else
-				buffer[i] = '\0';
-		}
-
-		ca = fgetc(fp);
-	}
+    printf("%d + %d = %d", number1, number2, sum);
+    return 0;
 }

@@ -184,7 +184,7 @@ struct token *getNextToken(FILE *fp)
 				{
 					if (cb == special_symbols[j][0])
 					{
-						multiple_char_symbol = true;
+						// multiple_char_symbol = true;
 						special_symbol_array[1] = cb;
 						special_symbol_array[2] = '\0';
 					}
@@ -363,7 +363,8 @@ struct token *getNextToken(FILE *fp)
 
 int main(int argc, char const *argv[])
 {
-	FILE *fp = fopen("lab03_q1_input_all_operators.c", "r");
+	// FILE *fp = fopen("lab03_q1_input_all_operators.c", "r");
+	FILE *fp = fopen("input_file.c", "r");
 	if (fp == NULL)
 	{
 		printf("Cannot open file \n Exiting.. \n");
