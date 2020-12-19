@@ -52,7 +52,7 @@ int function_number = -1;          // Denotes which Function and ALL tokens with
 int local_symbol_table_index = -1; // Denotes the token INDEX within that function
 
 // Symbol Table Functions
-void insert_into_local_symbol_table(struct token *retToken)
+void insert_into_local_symbol_table(struct token *retToken, int dataType_size)
 {
     struct symbol_table_entry ste;
 
@@ -64,11 +64,12 @@ void insert_into_local_symbol_table(struct token *retToken)
         //     return;
     }
 
-    ste.token = *retToken;
-
     local_symbol_table_index++;
 
+    ste.token = *retToken;
     ste.index = local_symbol_table_index;
+    ste.size = dataType_size;
+
     local_symbol_table[function_number][local_symbol_table_index] = ste;
     global_symbol_table[function_number].number_of_tokens++;
 }
@@ -78,9 +79,9 @@ void display_local_symbol_tables()
     for (int i = 0; i <= function_number; i++)
     {
         printf("\n\nSymbol Table for Function: %s\n\n", global_symbol_table[i].function_name);
-        printf("\tIndex\tLexeme\t\tType\tSize\n");
+        printf("\tIndex\tLexeme\tType\tSize\n");
 
-        for (int j = 0; j <= global_symbol_table[i].number_of_tokens; j++)
+        for (int j = 1; j <= global_symbol_table[i].number_of_tokens; j++)
         {
             printf("%9d%9s%9s%9d\n", local_symbol_table[i][j].index, local_symbol_table[i][j].token.lexeme,
                    local_symbol_table[i][j].token.type, local_symbol_table[i][j].size);
@@ -449,6 +450,7 @@ struct token *getNextToken(FILE *fp)
                     ca = fgetc(fp);
                     while (ca == ' ' || ca == '\t')
                         ca = fgetc(fp);
+                    // ungetc(ca, fp);
 
                     //Variables
                     if (ca == '[')
@@ -473,33 +475,32 @@ struct token *getNextToken(FILE *fp)
                     //Function
                     else if (ca == '(')
                     {
-                        printf("\nDEBUG 2\n");
-
                         ungetc(ca, fp);
+                        printf("\nDEBUG 2 : %c \n", ca);
                         if (function_scope) // Function Calling
                         {
+
                             strcpy(retToken->type, "function");
                             return retToken;
                         }
                         else // Function Definition
                         {
+                            printf("\nDEBUG 3 FUNC inserted %s\n", buffer);
                             function_number++;
-                            printf("\nDEBUG 3 %s\n", buffer);
                             strcpy(global_symbol_table[function_number].function_name, buffer);
-                            global_symbol_table->number_of_tokens++;
+                            // global_symbol_table->number_of_tokens++;
                             local_symbol_table_index = 0;
                             return retToken;
                         }
                     }
-                }
 
-                if (ca == ';')
-                {
-                    contains_keyword_datatype = false;
-                    memset(dataType_buffer, '\0', sizeof(*dataType_buffer));
-                    return retToken;
+                    else if (ca == ';')
+                    {
+                        contains_keyword_datatype = false;
+                        memset(dataType_buffer, '\0', sizeof(*dataType_buffer));
+                        return retToken;
+                    }
                 }
-
                 return retToken;
             }
             // The only remaining condition (Can also make the condition "else")
@@ -533,19 +534,29 @@ int main(int argc, char const *argv[])
     struct token *retToken;
     while ((retToken = getNextToken(fp)) != NULL)
     {
-        printf("FNO %d FSCOPE %d\t", function_number, function_scope);
+        printf("FNO %d FSCOPE %d\t\t", function_number, function_scope);
         printf("< %d,%d,'%s',%s >\n", retToken->row, retToken->column, retToken->lexeme, retToken->type);
 
+        if (strncmp(retToken->type, "function", strlen("function")) == 0)
+        {
+            insert_into_local_symbol_table(retToken, -1);
+        }
         if (strncmp(retToken->type, "identifier", strlen("identifier")) == 0)
         {
             strcpy(retToken->type, dataType_buffer);
-            insert_into_local_symbol_table(retToken);
+
+            if ((strcmp(dataType_buffer, "char") == 0 || (strcmp(dataType_buffer, "bool") == 0)))
+                insert_into_local_symbol_table(retToken, 1);
+            if ((strcmp(dataType_buffer, "int") == 0 || (strcmp(dataType_buffer, "float") == 0)))
+                insert_into_local_symbol_table(retToken, 4);
+            if ((strcmp(dataType_buffer, "long") == 0 || (strcmp(dataType_buffer, "double") == 0)))
+                insert_into_local_symbol_table(retToken, 8);
         }
     }
 
-    printf("Finished Lexical analysis");
+    printf("\nFinished Lexical analysis");
     display_local_symbol_tables();
-    printf("Finished Symbol Table Entries");
+    printf("\nFinished Symbol Table Entries");
 
     return 0;
 }

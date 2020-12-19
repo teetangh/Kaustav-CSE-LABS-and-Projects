@@ -1,241 +1,233 @@
-FNO -1 FSCOPE 0	< 1,5,'int',int >
+FNO -1 FSCOPE 0		< 1,5,'int',int >
 
 DEBUG 1	 contains key 1
 
-DEBUG 2
+DEBUG 2 : ( 
 
-DEBUG 3 sum
-FNO 0 FSCOPE 0	< 1,9,'sum',identifier >
-FNO 0 FSCOPE 0	< 1,10,'(',special_symbols >
-FNO 0 FSCOPE 0	< 1,14,'int',int >
-
-DEBUG 1	 contains key 1
-FNO 0 FSCOPE 0	< 1,16,'a',identifier >
-FNO 0 FSCOPE 0	< 1,20,'int',int >
+DEBUG 3 FUNC inserted sum
+FNO 0 FSCOPE 0		< 1,9,'sum',identifier >
+FNO 0 FSCOPE 0		< 1,10,'(',special_symbols >
+FNO 0 FSCOPE 0		< 1,14,'int',int >
 
 DEBUG 1	 contains key 1
-FNO 0 FSCOPE 0	< 1,22,'b',identifier >
-FNO 0 FSCOPE 1	< 2,1,'{',special_symbols >
-FNO 0 FSCOPE 1	< 3,7,'int',int >
+FNO 0 FSCOPE 0		< 1,16,'a',identifier >
+FNO 0 FSCOPE 0		< 1,20,'int',int >
 
 DEBUG 1	 contains key 1
-FNO 0 FSCOPE 1	< 3,9,'s',identifier >
+FNO 0 FSCOPE 0		< 1,22,'b',identifier >
+FNO 0 FSCOPE 1		< 2,1,'{',special_symbols >
+FNO 0 FSCOPE 1		< 3,7,'int',int >
 
 DEBUG 1	 contains key 1
-FNO 0 FSCOPE 1	< 3,11,'a',identifier >
+FNO 0 FSCOPE 1		< 3,9,'s',identifier >
 
 DEBUG 1	 contains key 1
-FNO 0 FSCOPE 1	< 3,13,'b',identifier >
-FNO 0 FSCOPE 1	< 4,10,'return',keyword >
+FNO 0 FSCOPE 1		< 3,11,'a',identifier >
+
+DEBUG 1	 contains key 1
+FNO 0 FSCOPE 1		< 3,13,'b',identifier >
+FNO 0 FSCOPE 1		< 4,10,'return',keyword >
 
 DEBUG 1	 contains key 0
-FNO 0 FSCOPE 1	< 4,12,'s',identifier >
-FNO 0 FSCOPE 1	< 4,13,';',special_symbols >
-FNO 0 FSCOPE 0	< 5,1,'}',special_symbols >
-FNO 0 FSCOPE 0	< 6,5,'bool',bool >
-
-DEBUG 1	 contains key 1
-
-DEBUG 2
-
-DEBUG 3 search
-FNO 1 FSCOPE 0	< 6,12,'search',identifier >
-FNO 1 FSCOPE 0	< 6,13,'(',special_symbols >
-FNO 1 FSCOPE 0	< 6,17,'int',int >
-FNO 1 FSCOPE 0	< 6,19,'*',assignment_operators >
-
-DEBUG 1	 contains key 1
-FNO 1 FSCOPE 0	< 6,22,'rr',identifier >
-FNO 1 FSCOPE 0	< 6,26,'int',int >
-
-DEBUG 1	 contains key 1
-FNO 1 FSCOPE 0	< 6,30,'key',identifier >
-FNO 1 FSCOPE 1	< 7,1,'{',special_symbols >
-FNO 1 FSCOPE 1	< 8,7,'int',int >
-
-DEBUG 1	 contains key 1
-FNO 1 FSCOPE 1	< 8,9,'i',identifier >
-FNO 1 FSCOPE 1	< 9,7,'for',keyword >
-FNO 1 FSCOPE 1	< 9,8,'(',special_symbols >
-
-DEBUG 1	 contains key 0
-FNO 1 FSCOPE 1	< 9,10,'i',identifier >
-FNO 1 FSCOPE 1	< 9,12,'=',relational_operators >
-FNO 1 FSCOPE 1	< 9,14,'0',constant >
-FNO 1 FSCOPE 1	< 9,15,';',special_symbols >
-
-DEBUG 1	 contains key 0
-FNO 1 FSCOPE 1	< 9,17,'i',identifier >
-FNO 1 FSCOPE 1	< 9,21,'10',constant >
-FNO 1 FSCOPE 1	< 9,22,';',special_symbols >
-
-DEBUG 1	 contains key 0
-FNO 1 FSCOPE 1	< 9,24,'i',identifier >
-FNO 1 FSCOPE 1	< 9,26,'++',increment_decrement_operators >
-FNO 1 FSCOPE 1	< 9,27,')',special_symbols >
-FNO 1 FSCOPE 2	< 10,4,'{',special_symbols >
-FNO 1 FSCOPE 2	< 11,10,'if',keyword >
-FNO 1 FSCOPE 2	< 11,11,'(',special_symbols >
-
-DEBUG 1	 contains key 0
-FNO 1 FSCOPE 2	< 11,15,'arr',identifier >
-FNO 1 FSCOPE 2	< 11,16,'[',special_symbols >
-
-DEBUG 1	 contains key 0
-FNO 1 FSCOPE 2	< 11,18,'i',identifier >
-FNO 1 FSCOPE 2	< 11,19,']',special_symbols >
-FNO 1 FSCOPE 2	< 11,21,'==',relational_operators >
-
-DEBUG 1	 contains key 0
-FNO 1 FSCOPE 2	< 11,25,'key',identifier >
-FNO 1 FSCOPE 2	< 11,26,')',special_symbols >
-FNO 1 FSCOPE 2	< 12,18,'return',keyword >
-FNO 1 FSCOPE 2	< 12,23,'true',keyword >
-FNO 1 FSCOPE 2	< 12,24,';',special_symbols >
-FNO 1 FSCOPE 2	< 13,12,'else',keyword >
-FNO 1 FSCOPE 2	< 13,30,'return',keyword >
-FNO 1 FSCOPE 2	< 13,36,'false',keyword >
-FNO 1 FSCOPE 2	< 13,37,';',special_symbols >
-FNO 1 FSCOPE 1	< 14,4,'}',special_symbols >
-FNO 1 FSCOPE 0	< 15,1,'}',special_symbols >
-FNO 1 FSCOPE 0	< 16,5,'void',void >
+FNO 0 FSCOPE 1		< 4,12,'s',identifier >
+FNO 0 FSCOPE 1		< 4,13,';',special_symbols >
+FNO 0 FSCOPE 0		< 5,1,'}',special_symbols >
+FNO 0 FSCOPE 0		< 6,5,'bool',bool >
 
 DEBUG 1	 contains key 1
 
-DEBUG 2
+DEBUG 2 : ( 
 
-DEBUG 3 main
-FNO 2 FSCOPE 0	< 16,10,'main',identifier >
-FNO 2 FSCOPE 0	< 16,12,'(',special_symbols >
-FNO 2 FSCOPE 1	< 17,1,'{',special_symbols >
-FNO 2 FSCOPE 1	< 18,7,'int',int >
-
-DEBUG 1	 contains key 1
-FNO 2 FSCOPE 1	< 18,9,'a',identifier >
-FNO 2 FSCOPE 1	< 18,10,',',special_symbols >
+DEBUG 3 FUNC inserted search
+FNO 1 FSCOPE 0		< 6,12,'search',identifier >
+FNO 1 FSCOPE 0		< 6,13,'(',special_symbols >
+FNO 1 FSCOPE 0		< 6,17,'int',int >
+FNO 1 FSCOPE 0		< 6,19,'*',assignment_operators >
 
 DEBUG 1	 contains key 1
-FNO 2 FSCOPE 1	< 18,12,'i',identifier >
+FNO 1 FSCOPE 0		< 6,22,'rr',identifier >
+FNO 1 FSCOPE 0		< 6,26,'int',int >
 
 DEBUG 1	 contains key 1
-FNO 2 FSCOPE 1	< 18,16,'sum',identifier >
-FNO 2 FSCOPE 1	< 19,8,'bool',bool >
+FNO 1 FSCOPE 0		< 6,30,'key',identifier >
+FNO 1 FSCOPE 1		< 7,1,'{',special_symbols >
+FNO 1 FSCOPE 1		< 8,7,'int',int >
 
 DEBUG 1	 contains key 1
-FNO 2 FSCOPE 1	< 19,15,'status',identifier >
-FNO 2 FSCOPE 1	< 20,10,'int',keyword >
-FNO 2 FSCOPE 1	< 20,11,'(',special_symbols >
-FNO 2 FSCOPE 1	< 20,34,'"Enter array elements:',string_literal >
-FNO 2 FSCOPE 1	< 20,36,')',special_symbols >
-FNO 2 FSCOPE 1	< 21,7,'for',keyword >
-FNO 2 FSCOPE 1	< 21,8,'(',special_symbols >
+FNO 1 FSCOPE 1		< 8,9,'i',identifier >
+FNO 1 FSCOPE 1		< 9,7,'for',keyword >
+FNO 1 FSCOPE 1		< 9,8,'(',special_symbols >
 
 DEBUG 1	 contains key 0
-FNO 2 FSCOPE 1	< 21,10,'i',identifier >
-FNO 2 FSCOPE 1	< 21,12,'=',relational_operators >
-FNO 2 FSCOPE 1	< 21,14,'0',constant >
-FNO 2 FSCOPE 1	< 21,15,';',special_symbols >
+FNO 1 FSCOPE 1		< 9,10,'i',identifier >
+FNO 1 FSCOPE 1		< 9,12,'=',relational_operators >
+FNO 1 FSCOPE 1		< 9,14,'0',constant >
+FNO 1 FSCOPE 1		< 9,15,';',special_symbols >
 
 DEBUG 1	 contains key 0
-FNO 2 FSCOPE 1	< 21,17,'i',identifier >
-FNO 2 FSCOPE 1	< 21,21,'10',constant >
-FNO 2 FSCOPE 1	< 21,22,';',special_symbols >
-FNO 2 FSCOPE 1	< 21,24,'++',increment_decrement_operators >
+FNO 1 FSCOPE 1		< 9,17,'i',identifier >
+FNO 1 FSCOPE 1		< 9,21,'10',constant >
+FNO 1 FSCOPE 1		< 9,22,';',special_symbols >
 
 DEBUG 1	 contains key 0
-FNO 2 FSCOPE 1	< 21,26,'i',identifier >
-FNO 2 FSCOPE 1	< 21,27,')',special_symbols >
+FNO 1 FSCOPE 1		< 9,24,'i',identifier >
+FNO 1 FSCOPE 1		< 9,26,'++',increment_decrement_operators >
+FNO 1 FSCOPE 1		< 9,27,')',special_symbols >
+FNO 1 FSCOPE 2		< 10,4,'{',special_symbols >
+FNO 1 FSCOPE 2		< 11,10,'if',keyword >
+FNO 1 FSCOPE 2		< 11,11,'(',special_symbols >
 
 DEBUG 1	 contains key 0
-FNO 2 FSCOPE 1	< 22,13,'scanf',identifier >
-FNO 2 FSCOPE 1	< 22,14,'(',special_symbols >
-FNO 2 FSCOPE 1	< 22,18,'"%d',string_literal >
-FNO 2 FSCOPE 1	< 22,19,',',special_symbols >
-FNO 2 FSCOPE 1	< 22,21,'&',bitwise_operators >
-FNO 2 FSCOPE 1	< 22,22,'[',special_symbols >
+FNO 1 FSCOPE 2		< 11,15,'arr',identifier >
+FNO 1 FSCOPE 2		< 11,16,'[',special_symbols >
 
 DEBUG 1	 contains key 0
-FNO 2 FSCOPE 1	< 22,24,'i',identifier >
-FNO 2 FSCOPE 1	< 22,26,']',special_symbols >
-FNO 2 FSCOPE 1	< 22,27,';',special_symbols >
+FNO 1 FSCOPE 2		< 11,18,'i',identifier >
+FNO 1 FSCOPE 2		< 11,19,']',special_symbols >
+FNO 1 FSCOPE 2		< 11,21,'==',relational_operators >
 
 DEBUG 1	 contains key 0
-FNO 2 FSCOPE 1	< 23,7,'sum',identifier >
-FNO 2 FSCOPE 1	< 23,9,'=',relational_operators >
+FNO 1 FSCOPE 2		< 11,25,'key',identifier >
+FNO 1 FSCOPE 2		< 11,26,')',special_symbols >
+FNO 1 FSCOPE 2		< 12,18,'return',keyword >
+FNO 1 FSCOPE 2		< 12,23,'true',keyword >
+FNO 1 FSCOPE 2		< 12,24,';',special_symbols >
+FNO 1 FSCOPE 2		< 13,12,'else',keyword >
+FNO 1 FSCOPE 2		< 13,30,'return',keyword >
+FNO 1 FSCOPE 2		< 13,36,'false',keyword >
+FNO 1 FSCOPE 2		< 13,37,';',special_symbols >
+FNO 1 FSCOPE 1		< 14,4,'}',special_symbols >
+FNO 1 FSCOPE 0		< 15,1,'}',special_symbols >
+FNO 1 FSCOPE 0		< 16,5,'void',void >
+
+DEBUG 1	 contains key 1
+
+DEBUG 2 : ( 
+
+DEBUG 3 FUNC inserted main
+FNO 2 FSCOPE 0		< 16,10,'main',identifier >
+FNO 2 FSCOPE 0		< 16,12,'(',special_symbols >
+FNO 2 FSCOPE 1		< 17,1,'{',special_symbols >
+FNO 2 FSCOPE 1		< 18,7,'int',int >
+
+DEBUG 1	 contains key 1
+FNO 2 FSCOPE 1		< 18,9,'a',identifier >
+FNO 2 FSCOPE 1		< 18,10,',',special_symbols >
+
+DEBUG 1	 contains key 1
+FNO 2 FSCOPE 1		< 18,12,'i',identifier >
+
+DEBUG 1	 contains key 1
+FNO 2 FSCOPE 1		< 18,16,'res',identifier >
+FNO 2 FSCOPE 1		< 19,8,'bool',bool >
+
+DEBUG 1	 contains key 1
+FNO 2 FSCOPE 1		< 19,15,'status',identifier >
+FNO 2 FSCOPE 1		< 20,10,'int',keyword >
+FNO 2 FSCOPE 1		< 20,11,'(',special_symbols >
+FNO 2 FSCOPE 1		< 20,34,'"Enter array elements:',string_literal >
+FNO 2 FSCOPE 1		< 20,36,')',special_symbols >
+FNO 2 FSCOPE 1		< 21,7,'for',keyword >
+FNO 2 FSCOPE 1		< 21,8,'(',special_symbols >
 
 DEBUG 1	 contains key 0
-FNO 2 FSCOPE 1	< 23,11,'a',identifier >
-FNO 2 FSCOPE 1	< 23,12,'[',special_symbols >
-FNO 2 FSCOPE 1	< 23,14,'0',constant >
-FNO 2 FSCOPE 1	< 23,15,']',special_symbols >
-FNO 2 FSCOPE 1	< 23,17,'+',assignment_operators >
+FNO 2 FSCOPE 1		< 21,10,'i',identifier >
+FNO 2 FSCOPE 1		< 21,12,'=',relational_operators >
+FNO 2 FSCOPE 1		< 21,14,'0',constant >
+FNO 2 FSCOPE 1		< 21,15,';',special_symbols >
 
 DEBUG 1	 contains key 0
-FNO 2 FSCOPE 1	< 23,19,'a',identifier >
-FNO 2 FSCOPE 1	< 23,20,'[',special_symbols >
-FNO 2 FSCOPE 1	< 23,22,'4',constant >
-FNO 2 FSCOPE 1	< 23,24,']',special_symbols >
+FNO 2 FSCOPE 1		< 21,17,'i',identifier >
+FNO 2 FSCOPE 1		< 21,21,'10',constant >
+FNO 2 FSCOPE 1		< 21,22,';',special_symbols >
+FNO 2 FSCOPE 1		< 21,24,'++',increment_decrement_operators >
 
 DEBUG 1	 contains key 0
-FNO 2 FSCOPE 1	< 24,10,'status',identifier >
-FNO 2 FSCOPE 1	< 24,12,'=',relational_operators >
+FNO 2 FSCOPE 1		< 21,26,'i',identifier >
+FNO 2 FSCOPE 1		< 21,27,')',special_symbols >
 
 DEBUG 1	 contains key 0
-FNO 2 FSCOPE 1	< 24,19,'search',identifier >
-FNO 2 FSCOPE 1	< 24,20,'(',special_symbols >
+FNO 2 FSCOPE 1		< 22,13,'scanf',identifier >
+FNO 2 FSCOPE 1		< 22,14,'(',special_symbols >
+FNO 2 FSCOPE 1		< 22,18,'"%d',string_literal >
+FNO 2 FSCOPE 1		< 22,19,',',special_symbols >
+FNO 2 FSCOPE 1		< 22,21,'&',bitwise_operators >
+FNO 2 FSCOPE 1		< 22,22,'[',special_symbols >
 
 DEBUG 1	 contains key 0
-FNO 2 FSCOPE 1	< 24,22,'a',identifier >
-FNO 2 FSCOPE 1	< 24,23,',',special_symbols >
+FNO 2 FSCOPE 1		< 22,24,'i',identifier >
+FNO 2 FSCOPE 1		< 22,26,']',special_symbols >
+FNO 2 FSCOPE 1		< 22,27,';',special_symbols >
 
 DEBUG 1	 contains key 0
-FNO 2 FSCOPE 1	< 24,27,'sum',identifier >
-FNO 2 FSCOPE 1	< 24,29,')',special_symbols >
-FNO 2 FSCOPE 1	< 25,10,'int',keyword >
-FNO 2 FSCOPE 1	< 25,11,'(',special_symbols >
-FNO 2 FSCOPE 1	< 25,15,'"%d',string_literal >
-FNO 2 FSCOPE 1	< 25,16,',',special_symbols >
+FNO 2 FSCOPE 1		< 23,7,'res',identifier >
+FNO 2 FSCOPE 1		< 23,9,'=',relational_operators >
 
 DEBUG 1	 contains key 0
-FNO 2 FSCOPE 1	< 25,23,'status',identifier >
-FNO 2 FSCOPE 1	< 25,25,')',special_symbols >
-FNO 2 FSCOPE 0	< 26,1,'}',special_symbols >
+FNO 2 FSCOPE 1		< 23,13,'sum',identifier >
+FNO 2 FSCOPE 1		< 23,14,'(',special_symbols >
+
+DEBUG 1	 contains key 0
+FNO 2 FSCOPE 1		< 23,16,'a',identifier >
+FNO 2 FSCOPE 1		< 23,17,'[',special_symbols >
+FNO 2 FSCOPE 1		< 23,19,'0',constant >
+FNO 2 FSCOPE 1		< 23,21,']',special_symbols >
+
+DEBUG 1	 contains key 0
+FNO 2 FSCOPE 1		< 23,23,'a',identifier >
+FNO 2 FSCOPE 1		< 23,24,'[',special_symbols >
+FNO 2 FSCOPE 1		< 23,26,'4',constant >
+FNO 2 FSCOPE 1		< 23,28,']',special_symbols >
+FNO 2 FSCOPE 1		< 23,29,';',special_symbols >
+
+DEBUG 1	 contains key 0
+FNO 2 FSCOPE 1		< 24,10,'status',identifier >
+FNO 2 FSCOPE 1		< 24,12,'=',relational_operators >
+
+DEBUG 1	 contains key 0
+FNO 2 FSCOPE 1		< 24,19,'search',identifier >
+FNO 2 FSCOPE 1		< 24,20,'(',special_symbols >
+
+DEBUG 1	 contains key 0
+FNO 2 FSCOPE 1		< 24,22,'a',identifier >
+FNO 2 FSCOPE 1		< 24,23,',',special_symbols >
+
+DEBUG 1	 contains key 0
+FNO 2 FSCOPE 1		< 24,27,'res',identifier >
+FNO 2 FSCOPE 1		< 24,29,')',special_symbols >
+FNO 2 FSCOPE 1		< 25,10,'int',keyword >
+FNO 2 FSCOPE 1		< 25,11,'(',special_symbols >
+FNO 2 FSCOPE 1		< 25,15,'"%d',string_literal >
+FNO 2 FSCOPE 1		< 25,16,',',special_symbols >
+
+DEBUG 1	 contains key 0
+FNO 2 FSCOPE 1		< 25,23,'status',identifier >
+FNO 2 FSCOPE 1		< 25,25,')',special_symbols >
+FNO 2 FSCOPE 0		< 26,1,'}',special_symbols >
+
 Finished Lexical analysis
 
 Symbol Table for Function: sum
 
-	Index	Lexeme		Type	Size
-        0                          0
-        1      sum      int    22057
-        2        a      int    22057
-        3        b      int    22057
-        4        s      int    22057
-        0                          0
-        0                          0
-        0                          0
+	Index	Lexeme	Type	Size
+        1      sum      int        4
+        2        a      int        4
+        3        b      int        4
+        4        s      int        4
 
 
 Symbol Table for Function: search
 
-	Index	Lexeme		Type	Size
-        0                          0
-        1   search     bool    22057
-        2       rr      int    22057
-        3      key      int    22057
-        4        i             22057
-        5        i             22057
-        6      arr             22057
+	Index	Lexeme	Type	Size
+        1   search     bool        1
+        2       rr      int        4
+        3      key      int        4
 
 
 Symbol Table for Function: main
 
-	Index	Lexeme		Type	Size
-        0                          0
-        1     main     void    22057
-        2        a      int    22057
-        3        i      int    22057
-        4      sum             22057
-        5   status             22057
-        6    scanf             22057
-        7   search             22057
+	Index	Lexeme	Type	Size
+        1        a      int        4
+        2        i      int        4
+
 Finished Symbol Table Entries

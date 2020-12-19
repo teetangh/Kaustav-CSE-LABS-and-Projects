@@ -16,12 +16,12 @@ bool search(int *arr, int key)
 }
 void main()
 {
-    int a[20], i, sum;
+    int a[20], i, res;
     bool status;
     printf("Enter array elements:");
     for (i = 0; i < 10; ++i)
         scanf("%d", &a[i]);
-    sum = a[0] + a[4];
-    status = search(a, sum);
+    res = sum(a[0], a[4]);
+    status = search(a, res);
     printf("%d", status);
 }
