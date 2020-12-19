@@ -48,8 +48,8 @@ struct global_symbol_table_data
 struct global_symbol_table_data global_symbol_table[10];
 struct symbol_table_entry local_symbol_table[10][100];
 
-int function_number = 0;          // Denotes which Function and ALL tokens within that function
-int local_symbol_table_index = 0; // Denotes the token INDEX within that function
+int function_number = -1;          // Denotes which Function and ALL tokens within that function
+int local_symbol_table_index = -1; // Denotes the token INDEX within that function
 
 // Symbol Table Functions
 void insert_into_local_symbol_table(struct token *retToken)
@@ -60,6 +60,8 @@ void insert_into_local_symbol_table(struct token *retToken)
     {
         if (strcmp(retToken->lexeme, local_symbol_table[function_number][i].token.lexeme) == 0)
             return;
+        // if (strncmp(retToken->lexeme, local_symbol_table[function_number][i].token.lexeme, strlen(retToken->lexeme)) == 0)
+        //     return;
     }
 
     ste.token = *retToken;
@@ -92,6 +94,7 @@ int function_scope = 0;
 char ca, cb;
 char buffer[100];
 char dataType_buffer[100]; // For symbol Table Entry
+bool contains_keyword_datatype = false;
 
 char keywords_table[][10] = {
     "auto", "break", "bool", "case", "char", "const", "continue", "default", "do",
@@ -367,7 +370,6 @@ struct token *getNextToken(FILE *fp)
             int alphabet = 0;
             int digits = 0;
             bool contains_keyword = false;
-            bool contains_keyword_datatype = false;
 
             for (int i = 0; i < strlen(buffer); ++i)
             {
@@ -440,56 +442,62 @@ struct token *getNextToken(FILE *fp)
                 /*****************************************
                 TODO: Type of the Identifier(variable(int,char,float...),function...)
                 *****************************************/
-                if ((contains_keyword_datatype == true)) // && strlen(dataType_buffer) > 0)
+                printf("\nDEBUG 1\t contains key %d\n", contains_keyword_datatype);
+                if (contains_keyword_datatype == true) // && strlen(dataType_buffer) > 0)
                 {
-                    while (ca == ' ' || ca == '\n' || ca == '\t')
-                    {
+
+                    ca = fgetc(fp);
+                    while (ca == ' ' || ca == '\t')
                         ca = fgetc(fp);
 
-                        //Variables
-                        if (ca == '[')
-                        {
-                            int array_size = 0;
-                            while (ca != ']')
-                            {
-                                ca = fgetc(fp);
-                                array_size = (array_size * 10) + (ca - '0');
-                            }
-                            // // Being specific about the return type
-                            // strcpy(retToken->type, dataType_buffer);
-                            return retToken;
-                        }
-                        else if (ca == ',')
-                        {
-                            // // Being specific about the return type
-                            // strcpy(retToken->type, dataType_buffer);
-                            return retToken;
-                        }
-                        //Function
-                        else if (ca == '(')
-                        {
-                            ungetc(ca, fp);
-                            if (function_scope) // Function Calling
-                            {
-                                strcpy(retToken->type, "function");
-                                return retToken;
-                            }
-                            else // Function Definition
-                            {
-                                strcpy(global_symbol_table[++function_number].function_name, buffer);
-                                global_symbol_table->number_of_tokens++;
-                                local_symbol_table_index = 0;
-                                return retToken;
-                            }
-                        }
-                    }
-
-                    if (ca == ';')
+                    //Variables
+                    if (ca == '[')
                     {
-                        contains_keyword_datatype = false;
-                        memset(dataType_buffer, '\0', sizeof(*dataType_buffer));
+                        int array_size = 0;
+                        while (ca != ']')
+                        {
+                            ca = fgetc(fp);
+                            array_size = (array_size * 10) + (ca - '0');
+                        }
+                        // // Being specific about the return type
+                        // strcpy(retToken->type, dataType_buffer);
                         return retToken;
                     }
+                    else if (ca == ',')
+                    {
+                        // // Being specific about the return type
+                        // strcpy(retToken->type, dataType_buffer);
+
+                        return retToken;
+                    }
+                    //Function
+                    else if (ca == '(')
+                    {
+                        printf("\nDEBUG 2\n");
+
+                        ungetc(ca, fp);
+                        if (function_scope) // Function Calling
+                        {
+                            strcpy(retToken->type, "function");
+                            return retToken;
+                        }
+                        else // Function Definition
+                        {
+                            function_number++;
+                            printf("\nDEBUG 3 %s\n", buffer);
+                            strcpy(global_symbol_table[function_number].function_name, buffer);
+                            global_symbol_table->number_of_tokens++;
+                            local_symbol_table_index = 0;
+                            return retToken;
+                        }
+                    }
+                }
+
+                if (ca == ';')
+                {
+                    contains_keyword_datatype = false;
+                    memset(dataType_buffer, '\0', sizeof(*dataType_buffer));
+                    return retToken;
                 }
 
                 return retToken;

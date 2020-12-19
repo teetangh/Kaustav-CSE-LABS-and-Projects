@@ -37,10 +37,10 @@ char ca, cb;
 char buffer[100];
 
 char keywords_table[][10] = {
-	"auto", "break", "case", "char", "const", "continue", "default", "do",
-	"double", "else", "enum", "extern", "float", "for", "goto", "if", "int", "long", "register",
+	"auto", "break", "bool", "case", "char", "const", "continue", "default", "do",
+	"double", "else", "enum", "extern", "false", "float", "for", "goto", "if", "int", "long", "register",
 	"return", "short", "signed", "sizeof", "static", "struct",
-	"switch", "typedef", "union", "unsigned", "void", "volatile", "while"};
+	"switch", "typedef", "true", "union", "unsigned", "void", "volatile", "while"};
 
 char special_symbols[][2] = {
 	"`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_",
