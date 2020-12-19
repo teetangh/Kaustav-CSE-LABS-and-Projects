@@ -1,0 +1,122 @@
+First Set
+Non-Terminal Symbol	First Set
+main                    main
+(                           (
+)                           )
+{                           {
+}                           }
+;                           ;
+ε                           ε
+int                         int
+char                            char
+id                          id
+,                           ,
+[                           [
+number                          number
+]                           ]
+=                           =
+simple-expn                         simple-expn
+num                         num
+if                          if
+else                            else
+while                           while
+for                         for
+==                          ==
+!=                          !=
+<=                          <=
+>=                          >=
+>                           >
+<                           <
++                           +
+-                           -
+*                           *
+/                           /
+%                           %
+Program	main
+declarations            ε, int, char
+data_type           int, char
+identifier_list     id
+statement_list      ε, id, while, for, if
+assign_stat         id
+eprime              ε, ==, !=, <=, >=, >, <
+seprime             ε, +, -
+tprime              ε, *, /, %
+factor              id, num
+decision_stat               if
+dprime              else, ε
+looping_stat                while, for
+relop               ==, !=, <=, >=, >, <
+addop               +, -
+mulop               *, /, %
+statement               id, while, for, if
+term                id, num
+simple_expn             id, num
+expn                id, num
+
+Follow Set
+Non-Terminal Symbol	Follow Set
+Program             $
+declarations                ), id, while, for, if
+data_type               id
+identifier_list             ;
+statement_list              }
+statement               id, while, for, if, }
+assign_stat             ;, )
+expn                ), ;
+eprime              ), ;
+simple_expn             ==, !=, <=, >=, >, <, ), ;
+seprime             ==, !=, <=, >=, >, <, ), ;
+term                +, -, ==, !=, <=, >=, >, <, ), ;
+tprime              +, -, ==, !=, <=, >=, >, <, ), ;
+factor              *, /, %, +, -, ==, !=, <=, >=, >, <, ), ;
+decision_stat               id, while, for, if, }
+dprime              id, while, for, if, }
+looping_stat                id, while, for, if, }
+relop               simple-expn
+addop               id, num
+mulop               id, num
+
+Predict Set
+#	Expression	                                Predict
+1	Program             →           main ( ) { declarations statement_list }	main
+2	declarations            →          data_type identifier_list ; declarations	int, char
+3	declarations            →          ε	), id, while, for, if
+4	data_type           →             int	int
+5	data_type           →             char	char
+6	identifier_list             →           id	id
+7	identifier_list             →           id , identifier_list	id
+8	identifier_list             →           id [ number ] , identifier_list	id
+9	identifier_list             →           id [ number ]	id
+10	statement_list          →            statement statement_list	id, while, for, if
+11	statement_list          →            ε	}
+12	statement           →             assign_stat ;	id
+13	statement           →             decision_stat	if
+14	statement           →             looping_stat	while, for
+15	assign_stat             →           id = expn	id
+16	expn            →          simple_expn eprime	id, num
+17	eprime          →            relop simple-expn	==, !=, <=, >=, >, <
+18	eprime          →            ε	), ;
+19	simple_expn             →           term seprime	id, num
+20	seprime             →           addop term seprime	+, -
+21	seprime             →           ε	==, !=, <=, >=, >, <, ), ;
+22	term            →          factor tprime	id, num
+23	tprime          →            mulop factor tprime	*, /, %
+24	tprime          →            ε	+, -, ==, !=, <=, >=, >, <, ), ;
+25	factor          →            id	id
+26	factor          →            num	num
+27	decision_stat           →             if ( expn ) { statement_list } dprime	if
+28	dprime          →            else { statement_list }	else
+29	dprime          →            ε	id, while, for, if, }
+30	looping_stat            →          while ( expn ) { statement_list }	while
+31	looping_stat            →          for ( assign_stat ; expn ; assign_stat ) { statement_list }	for
+32	relop           →             ==	==
+33	relop           →             !=	!=
+34	relop           →             <=	<=
+35	relop           →             >=	>=
+36	relop           →             >	>
+37	relop           →             <	<
+38	addop           →             +	+
+39	addop           →             -	-
+40	mulop           →             *	*
+41	mulop           →             /	/
+42	mulop           →             %	%
