@@ -44,7 +44,7 @@ int main(int argc, char const *argv[])
             printf("You wrote: %s", shared_stuff->some_text);
             sleep(rand() % 4);
             shared_stuff->written_by_you = 0;
-            if (strcmp(shared_stuff->some_text, "end", 3) == 0)
+            if (strncmp(shared_stuff->some_text, "end", 3) == 0)
                 running = 0;
         }
     }

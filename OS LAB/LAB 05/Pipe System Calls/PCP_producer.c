@@ -36,7 +36,9 @@ int main(int argc, char const *argv[])
 
     if (pipe_fd != -1)
     {
+        fgets(buffer, 10, stdin);
         result = write(pipe_fd, buffer, sizeof(buffer));
+        printf("Producer %s \n", buffer);
         if (result == -1)
         {
             fprintf(stderr, "Write Error on pipe\n");

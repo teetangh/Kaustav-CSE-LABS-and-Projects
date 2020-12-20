@@ -31,6 +31,7 @@ int main(int argc, char const *argv[])
             result = read(pipe_fd, buffer, BUFFER_SIZE);
             bytes_read += result;
         } while (result > 0);
+        printf("Consumer %s \n", buffer);
         (void)close(pipe_fd);
     }
 
