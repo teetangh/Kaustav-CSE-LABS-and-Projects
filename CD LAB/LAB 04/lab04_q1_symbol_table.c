@@ -22,9 +22,10 @@
 
 int main(int argc, char const *argv[])
 {
-    // FILE *fp = fopen("lab04_q1_input.c", "r");
-    FILE *fp = fopen("input.c", "r");
-    freopen("symbol_table_temp_output.txt", "w", stdout);
+    FILE *fp = fopen("input_file1.c", "r");
+    // FILE *fp = fopen("input_file2_multi_function.c", "r");
+
+    freopen("lab04_symbol_table_output.txt", "w", stdout);
 
     if (fp == NULL)
     {
@@ -38,7 +39,7 @@ int main(int argc, char const *argv[])
         printf("FNO %d FSCOPE %d\t\t", function_number, function_scope);
         printf("< %d,%d,'%s',%s >\n", retToken->row, retToken->column, retToken->lexeme, retToken->type);
 
-        insert_into_local_symbol_table_helper(retToken);  
+        insert_into_local_symbol_table_helper(retToken);
     }
 
     printf("\n*******************Finished Lexical analysis*******************\n");

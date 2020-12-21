@@ -1,23 +1,4 @@
-// Copyright (c) 21 December 2020 Kaustav Ghosh
-
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
-
-// The above copyright notice and this permission notice shall be included in all
-// copies or substantial portions of the Software.
-
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-// SOFTWARE.
-
+﻿
 // #include "/home/student/Desktop/KaustavLABS3/CD LAB/LAB 04/lab04_q1_symbol_table_header.h"
 #include "/home/kaustav/Desktop/KaustavLABS3/CD LAB/LAB 04/lab04_q1_symbol_table_header.h"
 
@@ -388,7 +369,7 @@ int main(int argc, char const *argv[])
 {
 
     fp = fopen("lab08_RDP_input.c", "r");
-    freopen("lab08_RDP_output.txt", "w", stdout);
+    // freopen("lab07_RDP_output.txt", "w", stdout);
 
     if (fp == NULL)
     {
@@ -404,3 +385,40 @@ int main(int argc, char const *argv[])
 
     return 0;
 }
+INPUT
+
+main(){
+int a,b,x,y,z;
+char c;
+a=23 * 13 + 15 + 13 + 7 * 45 + 13;
+c = 45 + 67 * 23;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

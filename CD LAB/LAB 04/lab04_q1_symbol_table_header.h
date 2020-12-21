@@ -525,7 +525,7 @@ struct token *getNextToken(FILE *fp)
                     //Function
                     else if (ca == '(')
                     {
-                        ungetc(ca, fp);
+                        // ungetc(ca, fp);
                         // printf("\nDEBUG 2 : %c \n", ca);
                         if (!function_scope) // Function Definition
                         {
