@@ -10,7 +10,5 @@ Token Scanned < main , function >
  Token Scanned < ; , special_symbols > 
  Token Scanned < a , identifier > 
  Token Scanned < = , special_symbols > 
- Token Scanned < 23 , constant > 
- Token Scanned < } , special_symbols > 
- ; expected
-Error at Row 4 : Column 7 ::
+ ; expected 
+Error at Row 4 : Column 3 ::

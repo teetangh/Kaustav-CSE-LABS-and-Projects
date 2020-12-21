@@ -38,26 +38,7 @@ int main(int argc, char const *argv[])
         printf("FNO %d FSCOPE %d\t\t", function_number, function_scope);
         printf("< %d,%d,'%s',%s >\n", retToken->row, retToken->column, retToken->lexeme, retToken->type);
 
-        if (strncmp(retToken->type, "function", strlen("function")) == 0)
-        {
-            insert_into_local_symbol_table(retToken, -1);
-        }
-        if (strncmp(retToken->type, "identifier", strlen("identifier")) == 0)
-        {
-            strcpy(retToken->type, dataType_buffer);
-
-            if ((strcmp(dataType_buffer, "void") == 0))
-                insert_into_local_symbol_table(retToken, 0 * array_size);
-            if ((strcmp(dataType_buffer, "char") == 0 || (strcmp(dataType_buffer, "bool") == 0)))
-                insert_into_local_symbol_table(retToken, 1 * array_size);
-            if ((strcmp(dataType_buffer, "int") == 0 || (strcmp(dataType_buffer, "float") == 0)))
-                insert_into_local_symbol_table(retToken, 4 * array_size);
-            if ((strcmp(dataType_buffer, "long") == 0 || (strcmp(dataType_buffer, "double") == 0)))
-                insert_into_local_symbol_table(retToken, 8 * array_size);
-
-            if (array_size > 1)
-                array_size = 1;
-        }
+        insert_into_local_symbol_table_helper(retToken);  
     }
 
     printf("\n*******************Finished Lexical analysis*******************\n");

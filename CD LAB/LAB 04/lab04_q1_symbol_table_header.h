@@ -51,6 +51,23 @@ struct symbol_table_entry local_symbol_table[10][100];
 int function_number = -1;          // Denotes which Function and ALL tokens within that function
 int local_symbol_table_index = -1; // Denotes the token INDEX within that function
 
+// Functions for Symbol Table Handling
+void insert_into_local_symbol_table(struct token *retToken, int dataType_size);
+void insert_into_local_symbol_table_helper(struct token *retToken);
+void display_local_symbol_tables();
+
+int row = 1;
+int column = 1;
+int function_scope = 0;
+int array_size = 1;
+
+char ca, cb;
+char buffer[100];
+char dataType_buffer[100]; // For symbol Table Entry
+
+bool contains_keyword_datatype = false;
+bool isArray = false;
+
 // Symbol Table Functions
 void insert_into_local_symbol_table(struct token *retToken, int dataType_size)
 {
@@ -74,6 +91,30 @@ void insert_into_local_symbol_table(struct token *retToken, int dataType_size)
     global_symbol_table[function_number].number_of_tokens++;
 }
 
+void insert_into_local_symbol_table_helper(struct token *retToken)
+{
+        if (strncmp(retToken->type, "function", strlen("function")) == 0)
+        {
+            insert_into_local_symbol_table(retToken, -1);
+        }
+        if (strncmp(retToken->type, "identifier", strlen("identifier")) == 0)
+        {
+            strcpy(retToken->type, dataType_buffer);
+
+            if ((strcmp(dataType_buffer, "void") == 0))
+                insert_into_local_symbol_table(retToken, 0 * array_size);
+            if ((strcmp(dataType_buffer, "char") == 0 || (strcmp(dataType_buffer, "bool") == 0)))
+                insert_into_local_symbol_table(retToken, 1 * array_size);
+            if ((strcmp(dataType_buffer, "int") == 0 || (strcmp(dataType_buffer, "float") == 0)))
+                insert_into_local_symbol_table(retToken, 4 * array_size);
+            if ((strcmp(dataType_buffer, "long") == 0 || (strcmp(dataType_buffer, "double") == 0)))
+                insert_into_local_symbol_table(retToken, 8 * array_size);
+
+            if (array_size > 1)
+                array_size = 1;
+        }
+}
+
 void display_local_symbol_tables()
 {
     for (int i = 0; i <= function_number; i++)
@@ -89,18 +130,6 @@ void display_local_symbol_tables()
     }
 }
 
-int row = 1;
-int column = 1;
-int function_scope = 0;
-int array_size = 1;
-
-char ca, cb;
-char buffer[100];
-char dataType_buffer[100]; // For symbol Table Entry
-
-bool contains_keyword_datatype = false;
-bool isArray = false;
-
 char keywords_table[][10] = {
     "auto", "break", "bool", "case", "char", "const", "continue", "default", "do",
     "double", "else", "enum", "extern", "false", "float", "for", "goto", "if", "int", "long", "register",
@@ -108,8 +137,8 @@ char keywords_table[][10] = {
     "switch", "typedef", "true", "union", "unsigned", "void", "volatile", "while"};
 
 char special_symbols[][3] = {
-    "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_",
-    "+", "-", "=", "[", "]", "{", "}", "|", ";", ":", ",", ".", "?", "\\"};
+    "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", ">" , "<" ,
+    "+", "-", "=", "[", "]", "{", "}", "|", ";", ":", ",", ".", "?", "/" , "\\"};
 
 char arithmetic_operators[][3] = {
     "+", "-", "*", "/", "%"};
@@ -457,7 +486,7 @@ struct token *getNextToken(FILE *fp)
                     if (!function_scope) // Function Definition
                     {
                         // printf("\nDEBUG 3 FUNC inserted %s\n", buffer);
-                        function_number++;
+                        // function_number++;
                         strcpy(global_symbol_table[function_number].function_name, buffer);
                         // global_symbol_table->number_of_tokens++;
                         local_symbol_table_index = 0;

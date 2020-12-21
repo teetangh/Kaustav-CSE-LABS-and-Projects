@@ -1,3 +1,4 @@
+// #include "/home/student/Desktop/KaustavLABS3/CD LAB/LAB 04/lab04_q1_symbol_table_header.h"
 #include "/home/kaustav/Desktop/KaustavLABS3/CD LAB/LAB 04/lab04_q1_symbol_table_header.h"
 
 int curr = 0;
@@ -31,16 +32,15 @@ void invalid()
     exit(0);
 }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 void tokenDebug()
 {
     printf("Token Scanned < %s , %s > \n ", currentToken->lexeme, currentToken->type);
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 void Program()
 {
-
     if (strcmp(currentToken->lexeme, "main") == 0)
     {
         currentToken = getNextToken(fp), tokenDebug();
@@ -52,51 +52,48 @@ void Program()
                 currentToken = getNextToken(fp), tokenDebug();
                 if (strcmp(currentToken->lexeme, "{") == 0)
                 {
+                    currentToken = getNextToken(fp), tokenDebug();
 
                     declarations();
                     assign_stat();
-
-                    currentToken = getNextToken(fp), tokenDebug();
                     if (strcmp(currentToken->lexeme, "}") == 0)
                         return;
                     else
                     {
-                        printf(" } expected\n");
+                        printf("} expected \n");
                         invalid();
                     }
                 }
                 else
                 {
-                    printf("{ Expected\n");
+                    printf("{ expected \n");
                     invalid();
                 }
             }
             else
             {
-                printf(") Expected\n");
+                printf(") expected \n");
                 invalid();
             }
         }
         else
         {
-            printf("( Expected\n");
+            printf("( expected \n");
             invalid();
         }
     }
     else
     {
-        printf("Main Expected\n");
+        printf("main expected \n");
         invalid();
     }
-};
+}
+
 void declarations()
 {
-
-    currentToken = getNextToken(fp), tokenDebug();
-
-    char *first_of_declarations[2] = {"int", "char"};
+    char first_of_declarations[2][10] = {"int", "char"};
     int flag = 0;
-    for (int i = 0; i < sizeof(first_of_declarations) / sizeof(first_of_declarations[0]); i++)
+    for (int i = 0; i < sizeof(first_of_declarations) / sizeof(first_of_declarations[0]); ++i)
     {
         if (strcmp(currentToken->lexeme, first_of_declarations[i]) == 0)
             flag++;
@@ -108,52 +105,59 @@ void declarations()
         identifier_list();
         if (strcmp(currentToken->lexeme, ";") == 0)
         {
+            currentToken = getNextToken(fp), tokenDebug();
             declarations();
         }
         else
         {
-            printf("; expected\n");
+            printf("here ; expected \n");
             invalid();
         }
     }
 }
+
 void data_type()
 {
-    // currentToken = getNextToken(fp), tokenDebug();
-    if ((strcmp(currentToken->lexeme, "int") == 0) || (strcmp(currentToken->lexeme, "char") == 0))
-        return;
-
-    else
+    if ((strcmp(currentToken->lexeme, "int") == 0 || strcmp(currentToken->lexeme, "char") == 0))
     {
-        printf("Backtrack please\n");
-        // invalid();
+        currentToken = getNextToken(fp), tokenDebug();
         return;
     }
-};
+}
+
 void identifier_list()
 {
-    currentToken = getNextToken(fp), tokenDebug();
     if (strcmp(currentToken->type, "identifier") == 0)
+    {
+        currentToken = getNextToken(fp), tokenDebug();
         identifier_list_factors();
+    }
     else
     {
         printf("identifier expected\n");
+        invalid();
     }
-};
+}
+
 void identifier_list_factors()
 {
-    currentToken = getNextToken(fp), tokenDebug();
     if (strcmp(currentToken->lexeme, ",") == 0)
+    {
+        currentToken = getNextToken(fp), tokenDebug();
         identifier_list();
+    }
 }
+
 void assign_stat()
 {
-    // currentToken = getNextToken(fp), tokenDebug();
-    if ((strcmp(currentToken->type, "identifier") == 0))
+    if (strcmp(currentToken->type, "identifier") == 0)
     {
         currentToken = getNextToken(fp), tokenDebug();
         if (strcmp(currentToken->lexeme, "=") == 0)
+        {
+            currentToken = getNextToken(fp), tokenDebug();
             assign_stat_factors();
+        }
         else
         {
             printf("= expected\n");
@@ -162,19 +166,21 @@ void assign_stat()
     }
     else
     {
-        printf("hi identifier expected\n");
+        printf("identifier expected\\n");
         invalid();
     }
 }
+
 void assign_stat_factors()
 {
-    currentToken = getNextToken(fp), tokenDebug();
-
-    if ((strcmp(currentToken->type, "identifier") == 0) || (strcmp(currentToken->type, "constant") == 0))
+    if (strcmp(currentToken->type, "identifier") || strcmp(currentToken->type, "constant") == 0)
     {
         currentToken = getNextToken(fp), tokenDebug();
         if (strcmp(currentToken->lexeme, ";") == 0)
+        {
+            currentToken = getNextToken(fp), tokenDebug();
             return;
+        }
         else
         {
             printf("; expected\n");
@@ -183,7 +189,7 @@ void assign_stat_factors()
     }
     else
     {
-        printf("identifier or constant expected\n");
+        printf("identifier or constant expected \n");
         invalid();
     }
 }
