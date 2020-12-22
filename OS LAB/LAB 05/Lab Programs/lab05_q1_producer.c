@@ -1,60 +1,49 @@
-// Run Consumer code first then the Producer code
-#include <unistd.h>
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <fcntl.h>
 #include <limits.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <sys/wait.h>
+#include <unistd.h>
 
-#define FIFO_NAME "/tmp/my_fifo"
+#define PIPE_NAME "/tmp/my_fifo"
 #define BUFFER_SIZE PIPE_BUF
-#define TEN_MEG (1024 * 1024 * 10)
 
 int main(int argc, char const *argv[])
 {
-    int pipe_fd;
-    int res;
+    int n, pipe_fd;
+    char buffer[BUFFER_SIZE];
     int open_mode = O_WRONLY;
-    int bytes_sent = 0;
-    int buffer;
+    int curr_number;
 
-    if (access(FIFO_NAME, F_OK) == -1)
+    if (access(PIPE_NAME, F_OK) == -1)
     {
-        res = mkfifo(FIFO_NAME, 0777);
+        int res = mkfifo(PIPE_NAME, 0777);
         if (res != 0)
         {
-            fprintf(stderr, "Could not create fifo %s \n", FIFO_NAME);
-            exit(EXIT_FAILURE);
+            fprintf(stderr, "Pipe createion failed \n");
+            exit(1);
         }
+        else
+            printf("Pipe created successfully \n");
     }
 
     printf("Process %d opening FIFO O_WRONLY \n", getpid());
-    pipe_fd = open(FIFO_NAME, open_mode);
+    pipe_fd = open(PIPE_NAME, open_mode);
     printf("Process %d result %d \n", getpid(), pipe_fd);
 
     if (pipe_fd != -1)
     {
-        int count=0;
-        while (count < 4)
+
+        printf("Enter the four intgers \n");
+        for (int i = 0; i < 4; i++)
         {
-            scanf("%d",&buffer);
-            res = write(pipe_fd, &buffer, sizeof(buffer));
-            if (res == -1)
-            {
-                fprintf(stderr, "Write error on pipe \n");
-                exit(EXIT_FAILURE);
-            }
-             count++;
+            scanf(" %d", &curr_number);
+            write(pipe_fd, &curr_number, 1);
         }
         (void)close(pipe_fd);
     }
-    else
-        exit(EXIT_FAILURE);
-
-    printf("Process %d finished \n", getpid());
     exit(EXIT_SUCCESS);
-
-    return 0;
 }
