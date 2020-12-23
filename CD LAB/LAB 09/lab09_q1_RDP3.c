@@ -1,4 +1,4 @@
-// Copyright (c) 21 December 2020 Kaustav Ghosh
+// Copyright (c) 23 December 2020 Kaustav Ghosh
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -176,7 +176,7 @@ void identifier_list()
     }
     else
     {
-        printf("identifier expected\n");
+        printf("identifier expected \n");
         invalid();
     }
 }
@@ -246,7 +246,7 @@ void assign_stat()
     }
     else
     {
-        printf("identifier expected\\n");
+        printf("identifier expected \n");
         invalid();
     }
 }
@@ -271,11 +271,11 @@ void statement()
             flag++;
             if (strcmp(currentToken->type, "identifier") == 0)
             {
-                currentToken = getNextToken(fp), tokenDebug();
+                // currentToken = getNextToken(fp), tokenDebug();
                 assign_stat();
                 if (strcmp(currentToken->lexeme, ";") == 0)
                 {
-                    // currentToken = getNextToken(fp), tokenDebug();
+                    currentToken = getNextToken(fp), tokenDebug();
                     return;
                 }
                 else

@@ -273,58 +273,104 @@ struct token *getNextToken(FILE *fp)
                 // Finding the category of the special symbol
                 for (int k = 0; k < sizeof(arithmetic_operators) / sizeof(arithmetic_operators[0]); ++k)
                 {
-                    if (strncmp(special_symbol_array, arithmetic_operators[k], strlen(arithmetic_operators[k])) == 0)
+
+                    if (strlen(arithmetic_operators[k]) == 2 && strncmp(special_symbol_array, arithmetic_operators[k], 2) == 0)
                     {
                         strcpy(retToken->type, "arithmetic_operators");
+                        multiple_char_symbol = true;
+                        break;
+                    }
+                    else if (strlen(arithmetic_operators[k]) == 1 && strncmp(special_symbol_array, arithmetic_operators[k], 1) == 0)
+                    {
+                        strcpy(retToken->type, "arithmetic_operators");
+                        multiple_char_symbol = false;
                         break;
                     }
                 }
 
                 for (int k = 0; k < sizeof(increment_decrement_operators) / sizeof(increment_decrement_operators[0]); ++k)
                 {
-                    if (strncmp(special_symbol_array, increment_decrement_operators[k], strlen(increment_decrement_operators[k])) == 0)
+
+                    if (strlen(increment_decrement_operators[k]) == 2 && strncmp(special_symbol_array, increment_decrement_operators[k], 2) == 0)
                     {
                         strcpy(retToken->type, "increment_decrement_operators");
+                        multiple_char_symbol = true;
+                        break;
+                    }
+                    else if (strlen(increment_decrement_operators[k]) == 1 && strncmp(special_symbol_array, increment_decrement_operators[k], 1) == 0)
+                    {
+                        strcpy(retToken->type, "increment_decrement_operators");
+                        multiple_char_symbol = false;
                         break;
                     }
                 }
+
                 for (int k = 0; k < sizeof(assignment_operators) / sizeof(assignment_operators[0]); ++k)
                 {
-                    if (strncmp(special_symbol_array, assignment_operators[k], strlen(assignment_operators[k])) == 0)
+
+                    if (strlen(assignment_operators[k]) == 2 && strncmp(special_symbol_array, assignment_operators[k], 2) == 0)
                     {
                         strcpy(retToken->type, "assignment_operators");
+                        multiple_char_symbol = true;
+                        break;
+                    }
+                    else if (strlen(assignment_operators[k]) == 1 && strncmp(special_symbol_array, assignment_operators[k], 1) == 0)
+                    {
+                        strcpy(retToken->type, "assignment_operators");
+                        multiple_char_symbol = false;
                         break;
                     }
                 }
+
                 for (int k = 0; k < sizeof(relational_operators) / sizeof(relational_operators[0]); ++k)
                 {
-                    if (strncmp(special_symbol_array, relational_operators[k], strlen(relational_operators[k])) == 0)
+
+                    if (strlen(relational_operators[k]) == 2 && strncmp(special_symbol_array, relational_operators[k], 2) == 0)
                     {
                         strcpy(retToken->type, "relational_operators");
+                        multiple_char_symbol = true;
+                        break;
+                    }
+                    else if (strlen(relational_operators[k]) == 1 && strncmp(special_symbol_array, relational_operators[k], 1) == 0)
+                    {
+                        strcpy(retToken->type, "relational_operators");
+                        multiple_char_symbol = false;
                         break;
                     }
                 }
+
                 for (int k = 0; k < sizeof(logical_operators) / sizeof(logical_operators[0]); ++k)
                 {
-                    if (strncmp(special_symbol_array, logical_operators[k], strlen(logical_operators[k])) == 0)
+
+                    if (strlen(logical_operators[k]) == 2 && strncmp(special_symbol_array, logical_operators[k], 2) == 0)
                     {
                         strcpy(retToken->type, "logical_operators");
+                        multiple_char_symbol = true;
+                        break;
+                    }
+                    else if (strlen(logical_operators[k]) == 1 && strncmp(special_symbol_array, logical_operators[k], 1) == 0)
+                    {
+                        strcpy(retToken->type, "logical_operators");
+                        multiple_char_symbol = false;
                         break;
                     }
                 }
-
                 for (int k = 0; k < sizeof(bitwise_operators) / sizeof(bitwise_operators[0]); ++k)
                 {
-                    if (strncmp(special_symbol_array, bitwise_operators[k], strlen(bitwise_operators[k])) == 0)
+
+                    if (strlen(bitwise_operators[k]) == 2 && strncmp(special_symbol_array, bitwise_operators[k], 2) == 0)
                     {
                         strcpy(retToken->type, "bitwise_operators");
+                        multiple_char_symbol = true;
+                        break;
+                    }
+                    else if (strlen(bitwise_operators[k]) == 1 && strncmp(special_symbol_array, bitwise_operators[k], 1) == 0)
+                    {
+                        strcpy(retToken->type, "bitwise_operators");
+                        multiple_char_symbol = false;
                         break;
                     }
                 }
-
-                for (int j = 0; j < sizeof(special_symbols) / sizeof(special_symbols[0]); ++j)
-                    if (cb == special_symbols[j][0])
-                        multiple_char_symbol = true;
 
                 // In-case the special symbol is not multiple characters,push the scanned character back into the file stream
                 if (multiple_char_symbol == false)
