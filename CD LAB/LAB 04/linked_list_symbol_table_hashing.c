@@ -3,18 +3,22 @@
 #include <string.h>
 #define TableLength 30
 
-enum tokenType{
-	EOFILE=-1,
-	LESS_THAN,LESS_THAN_OR_EQUAL,
-	GREATER_THAN,GREATER_THAN_OR_EQUAL,
-	EQUAL,NOT_EQUAL
+enum tokenType
+{
+	EOFILE = -1,
+	LESS_THAN,
+	LESS_THAN_OR_EQUAL,
+	GREATER_THAN,
+	GREATER_THAN_OR_EQUAL,
+	EQUAL,
+	NOT_EQUAL
 };
 
 struct token
 {
 	char *lexeme;
 	int index;
-	unsigned int rowno , colno;
+	unsigned int rowno, colno;
 	enum tokenType type;
 };
 
@@ -34,11 +38,8 @@ void Initialize()
 
 void Display()
 {
-
 }
 
-void HASH(char * str)
+void HASH(char *str)
 {
-	
 }
-
