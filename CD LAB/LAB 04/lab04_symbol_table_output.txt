@@ -1,178 +1,541 @@
-FNO -1 FSCOPE 0		< 1,5,'int',keyword >
-FNO 0 FSCOPE 0		< 1,9,'sum',function >
-FNO 0 FSCOPE 0		< 1,10,'(',special_symbols >
-FNO 0 FSCOPE 0		< 1,14,'int',keyword >
-FNO 0 FSCOPE 0		< 1,16,'a',identifier >
-FNO 0 FSCOPE 0		< 1,17,',',special_symbols >
-FNO 0 FSCOPE 0		< 1,21,'int',keyword >
-FNO 0 FSCOPE 0		< 1,23,'b',identifier >
-FNO 0 FSCOPE 0		< 1,24,')',special_symbols >
-FNO 0 FSCOPE 1		< 2,1,'{',special_symbols >
-FNO 0 FSCOPE 1		< 3,4,'int',keyword >
-FNO 0 FSCOPE 1		< 3,6,'s',identifier >
-FNO 0 FSCOPE 1		< 3,7,'=',special_symbols >
-FNO 0 FSCOPE 1		< 3,9,'a',identifier >
-FNO 0 FSCOPE 1		< 3,10,'+',special_symbols >
-FNO 0 FSCOPE 1		< 3,12,'b',identifier >
-FNO 0 FSCOPE 1		< 3,13,';',special_symbols >
-FNO 0 FSCOPE 1		< 4,7,'return',keyword >
-FNO 0 FSCOPE 1		< 4,9,'s',identifier >
-FNO 0 FSCOPE 1		< 4,10,';',special_symbols >
-FNO 0 FSCOPE 0		< 5,1,'}',special_symbols >
-FNO 0 FSCOPE 0		< 6,5,'bool',keyword >
-FNO 1 FSCOPE 0		< 6,12,'search',function >
-FNO 1 FSCOPE 0		< 6,13,'(',special_symbols >
-FNO 1 FSCOPE 0		< 6,17,'int',keyword >
-FNO 1 FSCOPE 0		< 6,18,'*',special_symbols >
-FNO 1 FSCOPE 0		< 6,22,'arr',identifier >
-FNO 1 FSCOPE 0		< 6,23,',',special_symbols >
-FNO 1 FSCOPE 0		< 6,27,'int',keyword >
-FNO 1 FSCOPE 0		< 6,31,'key',identifier >
-FNO 1 FSCOPE 0		< 6,32,')',special_symbols >
-FNO 1 FSCOPE 1		< 7,1,'{',special_symbols >
-FNO 1 FSCOPE 1		< 8,4,'int',keyword >
-FNO 1 FSCOPE 1		< 8,6,'i',identifier >
-FNO 1 FSCOPE 1		< 8,7,';',special_symbols >
-FNO 1 FSCOPE 1		< 9,4,'for',keyword >
-FNO 1 FSCOPE 1		< 9,5,'(',special_symbols >
-FNO 1 FSCOPE 1		< 9,7,'i',identifier >
-FNO 1 FSCOPE 1		< 9,8,'=',special_symbols >
-FNO 1 FSCOPE 1		< 9,10,'0',constant >
-FNO 1 FSCOPE 1		< 9,11,';',special_symbols >
-FNO 1 FSCOPE 1		< 9,13,'i',identifier >
-FNO 1 FSCOPE 1		< 9,14,'<',special_symbols >
-FNO 1 FSCOPE 1		< 9,17,'10',constant >
-FNO 1 FSCOPE 1		< 9,18,';',special_symbols >
-FNO 1 FSCOPE 1		< 9,20,'i',identifier >
-FNO 1 FSCOPE 1		< 9,22,'++',increment_decrement_operators >
-FNO 1 FSCOPE 1		< 9,23,')',special_symbols >
-FNO 1 FSCOPE 2		< 10,1,'{',special_symbols >
-FNO 1 FSCOPE 2		< 11,3,'if',keyword >
-FNO 1 FSCOPE 2		< 11,4,'(',special_symbols >
-FNO 1 FSCOPE 2		< 11,8,'arr',identifier >
-FNO 1 FSCOPE 2		< 11,9,'[',special_symbols >
-FNO 1 FSCOPE 2		< 11,11,'i',identifier >
-FNO 1 FSCOPE 2		< 11,12,']',special_symbols >
-FNO 1 FSCOPE 2		< 11,14,'==',relational_operators >
-FNO 1 FSCOPE 2		< 11,18,'key',identifier >
-FNO 1 FSCOPE 2		< 11,19,')',special_symbols >
-FNO 1 FSCOPE 2		< 12,7,'return',keyword >
-FNO 1 FSCOPE 2		< 12,12,'true',keyword >
-FNO 1 FSCOPE 2		< 12,13,';',special_symbols >
-FNO 1 FSCOPE 2		< 13,5,'else',keyword >
-FNO 1 FSCOPE 2		< 13,12,'return',keyword >
-FNO 1 FSCOPE 2		< 13,18,'false',keyword >
-FNO 1 FSCOPE 2		< 13,19,';',special_symbols >
-FNO 1 FSCOPE 1		< 14,1,'}',special_symbols >
-FNO 1 FSCOPE 0		< 15,1,'}',special_symbols >
-FNO 1 FSCOPE 0		< 16,5,'void',keyword >
-FNO 2 FSCOPE 0		< 16,10,'main',function >
-FNO 2 FSCOPE 0		< 16,11,'(',special_symbols >
-FNO 2 FSCOPE 0		< 16,12,')',special_symbols >
-FNO 2 FSCOPE 1		< 17,1,'{',special_symbols >
-FNO 2 FSCOPE 1		< 18,4,'int',keyword >
-FNO 2 FSCOPE 1		< 18,6,'a',identifier >
-FNO 2 FSCOPE 1		< 18,7,']',special_symbols >
-FNO 2 FSCOPE 1		< 18,8,'[',special_symbols >
-FNO 2 FSCOPE 1		< 18,11,'20',constant >
-FNO 2 FSCOPE 1		< 18,12,']',special_symbols >
-FNO 2 FSCOPE 1		< 18,13,',',special_symbols >
-FNO 2 FSCOPE 1		< 18,15,'i',identifier >
-FNO 2 FSCOPE 1		< 18,16,',',special_symbols >
-FNO 2 FSCOPE 1		< 18,20,'sum',identifier >
-FNO 2 FSCOPE 1		< 18,21,';',special_symbols >
-FNO 2 FSCOPE 1		< 19,5,'bool',keyword >
-FNO 2 FSCOPE 1		< 19,12,'status',identifier >
-FNO 2 FSCOPE 1		< 19,13,';',special_symbols >
-FNO 2 FSCOPE 1		< 20,7,'int',keyword >
-FNO 2 FSCOPE 1		< 20,8,'(',special_symbols >
-FNO 2 FSCOPE 1		< 20,31,'"Enter array elements:',string_literal >
-FNO 2 FSCOPE 1		< 20,32,')',special_symbols >
-FNO 2 FSCOPE 1		< 20,33,';',special_symbols >
-FNO 2 FSCOPE 1		< 21,4,'for',keyword >
-FNO 2 FSCOPE 1		< 21,5,'(',special_symbols >
-FNO 2 FSCOPE 1		< 21,7,'i',identifier >
-FNO 2 FSCOPE 1		< 21,8,'=',special_symbols >
-FNO 2 FSCOPE 1		< 21,10,'0',constant >
-FNO 2 FSCOPE 1		< 21,11,';',special_symbols >
-FNO 2 FSCOPE 1		< 21,13,'i',identifier >
-FNO 2 FSCOPE 1		< 21,14,'<',special_symbols >
-FNO 2 FSCOPE 1		< 21,17,'10',constant >
-FNO 2 FSCOPE 1		< 21,18,';',special_symbols >
-FNO 2 FSCOPE 1		< 21,20,'++',increment_decrement_operators >
-FNO 2 FSCOPE 1		< 21,22,'i',identifier >
-FNO 2 FSCOPE 1		< 21,23,')',special_symbols >
-FNO 2 FSCOPE 1		< 22,6,'scanf',function >
-FNO 2 FSCOPE 1		< 22,7,'(',special_symbols >
-FNO 2 FSCOPE 1		< 22,11,'"%d',string_literal >
-FNO 2 FSCOPE 1		< 22,12,',',special_symbols >
-FNO 2 FSCOPE 1		< 22,13,'&',special_symbols >
-FNO 2 FSCOPE 1		< 22,15,'a',identifier >
-FNO 2 FSCOPE 1		< 22,16,'[',special_symbols >
-FNO 2 FSCOPE 1		< 22,18,'i',identifier >
-FNO 2 FSCOPE 1		< 22,19,']',special_symbols >
-FNO 2 FSCOPE 1		< 22,20,')',special_symbols >
-FNO 2 FSCOPE 1		< 22,21,';',special_symbols >
-FNO 2 FSCOPE 1		< 23,4,'sum',identifier >
-FNO 2 FSCOPE 1		< 23,5,'=',special_symbols >
-FNO 2 FSCOPE 1		< 23,7,'a',identifier >
-FNO 2 FSCOPE 1		< 23,8,'[',special_symbols >
-FNO 2 FSCOPE 1		< 23,10,'0',constant >
-FNO 2 FSCOPE 1		< 23,11,']',special_symbols >
-FNO 2 FSCOPE 1		< 23,12,'+',special_symbols >
-FNO 2 FSCOPE 1		< 23,14,'a',identifier >
-FNO 2 FSCOPE 1		< 23,15,'[',special_symbols >
-FNO 2 FSCOPE 1		< 23,17,'4',constant >
-FNO 2 FSCOPE 1		< 23,18,']',special_symbols >
-FNO 2 FSCOPE 1		< 23,19,';',special_symbols >
-FNO 2 FSCOPE 1		< 24,7,'status',identifier >
-FNO 2 FSCOPE 1		< 24,8,'=',special_symbols >
-FNO 2 FSCOPE 1		< 24,15,'search',function >
-FNO 2 FSCOPE 1		< 24,16,'(',special_symbols >
-FNO 2 FSCOPE 1		< 24,18,'a',identifier >
-FNO 2 FSCOPE 1		< 24,19,',',special_symbols >
-FNO 2 FSCOPE 1		< 24,23,'sum',identifier >
-FNO 2 FSCOPE 1		< 24,24,')',special_symbols >
-FNO 2 FSCOPE 1		< 24,25,';',special_symbols >
-FNO 2 FSCOPE 1		< 25,7,'int',keyword >
-FNO 2 FSCOPE 1		< 25,8,'(',special_symbols >
-FNO 2 FSCOPE 1		< 25,12,'"%d',string_literal >
-FNO 2 FSCOPE 1		< 25,13,',',special_symbols >
-FNO 2 FSCOPE 1		< 25,20,'status',identifier >
-FNO 2 FSCOPE 1		< 25,21,')',special_symbols >
-FNO 2 FSCOPE 1		< 25,22,';',special_symbols >
-FNO 2 FSCOPE 0		< 26,1,'}',special_symbols >
+FNO -1 FSCOPE 0		< 6,3,'//',arithmetic_operators >
+FNO -1 FSCOPE 0		< 8,1,'#',special_symbols >
+FNO -1 FSCOPE 0		< 8,9,'include',identifier >
+FNO -1 FSCOPE 0		< 8,10,'<',relational_operators >
+FNO -1 FSCOPE 0		< 8,16,'stdio',identifier >
+FNO -1 FSCOPE 0		< 8,17,'.',special_symbols >
+FNO -1 FSCOPE 0		< 8,19,'h',identifier >
+FNO -1 FSCOPE 0		< 8,20,'>',relational_operators >
+FNO -1 FSCOPE 0		< 9,4,'int',keyword >
+FNO 0 FSCOPE 0		< 9,9,'main',function >
+FNO 0 FSCOPE 0		< 9,11,'()',special_symbols >
+FNO 0 FSCOPE 1		< 10,1,'{',special_symbols >
+FNO 0 FSCOPE 1		< 12,7,'int',keyword >
+FNO 0 FSCOPE 1		< 12,9,'a',identifier >
+FNO 0 FSCOPE 1		< 12,10,'=',special_symbols >
+FNO 0 FSCOPE 1		< 12,12,'9',constant >
+FNO 0 FSCOPE 1		< 12,13,',',special_symbols >
+FNO 0 FSCOPE 1		< 12,15,'b',identifier >
+FNO 0 FSCOPE 1		< 12,16,'=',special_symbols >
+FNO 0 FSCOPE 1		< 12,18,'4',constant >
+FNO 0 FSCOPE 1		< 12,19,',',special_symbols >
+FNO 0 FSCOPE 1		< 12,21,'c',identifier >
+FNO 0 FSCOPE 1		< 12,22,';',special_symbols >
+FNO 0 FSCOPE 1		< 14,5,'c',identifier >
+FNO 0 FSCOPE 1		< 14,6,'=',special_symbols >
+FNO 0 FSCOPE 1		< 14,8,'a',identifier >
+FNO 0 FSCOPE 1		< 14,9,'+',arithmetic_operators >
+FNO 0 FSCOPE 1		< 14,11,'b',identifier >
+FNO 0 FSCOPE 1		< 14,12,';',special_symbols >
+FNO 0 FSCOPE 1		< 15,10,'int',keyword >
+FNO 0 FSCOPE 1		< 15,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 15,24,'"a+b = %d \n',string_literal >
+FNO 0 FSCOPE 1		< 15,25,',',special_symbols >
+FNO 0 FSCOPE 1		< 15,27,'c',identifier >
+FNO 0 FSCOPE 1		< 15,29,');',special_symbols >
+FNO 0 FSCOPE 1		< 16,5,'c',identifier >
+FNO 0 FSCOPE 1		< 16,6,'=',special_symbols >
+FNO 0 FSCOPE 1		< 16,8,'a',identifier >
+FNO 0 FSCOPE 1		< 16,9,'-',arithmetic_operators >
+FNO 0 FSCOPE 1		< 16,11,'b',identifier >
+FNO 0 FSCOPE 1		< 16,12,';',special_symbols >
+FNO 0 FSCOPE 1		< 17,10,'int',keyword >
+FNO 0 FSCOPE 1		< 17,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 17,24,'"a-b = %d \n',string_literal >
+FNO 0 FSCOPE 1		< 17,25,',',special_symbols >
+FNO 0 FSCOPE 1		< 17,27,'c',identifier >
+FNO 0 FSCOPE 1		< 17,29,');',special_symbols >
+FNO 0 FSCOPE 1		< 18,5,'c',identifier >
+FNO 0 FSCOPE 1		< 18,6,'=',special_symbols >
+FNO 0 FSCOPE 1		< 18,8,'a',identifier >
+FNO 0 FSCOPE 1		< 18,9,'*',arithmetic_operators >
+FNO 0 FSCOPE 1		< 18,11,'b',identifier >
+FNO 0 FSCOPE 1		< 18,12,';',special_symbols >
+FNO 0 FSCOPE 1		< 19,10,'int',keyword >
+FNO 0 FSCOPE 1		< 19,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 19,24,'"a*b = %d \n',string_literal >
+FNO 0 FSCOPE 1		< 19,25,',',special_symbols >
+FNO 0 FSCOPE 1		< 19,27,'c',identifier >
+FNO 0 FSCOPE 1		< 19,29,');',special_symbols >
+FNO 0 FSCOPE 1		< 20,5,'c',identifier >
+FNO 0 FSCOPE 1		< 20,6,'=',special_symbols >
+FNO 0 FSCOPE 1		< 20,8,'a',identifier >
+FNO 0 FSCOPE 1		< 20,12,'b',identifier >
+FNO 0 FSCOPE 1		< 20,13,';',special_symbols >
+FNO 0 FSCOPE 1		< 21,10,'int',keyword >
+FNO 0 FSCOPE 1		< 21,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 21,24,'"a/b = %d \n',string_literal >
+FNO 0 FSCOPE 1		< 21,25,',',special_symbols >
+FNO 0 FSCOPE 1		< 21,27,'c',identifier >
+FNO 0 FSCOPE 1		< 21,29,');',special_symbols >
+FNO 0 FSCOPE 1		< 22,5,'c',identifier >
+FNO 0 FSCOPE 1		< 22,6,'=',special_symbols >
+FNO 0 FSCOPE 1		< 22,8,'a',identifier >
+FNO 0 FSCOPE 1		< 22,9,'%',arithmetic_operators >
+FNO 0 FSCOPE 1		< 22,11,'b',identifier >
+FNO 0 FSCOPE 1		< 22,12,';',special_symbols >
+FNO 0 FSCOPE 1		< 23,10,'int',keyword >
+FNO 0 FSCOPE 1		< 23,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 23,50,'"Remainder when a divided by b = %d \n',string_literal >
+FNO 0 FSCOPE 1		< 23,51,',',special_symbols >
+FNO 0 FSCOPE 1		< 23,53,'c',identifier >
+FNO 0 FSCOPE 1		< 23,55,');',special_symbols >
+FNO 0 FSCOPE 1		< 27,7,'int',keyword >
+FNO 0 FSCOPE 1		< 27,9,'a',identifier >
+FNO 0 FSCOPE 1		< 27,10,'=',special_symbols >
+FNO 0 FSCOPE 1		< 27,13,'10',constant >
+FNO 0 FSCOPE 1		< 27,14,',',special_symbols >
+FNO 0 FSCOPE 1		< 27,16,'b',identifier >
+FNO 0 FSCOPE 1		< 27,17,'=',special_symbols >
+FNO 0 FSCOPE 1		< 27,21,'100',constant >
+FNO 0 FSCOPE 1		< 27,22,';',special_symbols >
+FNO 0 FSCOPE 1		< 28,9,'float',keyword >
+FNO 0 FSCOPE 1		< 28,11,'c',identifier >
+FNO 0 FSCOPE 1		< 28,12,'=',special_symbols >
+FNO 0 FSCOPE 1		< 28,15,'10',constant >
+FNO 0 FSCOPE 1		< 28,16,'.',special_symbols >
+FNO 0 FSCOPE 1		< 28,18,'5',constant >
+FNO 0 FSCOPE 1		< 28,19,',',special_symbols >
+FNO 0 FSCOPE 1		< 28,21,'d',identifier >
+FNO 0 FSCOPE 1		< 28,22,'=',special_symbols >
+FNO 0 FSCOPE 1		< 28,26,'100',constant >
+FNO 0 FSCOPE 1		< 28,27,'.',special_symbols >
+FNO 0 FSCOPE 1		< 28,29,'5',constant >
+FNO 0 FSCOPE 1		< 28,30,';',special_symbols >
+FNO 0 FSCOPE 1		< 30,10,'int',keyword >
+FNO 0 FSCOPE 1		< 30,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 30,24,'"++a = %d \n',string_literal >
+FNO 0 FSCOPE 1		< 30,25,',',special_symbols >
+FNO 0 FSCOPE 1		< 30,27,'++',increment_decrement_operators >
+FNO 0 FSCOPE 1		< 30,29,'a',identifier >
+FNO 0 FSCOPE 1		< 30,31,');',special_symbols >
+FNO 0 FSCOPE 1		< 31,10,'int',keyword >
+FNO 0 FSCOPE 1		< 31,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 31,24,'"--b = %d \n',string_literal >
+FNO 0 FSCOPE 1		< 31,25,',',special_symbols >
+FNO 0 FSCOPE 1		< 31,27,'--',increment_decrement_operators >
+FNO 0 FSCOPE 1		< 31,29,'b',identifier >
+FNO 0 FSCOPE 1		< 31,31,');',special_symbols >
+FNO 0 FSCOPE 1		< 32,10,'int',keyword >
+FNO 0 FSCOPE 1		< 32,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 32,24,'"++c = %f \n',string_literal >
+FNO 0 FSCOPE 1		< 32,25,',',special_symbols >
+FNO 0 FSCOPE 1		< 32,27,'++',increment_decrement_operators >
+FNO 0 FSCOPE 1		< 32,29,'c',identifier >
+FNO 0 FSCOPE 1		< 32,31,');',special_symbols >
+FNO 0 FSCOPE 1		< 33,10,'int',keyword >
+FNO 0 FSCOPE 1		< 33,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 33,24,'"--d = %f \n',string_literal >
+FNO 0 FSCOPE 1		< 33,25,',',special_symbols >
+FNO 0 FSCOPE 1		< 33,27,'--',increment_decrement_operators >
+FNO 0 FSCOPE 1		< 33,29,'d',identifier >
+FNO 0 FSCOPE 1		< 33,31,');',special_symbols >
+FNO 0 FSCOPE 1		< 37,7,'int',keyword >
+FNO 0 FSCOPE 1		< 37,9,'a',identifier >
+FNO 0 FSCOPE 1		< 37,10,'=',special_symbols >
+FNO 0 FSCOPE 1		< 37,12,'5',constant >
+FNO 0 FSCOPE 1		< 37,13,',',special_symbols >
+FNO 0 FSCOPE 1		< 37,15,'c',identifier >
+FNO 0 FSCOPE 1		< 37,16,';',special_symbols >
+FNO 0 FSCOPE 1		< 39,5,'c',identifier >
+FNO 0 FSCOPE 1		< 39,6,'=',special_symbols >
+FNO 0 FSCOPE 1		< 39,8,'a',identifier >
+FNO 0 FSCOPE 1		< 39,9,';',special_symbols >
+FNO 0 FSCOPE 1		< 40,10,'int',keyword >
+FNO 0 FSCOPE 1		< 40,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 40,21,'"c = %d\n',string_literal >
+FNO 0 FSCOPE 1		< 40,22,',',special_symbols >
+FNO 0 FSCOPE 1		< 40,24,'c',identifier >
+FNO 0 FSCOPE 1		< 40,26,');',special_symbols >
+FNO 0 FSCOPE 1		< 41,5,'c',identifier >
+FNO 0 FSCOPE 1		< 41,7,'+=',assignment_operators >
+FNO 0 FSCOPE 1		< 41,9,'a',identifier >
+FNO 0 FSCOPE 1		< 41,10,';',special_symbols >
+FNO 0 FSCOPE 1		< 42,10,'int',keyword >
+FNO 0 FSCOPE 1		< 42,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 42,21,'"c = %d\n',string_literal >
+FNO 0 FSCOPE 1		< 42,22,',',special_symbols >
+FNO 0 FSCOPE 1		< 42,24,'c',identifier >
+FNO 0 FSCOPE 1		< 42,26,');',special_symbols >
+FNO 0 FSCOPE 1		< 43,5,'c',identifier >
+FNO 0 FSCOPE 1		< 43,7,'-=',assignment_operators >
+FNO 0 FSCOPE 1		< 43,9,'a',identifier >
+FNO 0 FSCOPE 1		< 43,10,';',special_symbols >
+FNO 0 FSCOPE 1		< 44,10,'int',keyword >
+FNO 0 FSCOPE 1		< 44,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 44,21,'"c = %d\n',string_literal >
+FNO 0 FSCOPE 1		< 44,22,',',special_symbols >
+FNO 0 FSCOPE 1		< 44,24,'c',identifier >
+FNO 0 FSCOPE 1		< 44,26,');',special_symbols >
+FNO 0 FSCOPE 1		< 45,5,'c',identifier >
+FNO 0 FSCOPE 1		< 45,7,'*=',arithmetic_operators >
+FNO 0 FSCOPE 1		< 45,9,'a',identifier >
+FNO 0 FSCOPE 1		< 45,10,';',special_symbols >
+FNO 0 FSCOPE 1		< 46,10,'int',keyword >
+FNO 0 FSCOPE 1		< 46,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 46,21,'"c = %d\n',string_literal >
+FNO 0 FSCOPE 1		< 46,22,',',special_symbols >
+FNO 0 FSCOPE 1		< 46,24,'c',identifier >
+FNO 0 FSCOPE 1		< 46,26,');',special_symbols >
+FNO 0 FSCOPE 1		< 47,5,'c',identifier >
+FNO 0 FSCOPE 1		< 47,8,'==',relational_operators >
+FNO 0 FSCOPE 1		< 47,10,'a',identifier >
+FNO 0 FSCOPE 1		< 47,11,';',special_symbols >
+FNO 0 FSCOPE 1		< 48,10,'int',keyword >
+FNO 0 FSCOPE 1		< 48,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 48,21,'"c = %d\n',string_literal >
+FNO 0 FSCOPE 1		< 48,22,',',special_symbols >
+FNO 0 FSCOPE 1		< 48,24,'c',identifier >
+FNO 0 FSCOPE 1		< 48,26,');',special_symbols >
+FNO 0 FSCOPE 1		< 49,5,'c',identifier >
+FNO 0 FSCOPE 1		< 49,7,'%=',assignment_operators >
+FNO 0 FSCOPE 1		< 49,9,'a',identifier >
+FNO 0 FSCOPE 1		< 49,10,';',special_symbols >
+FNO 0 FSCOPE 1		< 50,10,'int',keyword >
+FNO 0 FSCOPE 1		< 50,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 50,21,'"c = %d\n',string_literal >
+FNO 0 FSCOPE 1		< 50,22,',',special_symbols >
+FNO 0 FSCOPE 1		< 50,24,'c',identifier >
+FNO 0 FSCOPE 1		< 50,26,');',special_symbols >
+FNO 0 FSCOPE 1		< 54,7,'int',keyword >
+FNO 0 FSCOPE 1		< 54,9,'a',identifier >
+FNO 0 FSCOPE 1		< 54,10,'=',special_symbols >
+FNO 0 FSCOPE 1		< 54,12,'5',constant >
+FNO 0 FSCOPE 1		< 54,13,',',special_symbols >
+FNO 0 FSCOPE 1		< 54,15,'b',identifier >
+FNO 0 FSCOPE 1		< 54,16,'=',special_symbols >
+FNO 0 FSCOPE 1		< 54,18,'5',constant >
+FNO 0 FSCOPE 1		< 54,19,',',special_symbols >
+FNO 0 FSCOPE 1		< 54,21,'c',identifier >
+FNO 0 FSCOPE 1		< 54,22,'=',special_symbols >
+FNO 0 FSCOPE 1		< 54,25,'10',constant >
+FNO 0 FSCOPE 1		< 54,26,';',special_symbols >
+FNO 0 FSCOPE 1		< 56,10,'int',keyword >
+FNO 0 FSCOPE 1		< 56,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 56,30,'"%d == %d is %d \n',string_literal >
+FNO 0 FSCOPE 1		< 56,31,',',special_symbols >
+FNO 0 FSCOPE 1		< 56,33,'a',identifier >
+FNO 0 FSCOPE 1		< 56,34,',',special_symbols >
+FNO 0 FSCOPE 1		< 56,36,'b',identifier >
+FNO 0 FSCOPE 1		< 56,37,',',special_symbols >
+FNO 0 FSCOPE 1		< 56,39,'a',identifier >
+FNO 0 FSCOPE 1		< 56,41,'==',relational_operators >
+FNO 0 FSCOPE 1		< 56,43,'b',identifier >
+FNO 0 FSCOPE 1		< 56,45,');',special_symbols >
+FNO 0 FSCOPE 1		< 57,10,'int',keyword >
+FNO 0 FSCOPE 1		< 57,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 57,30,'"%d == %d is %d \n',string_literal >
+FNO 0 FSCOPE 1		< 57,31,',',special_symbols >
+FNO 0 FSCOPE 1		< 57,33,'a',identifier >
+FNO 0 FSCOPE 1		< 57,34,',',special_symbols >
+FNO 0 FSCOPE 1		< 57,36,'c',identifier >
+FNO 0 FSCOPE 1		< 57,37,',',special_symbols >
+FNO 0 FSCOPE 1		< 57,39,'a',identifier >
+FNO 0 FSCOPE 1		< 57,41,'==',relational_operators >
+FNO 0 FSCOPE 1		< 57,43,'c',identifier >
+FNO 0 FSCOPE 1		< 57,45,');',special_symbols >
+FNO 0 FSCOPE 1		< 58,10,'int',keyword >
+FNO 0 FSCOPE 1		< 58,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 58,29,'"%d > %d is %d \n',string_literal >
+FNO 0 FSCOPE 1		< 58,30,',',special_symbols >
+FNO 0 FSCOPE 1		< 58,32,'a',identifier >
+FNO 0 FSCOPE 1		< 58,33,',',special_symbols >
+FNO 0 FSCOPE 1		< 58,35,'b',identifier >
+FNO 0 FSCOPE 1		< 58,36,',',special_symbols >
+FNO 0 FSCOPE 1		< 58,38,'a',identifier >
+FNO 0 FSCOPE 1		< 58,39,'>',relational_operators >
+FNO 0 FSCOPE 1		< 58,41,'b',identifier >
+FNO 0 FSCOPE 1		< 58,43,');',special_symbols >
+FNO 0 FSCOPE 1		< 59,10,'int',keyword >
+FNO 0 FSCOPE 1		< 59,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 59,29,'"%d > %d is %d \n',string_literal >
+FNO 0 FSCOPE 1		< 59,30,',',special_symbols >
+FNO 0 FSCOPE 1		< 59,32,'a',identifier >
+FNO 0 FSCOPE 1		< 59,33,',',special_symbols >
+FNO 0 FSCOPE 1		< 59,35,'c',identifier >
+FNO 0 FSCOPE 1		< 59,36,',',special_symbols >
+FNO 0 FSCOPE 1		< 59,38,'a',identifier >
+FNO 0 FSCOPE 1		< 59,39,'>',relational_operators >
+FNO 0 FSCOPE 1		< 59,41,'c',identifier >
+FNO 0 FSCOPE 1		< 59,43,');',special_symbols >
+FNO 0 FSCOPE 1		< 60,10,'int',keyword >
+FNO 0 FSCOPE 1		< 60,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 60,29,'"%d < %d is %d \n',string_literal >
+FNO 0 FSCOPE 1		< 60,30,',',special_symbols >
+FNO 0 FSCOPE 1		< 60,32,'a',identifier >
+FNO 0 FSCOPE 1		< 60,33,',',special_symbols >
+FNO 0 FSCOPE 1		< 60,35,'b',identifier >
+FNO 0 FSCOPE 1		< 60,36,',',special_symbols >
+FNO 0 FSCOPE 1		< 60,38,'a',identifier >
+FNO 0 FSCOPE 1		< 60,39,'<',relational_operators >
+FNO 0 FSCOPE 1		< 60,41,'b',identifier >
+FNO 0 FSCOPE 1		< 60,43,');',special_symbols >
+FNO 0 FSCOPE 1		< 61,10,'int',keyword >
+FNO 0 FSCOPE 1		< 61,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 61,29,'"%d < %d is %d \n',string_literal >
+FNO 0 FSCOPE 1		< 61,30,',',special_symbols >
+FNO 0 FSCOPE 1		< 61,32,'a',identifier >
+FNO 0 FSCOPE 1		< 61,33,',',special_symbols >
+FNO 0 FSCOPE 1		< 61,35,'c',identifier >
+FNO 0 FSCOPE 1		< 61,36,',',special_symbols >
+FNO 0 FSCOPE 1		< 61,38,'a',identifier >
+FNO 0 FSCOPE 1		< 61,39,'<',relational_operators >
+FNO 0 FSCOPE 1		< 61,41,'c',identifier >
+FNO 0 FSCOPE 1		< 61,43,');',special_symbols >
+FNO 0 FSCOPE 1		< 62,10,'int',keyword >
+FNO 0 FSCOPE 1		< 62,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 62,30,'"%d != %d is %d \n',string_literal >
+FNO 0 FSCOPE 1		< 62,31,',',special_symbols >
+FNO 0 FSCOPE 1		< 62,33,'a',identifier >
+FNO 0 FSCOPE 1		< 62,34,',',special_symbols >
+FNO 0 FSCOPE 1		< 62,36,'b',identifier >
+FNO 0 FSCOPE 1		< 62,37,',',special_symbols >
+FNO 0 FSCOPE 1		< 62,39,'a',identifier >
+FNO 0 FSCOPE 1		< 62,41,'!=',logical_operators >
+FNO 0 FSCOPE 1		< 62,43,'b',identifier >
+FNO 0 FSCOPE 1		< 62,45,');',special_symbols >
+FNO 0 FSCOPE 1		< 63,10,'int',keyword >
+FNO 0 FSCOPE 1		< 63,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 63,30,'"%d != %d is %d \n',string_literal >
+FNO 0 FSCOPE 1		< 63,31,',',special_symbols >
+FNO 0 FSCOPE 1		< 63,33,'a',identifier >
+FNO 0 FSCOPE 1		< 63,34,',',special_symbols >
+FNO 0 FSCOPE 1		< 63,36,'c',identifier >
+FNO 0 FSCOPE 1		< 63,37,',',special_symbols >
+FNO 0 FSCOPE 1		< 63,39,'a',identifier >
+FNO 0 FSCOPE 1		< 63,41,'!=',logical_operators >
+FNO 0 FSCOPE 1		< 63,43,'c',identifier >
+FNO 0 FSCOPE 1		< 63,45,');',special_symbols >
+FNO 0 FSCOPE 1		< 64,10,'int',keyword >
+FNO 0 FSCOPE 1		< 64,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 64,30,'"%d >= %d is %d \n',string_literal >
+FNO 0 FSCOPE 1		< 64,31,',',special_symbols >
+FNO 0 FSCOPE 1		< 64,33,'a',identifier >
+FNO 0 FSCOPE 1		< 64,34,',',special_symbols >
+FNO 0 FSCOPE 1		< 64,36,'b',identifier >
+FNO 0 FSCOPE 1		< 64,37,',',special_symbols >
+FNO 0 FSCOPE 1		< 64,39,'a',identifier >
+FNO 0 FSCOPE 1		< 64,41,'>=',relational_operators >
+FNO 0 FSCOPE 1		< 64,43,'b',identifier >
+FNO 0 FSCOPE 1		< 64,45,');',special_symbols >
+FNO 0 FSCOPE 1		< 65,10,'int',keyword >
+FNO 0 FSCOPE 1		< 65,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 65,30,'"%d >= %d is %d \n',string_literal >
+FNO 0 FSCOPE 1		< 65,31,',',special_symbols >
+FNO 0 FSCOPE 1		< 65,33,'a',identifier >
+FNO 0 FSCOPE 1		< 65,34,',',special_symbols >
+FNO 0 FSCOPE 1		< 65,36,'c',identifier >
+FNO 0 FSCOPE 1		< 65,37,',',special_symbols >
+FNO 0 FSCOPE 1		< 65,39,'a',identifier >
+FNO 0 FSCOPE 1		< 65,41,'>=',relational_operators >
+FNO 0 FSCOPE 1		< 65,43,'c',identifier >
+FNO 0 FSCOPE 1		< 65,45,');',special_symbols >
+FNO 0 FSCOPE 1		< 66,10,'int',keyword >
+FNO 0 FSCOPE 1		< 66,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 66,30,'"%d <= %d is %d \n',string_literal >
+FNO 0 FSCOPE 1		< 66,31,',',special_symbols >
+FNO 0 FSCOPE 1		< 66,33,'a',identifier >
+FNO 0 FSCOPE 1		< 66,34,',',special_symbols >
+FNO 0 FSCOPE 1		< 66,36,'b',identifier >
+FNO 0 FSCOPE 1		< 66,37,',',special_symbols >
+FNO 0 FSCOPE 1		< 66,39,'a',identifier >
+FNO 0 FSCOPE 1		< 66,41,'<=',relational_operators >
+FNO 0 FSCOPE 1		< 66,43,'b',identifier >
+FNO 0 FSCOPE 1		< 66,45,');',special_symbols >
+FNO 0 FSCOPE 1		< 67,10,'int',keyword >
+FNO 0 FSCOPE 1		< 67,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 67,30,'"%d <= %d is %d \n',string_literal >
+FNO 0 FSCOPE 1		< 67,31,',',special_symbols >
+FNO 0 FSCOPE 1		< 67,33,'a',identifier >
+FNO 0 FSCOPE 1		< 67,34,',',special_symbols >
+FNO 0 FSCOPE 1		< 67,36,'c',identifier >
+FNO 0 FSCOPE 1		< 67,37,',',special_symbols >
+FNO 0 FSCOPE 1		< 67,39,'a',identifier >
+FNO 0 FSCOPE 1		< 67,41,'<=',relational_operators >
+FNO 0 FSCOPE 1		< 67,43,'c',identifier >
+FNO 0 FSCOPE 1		< 67,45,');',special_symbols >
+FNO 0 FSCOPE 1		< 71,7,'int',keyword >
+FNO 0 FSCOPE 1		< 71,9,'a',identifier >
+FNO 0 FSCOPE 1		< 71,10,'=',special_symbols >
+FNO 0 FSCOPE 1		< 71,12,'5',constant >
+FNO 0 FSCOPE 1		< 71,13,',',special_symbols >
+FNO 0 FSCOPE 1		< 71,15,'b',identifier >
+FNO 0 FSCOPE 1		< 71,16,'=',special_symbols >
+FNO 0 FSCOPE 1		< 71,18,'5',constant >
+FNO 0 FSCOPE 1		< 71,19,',',special_symbols >
+FNO 0 FSCOPE 1		< 71,21,'c',identifier >
+FNO 0 FSCOPE 1		< 71,22,'=',special_symbols >
+FNO 0 FSCOPE 1		< 71,25,'10',constant >
+FNO 0 FSCOPE 1		< 71,26,',',special_symbols >
+FNO 0 FSCOPE 1		< 71,33,'result',identifier >
+FNO 0 FSCOPE 1		< 71,34,';',special_symbols >
+FNO 0 FSCOPE 1		< 73,10,'result',identifier >
+FNO 0 FSCOPE 1		< 73,11,'=',special_symbols >
+FNO 0 FSCOPE 1		< 73,12,'(',special_symbols >
+FNO 0 FSCOPE 1		< 73,14,'a',identifier >
+FNO 0 FSCOPE 1		< 73,16,'==',relational_operators >
+FNO 0 FSCOPE 1		< 73,18,'b',identifier >
+FNO 0 FSCOPE 1		< 73,19,')',special_symbols >
+FNO 0 FSCOPE 1		< 73,21,'&&',bitwise_operators >
+FNO 0 FSCOPE 1		< 73,22,'(',special_symbols >
+FNO 0 FSCOPE 1		< 73,24,'c',identifier >
+FNO 0 FSCOPE 1		< 73,25,'>',relational_operators >
+FNO 0 FSCOPE 1		< 73,27,'b',identifier >
+FNO 0 FSCOPE 1		< 73,29,');',special_symbols >
+FNO 0 FSCOPE 1		< 74,10,'int',keyword >
+FNO 0 FSCOPE 1		< 74,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 74,41,'"(a == b) && (c > b) is %d \n',string_literal >
+FNO 0 FSCOPE 1		< 74,42,',',special_symbols >
+FNO 0 FSCOPE 1		< 74,49,'result',identifier >
+FNO 0 FSCOPE 1		< 74,51,');',special_symbols >
+FNO 0 FSCOPE 1		< 76,10,'result',identifier >
+FNO 0 FSCOPE 1		< 76,11,'=',special_symbols >
+FNO 0 FSCOPE 1		< 76,12,'(',special_symbols >
+FNO 0 FSCOPE 1		< 76,14,'a',identifier >
+FNO 0 FSCOPE 1		< 76,16,'==',relational_operators >
+FNO 0 FSCOPE 1		< 76,18,'b',identifier >
+FNO 0 FSCOPE 1		< 76,19,')',special_symbols >
+FNO 0 FSCOPE 1		< 76,21,'&&',bitwise_operators >
+FNO 0 FSCOPE 1		< 76,22,'(',special_symbols >
+FNO 0 FSCOPE 1		< 76,24,'c',identifier >
+FNO 0 FSCOPE 1		< 76,25,'<',relational_operators >
+FNO 0 FSCOPE 1		< 76,27,'b',identifier >
+FNO 0 FSCOPE 1		< 76,29,');',special_symbols >
+FNO 0 FSCOPE 1		< 77,10,'int',keyword >
+FNO 0 FSCOPE 1		< 77,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 77,41,'"(a == b) && (c < b) is %d \n',string_literal >
+FNO 0 FSCOPE 1		< 77,42,',',special_symbols >
+FNO 0 FSCOPE 1		< 77,49,'result',identifier >
+FNO 0 FSCOPE 1		< 77,51,');',special_symbols >
+FNO 0 FSCOPE 1		< 79,10,'result',identifier >
+FNO 0 FSCOPE 1		< 79,11,'=',special_symbols >
+FNO 0 FSCOPE 1		< 79,12,'(',special_symbols >
+FNO 0 FSCOPE 1		< 79,14,'a',identifier >
+FNO 0 FSCOPE 1		< 79,16,'==',relational_operators >
+FNO 0 FSCOPE 1		< 79,18,'b',identifier >
+FNO 0 FSCOPE 1		< 79,19,')',special_symbols >
+FNO 0 FSCOPE 1		< 79,21,'||',bitwise_operators >
+FNO 0 FSCOPE 1		< 79,22,'(',special_symbols >
+FNO 0 FSCOPE 1		< 79,24,'c',identifier >
+FNO 0 FSCOPE 1		< 79,25,'<',relational_operators >
+FNO 0 FSCOPE 1		< 79,27,'b',identifier >
+FNO 0 FSCOPE 1		< 79,29,');',special_symbols >
+FNO 0 FSCOPE 1		< 80,10,'int',keyword >
+FNO 0 FSCOPE 1		< 80,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 80,41,'"(a == b) || (c < b) is %d \n',string_literal >
+FNO 0 FSCOPE 1		< 80,42,',',special_symbols >
+FNO 0 FSCOPE 1		< 80,49,'result',identifier >
+FNO 0 FSCOPE 1		< 80,51,');',special_symbols >
+FNO 0 FSCOPE 1		< 82,10,'result',identifier >
+FNO 0 FSCOPE 1		< 82,11,'=',special_symbols >
+FNO 0 FSCOPE 1		< 82,12,'(',special_symbols >
+FNO 0 FSCOPE 1		< 82,14,'a',identifier >
+FNO 0 FSCOPE 1		< 82,16,'!=',logical_operators >
+FNO 0 FSCOPE 1		< 82,18,'b',identifier >
+FNO 0 FSCOPE 1		< 82,19,')',special_symbols >
+FNO 0 FSCOPE 1		< 82,21,'||',bitwise_operators >
+FNO 0 FSCOPE 1		< 82,22,'(',special_symbols >
+FNO 0 FSCOPE 1		< 82,24,'c',identifier >
+FNO 0 FSCOPE 1		< 82,25,'<',relational_operators >
+FNO 0 FSCOPE 1		< 82,27,'b',identifier >
+FNO 0 FSCOPE 1		< 82,29,');',special_symbols >
+FNO 0 FSCOPE 1		< 83,10,'int',keyword >
+FNO 0 FSCOPE 1		< 83,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 83,41,'"(a != b) || (c < b) is %d \n',string_literal >
+FNO 0 FSCOPE 1		< 83,42,',',special_symbols >
+FNO 0 FSCOPE 1		< 83,49,'result',identifier >
+FNO 0 FSCOPE 1		< 83,51,');',special_symbols >
+FNO 0 FSCOPE 1		< 85,10,'result',identifier >
+FNO 0 FSCOPE 1		< 85,11,'=',special_symbols >
+FNO 0 FSCOPE 1		< 85,13,'!(',special_symbols >
+FNO 0 FSCOPE 1		< 85,15,'a',identifier >
+FNO 0 FSCOPE 1		< 85,17,'!=',logical_operators >
+FNO 0 FSCOPE 1		< 85,19,'b',identifier >
+FNO 0 FSCOPE 1		< 85,21,');',special_symbols >
+FNO 0 FSCOPE 1		< 86,10,'int',keyword >
+FNO 0 FSCOPE 1		< 86,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 86,31,'"!(a != b) is %d \n',string_literal >
+FNO 0 FSCOPE 1		< 86,32,',',special_symbols >
+FNO 0 FSCOPE 1		< 86,39,'result',identifier >
+FNO 0 FSCOPE 1		< 86,41,');',special_symbols >
+FNO 0 FSCOPE 1		< 88,10,'result',identifier >
+FNO 0 FSCOPE 1		< 88,11,'=',special_symbols >
+FNO 0 FSCOPE 1		< 88,13,'!(',special_symbols >
+FNO 0 FSCOPE 1		< 88,15,'a',identifier >
+FNO 0 FSCOPE 1		< 88,17,'==',relational_operators >
+FNO 0 FSCOPE 1		< 88,19,'b',identifier >
+FNO 0 FSCOPE 1		< 88,21,');',special_symbols >
+FNO 0 FSCOPE 1		< 89,10,'int',keyword >
+FNO 0 FSCOPE 1		< 89,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 89,31,'"!(a == b) is %d \n',string_literal >
+FNO 0 FSCOPE 1		< 89,32,',',special_symbols >
+FNO 0 FSCOPE 1		< 89,39,'result',identifier >
+FNO 0 FSCOPE 1		< 89,41,');',special_symbols >
+FNO 0 FSCOPE 1		< 92,7,'int',keyword >
+FNO 0 FSCOPE 1		< 92,9,'a',identifier >
+FNO 0 FSCOPE 1		< 92,10,';',special_symbols >
+FNO 0 FSCOPE 1		< 93,9,'float',keyword >
+FNO 0 FSCOPE 1		< 93,11,'b',identifier >
+FNO 0 FSCOPE 1		< 93,12,';',special_symbols >
+FNO 0 FSCOPE 1		< 94,10,'do',keyword >
+FNO 0 FSCOPE 1		< 94,12,'c',identifier >
+FNO 0 FSCOPE 1		< 94,13,';',special_symbols >
+FNO 0 FSCOPE 1		< 95,8,'char',keyword >
+FNO 0 FSCOPE 1		< 95,10,'d',identifier >
+FNO 0 FSCOPE 1		< 95,11,';',special_symbols >
+FNO 0 FSCOPE 1		< 96,10,'int',keyword >
+FNO 0 FSCOPE 1		< 96,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 96,36,'"Size of int=%lu bytes\n',string_literal >
+FNO 0 FSCOPE 1		< 96,37,',',special_symbols >
+FNO 0 FSCOPE 1		< 96,44,'sizeof',keyword >
+FNO 0 FSCOPE 1		< 96,45,'(',special_symbols >
+FNO 0 FSCOPE 1		< 96,47,'a',identifier >
+FNO 0 FSCOPE 1		< 96,49,'))',special_symbols >
+FNO 0 FSCOPE 1		< 96,50,';',special_symbols >
+FNO 0 FSCOPE 1		< 97,10,'int',keyword >
+FNO 0 FSCOPE 1		< 97,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 97,38,'"Size of float=%lu bytes\n',string_literal >
+FNO 0 FSCOPE 1		< 97,39,',',special_symbols >
+FNO 0 FSCOPE 1		< 97,46,'sizeof',keyword >
+FNO 0 FSCOPE 1		< 97,47,'(',special_symbols >
+FNO 0 FSCOPE 1		< 97,49,'b',identifier >
+FNO 0 FSCOPE 1		< 97,51,'))',special_symbols >
+FNO 0 FSCOPE 1		< 97,52,';',special_symbols >
+FNO 0 FSCOPE 1		< 98,10,'int',keyword >
+FNO 0 FSCOPE 1		< 98,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 98,39,'"Size of double=%lu bytes\n',string_literal >
+FNO 0 FSCOPE 1		< 98,40,',',special_symbols >
+FNO 0 FSCOPE 1		< 98,47,'sizeof',keyword >
+FNO 0 FSCOPE 1		< 98,48,'(',special_symbols >
+FNO 0 FSCOPE 1		< 98,50,'c',identifier >
+FNO 0 FSCOPE 1		< 98,52,'))',special_symbols >
+FNO 0 FSCOPE 1		< 98,53,';',special_symbols >
+FNO 0 FSCOPE 1		< 99,10,'int',keyword >
+FNO 0 FSCOPE 1		< 99,11,'(',special_symbols >
+FNO 0 FSCOPE 1		< 99,36,'"Size of char=%lu byte\n',string_literal >
+FNO 0 FSCOPE 1		< 99,37,',',special_symbols >
+FNO 0 FSCOPE 1		< 99,44,'sizeof',keyword >
+FNO 0 FSCOPE 1		< 99,45,'(',special_symbols >
+FNO 0 FSCOPE 1		< 99,47,'d',identifier >
+FNO 0 FSCOPE 1		< 99,49,'))',special_symbols >
+FNO 0 FSCOPE 1		< 99,50,';',special_symbols >
+FNO 0 FSCOPE 1		< 101,10,'return',keyword >
+FNO 0 FSCOPE 1		< 101,12,'0',constant >
+FNO 0 FSCOPE 1		< 101,13,';',special_symbols >
+FNO 0 FSCOPE 0		< 102,1,'}',special_symbols >
 
 *******************Finished Lexical analysis*******************
-
-
-Symbol Table for Function: sum
-
-	Index	Lexeme	Type	Size
-        1      sum function       -1
-        2        a      int        4
-        3        b      int        4
-        4        s      int        4
-
-
-Symbol Table for Function: search
-
-	Index	Lexeme	Type	Size
-        1   search function       -1
-        2      arr      int        4
-        3      key      int        4
-        4        i      int        4
 
 
 Symbol Table for Function: main
 
 	Index	Lexeme	Type	Size
         1     main function       -1
-        2        a      int       80
-        3        i      int        4
-        4      sum      int        4
-        5   status     bool        1
-        6    scanf function       -1
-        7   search function       -1
+        2        a      int        4
+        3        b      int        4
+        4        c      int        4
+        5        c    float        4
+        6        d    float        4
+        7   result      int        4
 
 *******************Finished Symbol Table Entries*******************

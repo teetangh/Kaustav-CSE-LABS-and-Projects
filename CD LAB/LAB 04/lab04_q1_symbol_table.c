@@ -18,12 +18,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-// #include "lab04_q1_symbol_table_header.h"
+#include "lab04_q1_symbol_table_header.h"
 
 int main(int argc, char const *argv[])
 {
     // FILE *fp = fopen("input_file1.c", "r");
-    FILE *fp = fopen("input_file2_multi_function.c", "r");
+    FILE *fp = fopen("../LAB 03/lab03_q1_input_all_operators.c", "r");
+    // FILE *fp = fopen("input_file2_multi_function.c", "r");
+    
 
     freopen("lab04_symbol_table_output.txt", "w", stdout);
 

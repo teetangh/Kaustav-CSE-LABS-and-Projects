@@ -1,0 +1,32 @@
+Token Scanned < main , function > 
+ Token Scanned < ( , special_symbols > 
+ Token Scanned < ) , special_symbols > 
+ Token Scanned < { , special_symbols > 
+ Token Scanned < int , keyword > 
+ Token Scanned < a , identifier > 
+ Token Scanned < , , special_symbols > 
+ Token Scanned < b , identifier > 
+ Token Scanned < , , special_symbols > 
+ Token Scanned < p , identifier > 
+ Token Scanned < [ , special_symbols > 
+ Token Scanned < 25 , constant > 
+ Token Scanned < ] , special_symbols > 
+ Token Scanned < ; , special_symbols > 
+ Token Scanned < char , keyword > 
+ Token Scanned < c , identifier > 
+ Token Scanned < ; , special_symbols > 
+ Token Scanned < while , keyword > 
+ Token Scanned < ( , special_symbols > 
+ Token Scanned < a , identifier > 
+ Token Scanned < ) , special_symbols > 
+ 
+TADA
+Token Scanned < { , special_symbols > 
+ Token Scanned < if , keyword > 
+ Token Scanned < ( , special_symbols > 
+ Token Scanned < a , identifier > 
+ Token Scanned < < , special_symbols > 
+ 
+TADA
+) expected
+Error at Row 6 : Column 14 ::

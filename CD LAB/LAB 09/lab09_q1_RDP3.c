@@ -253,7 +253,7 @@ void assign_stat()
 
 void statement_list()
 {
-    if (strcmp(currentToken->type, "identifier") == 0)
+    if ((strcmp(currentToken->type, "identifier") == 0) || (strcmp(currentToken->lexeme, "for") == 0) || (strcmp(currentToken->lexeme, "while") == 0) || (strcmp(currentToken->lexeme, "if") == 0))
     {
         statement();
         statement_list();
@@ -275,7 +275,7 @@ void statement()
                 assign_stat();
                 if (strcmp(currentToken->lexeme, ";") == 0)
                 {
-                    currentToken = getNextToken(fp), tokenDebug();
+                    // currentToken = getNextToken(fp), tokenDebug();
                     return;
                 }
                 else
@@ -290,7 +290,7 @@ void statement()
             flag++;
             if (strcmp(currentToken->lexeme, first_of_statement[i]) == 0)
             {
-                currentToken = getNextToken(fp), tokenDebug();
+                // currentToken = getNextToken(fp), tokenDebug();
                 decision_statement();
                 return;
             }
@@ -300,7 +300,7 @@ void statement()
             flag++;
             if (strcmp(currentToken->lexeme, first_of_statement[i]) == 0)
             {
-                currentToken = getNextToken(fp), tokenDebug();
+                // currentToken = getNextToken(fp), tokenDebug();
                 looping_statement();
                 return;
             }
@@ -319,6 +319,8 @@ void expn()
 }
 void eprime()
 {
+    printf("\nTADA\n");
+
     if (strcmp(currentToken->type, "relational_operators") == 0)
     {
         currentToken = getNextToken(fp), tokenDebug();
@@ -607,7 +609,7 @@ int main(int argc, char const *argv[])
 {
 
     fp = fopen("lab09_RDP_input.c", "r");
-    // freopen("lab07_RDP_output.txt", "w", stdout);
+    freopen("lab09_RDP_output.txt", "w", stdout);
 
     if (fp == NULL)
     {
