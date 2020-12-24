@@ -158,11 +158,11 @@ struct token *getNextToken(FILE *fp)
         {
             while (ca == ' ' || ca == '\t')
             {
-                ca = fgetc(fp);
                 if (ca == ' ')
                     column = column + 1;
                 else if (ca == '\t')
                     column = column + 4;
+                ca = fgetc(fp);
 
                 if (feof(fp))
                     break;
@@ -422,12 +422,10 @@ struct token *getNextToken(FILE *fp)
             buffer[i] = '\0';
 
             // ungetc(ca, fp);
-            // printf("After ungetting %c \n", ca);
 
             // Checking for alaphabet and digits in the scanned string
             int alphabet = 0;
             int digits = 0;
-            bool contains_keyword = false;
             for (int i = 0; i < strlen(buffer); ++i)
             {
                 // Check for letters
@@ -453,13 +451,9 @@ struct token *getNextToken(FILE *fp)
             {
                 for (int i = 0; i < (sizeof(keywords_table) / sizeof(keywords_table[0])); ++i)
                 {
-                    // printf("Good %s \n", keywords_table[i]);
                     // if(strncmp(buffer,keywords_table[i],strlen(keywords_table[i])) == 0)
                     if (strstr(buffer, keywords_table[i]) != NULL)
                     {
-                        // printf("buffer %s \n", buffer);
-                        contains_keyword = true;
-                        // retToken->lexeme = keywords_table[i];
                         strcpy(retToken->lexeme, keywords_table[i]);
                         strcpy(retToken->type, "keyword");
                         retToken->row = row;
@@ -489,7 +483,7 @@ struct token *getNextToken(FILE *fp)
                 retToken->row = row;
                 retToken->column = column;
 
-                // Checing for a function Call
+                // Checing for a function Defintion
                 if (ca == '(')
                 {
                     strcpy(retToken->type, "function");
@@ -569,3 +563,4 @@ struct token *getNextToken(FILE *fp)
 
     return NULL;
 }
+    
