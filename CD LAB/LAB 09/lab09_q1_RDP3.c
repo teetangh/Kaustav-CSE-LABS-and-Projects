@@ -1,4 +1,4 @@
-// Copyright (c) 23 December 2020 Kaustav Ghosh
+// Copyright (c) 24 December 2020 Kaustav Ghosh
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -21,11 +21,6 @@
 // #include "/home/student/Desktop/KaustavLABS3/CD LAB/LAB 04/lab04_q1_symbol_table_header.h"
 #include "/home/kaustav/Desktop/KaustavLABS3/CD LAB/LAB 04/lab04_q1_symbol_table_header.h"
 
-int curr = 0;
-// char str[100];
-static char str[700000000];
-
-// FILE *fp = fopen("lab04_q1_input.c", "r");
 FILE *fp;
 struct token *currentToken;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -211,6 +206,7 @@ void identifier_list_factors()
             invalid();
         }
     }
+    // NOT INVALID because of epsilon production availablility in Backus Naur Form
     // else
     // {
     //     printf(", or [ expected \n");
