@@ -582,4 +582,33 @@ struct token *getNextToken(FILE *fp)
 
     return NULL;
 }
-    
+
+int main(int argc, char const *argv[])
+{
+    // FILE *fp = fopen("input_file1.c", "r");
+    FILE *fp = fopen("../LAB 03/lab03_q1_input_all_operators.c", "r");
+    // FILE *fp = fopen("input_file2_multi_function.c", "r");
+
+    freopen("lab04_symbol_table_output.txt", "w", stdout);
+
+    if (fp == NULL)
+    {
+        printf("Cannot open file \n Exiting.. \n");
+        exit(0);
+    }
+
+    struct token *retToken;
+    while ((retToken = getNextToken(fp)) != NULL)
+    {
+        printf("FNO %d FSCOPE %d\t\t", function_number, function_scope);
+        printf("< %d,%d,'%s',%s >\n", retToken->row, retToken->column, retToken->lexeme, retToken->type);
+
+        insert_into_local_symbol_table_helper(retToken);
+    }
+
+    printf("\n*******************Finished Lexical analysis*******************\n");
+    display_local_symbol_tables();
+    printf("\n*******************Finished Symbol Table Entries*******************\n");
+
+    return 0;
+}

@@ -1,4 +1,4 @@
-// Copyright (c) 21 December 2020 Kaustav Ghosh
+// Copyright (c) 24 December 2020 Kaustav Ghosh
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -18,14 +18,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-// #include "/home/student/Desktop/KaustavLABS3/CD LAB/LAB 04/lab04_q1_symbol_table_header.h"
-#include "/home/kaustav/Desktop/KaustavLABS3/CD LAB/LAB 04/lab04_q1_symbol_table_header.h"
+// #include "/home/student/Desktop/KaustavLABS3/CD LAB/LAB 04/lab04_symbol_table_header.h"
+#include "/home/kaustav/Desktop/KaustavLABS3/CD LAB/LAB 04/lab04_symbol_table_header.h"
 
-int curr = 0;
-// char str[100];
-static char str[700000000];
-
-// FILE *fp = fopen("lab04_q1_input.c", "r");
 FILE *fp;
 struct token *currentToken;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -53,6 +48,11 @@ void factor();
 void relop();
 void addop();
 void mulop();
+
+// LAB 09
+void decision_statement();
+void dprime();
+void looping_statement();
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void success()
@@ -171,7 +171,7 @@ void identifier_list()
     }
     else
     {
-        printf("identifier expected\n");
+        printf("identifier expected \n");
         invalid();
     }
 }
@@ -206,6 +206,7 @@ void identifier_list_factors()
             invalid();
         }
     }
+    // NOT INVALID because of epsilon production availablility in Backus Naur Form
     // else
     // {
     //     printf(", or [ expected \n");
@@ -241,14 +242,14 @@ void assign_stat()
     }
     else
     {
-        printf("identifier expected\\n");
+        printf("identifier expected \n");
         invalid();
     }
 }
 
 void statement_list()
 {
-    if (strcmp(currentToken->type, "identifier") == 0)
+    if ((strcmp(currentToken->type, "identifier") == 0) || (strcmp(currentToken->lexeme, "for") == 0) || (strcmp(currentToken->lexeme, "while") == 0) || (strcmp(currentToken->lexeme, "if") == 0))
     {
         statement();
         statement_list();
@@ -256,15 +257,54 @@ void statement_list()
 }
 void statement()
 {
-    assign_stat();
-    if (strcmp(currentToken->lexeme, ";") == 0)
+    char first_of_statement[][10] = {"identifier", "if", "while", "for"};
+    int flag = 0;
+
+    for (int i = 0; i < sizeof(first_of_statement) / sizeof(first_of_statement[0]); ++i)
     {
-        currentToken = getNextToken(fp), tokenDebug();
-        return;
+        if (i == 0)
+        {
+            flag++;
+            if (strcmp(currentToken->type, "identifier") == 0)
+            {
+                // currentToken = getNextToken(fp), tokenDebug();
+                assign_stat();
+                if (strcmp(currentToken->lexeme, ";") == 0)
+                {
+                    currentToken = getNextToken(fp), tokenDebug();
+                    return;
+                }
+                else
+                {
+                    printf("; expected \n");
+                    invalid();
+                }
+            }
+        }
+        else if (i == 1)
+        {
+            flag++;
+            if (strcmp(currentToken->lexeme, first_of_statement[i]) == 0)
+            {
+                // currentToken = getNextToken(fp), tokenDebug();
+                decision_statement();
+                return;
+            }
+        }
+        else if (i == 2 || i == 3)
+        {
+            flag++;
+            if (strcmp(currentToken->lexeme, first_of_statement[i]) == 0)
+            {
+                // currentToken = getNextToken(fp), tokenDebug();
+                looping_statement();
+                return;
+            }
+        }
     }
-    else
+    if (!flag)
     {
-        printf("; expected \n");
+        printf("identifier , decision_statement or looping_statement expected \n");
         invalid();
     }
 }
@@ -275,6 +315,8 @@ void expn()
 }
 void eprime()
 {
+    printf("\nTADA\n");
+
     if (strcmp(currentToken->type, "relational_operators") == 0)
     {
         currentToken = getNextToken(fp), tokenDebug();
@@ -384,11 +426,186 @@ void mulop()
     }
 }
 
+void decision_statement()
+{
+    if (strcmp(currentToken->lexeme, "if") == 0)
+    {
+        currentToken = getNextToken(fp), tokenDebug();
+        if (strcmp(currentToken->lexeme, "(") == 0)
+        {
+            currentToken = getNextToken(fp), tokenDebug();
+            expn();
+            if (strcmp(currentToken->lexeme, ")") == 0)
+            {
+                currentToken = getNextToken(fp), tokenDebug();
+                if (strcmp(currentToken->lexeme, "{") == 0)
+                {
+                    currentToken = getNextToken(fp), tokenDebug();
+                    statement_list();
+                    if (strcmp(currentToken->lexeme, "}") == 0)
+                    {
+                        currentToken = getNextToken(fp), tokenDebug();
+                        dprime();
+                    }
+                    else
+                    {
+                        printf("} expected\n");
+                        invalid();
+                    }
+                }
+                else
+                {
+                    printf("{ expected\n");
+                    invalid();
+                }
+            }
+            else
+            {
+                printf(") expected\n");
+                invalid();
+            }
+        }
+        else
+        {
+            printf("( expected\n");
+            invalid();
+        }
+    }
+    else
+    {
+        printf("if expected\n");
+        invalid();
+    }
+}
+void dprime()
+{
+    if (strcmp(currentToken->lexeme, "else") == 0)
+    {
+        currentToken = getNextToken(fp), tokenDebug();
+        if (strcmp(currentToken->lexeme, "{") == 0)
+        {
+            currentToken = getNextToken(fp), tokenDebug();
+            statement_list();
+            if (strcmp(currentToken->lexeme, "}") == 0)
+            {
+                currentToken = getNextToken(fp), tokenDebug();
+                return;
+            }
+            else
+            {
+                printf("} expected\n");
+                invalid();
+            }
+        }
+        else
+        {
+            printf("{} expected\n");
+            invalid();
+        }
+    }
+}
+
+void looping_statement()
+{
+    if (strcmp(currentToken->lexeme, "while") == 0)
+    {
+        currentToken = getNextToken(fp), tokenDebug();
+        if (strcmp(currentToken->lexeme, "(") == 0)
+        {
+            currentToken = getNextToken(fp), tokenDebug();
+            expn();
+            if (strcmp(currentToken->lexeme, ")") == 0)
+            {
+                currentToken = getNextToken(fp), tokenDebug();
+                if (strcmp(currentToken->lexeme, "{") == 0)
+                {
+                    currentToken = getNextToken(fp), tokenDebug();
+                    statement_list();
+                    if (strcmp(currentToken->lexeme, "}") == 0)
+                    {
+                        currentToken = getNextToken(fp), tokenDebug();
+                        return;
+                    }
+                    else
+                    {
+                        printf("  }  expected \n");
+                        invalid();
+                    }
+                }
+                else
+                {
+                    printf("  { expected \n");
+                    invalid();
+                }
+            }
+            else
+            {
+                printf("  )  expected \n");
+                invalid();
+            }
+        }
+        else
+        {
+            printf("  (  expected \n");
+            invalid();
+        }
+    }
+    else if (strcmp(currentToken->lexeme, "for") == 0)
+    {
+        currentToken = getNextToken(fp), tokenDebug();
+        if (strcmp(currentToken->lexeme, "(") == 0)
+        {
+            currentToken = getNextToken(fp), tokenDebug();
+            assign_stat();
+            if (strcmp(currentToken->lexeme, ";") == 0)
+            {
+                currentToken = getNextToken(fp), tokenDebug();
+                expn();
+                if (strcmp(currentToken->lexeme, ";") == 0)
+                {
+                    currentToken = getNextToken(fp), tokenDebug();
+                    assign_stat();
+                    if (strcmp(currentToken->lexeme, ")") == 0)
+                    {
+                        currentToken = getNextToken(fp), tokenDebug();
+                        return;
+                    }
+                    else
+                    {
+                        printf(" ) expected\n");
+                        invalid();
+                    }
+                }
+                else
+                {
+                    printf(" ; expected\n");
+                    invalid();
+                }
+            }
+            else
+            {
+                printf(" ; expected\n");
+                invalid();
+            }
+        }
+        else
+        {
+            printf(" ( expected\n");
+            invalid();
+        }
+    }
+    else
+    {
+        printf("for or while expected \n");
+        invalid();
+    }
+}
+
 int main(int argc, char const *argv[])
 {
 
-    fp = fopen("lab08_RDP_input.c", "r");
-    freopen("lab08_RDP_output.txt", "w", stdout);
+    fp = fopen("lab09_RDP_input.c", "r");
+    freopen("lab09_RDP_output.txt", "w", stdout);
 
     if (fp == NULL)
     {

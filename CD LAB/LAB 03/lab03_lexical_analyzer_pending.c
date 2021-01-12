@@ -369,7 +369,7 @@ struct token *getNextToken(FILE *fp)
 
 int main(int argc, char const *argv[])
 {
-	// FILE *fp = fopen("lab03_q1_input_all_operators.c", "r");
+	// FILE *fp = fopen("lab03_input1_all_operators.c", "r");
 	FILE *fp = fopen("input_file.c", "r");
 	if (fp == NULL)
 	{
