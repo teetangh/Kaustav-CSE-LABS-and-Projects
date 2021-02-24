@@ -13,7 +13,7 @@ int power(int base, int exponent)
         return base * power(base, exponent - 1);
 }
 
-int main(int argc, char const *argv[])
+int main(int argc, char *argv[])
 {
     int rank, size;
 
