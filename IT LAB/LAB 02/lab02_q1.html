@@ -1,211 +1,152 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Latest compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-      crossorigin="anonymous"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Document</title>
-  </head>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
 
-  <body>
-    <h1>Student Biodata Form</h1>
+  <title>Document</title>
+</head>
 
-    <form>
-      <div class="form-group">
-        <label for="formGroupExampleInput">First Name</label>
-        <input
-          type="text"
-          class="form-control"
-          id="formGroupExampleInput"
-          placeholder="First Name"
-        />
-      </div>
-      <div class="form-group">
-        <label for="formGroupExampleInput2">Last Name</label>
-        <input
-          type="text"
-          class="form-control"
-          id="formGroupExampleInput2"
-          placeholder="Last Name"
-        />
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputEmail4">Email</label>
-          <input
-            type="email"
-            class="form-control"
-            id="inputEmail4"
-            placeholder="Email"
-          />
-        </div>
-        <div class="form-group col-md-6">
-          <label for="inputPassword4">Password</label>
-          <input
-            type="password"
-            class="form-control"
-            id="inputPassword4"
-            placeholder="Password"
-          />
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="inputAddress">Address Line 1</label>
-        <input
-          type="text"
-          class="form-control"
-          id="inputAddress"
-          placeholder="1234 Main St"
-        />
-      </div>
-      <div class="form-group">
-        <label for="inputAddress2">Address Line 2</label>
-        <input
-          type="text"
-          class="form-control"
-          id="inputAddress2"
-          placeholder="Apartment, studio, or floor"
-        />
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputCity">City</label>
-          <input type="text" class="form-control" id="inputCity" />
-        </div>
-        <div class="form-group col-md-4">
-          <label for="inputState">State</label>
-          <select id="inputState" class="form-control">
-            <option selected>Choose...</option>
-            <option>Kolkata</option>
-            <option>Haryana</option>
-            <option>Mahrashtra</option>
-            <option>Tamil Nadu</option>
-          </select>
-        </div>
-        <div class="form-group col-md-2">
-          <label for="inputZip">Zip</label>
-          <input type="text" class="form-control" id="inputZip" />
-        </div>
-      </div>
+<body>
+  <h1>Student Biodata Form</h1>
 
-      <div class="form-group">
-        <label for="number_of_spoken_languages"
-          >Number of spoken languages</label
-        >
-        <select
-          class="custom-select custom-select-lg mb-3"
-          id="number_of_spoken_languages"
-        >
-          <option selected>One</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-          <option value="More than three">More than Three</option>
+  <form>
+    <div class="form-group">
+      <label for="formGroupExampleInput">First Name</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="First Name" />
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Last Name</label>
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Last Name" />
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Email</label>
+        <input type="email" class="form-control" id="inputEmail4" placeholder="Email" />
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Password</label>
+        <input type="password" class="form-control" id="inputPassword4" placeholder="Password" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputAddress">Address Line 1</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" />
+    </div>
+    <div class="form-group">
+      <label for="inputAddress2">Address Line 2</label>
+      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputCity">City</label>
+        <input type="text" class="form-control" id="inputCity" />
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputState">State</label>
+        <select id="inputState" class="form-control">
+          <option selected>Choose...</option>
+          <option>Kolkata</option>
+          <option>Haryana</option>
+          <option>Mahrashtra</option>
+          <option>Tamil Nadu</option>
         </select>
       </div>
+      <div class="form-group col-md-2">
+        <label for="inputZip">Zip</label>
+        <input type="text" class="form-control" id="inputZip" />
+      </div>
+    </div>
 
-      <h3>Gender</h3>
-      <div class="form-check">
-        <input
-          class="form-check-input"
-          type="radio"
-          name="flexRadioDefault"
-          id="flexRadioDefault1"
-        />
-        <label class="form-check-label" for="flexRadioDefault1"> Female </label>
-      </div>
-      <div class="form-check">
-        <input
-          class="form-check-input"
-          type="radio"
-          name="flexRadioDefault"
-          id="flexRadioDefault2"
-          checked
-        />
-        <label class="form-check-label" for="flexRadioDefault2"> Male </label>
-      </div>
+    <div class="form-group">
+      <label for="number_of_spoken_languages">Number of spoken languages</label>
+      <select class="custom-select custom-select-lg mb-3" id="number_of_spoken_languages">
+        <option selected>One</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="More than three">More than Three</option>
+      </select>
+    </div>
 
-      <div class="form-group">
-        <label for="marital_status">Marital Status</label>
-        <select class="custom-select" id="number_of_spoken_languages">
-          <option selected>None</option>
-          <option value="Single">Single</option>
-          <option value="Engaged">Engaged</option>
-          <option value="Married">Married</option>
-        </select>
-      </div>
+    <h3>Gender</h3>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+      <label class="form-check-label" for="flexRadioDefault1"> Female </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked />
+      <label class="form-check-label" for="flexRadioDefault2"> Male </label>
+    </div>
 
-      <div class="form-check">
-        <input
-          class="form-check-input"
-          type="checkbox"
-          value=""
-          id="flexCheckDefault"
-        />
-        <label class="form-check-label" for="flexCheckDefault">
-          Driving License ?
-        </label>
-      </div>
-      <div class="form-check">
-        <input
-          class="form-check-input"
-          type="checkbox"
-          value=""
-          id="flexCheckChecked"
-          checked
-        />
-        <label class="form-check-label" for="flexCheckChecked">
-          Mess Card ?
-        </label>
-      </div>
+    <div class="form-group">
+      <label for="marital_status">Marital Status</label>
+      <select class="custom-select" id="number_of_spoken_languages">
+        <option selected>None</option>
+        <option value="Single">Single</option>
+        <option value="Engaged">Engaged</option>
+        <option value="Married">Married</option>
+      </select>
+    </div>
 
-      <div class="form-group">
-        <label for="comment">Tell us about yourself</label>
-        <textarea class="form-control" rows="5" id="comment"></textarea>
-      </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+      <label class="form-check-label" for="flexCheckDefault">
+        Driving License ?
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked />
+      <label class="form-check-label" for="flexCheckChecked">
+        Mess Card ?
+      </label>
+    </div>
 
-      <div>
-        <table class="table table-dark">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Education</th>
-              <th scope="col">Date</th>
-              <th scope="col">place</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>MIT,Manipal</td>
-              <td>2015</td>
-              <td>Karnataka</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Amity</td>
-              <td>2017</td>
-              <td>Gurgaon</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Suncity</td>
-              <td>2015</td>
-              <td>Gurgaon</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <div class="form-group">
+      <label for="comment">Tell us about yourself</label>
+      <textarea class="form-control" rows="5" id="comment"></textarea>
+    </div>
 
-      <button type="submit" class="btn btn-primary">Sign in</button>
-    </form>
-  </body>
+    <div>
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Education</th>
+            <th scope="col">Date</th>
+            <th scope="col">place</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>MIT,Manipal</td>
+            <td>2015</td>
+            <td>Karnataka</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Amity</td>
+            <td>2017</td>
+            <td>Gurgaon</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Suncity</td>
+            <td>2015</td>
+            <td>Gurgaon</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </form>
+</body>
+
 </html>

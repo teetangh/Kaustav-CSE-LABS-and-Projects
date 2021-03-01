@@ -1,184 +1,145 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
 
-    <!-- Latest compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <table class="table table-dark">
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>first_name</th>
-            <th>last_name</th>
-            <th>email</th>
-            <th>gender</th>
-            <th>job title</th>
-            <th>Functions</th>
-          </tr>
-        </thead>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
 
-        <tbody>
-          <tr>
-            <th>1</th>
-            <th>Julienne</th>
-            <th>Wederell</th>
-            <th>jwederell0@flickr.com</th>
-            <th>Female</th>
-            <th>Account Executive</th>
-            <th>
-              <button type="button" class="btn btn-success">Update</button>
-              <button type="button" class="btn btn-danger">Delete</button>
-            </th>
-          </tr>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+</head>
 
-          <tr>
-            <th>2</th>
-            <th>Evania</th>
-            <th>Maccrea</th>
-            <th>emaccrea1@unc.edu</th>
-            <th>Male</th>
-            <th>Clinical Specialist</th>
-            <th>
-              <button type="button" class="btn btn-success">Update</button>
-              <button type="button" class="btn btn-danger">Delete</button>
-            </th>
-          </tr>
+<body>
+  <div class="container">
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>first_name</th>
+          <th>last_name</th>
+          <th>email</th>
+          <th>gender</th>
+          <th>job title</th>
+          <th>Functions</th>
+        </tr>
+      </thead>
 
-          <tr>
-            <th>3</th>
-            <th>Ettore</th>
-            <th>Westlake</th>
-            <th>ewestlake2@usatoday.com</th>
-            <th>Male</th>
-            <th>Business Systems Development Analyst</th>
-            <th>
-              <button type="button" class="btn btn-success">Update</button>
-              <button type="button" class="btn btn-danger">Delete</button>
-            </th>
-          </tr>
+      <tbody>
+        <tr>
+          <th>1</th>
+          <th>Julienne</th>
+          <th>Wederell</th>
+          <th>jwederell0@flickr.com</th>
+          <th>Female</th>
+          <th>Account Executive</th>
+          <th>
+            <button type="button" class="btn btn-success">Update</button>
+            <button type="button" class="btn btn-danger">Delete</button>
+          </th>
+        </tr>
 
-          <tr>
-            <th>4</th>
-            <th>Phillie</th>
-            <th>Marlowe</th>
-            <th>pmarlowe3@unc.edu</th>
-            <th>Male</th>
-            <th>Staff Accountant II</th>
-            <th>
-              <button type="button" class="btn btn-success">Update</button>
-              <button type="button" class="btn btn-danger">Delete</button>
-            </th>
-          </tr>
+        <tr>
+          <th>2</th>
+          <th>Evania</th>
+          <th>Maccrea</th>
+          <th>emaccrea1@unc.edu</th>
+          <th>Male</th>
+          <th>Clinical Specialist</th>
+          <th>
+            <button type="button" class="btn btn-success">Update</button>
+            <button type="button" class="btn btn-danger">Delete</button>
+          </th>
+        </tr>
 
-          <tr>
-            <th>5</th>
-            <th>Hagen</th>
-            <th>Boness</th>
-            <th>hboness4@hexun.com</th>
-            <th>Female</th>
-            <th>Mechanical Systems Engineer</th>
-            <th>
-              <button type="button" class="btn btn-success">Update</button>
-              <button type="button" class="btn btn-danger">Delete</button>
-            </th>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="container">
-      <form>
-        <div class="form-row">
-          <div class="col-md-4 mb-3">
-            <label for="validationServer01">First name</label>
-            <input
-              type="text"
-              class="form-control is-valid"
-              id="validationServer01"
-              placeholder="First name"
-              value="Mark"
-              required
-            />
-            <div class="valid-feedback">Looks good!</div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <label for="validationServer02">Last name</label>
-            <input
-              type="text"
-              class="form-control is-valid"
-              id="validationServer02"
-              placeholder="Last name"
-              value="Otto"
-              required
-            />
-            <div class="valid-feedback">Looks good!</div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input
-                type="email"
-                class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                placeholder="Enter email"
-              />
-              <small id="emailHelp" class="form-text text-muted"
-                >We'll never share your email with anyone else.</small
-              >
-            </div>
+        <tr>
+          <th>3</th>
+          <th>Ettore</th>
+          <th>Westlake</th>
+          <th>ewestlake2@usatoday.com</th>
+          <th>Male</th>
+          <th>Business Systems Development Analyst</th>
+          <th>
+            <button type="button" class="btn btn-success">Update</button>
+            <button type="button" class="btn btn-danger">Delete</button>
+          </th>
+        </tr>
+
+        <tr>
+          <th>4</th>
+          <th>Phillie</th>
+          <th>Marlowe</th>
+          <th>pmarlowe3@unc.edu</th>
+          <th>Male</th>
+          <th>Staff Accountant II</th>
+          <th>
+            <button type="button" class="btn btn-success">Update</button>
+            <button type="button" class="btn btn-danger">Delete</button>
+          </th>
+        </tr>
+
+        <tr>
+          <th>5</th>
+          <th>Hagen</th>
+          <th>Boness</th>
+          <th>hboness4@hexun.com</th>
+          <th>Female</th>
+          <th>Mechanical Systems Engineer</th>
+          <th>
+            <button type="button" class="btn btn-success">Update</button>
+            <button type="button" class="btn btn-danger">Delete</button>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="container">
+    <form>
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label for="validationServer01">First name</label>
+          <input type="text" class="form-control is-valid" id="validationServer01" placeholder="First name" value="Mark"
+            required />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="validationServer02">Last name</label>
+          <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name" value="Otto"
+            required />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Enter email" />
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
         </div>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked />
+        <label class="form-check-label" for="exampleRadios1"> male </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" />
+        <label class="form-check-label" for="exampleRadios2"> Female </label>
+      </div>
+      <div class="form-group">
         <div class="form-check">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="exampleRadios"
-            id="exampleRadios1"
-            value="option1"
-            checked
-          />
-          <label class="form-check-label" for="exampleRadios1"> male </label>
-        </div>
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="exampleRadios"
-            id="exampleRadios2"
-            value="option2"
-          />
-          <label class="form-check-label" for="exampleRadios2"> Female </label>
-        </div>
-        <div class="form-group">
-          <div class="form-check">
-            <input
-              class="form-check-input is-invalid"
-              type="checkbox"
-              value=""
-              id="invalidCheck3"
-              required
-            />
-            <label class="form-check-label" for="invalidCheck3">
-              Agree to terms and conditions
-            </label>
-            <div class="invalid-feedback">
-              You must agree before submitting.
-            </div>
+          <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required />
+          <label class="form-check-label" for="invalidCheck3">
+            Agree to terms and conditions
+          </label>
+          <div class="invalid-feedback">
+            You must agree before submitting.
           </div>
         </div>
-        <button class="btn btn-primary" type="submit">Submit form</button>
-      </form>
-    </div>
-  </body>
+      </div>
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </form>
+  </div>
+</body>
+
 </html>
