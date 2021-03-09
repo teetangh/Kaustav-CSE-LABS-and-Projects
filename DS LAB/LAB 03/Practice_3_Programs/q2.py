@@ -7,7 +7,7 @@ def main():
     print(elements)
 
     nrows, ncols = [int(x) for x in input("Enter nrows and ncols: ").split()]
-    elements_np = np.array(elements)
+
     elements_matrix = np.reshape(elements, [nrows, ncols])
     print(elements_matrix)
     print("column sum is: ", elements_matrix.sum(axis=0),
