@@ -1,0 +1,8 @@
+These are the contents from 
+the input file from question 2
+in the lab week 03
+
+some more text 
+
+Some more random text
+Some more Random teext
