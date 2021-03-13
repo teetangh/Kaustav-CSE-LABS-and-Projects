@@ -1,0 +1,11 @@
+# Ignore all the C object files
+*
+!*/
+!*.*
+
+# Ignore Python Cache
+__pycache__/
+*.py[cod]
+
+# Ignore Vs code settings
+.vscode/
