@@ -1,8 +1,6 @@
-#!/usr/bin/env python3
-# server.py
 import socket
-HOST = '127.0.0.1'  # Standard loopback interface address (localhost)
-PORT = 31621  # Port to listen on (non-privileged ports are > 1023)
+HOST = '127.0.0.1'
+PORT = 31621
 s = socket.socket()
 s.bind((HOST, PORT))
 s.listen()

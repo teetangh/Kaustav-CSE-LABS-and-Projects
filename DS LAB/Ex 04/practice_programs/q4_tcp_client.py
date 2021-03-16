@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import socket
 ClientSocket = socket.socket()
 host = '127.0.0.1'

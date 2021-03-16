@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import socket
-HOST = '127.0.0.1'  # Standard loopback interface address (localhost)
-PORT = 31621  # Port to listen on (non-privileged ports are > 1023)
+HOST = '172.16.58.136'
+PORT = 31624
 s = socket.socket()
 name = input(str("\nEnter your name: "))
 print("\nTrying to connect to ", HOST, "(", PORT, ")\n")

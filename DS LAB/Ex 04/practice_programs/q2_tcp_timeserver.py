@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # server.py
 import socket
 import time

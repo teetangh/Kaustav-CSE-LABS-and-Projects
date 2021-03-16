@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import socket
 import os
 from _thread import *
