@@ -13,4 +13,5 @@ print("UDP target Port:", udp_port)
 sock.sendto(msg.encode(), (udp_host, udp_port))
 
 data = sock.recvfrom(1024)
-print(data.currentTime.decode())
+# data.decode('utf-8')
+print(data)

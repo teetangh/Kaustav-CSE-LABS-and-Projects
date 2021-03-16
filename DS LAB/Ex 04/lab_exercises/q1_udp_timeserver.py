@@ -11,6 +11,6 @@ sock.bind((udp_host, udp_port))
 while True:
     print("Waiting for client")
     data, address = sock.recvfrom(1024)
-    currentTime = time.ctime(time.time()) + "\r\n"
+    currentTime = time.ctime(time.time())
     print("Received Messages: ", data.decode(), "from", address)
     sock.sendto(currentTime.encode() , address)
