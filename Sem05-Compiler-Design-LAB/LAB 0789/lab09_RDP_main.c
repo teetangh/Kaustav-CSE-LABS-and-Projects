@@ -19,7 +19,7 @@
 // SOFTWARE.
 
 // #include "/home/student/Desktop/KaustavLABS3/CD LAB/LAB 04/lab04_symbol_table_header.h"
-#include "/home/kaustav/Desktop/KaustavLABS3/CD LAB/LAB 04/lab04_symbol_table_header.h"
+#include "../LAB 04/lab04_symbol_table_lexical_analuser_header.h"
 
 FILE *fp;
 struct token *currentToken;
