@@ -5,3 +5,6 @@
 *.log
 *.out
 *.gz
+
+# Settings and Configs
+.vscode/

@@ -1,0 +1,72 @@
+Token Scanned < main , function > 
+ Token Scanned < ( , special_symbols > 
+ Token Scanned < ) , special_symbols > 
+ Token Scanned < { , special_symbols > 
+ Token Scanned < int , keyword > 
+ Token Scanned < a , identifier > 
+ Token Scanned < , , special_symbols > 
+ Token Scanned < b , identifier > 
+ Token Scanned < , , special_symbols > 
+ Token Scanned < p , identifier > 
+ Token Scanned < [ , special_symbols > 
+ Token Scanned < 25 , constant > 
+ Token Scanned < ] , special_symbols > 
+ Token Scanned < ; , special_symbols > 
+ Token Scanned < char , keyword > 
+ Token Scanned < c , identifier > 
+ Token Scanned < ; , special_symbols > 
+ Token Scanned < while , keyword > 
+ Token Scanned < ( , special_symbols > 
+ Token Scanned < a , identifier > 
+ Token Scanned < ) , special_symbols > 
+ 
+TADA
+Token Scanned < { , special_symbols > 
+ Token Scanned < if , keyword > 
+ Token Scanned < ( , special_symbols > 
+ Token Scanned < a , identifier > 
+ Token Scanned < < , relational_operators > 
+ 
+TADA
+Token Scanned < b , identifier > 
+ Token Scanned < ) , special_symbols > 
+ Token Scanned < { , special_symbols > 
+ Token Scanned < a , identifier > 
+ Token Scanned < = , special_symbols > 
+ Token Scanned < a , identifier > 
+ Token Scanned < + , arithmetic_operators > 
+ Token Scanned < b , identifier > 
+ Token Scanned < * , arithmetic_operators > 
+ Token Scanned < c , identifier > 
+ Token Scanned < ; , special_symbols > 
+ 
+TADA
+Token Scanned < } , special_symbols > 
+ Token Scanned < else , keyword > 
+ Token Scanned < { , special_symbols > 
+ Token Scanned < if , keyword > 
+ Token Scanned < ( , special_symbols > 
+ Token Scanned < p , identifier > 
+ Token Scanned < ) , special_symbols > 
+ 
+TADA
+Token Scanned < { , special_symbols > 
+ Token Scanned < a , identifier > 
+ Token Scanned < = , special_symbols > 
+ Token Scanned < 0 , constant > 
+ Token Scanned < ; , special_symbols > 
+ 
+TADA
+Token Scanned < } , special_symbols > 
+ Token Scanned < } , special_symbols > 
+ Token Scanned < b , identifier > 
+ Token Scanned < = , special_symbols > 
+ Token Scanned < 2 , constant > 
+ Token Scanned < * , arithmetic_operators > 
+ Token Scanned < c , identifier > 
+ Token Scanned < ; , special_symbols > 
+ 
+TADA
+Token Scanned < } , special_symbols > 
+ Token Scanned < } , special_symbols > 
+ SUCCESS

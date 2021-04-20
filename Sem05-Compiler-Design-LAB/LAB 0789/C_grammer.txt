@@ -1,0 +1,41 @@
+Program -> main ( ) { declarations statement_list }
+
+declarations -> data_type identifier_list ; declarations | EPSILON
+
+data_type -> int | char
+
+identifier_list -> id identifier_list_factors 
+
+identifier_list_factors -> EPSILON | , identifier_list | [ number ] , identifier_list | [ number ]
+
+statement_list -> statement statement_list | EPSILON
+
+statement -> assign_stat ; | decision_stat | looping_stat
+
+assign_stat -> id = expn
+
+expn -> simple_expn eprime
+
+eprime -> relop simple-expn | EPSILON
+
+simple_expn -> term seprime
+
+seprime -> addop term seprime | EPSILON
+
+term -> factor tprime
+
+tprime -> mulop factor tprime | EPSILON  
+
+factor -> id | num
+
+decision_stat -> if ( expn ) { statement_list } dprime
+
+dprime -> else { statement_list } | EPSILON
+
+looping_stat -> while ( expn ) { statement_list } | for ( assign_stat ; expn ; assign_stat ) { statement_list }
+
+relop -> == | != | <= | >= | > | <
+
+addop -> + | -
+
+mulop -> * | / | %
