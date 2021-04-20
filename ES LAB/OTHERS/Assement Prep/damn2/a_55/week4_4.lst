@@ -1,0 +1,205 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,DATA,READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10001000        DCD              0x10001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 AREA             Mycode,CODE,READONLY
+    7 00000000                 ENTRY
+    8 00000000                 EXPORT           Reset_Handler
+    9 00000000         Reset_Handler
+   10 00000000 4815            LDR              R0,=NUM
+   11 00000002 6801            LDR              R1,[R0]
+   12 00000004 4B15            LDR              R3,=DST
+   13 00000006         ZERO
+   14 00000006 F04F 0200       MOV              R2,#0
+   15 0000000A 290A            CMP              R1,#0XA
+   16 0000000C D30A            BCC              THREE
+   17 0000000E         ONE
+   18 0000000E 290A            CMP              R1,#0XA
+   19 00000010 D304            BCC              TWO
+   20 00000012 F1A1 010A       SUB              R1,R1,#0XA
+   21 00000016 F102 0201       ADD              R2,R2,#1
+   22 0000001A E7F8            B                ONE
+   23 0000001C         TWO
+   24 0000001C F843 1B01       STR              R1,[R3],#1
+   25 00000020 4611            MOV              R1,R2
+   26 00000022 E7F0            B                ZERO
+   27 00000024         THREE
+   28 00000024 6019            STR              R1,[R3]
+   29 00000026 480D            LDR              R0,=DST
+   30 00000028 F04F 0104       MOV              R1,#4
+   31 0000002C 6802            LDR              R2,[R0]
+   32 0000002E F04F 040F       MOV              R4,#0XF
+   33 00000032 F04F 0500       MOV              R5,#0
+   34 00000036         FOUR
+   35 00000036 2900            CMP              R1,#0
+   36 00000038 D00A            BEQ              FIVE
+   37 0000003A EA02 0604       AND              R6,R2,R4
+   38 0000003E EA4F 1212       LSR              R2,R2,#4
+   39 00000042 EA4F 1404       LSL              R4,R4,#4
+   40 00000046 EA45 0506       ORR              R5,R5,R6
+   41 0000004A F1A1 0101       SUB              R1,R1,#1
+   42 0000004E E7F2            B                FOUR
+   43 00000050         FIVE
+   44 00000050 6005            STR              R5,[R0]
+   45 00000052         STOP
+   46 00000052 E7FE            B                STOP
+   47 00000054 0000000F 
+                       NUM     DCD              0Xf
+   48 00000058 00000000 
+              00000000 
+              00000000         AREA             mydata,DATA,READWRITE
+   49 00000000 00000000 
+                       DST     DCD              0
+   50 00000004                 END
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\week4_
+4.d -o.\week4_4.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\
+ARM\Inc\NXP\LPC17xx --predefine="__EVAL SETA 1" --list=.\week4_4.lst week4_4.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file week4_4.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file week4_4.s
+   Uses
+      At line 2 in file week4_4.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+FIVE 00000050
+
+Symbol: FIVE
+   Definitions
+      At line 43 in file week4_4.s
+   Uses
+      At line 36 in file week4_4.s
+Comment: FIVE used once
+FOUR 00000036
+
+Symbol: FOUR
+   Definitions
+      At line 34 in file week4_4.s
+   Uses
+      At line 42 in file week4_4.s
+Comment: FOUR used once
+Mycode 00000000
+
+Symbol: Mycode
+   Definitions
+      At line 6 in file week4_4.s
+   Uses
+      None
+Comment: Mycode unused
+NUM 00000054
+
+Symbol: NUM
+   Definitions
+      At line 47 in file week4_4.s
+   Uses
+      At line 10 in file week4_4.s
+Comment: NUM used once
+ONE 0000000E
+
+Symbol: ONE
+   Definitions
+      At line 17 in file week4_4.s
+   Uses
+      At line 22 in file week4_4.s
+Comment: ONE used once
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 9 in file week4_4.s
+   Uses
+      At line 5 in file week4_4.s
+      At line 8 in file week4_4.s
+
+STOP 00000052
+
+Symbol: STOP
+   Definitions
+      At line 45 in file week4_4.s
+   Uses
+      At line 46 in file week4_4.s
+Comment: STOP used once
+THREE 00000024
+
+
+
+
+ARM Macro Assembler    Page 2 Alphabetic symbol ordering
+Relocatable symbols
+
+Symbol: THREE
+   Definitions
+      At line 27 in file week4_4.s
+   Uses
+      At line 16 in file week4_4.s
+Comment: THREE used once
+TWO 0000001C
+
+Symbol: TWO
+   Definitions
+      At line 23 in file week4_4.s
+   Uses
+      At line 19 in file week4_4.s
+Comment: TWO used once
+ZERO 00000006
+
+Symbol: ZERO
+   Definitions
+      At line 13 in file week4_4.s
+   Uses
+      At line 26 in file week4_4.s
+Comment: ZERO used once
+10 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DST 00000000
+
+Symbol: DST
+   Definitions
+      At line 49 in file week4_4.s
+   Uses
+      At line 12 in file week4_4.s
+      At line 29 in file week4_4.s
+
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 48 in file week4_4.s
+   Uses
+      None
+Comment: mydata unused
+2 symbols
+347 symbols in table

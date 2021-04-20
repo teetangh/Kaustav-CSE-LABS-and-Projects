@@ -1,0 +1,48 @@
+DECLARE
+ x NUMBER := 0;
+ rollno int := 1;
+ temp studenttable.gpa%Type;
+ 
+BEGIN
+
+LOOP
+select gpa into temp from studenttable where roll_no = rollno;
+
+IF temp < 4 THEN
+DBMS_OUTPUT.PUT_LINE('Rollno' || rollno || ' ' || 'Grade:' || 'F');
+
+ELSIF temp>=4 AND temp <=5 THEN
+DBMS_OUTPUT.PUT_LINE('Rollno' || rollno || ' ' || 'Grade:' || 'E');
+
+ELSIF temp>=5 AND temp<=6 THEN
+DBMS_OUTPUT.PUT_LINE('Rollno' || rollno || ' ' || 'Grade:' || 'D');
+
+ELSIF temp>=6 AND temp<=7 THEN
+DBMS_OUTPUT.PUT_LINE('Rollno' || rollno || ' ' || 'Grade:' || 'C');
+
+ELSIF temp>=7 AND temp<=8 THEN
+DBMS_OUTPUT.PUT_LINE('Rollno' || rollno || ' ' || 'Grade:' || 'B');
+
+ELSIF temp>=8 AND temp<=9 THEN
+DBMS_OUTPUT.PUT_LINE('Rollno' || rollno || ' ' || 'Grade:' || 'A');
+
+ELSIF temp>=9 AND temp<=10 THEN
+DBMS_OUTPUT.PUT_LINE('Rollno' || rollno || ' ' || 'Grade:' || 'A+');
+
+ELSE
+DBMS_OUTPUT.PUT_LINE('You are god bro');
+
+
+END IF;
+
+x := x + 1;
+rollno := rollno + 1;
+IF x >= 5 THEN EXIT;
+END IF;
+
+END LOOP;
+
+
+ 
+END;
+/

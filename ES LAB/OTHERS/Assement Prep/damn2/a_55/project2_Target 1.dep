@@ -1,0 +1,2 @@
+Dependencies for Project 'project2', Target 'Target 1': (DO NOT MODIFY !)
+F (.\week2_2.s)(0x5E195CF3)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\week2_2.lst --xref -o .\week2_2.o --depend .\week2_2.d)

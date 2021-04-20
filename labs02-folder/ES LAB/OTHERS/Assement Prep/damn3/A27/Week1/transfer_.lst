@@ -1,0 +1,176 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET, DATA, READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10001000        DCD              0X10001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 AREA             transfer, CODE, READONLY
+    7 00000000                 EXPORT           Reset_Handler
+    8 00000000                 ENTRY
+    9 00000000         Reset_Handler
+   10 00000000 480B            LDR              R0,=SRC
+   11 00000002 4601            MOV              R1,R0
+   12 00000004 F101 0124       ADD              R1,#(SIZE-1)*4
+   13 00000008 F04F 020A       MOV              R2,#10
+   14 0000000C         LOOP
+   15 0000000C F840 2B04       STR              R2,[R0],#4
+   16 00000010 1E52            SUBS             R2,R2,#1
+   17 00000012 D1FB            BNE              LOOP
+   18 00000014 F1A0 0004       SUB              R0,R0,#4
+   19 00000018 F101 0114       ADD              R1,R1,#OL*4
+   20 0000001C F102 020A       ADD              R2,R2,#10
+   21 00000020         TFS
+   22 00000020 F850 3904       LDR              R3,[R0],#-4
+   23 00000024 F841 3904       STR              R3,[R1],#-4
+   24 00000028 1E52            SUBS             R2,R2,#1
+   25 0000002A D1F9            BNE              TFS
+   26 0000002C         STOP
+   27 0000002C E7FE            B                STOP
+   28 0000002E 0000000A 
+                       SIZE    EQU              10
+   29 0000002E 00000005 
+                       OL      EQU              5
+   30 0000002E 00 00 00000000  AREA             mydata,DATA,READWRITE
+   31 00000000 00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 SRC     DCD              0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+   32 0000003C                 END
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\transf
+er_.d -o.\transfer_.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\K
+eil\ARM\Inc\NXP\LPC17xx --predefine="__EVAL SETA 1" --list=.\transfer_.lst tran
+sfer_.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file transfer_.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file transfer_.s
+   Uses
+      At line 2 in file transfer_.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+LOOP 0000000C
+
+Symbol: LOOP
+   Definitions
+      At line 14 in file transfer_.s
+   Uses
+      At line 17 in file transfer_.s
+Comment: LOOP used once
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 9 in file transfer_.s
+   Uses
+      At line 5 in file transfer_.s
+      At line 7 in file transfer_.s
+
+STOP 0000002C
+
+Symbol: STOP
+   Definitions
+      At line 26 in file transfer_.s
+   Uses
+      At line 27 in file transfer_.s
+Comment: STOP used once
+TFS 00000020
+
+Symbol: TFS
+   Definitions
+      At line 21 in file transfer_.s
+   Uses
+      At line 25 in file transfer_.s
+Comment: TFS used once
+transfer 00000000
+
+Symbol: transfer
+   Definitions
+      At line 6 in file transfer_.s
+   Uses
+      None
+Comment: transfer unused
+5 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+SRC 00000000
+
+Symbol: SRC
+   Definitions
+      At line 31 in file transfer_.s
+   Uses
+      At line 10 in file transfer_.s
+Comment: SRC used once
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 30 in file transfer_.s
+   Uses
+      None
+Comment: mydata unused
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+OL 00000005
+
+Symbol: OL
+   Definitions
+      At line 29 in file transfer_.s
+   Uses
+      At line 19 in file transfer_.s
+Comment: OL used once
+SIZE 0000000A
+
+Symbol: SIZE
+   Definitions
+      At line 28 in file transfer_.s
+   Uses
+      At line 12 in file transfer_.s
+Comment: SIZE used once
+2 symbols
+344 symbols in table

@@ -1,0 +1,201 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ;Copyright Kaustav
+    2 00000000                 AREA             RESET,DATA,READONLY
+    3 00000000                 EXPORT           __Vectors
+    4 00000000         __Vectors
+    5 00000000 10001000        DCD              0x10001000
+    6 00000004 00000000        DCD              Reset_Handler
+    7 00000008                 ALIGN
+    8 00000008                 AREA             mycode , CODE , READONLY
+    9 00000000                 ENTRY
+   10 00000000                 EXPORT           Reset_Handler
+   11 00000000         Reset_Handler
+   12 00000000 4915            LDR              R1,=NUM1
+   13 00000002 4A16            LDR              R2,=SUM
+   14 00000004         
+   15 00000004 F8DF A058       LDR              R10,=DST
+   16 00000008         
+   17 00000008 680B            LDR              R3,[R1]     ;r3 holds r1 value
+   18 0000000A 6814            LDR              R4,[R2]     ;r4 holds r2 value
+   19 0000000C         
+   20 0000000C F04F 0500       MOV              R5,#0       ;Last Digit holder
+   21 00000010 F04F 0600       MOV              R6,#0       ;Remainder
+   22 00000014 F04F 0700       MOV              R7,#0       ; Current Sum
+   23 00000018         
+   24 00000018         LOOP
+   25 00000018 F003 0501       AND              R5,R3,#0x01 ;R5 is last digit o
+                                                            r rem
+   26 0000001C FB05 F605       MUL              R6,R5,R5    ;R6 = R5^2
+   27 00000020 FB06 F605       MUL              R6,R6,R5    ;R6 = R5^3
+   28 00000024 EB47 0706       ADC              R7,R7,R6    ;R7 = R7 + R6
+   29 00000028         ;MLA R7,R6,R5,R7
+   30 00000028         
+   31 00000028 091B            MOVS             R3,R3,LSR #04 ;Dividing the num
+                                                            ber by 10
+   32 0000002A D1F5            BNE              LOOP
+   33 0000002C         
+   34 0000002C 680B            LDR              R3,[R1]     ;Reloading the orig
+                                                            inal nunmber
+   35 0000002E         
+   36 0000002E 429F            CMP              R7,R3       ;Checking the if co
+                                                            ndition
+   37 00000030 D000            BEQ              IFCONDITION
+   38 00000032 D104            BNE              ELSECONDITION
+   39 00000034         
+   40 00000034         IFCONDITION
+   41 00000034 F04F 08FF       MOV              R8,#0xFF
+   42 00000038 F8CA 8000       STR              R8,[R10]
+   43 0000003C E004            B                EXIT
+   44 0000003E         ELSECONDITION
+   45 0000003E F04F 08AA       MOV              R8,#0xAA
+   46 00000042 F8CA 8000       STR              R8,[R10]
+   47 00000046 E7FF            B                EXIT
+   48 00000048         EXIT
+   49 00000048         
+   50 00000048         STOP
+   51 00000048 E7FE            B                STOP
+   52 0000004A         
+   53 0000004A 00 00           ALIGN
+   54 0000004C 00000099 
+                       NUM1    DCD              153
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   55 00000050 00000000 
+                       SUM     DCD              0
+   56 00000054 00000000 
+                       DST     DCD              0
+   57 00000058                 END
+              00000000 
+              00000000 
+              00000000 
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\ex1.d 
+-o.\ex1.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\
+NXP\LPC17xx --predefine="__EVAL SETA 1" --list=.\ex1.lst ex1.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 2 in file ex1.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 4 in file ex1.s
+   Uses
+      At line 3 in file ex1.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DST 00000054
+
+Symbol: DST
+   Definitions
+      At line 56 in file ex1.s
+   Uses
+      At line 15 in file ex1.s
+Comment: DST used once
+ELSECONDITION 0000003E
+
+Symbol: ELSECONDITION
+   Definitions
+      At line 44 in file ex1.s
+   Uses
+      At line 38 in file ex1.s
+Comment: ELSECONDITION used once
+EXIT 00000048
+
+Symbol: EXIT
+   Definitions
+      At line 48 in file ex1.s
+   Uses
+      At line 43 in file ex1.s
+      At line 47 in file ex1.s
+
+IFCONDITION 00000034
+
+Symbol: IFCONDITION
+   Definitions
+      At line 40 in file ex1.s
+   Uses
+      At line 37 in file ex1.s
+Comment: IFCONDITION used once
+LOOP 00000018
+
+Symbol: LOOP
+   Definitions
+      At line 24 in file ex1.s
+   Uses
+      At line 32 in file ex1.s
+Comment: LOOP used once
+NUM1 0000004C
+
+Symbol: NUM1
+   Definitions
+      At line 54 in file ex1.s
+   Uses
+      At line 12 in file ex1.s
+Comment: NUM1 used once
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 11 in file ex1.s
+   Uses
+      At line 6 in file ex1.s
+      At line 10 in file ex1.s
+
+STOP 00000048
+
+
+
+ARM Macro Assembler    Page 2 Alphabetic symbol ordering
+Relocatable symbols
+
+
+Symbol: STOP
+   Definitions
+      At line 50 in file ex1.s
+   Uses
+      At line 51 in file ex1.s
+Comment: STOP used once
+SUM 00000050
+
+Symbol: SUM
+   Definitions
+      At line 55 in file ex1.s
+   Uses
+      At line 13 in file ex1.s
+Comment: SUM used once
+mycode 00000000
+
+Symbol: mycode
+   Definitions
+      At line 8 in file ex1.s
+   Uses
+      None
+Comment: mycode unused
+10 symbols
+345 symbols in table

@@ -1,0 +1,110 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET , DATA, READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10000000        DCD              0X10000000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 AREA             MYCODE, CODE, READONLY
+    7 00000000                 ENTRY
+    8 00000000                 EXPORT           Reset_Handler
+    9 00000000         Reset_Handler
+   10 00000000 4804            LDR              R0,=NUM
+   11 00000002 6801            LDR              R1,[R0]
+   12 00000004 4B04            LDR              R3,=SUM
+   13 00000006 FB01 1201       MLA              R2,R1,R1,R1
+   14 0000000A EA4F 0252       LSR              R2,#1
+   15 0000000E 601A            STR              R2,[R3]
+   16 00000010 00000008 
+                       NUM     DCD              8
+   17 00000014 00000000 
+              00000000         AREA             MYDATA, DATA, READWRITE
+   18 00000000 00000000 
+                       SUM     DCD              0
+   19 00000004                 END
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\prg3_3
+.d -o.\prg3_3.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\AR
+M\Inc\NXP\LPC17xx --predefine="__EVAL SETA 1" --list=.\prg3_3.lst prg3_3.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file prg3_3.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file prg3_3.s
+   Uses
+      At line 2 in file prg3_3.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+MYCODE 00000000
+
+Symbol: MYCODE
+   Definitions
+      At line 6 in file prg3_3.s
+   Uses
+      None
+Comment: MYCODE unused
+NUM 00000010
+
+Symbol: NUM
+   Definitions
+      At line 16 in file prg3_3.s
+   Uses
+      At line 10 in file prg3_3.s
+Comment: NUM used once
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 9 in file prg3_3.s
+   Uses
+      At line 5 in file prg3_3.s
+      At line 8 in file prg3_3.s
+
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+MYDATA 00000000
+
+Symbol: MYDATA
+   Definitions
+      At line 17 in file prg3_3.s
+   Uses
+      None
+Comment: MYDATA unused
+SUM 00000000
+
+Symbol: SUM
+   Definitions
+      At line 18 in file prg3_3.s
+   Uses
+      At line 12 in file prg3_3.s
+Comment: SUM used once
+2 symbols
+340 symbols in table

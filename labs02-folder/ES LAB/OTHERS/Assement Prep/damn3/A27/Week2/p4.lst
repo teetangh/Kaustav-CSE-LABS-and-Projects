@@ -1,0 +1,153 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,DATA,READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10001000        DCD              0x10001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 AREA             reverse,CODE,READONLY
+    7 00000000                 EXPORT           Reset_Handler
+    8 00000000                 ENTRY
+    9 00000000         Reset_Handler
+   10 00000000 4812            LDR              R0,=FIR
+   11 00000002 4913            LDR              R1,=SEC
+   12 00000004 4B13            LDR              R3,=RES
+   13 00000006 F04F 0204       MOV              R2,#4
+   14 0000000A F04F 34FF       MOV              R4,#0xFFFFFFFF
+   15 0000000E F384 8803       MSR              XPSR,R4
+   16 00000012 F04F 0800       MOV              R8,#0
+   17 00000016         LOOP
+   18 00000016 F850 5B04       LDR              R5,[R0],#4
+   19 0000001A F851 6B04       LDR              R6,[R1],#4
+   20 0000001E EB76 0805       SBCS             R8,R6,R5
+   21 00000022 F843 8B04       STR              R8,[R3],#4
+   22 00000026 3A01            SUBS             R2,#1
+   23 00000028 D1F5            BNE              LOOP
+   24 0000002A         STOP
+   25 0000002A E7FE            B                STOP
+   26 0000002C 00000001 
+              00000003 
+              00000005 
+              00000004 FIR     DCD              1,3,5,4
+   27 0000003C 00000006 
+              00000008 
+              00000004 
+              00000003 SEC     DCD              6,8,4,3
+   28 0000004C 00000000 
+              00000000 
+              00000000         AREA             mydata,DATA,READWRITE
+   29 00000000 00000000 
+              00000000 
+              00000000 
+              00000000 RES     DCD              0,0,0,0
+   30 00000010                 END
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\p4.d -
+o.\p4.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\NX
+P\LPC17xx --predefine="__EVAL SETA 1" --list=.\p4.lst p4.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file p4.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file p4.s
+   Uses
+      At line 2 in file p4.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+FIR 0000002C
+
+Symbol: FIR
+   Definitions
+      At line 26 in file p4.s
+   Uses
+      At line 10 in file p4.s
+Comment: FIR used once
+LOOP 00000016
+
+Symbol: LOOP
+   Definitions
+      At line 17 in file p4.s
+   Uses
+      At line 23 in file p4.s
+Comment: LOOP used once
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 9 in file p4.s
+   Uses
+      At line 5 in file p4.s
+      At line 7 in file p4.s
+
+SEC 0000003C
+
+Symbol: SEC
+   Definitions
+      At line 27 in file p4.s
+   Uses
+      At line 11 in file p4.s
+Comment: SEC used once
+STOP 0000002A
+
+Symbol: STOP
+   Definitions
+      At line 24 in file p4.s
+   Uses
+      At line 25 in file p4.s
+Comment: STOP used once
+reverse 00000000
+
+Symbol: reverse
+   Definitions
+      At line 6 in file p4.s
+   Uses
+      None
+Comment: reverse unused
+6 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RES 00000000
+
+Symbol: RES
+   Definitions
+      At line 29 in file p4.s
+   Uses
+      At line 12 in file p4.s
+Comment: RES used once
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 28 in file p4.s
+   Uses
+      None
+Comment: mydata unused
+2 symbols
+343 symbols in table

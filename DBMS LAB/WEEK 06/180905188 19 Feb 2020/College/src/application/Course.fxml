@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CourseController">
+   <children>
+      <TextField fx:id="txtId" layoutX="14.0" layoutY="21.0" promptText="Enter your text" />
+      <Button fx:id="btnId" layoutX="195.0" layoutY="21.0" mnemonicParsing="false" onAction="#onShow" text="Show" textFill="#e41b1b">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <TableView fx:id="tblCourses" layoutX="14.0" layoutY="59.0" prefHeight="157.0" prefWidth="270.0">
+        <columns>
+          <TableColumn fx:id="tblColCourseId" prefWidth="75.0" text="Course ID" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

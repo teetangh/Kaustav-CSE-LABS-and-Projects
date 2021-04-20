@@ -1,0 +1,20 @@
+	AREA RESET,DATA,READONLY
+	EXPORT __Vectors3
+__Vectors3
+	DCD 0x10001000
+	DCD Reset_Handler3
+	AREA mycode4,CODE,READONLY
+	
+	ENTRY
+	EXPORT Reset_Handler3
+	
+		
+Reset_Handler3
+	LDR R3,=SRC1
+	LDR R4,=DST1
+	LDR R1,[R3]
+	STR R1,[R4]
+	AREA mydata,DATA,READWRITE
+SRC1 DCD 0
+DST1 DCD 0
+	END

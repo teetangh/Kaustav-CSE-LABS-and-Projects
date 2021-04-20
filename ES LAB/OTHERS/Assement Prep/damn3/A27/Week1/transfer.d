@@ -1,0 +1,1 @@
+.\transfer.o: transfer.s

@@ -1,0 +1,6 @@
+Dependencies for Project 'wk4', Target 'Target 1': (DO NOT MODIFY !)
+F (.\prg4_1.s)(0x5E3361CD)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\prg4_1.lst --xref -o .\prg4_1.o --depend .\prg4_1.d)
+F (.\bcd_mul.s)(0x5E30C3FB)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\bcd_mul.lst --xref -o .\bcd_mul.o --depend .\bcd_mul.d)
+F (.\bcd2ascii.s)(0x5E30C44A)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\bcd2ascii.lst --xref -o .\bcd2ascii.o --depend .\bcd2ascii.d)
+F (.\hex2packbcd.s)(0x5E30C365)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\hex2packbcd.lst --xref -o .\hex2packbcd.o --depend .\hex2packbcd.d)
+F (.\packBcdToHex.s)(0x5E30C365)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\packbcdtohex.lst --xref -o .\packbcdtohex.o --depend .\packbcdtohex.d)

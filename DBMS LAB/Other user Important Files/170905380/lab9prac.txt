@@ -1,0 +1,23 @@
+CREATE OR REPLACE PROCEDURE Print_Hello IS 
+BEGIN
+DBMS_OUTPUT.PUT_LINE('Hello');
+END;
+/
+
+CREATE OR REPLACE FUNCTION Print_Hello1(name VARCHAR) 
+RETURN VARCHAR AS
+Greeting VARCHAR(100);
+BEGIN
+Greeting := 'Hello' || name;
+RETURN greeting;
+END;
+/
+
+
+begin
+Print_Hello;
+END;
+/
+
+select Print_Hello1('abc') FROM Dual;
+

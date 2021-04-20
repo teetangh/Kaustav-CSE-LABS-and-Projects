@@ -1,0 +1,22 @@
+DECLARE
+
+x int := 0;
+
+name instructor.name%TYPE
+Cursor c1 is select name from instructor;
+
+begin
+open c1;
+loop
+
+fetch c1 into name;
+dbma_output.putline(name);
+
+x := x + 1;
+
+if(x > 3) then
+exit loop
+
+end;
+
+/

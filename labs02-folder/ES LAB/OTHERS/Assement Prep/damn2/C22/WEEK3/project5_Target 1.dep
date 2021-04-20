@@ -1,0 +1,2 @@
+Dependencies for Project 'project5', Target 'Target 1': (DO NOT MODIFY !)
+F (.\prg5.s)(0x5E268865)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\prg5.lst --xref -o .\prg5.o --depend .\prg5.d)

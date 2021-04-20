@@ -1,0 +1,173 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET, DATA, READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10001000        DCD              0X10001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 AREA             MYCODE, CODE, READONLY
+    7 00000000                 ENTRY
+    8 00000000                 EXPORT           Reset_Handler
+    9 00000000         Reset_Handler
+   10 00000000 480C            LDR              R0,=INPUT
+   11 00000002 490D            LDR              R1,=RESULT
+   12 00000004 6802            LDR              R2,[R0]
+   13 00000006 F000 F802       BL               FACT
+   14 0000000A 600A            STR              R2,[R1]
+   15 0000000C         HERE
+   16 0000000C E7FE            B                HERE
+   17 0000000E         FACT
+   18 0000000E B508            PUSH             {R3,LR}
+   19 00000010         ADDR
+   20 00000010 4613            MOV              R3,R2
+   21 00000012 2A00            CMP              R2,#0
+   22 00000014 D102            BNE              DOWN
+   23 00000016 F04F 0201       MOV              R2,#1
+   24 0000001A E005            B                DOWN1
+   25 0000001C         DOWN
+   26 0000001C F1A2 0201       SUB              R2,#1
+   27 00000020 F7FF FFF5       BL               FACT
+   28 00000024 FB02 F203       MUL              R2,R3
+   29 00000028         DOWN1
+   30 00000028 E8BD 4008       POP{R3,LR}
+   31 0000002C 4770            BX               LR
+   32 0000002E 00 00 00000006 
+                       INPUT   DCD              0X6
+   33 00000034 00000000 
+              00000000         AREA             mydata,DATA,READWRITE
+   34 00000000 00000000 
+                       RESULT  DCD              0
+   35 00000004                 END
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\fact.d
+ -o.\fact.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\In
+c\NXP\LPC17xx --predefine="__EVAL SETA 1" --list=.\fact.lst fact.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file fact.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file fact.s
+   Uses
+      At line 2 in file fact.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ADDR 00000010
+
+Symbol: ADDR
+   Definitions
+      At line 19 in file fact.s
+   Uses
+      None
+Comment: ADDR unused
+DOWN 0000001C
+
+Symbol: DOWN
+   Definitions
+      At line 25 in file fact.s
+   Uses
+      At line 22 in file fact.s
+Comment: DOWN used once
+DOWN1 00000028
+
+Symbol: DOWN1
+   Definitions
+      At line 29 in file fact.s
+   Uses
+      At line 24 in file fact.s
+Comment: DOWN1 used once
+FACT 0000000E
+
+Symbol: FACT
+   Definitions
+      At line 17 in file fact.s
+   Uses
+      At line 13 in file fact.s
+      At line 27 in file fact.s
+
+HERE 0000000C
+
+Symbol: HERE
+   Definitions
+      At line 15 in file fact.s
+   Uses
+      At line 16 in file fact.s
+Comment: HERE used once
+INPUT 00000030
+
+Symbol: INPUT
+   Definitions
+      At line 32 in file fact.s
+   Uses
+      At line 10 in file fact.s
+Comment: INPUT used once
+MYCODE 00000000
+
+Symbol: MYCODE
+   Definitions
+      At line 6 in file fact.s
+   Uses
+      None
+Comment: MYCODE unused
+Reset_Handler 00000000
+
+
+
+
+ARM Macro Assembler    Page 2 Alphabetic symbol ordering
+Relocatable symbols
+
+Symbol: Reset_Handler
+   Definitions
+      At line 9 in file fact.s
+   Uses
+      At line 5 in file fact.s
+      At line 8 in file fact.s
+
+8 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESULT 00000000
+
+Symbol: RESULT
+   Definitions
+      At line 34 in file fact.s
+   Uses
+      At line 11 in file fact.s
+Comment: RESULT used once
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 33 in file fact.s
+   Uses
+      None
+Comment: mydata unused
+2 symbols
+345 symbols in table

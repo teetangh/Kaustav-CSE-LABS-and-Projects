@@ -1,0 +1,194 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,DATA,READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 40001000        DCD              0X40001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 ALIGN
+    7 00000008                 AREA             mycode,CODE,READONLY
+    8 00000000                 ENTRY
+    9 00000000                 EXPORT           Reset_Handler
+   10 00000000         Reset_Handler
+   11 00000000 4819            LDR              R0,=NUM1
+   12 00000002 6801            LDR              R1,[R0]
+   13 00000004 4819            LDR              R0,=NUM2
+   14 00000006 6802            LDR              R2,[R0]
+   15 00000008 F04F 0300       MOV              R3,#0
+   16 0000000C F04F 0408       MOV              R4,#8
+   17 00000010 F04F 080F       MOV              R8,#0X0F
+   18 00000014 F8DF 9058       LDR              R9,=SUM
+   19 00000018 EA01 0508 
+                       LOOP    AND              R5,R1,R8
+   20 0000001C EA02 0608       AND              R6,R2,R8
+   21 00000020 EA4F 1111       LSR              R1,R1,#4
+   22 00000024 EA4F 1212       LSR              R2,R2,#4
+   23 00000028 EB06 0705       ADD              R7,R6,R5
+   24 0000002C 441F            ADD              R7,R7,R3
+   25 0000002E 2F0A            CMP              R7,#0XA
+   26 00000030 BF26 3F0A       SUBCS            R7,R7,#0XA
+   27 00000034 2301            MOVCS            R3,#1
+   28 00000036 2300            MOVCC            R3,#0
+   29 00000038 F809 7B01       STRB             R7,[R9],#1
+   30 0000003C 1E64            SUBS             R4,R4,#1
+   31 0000003E D1EB            BNE              LOOP
+   32 00000040 480B            LDR              R0,=SUM
+   33 00000042 F04F 0100       MOV              R1,#0
+   34 00000046 F04F 0208       MOV              R2,#8
+   35 0000004A 4B0A            LDR              R3,=PACK
+   36 0000004C F810 4B01 
+                       LOOP1   LDRB             R4,[R0],#1
+   37 00000050 EA4F 1101       LSL              R1,R1,#4
+   38 00000054 EA41 0104       ORR              R1,R1,R4
+   39 00000058 1E52            SUBS             R2,R2,#1
+   40 0000005A D1F7            BNE              LOOP1
+   41 0000005C 6019            STR              R1,[R3]
+   42 0000005E         STOP
+   43 0000005E E7FE            B                STOP
+   44 00000060 00000129 
+                       NUM1    DCD              0X00000129
+   45 00000064 00000139 
+                       NUM2    DCD              0X00000139
+   46 00000068 00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000         AREA             mydata,DATA,READWRITE
+   47 00000000 00000000 
+                       SUM     DCD              0
+   48 00000004 00000000 
+                       PACK    DCD              0
+   49 00000008                 END
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\prg3.d
+ -o.\prg3.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\In
+c\NXP\LPC17xx --predefine="__EVAL SETA 1" --list=.\prg3.lst prg3.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file prg3.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file prg3.s
+   Uses
+      At line 2 in file prg3.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+LOOP 00000018
+
+Symbol: LOOP
+   Definitions
+      At line 19 in file prg3.s
+   Uses
+      At line 31 in file prg3.s
+Comment: LOOP used once
+LOOP1 0000004C
+
+Symbol: LOOP1
+   Definitions
+      At line 36 in file prg3.s
+   Uses
+      At line 40 in file prg3.s
+Comment: LOOP1 used once
+NUM1 00000060
+
+Symbol: NUM1
+   Definitions
+      At line 44 in file prg3.s
+   Uses
+      At line 11 in file prg3.s
+Comment: NUM1 used once
+NUM2 00000064
+
+Symbol: NUM2
+   Definitions
+      At line 45 in file prg3.s
+   Uses
+      At line 13 in file prg3.s
+Comment: NUM2 used once
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 10 in file prg3.s
+   Uses
+      At line 5 in file prg3.s
+      At line 9 in file prg3.s
+
+STOP 0000005E
+
+Symbol: STOP
+   Definitions
+      At line 42 in file prg3.s
+   Uses
+      At line 43 in file prg3.s
+Comment: STOP used once
+mycode 00000000
+
+Symbol: mycode
+   Definitions
+      At line 7 in file prg3.s
+   Uses
+      None
+Comment: mycode unused
+7 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+PACK 00000004
+
+Symbol: PACK
+   Definitions
+      At line 48 in file prg3.s
+   Uses
+      At line 35 in file prg3.s
+Comment: PACK used once
+SUM 00000000
+
+Symbol: SUM
+   Definitions
+      At line 47 in file prg3.s
+   Uses
+      At line 18 in file prg3.s
+      At line 32 in file prg3.s
+
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 46 in file prg3.s
+   Uses
+      None
+Comment: mydata unused
+3 symbols
+345 symbols in table

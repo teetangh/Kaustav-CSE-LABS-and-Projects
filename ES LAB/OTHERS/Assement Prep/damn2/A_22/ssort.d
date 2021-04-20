@@ -1,0 +1,1 @@
+.\ssort.o: ssort.s

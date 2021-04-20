@@ -1,0 +1,7 @@
+package application.models;
+
+
+public class Course {
+
+	private StringProperty courseId;
+}

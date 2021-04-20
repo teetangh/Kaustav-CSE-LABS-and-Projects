@@ -1,0 +1,13 @@
+package application.models;
+
+import javafx.beans.property.StringProperty;
+
+public class Course {
+
+	private StringProperty courseId;
+	
+	public void setCourseId(String cid)
+	{
+		courseId.set(cid);
+	}
+}

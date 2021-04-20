@@ -1,0 +1,155 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET, DATA, READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10001000        DCD              0X10001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 AREA             MYCODE, CODE, READONLY
+    7 00000000                 ENTRY
+    8 00000000                 EXPORT           Reset_Handler
+    9 00000000         Reset_Handler
+   10 00000000 4812            LDR              R0,=IN
+   11 00000002 4913            LDR              R1,=OUT
+   12 00000004 6802            LDR              R2,[R0]
+   13 00000006 F04F 030F       MOV              R3,#0X0000000F
+   14 0000000A F04F 4470       MOV              R4,#0XF0000000
+   15 0000000E F04F 0504       MOV              R5,#4
+   16 00000012 F04F 091C       MOV              R9,#28
+   17 00000016 EA02 0603 
+                       UP      AND              R6,R2,R3
+   18 0000001A EA02 0704       AND              R7,R2,R4
+   19 0000001E FA27 F709       LSR              R7,R9
+   20 00000022 42BE            CMP              R6,R7
+   21 00000024 EA4F 1303       LSL              R3,#4
+   22 00000028 EA4F 1414       LSR              R4,#4
+   23 0000002C D108            BNE              LAST
+   24 0000002E 3D01            SUBS             R5,#1
+   25 00000030 F1A9 0908       SUB              R9,R9,#8
+   26 00000034 D1EF            BNE              UP
+   27 00000036 F04F 08FF       MOV              R8,#0XFF
+   28 0000003A F8C1 8000       STR              R8,[R1]
+   29 0000003E         STOP
+   30 0000003E E7FE            B                STOP
+   31 00000040 F04F 08AA 
+                       LAST    MOV              R8,#0XAA
+   32 00000044 F8C1 8000       STR              R8,[R1]
+   33 00000048         
+   34 00000048         
+   35 00000048 DCBACDCD 
+                       IN      DCD              0XDCBACDCD
+   36 0000004C 00000000 
+              00000000         AREA             mydata,DATA,READWRITE
+   37 00000000 00000000 
+                       OUT     DCD              0
+   38 00000004                 END
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\test.d
+ -o.\test.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\In
+c\NXP\LPC17xx --predefine="__EVAL SETA 1" --list=.\test.lst D:\c55\test.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file D:\c55\test.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file D:\c55\test.s
+   Uses
+      At line 2 in file D:\c55\test.s
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+IN 00000048
+
+Symbol: IN
+   Definitions
+      At line 35 in file D:\c55\test.s
+   Uses
+      At line 10 in file D:\c55\test.s
+Comment: IN used once
+LAST 00000040
+
+Symbol: LAST
+   Definitions
+      At line 31 in file D:\c55\test.s
+   Uses
+      At line 23 in file D:\c55\test.s
+Comment: LAST used once
+MYCODE 00000000
+
+Symbol: MYCODE
+   Definitions
+      At line 6 in file D:\c55\test.s
+   Uses
+      None
+Comment: MYCODE unused
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 9 in file D:\c55\test.s
+   Uses
+      At line 5 in file D:\c55\test.s
+      At line 8 in file D:\c55\test.s
+
+STOP 0000003E
+
+Symbol: STOP
+   Definitions
+      At line 29 in file D:\c55\test.s
+   Uses
+      At line 30 in file D:\c55\test.s
+Comment: STOP used once
+UP 00000016
+
+Symbol: UP
+   Definitions
+      At line 17 in file D:\c55\test.s
+   Uses
+      At line 26 in file D:\c55\test.s
+Comment: UP used once
+6 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+OUT 00000000
+
+Symbol: OUT
+   Definitions
+      At line 37 in file D:\c55\test.s
+   Uses
+      At line 11 in file D:\c55\test.s
+Comment: OUT used once
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 36 in file D:\c55\test.s
+   Uses
+      None
+Comment: mydata unused
+2 symbols
+343 symbols in table

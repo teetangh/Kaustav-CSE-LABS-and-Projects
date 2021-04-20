@@ -1,0 +1,28 @@
+username:C29@cseorcl
+password:C29
+
+set linesize 120
+
+drop table EMPLOYEE;
+drop table DEPARTMENT;
+
+create table EMPLOYEE (
+EmpNo number(5) not null,
+EmpName varchar2(20) not null,
+Gender varchar2(2) not null, 
+Salary number(5) not null,
+Address varchar2(20) not null
+,DNo number(3));
+
+create table DEPARTMENT(
+DeptNo number(3) primary key,
+DeptName varchar2(10),
+Location varchar2(20));
+
+alter table EMPLOYEE add constraint Emp_pk primary key(EmpNo);
+
+alter table EMPLOYEE add constraint Gen_check CHECK (Gender = 'M' or Gender = 'F');
+
+alter table DEPARTMENT add constraint DeptNo_pk primary key(DeptNo);
+
+alter talbe DEPARTMENT add constraint DeptName_ck  
