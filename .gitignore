@@ -1,3 +1,16 @@
+# Settings and Configs
+# Ignore all the C object files
+*
+!*/
+!*.*
+
+# Ignore Python Cache
+__pycache__/
+*.py[cod]
+
+# Ignore Vs code settings
+.vscode/
+
 # Latex
 *.aux
 *.fdb_latexmk
@@ -5,6 +18,3 @@
 *.log
 *.out
 *.gz
-
-# Settings and Configs
-.vscode/

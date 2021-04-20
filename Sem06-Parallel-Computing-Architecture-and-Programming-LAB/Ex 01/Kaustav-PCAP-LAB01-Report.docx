@@ -1,0 +1,220 @@
+﻿Q1
+#include "mpi.h"
+#include <stdio.h>
+
+int power(int base, int exponent)
+{
+    if (base == 0 || base == 1)
+        return base;
+    else if (exponent == 0)
+        return 1;
+    else if (exponent == 1)
+        return base;
+    else
+        return base * power(base, exponent - 1);
+}
+
+int main(int argc, char *argv[])
+{
+    int rank, size;
+
+    MPI_Init(&argc, &argv);
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
+
+    int x = 10;
+    printf("x = %d => pow(x,%d) is %d \n", x, rank, power(x, rank));
+
+    MPI_Finalize();
+    return 0;
+}
+
+
+Q2
+#include "mpi.h"
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+    int rank, size;
+
+    MPI_Init(&argc, &argv);
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
+
+    if (rank % 2 == 0)
+        printf("Hello (Rank %d) \n", rank);
+    else
+        printf("World (Rank %d) \n", rank);
+
+    MPI_Finalize();
+    return 0;
+}
+
+Q3
+#include "mpi.h"
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+    int rank, size;
+
+    const int num1 = 10;
+    const int num2 = 20;
+
+    MPI_Init(&argc, &argv);
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
+
+    int result = 0;
+    switch (rank)
+    {
+    case 0:
+        result = num1 + num2;
+        printf("%d + %d is %d (Rank %d) \n", num1, num2, (num1 + num2), rank);
+        break;
+    case 1:
+        result = num1 - num2;
+        printf("%d - %d is %d (Rank %d) \n", num1, num2, (num1 - num2), rank);
+        break;
+    case 2:
+        result = num1 * num2;
+        printf("%d * %d is %d (Rank %d) \n", num1, num2, (num1 * num2), rank);
+        break;
+    case 3:
+        result = num1 / num2;
+        printf("%d / %d is %d (Rank %d) \n", num1, num2, (num1 / num2), rank);
+        break;
+    }
+
+    MPI_Finalize();
+    return 0;
+}
+
+
+Q4
+#include "mpi.h"
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+    int rank, size;
+
+    char str[] = "HeLLO";
+
+    MPI_Init(&argc, &argv);
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
+
+    if (str[rank] >= 'a' && str[rank] <= 'z')
+        str[rank] = str[rank] - 32;
+    else if (str[rank] >= 'A' && str[rank] <= 'Z')
+        str[rank] = str[rank] + 32;
+
+    printf("My rank is %d and the modified string is %s \n", rank, str);
+
+    MPI_Finalize();
+    return 0;
+}
+
+
+Q1 Additional Exercise
+#include "mpi.h"
+#include <stdio.h>
+#include <stdbool.h>
+
+int reverse_digits(int num)
+{
+    int rev = 0;
+
+    while (num > 0)
+    {
+        int last = num % 10;
+        rev = rev * 10 + last;
+        num = num / 10;
+    }
+
+    return rev;
+}
+
+int main(int argc, char *argv[])
+{
+    int rank, size;
+
+    MPI_Init(&argc, &argv);
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
+
+    int input[] = {18, 523, 301, 1234, 2, 14, 108, 150, 1928};
+
+    switch (rank)
+    {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+    case 7:
+    case 8:
+        printf("after reversing %d , we get %d (Rank %d) \n", input[rank], reverse_digits(input[rank]), rank);
+        break;
+
+    default:
+        break;
+    }
+
+    MPI_Finalize();
+    return 0;
+}
+
+Q2 Additional Exercise
+
+
+#include "mpi.h"
+#include <stdio.h>
+#include <stdbool.h>
+
+bool isPrime(int num)
+{
+    if (num < 2)
+        return false;
+
+    for (int i = 2; i < num; i++)
+    {
+        if (num % i == 0)
+            return false;
+    }
+
+    return true;
+}
+
+int main(int argc, char *argv[])
+{
+    int rank, size;
+
+    MPI_Init(&argc, &argv);
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
+
+    if (rank == 0)
+    {
+        for (int i = 1; i < 50; i++)
+        {
+            if (isPrime(i))
+                printf("Prime number %d (Rank %d ) \n", i, rank);
+        }
+    }
+    else
+    {
+        for (int i = 51; i < 101; i++)
+        {
+            if (isPrime(i))
+                printf("Prime number %d (Rank %d ) \n", i, rank);
+        }
+    }
+
+    MPI_Finalize();
+    return 0;
+}
