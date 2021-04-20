@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javafx.beans.property.StringProperty"/>
-<fullyQualifiedTypeName name="javafx.scene.control.cell.PropertyValueFactory"/>
-<fullyQualifiedTypeName name="javafx.collections.FXCollections"/>
-<fullyQualifiedTypeName name="javafx.collections.ObservableList"/>
-<fullyQualifiedTypeName name="javafx.stage.Stage"/>
-</qualifiedTypeNameHistroy>

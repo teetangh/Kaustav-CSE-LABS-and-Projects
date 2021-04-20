@@ -1,6 +1,0 @@
-package application.models;
-
-public class Course {
-
-	public StringProperty courseId
-}

@@ -1,8 +1,0 @@
-DECLARE
-   name VARCHAR(100) := 'World';
-BEGIN
-        name := '&YourName';
-        DBMS_OUTPUT.PUT_LINE('Hello' || ' ' || name);
-END;
-/
-

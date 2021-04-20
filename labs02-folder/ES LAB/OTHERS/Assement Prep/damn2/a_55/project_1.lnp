@@ -1,8 +1,0 @@
---cpu Cortex-M3
-".\mycode_1.o"
-".\mycode_2.o"
-".\mycode_3.o"
-".\mycode_4.o"
---ro-base 0x00000000 --entry 0x00000000 --rw-base 0x10000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols
---info sizes --info totals --info unused --info veneers
---list ".\project_1.map" -o .\project_1.axf

@@ -1,1 +1,0 @@
-.\mult.o: mult.s

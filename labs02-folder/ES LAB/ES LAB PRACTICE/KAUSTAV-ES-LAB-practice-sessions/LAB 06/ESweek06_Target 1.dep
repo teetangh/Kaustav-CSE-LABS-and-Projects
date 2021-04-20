@@ -1,51 +1,0 @@
-Dependencies for Project 'ESweek06', Target 'Target 1': (DO NOT MODIFY !)
-F (.\startup_LPC17xx.s)(0x532C1658)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\startup_lpc17xx.lst --xref -o .\startup_lpc17xx.o --depend .\startup_lpc17xx.d)
-F (..\include\system_LPC17xx.c)(0x532C1658)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-o .\system_lpc17xx.o --omf_browse .\system_lpc17xx.crf --depend .\system_lpc17xx.d)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7E87C)
-I (C:\Keil\ARM\Inc\NXP\LPC17xx\LPC17xx.h)(0x532C1734)
-I (C:\Keil\ARM\CMSIS\Include\core_cm3.h)(0x532C1AEA)
-I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532C1AEA)
-I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532C1AEA)
-I (C:\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h)(0x532C1734)
-F (.\paawanRing.c)(0x5ED4AFB2)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-o .\paawanring.o --omf_browse .\paawanring.crf --depend .\paawanring.d)
-I (C:\Keil\ARM\Inc\NXP\LPC17xx\LPC17XX.h)(0x532C1734)
-I (C:\Keil\ARM\CMSIS\Include\core_cm3.h)(0x532C1AEA)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7E87C)
-I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532C1AEA)
-I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532C1AEA)
-I (C:\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h)(0x532C1734)
-F (.\prog1binary8bitupCounter.c)(0x5ED4B4C8)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-o .\prog1binary8bitupcounter.o --omf_browse .\prog1binary8bitupcounter.crf --depend .\prog1binary8bitupcounter.d)
-I (C:\Keil\ARM\Inc\NXP\LPC17xx\LPC17xx.h)(0x532C1734)
-I (C:\Keil\ARM\CMSIS\Include\core_cm3.h)(0x532C1AEA)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7E87C)
-I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532C1AEA)
-I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532C1AEA)
-I (C:\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h)(0x532C1734)
-F (.\prog2upDownSwitchCounter.c)(0x5ED4BA05)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-o .\prog2updownswitchcounter.o --omf_browse .\prog2updownswitchcounter.crf --depend .\prog2updownswitchcounter.d)
-I (C:\Keil\ARM\Inc\NXP\LPC17xx\LPC17xx.h)(0x532C1734)
-I (C:\Keil\ARM\CMSIS\Include\core_cm3.h)(0x532C1AEA)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7E87C)
-I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532C1AEA)
-I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532C1AEA)
-I (C:\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h)(0x532C1734)
-F (.\prog3ringCounter.c)(0x5ED4BA7A)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-o .\prog3ringcounter.o --omf_browse .\prog3ringcounter.crf --depend .\prog3ringcounter.d)
-I (C:\Keil\ARM\Inc\NXP\LPC17xx\LPC17xx.h)(0x532C1734)
-I (C:\Keil\ARM\CMSIS\Include\core_cm3.h)(0x532C1AEA)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7E87C)
-I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532C1AEA)
-I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532C1AEA)
-I (C:\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h)(0x532C1734)
-F (.\sample1johnsonCounter.c)(0x5ED4BAB7)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-o .\sample1johnsoncounter.o --omf_browse .\sample1johnsoncounter.crf --depend .\sample1johnsoncounter.d)
-I (C:\Keil\ARM\Inc\NXP\LPC17xx\LPC17xx.h)(0x532C1734)
-I (C:\Keil\ARM\CMSIS\Include\core_cm3.h)(0x532C1AEA)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7E87C)
-I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532C1AEA)
-I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532C1AEA)
-I (C:\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h)(0x532C1734)
-F (.\sample2reverseJohnsonCounter.c)(0x5ED4BB30)(-c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-o .\sample2reversejohnsoncounter.o --omf_browse .\sample2reversejohnsoncounter.crf --depend .\sample2reversejohnsoncounter.d)
-I (C:\Keil\ARM\Inc\NXP\LPC17xx\LPC17xx.h)(0x532C1734)
-I (C:\Keil\ARM\CMSIS\Include\core_cm3.h)(0x532C1AEA)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7E87C)
-I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532C1AEA)
-I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532C1AEA)
-I (C:\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h)(0x532C1734)

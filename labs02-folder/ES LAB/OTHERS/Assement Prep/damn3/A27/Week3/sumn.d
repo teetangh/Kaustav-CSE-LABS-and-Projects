@@ -1,1 +1,0 @@
-.\sumn.o: sumn.s

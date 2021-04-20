@@ -1,1 +1,0 @@
-.\secondpgm.o: secondpgm.s
