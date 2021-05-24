@@ -13,21 +13,20 @@
 
 <div class="container" id="container1">
     <div id="content">
-        <h2>Entry one</h2>
-        <p>This is my first entry.</p>
-
-        <h2>Entry two</h2>
-        <p>This is my second entry.</p>
+        <h2>Car Manufacturer</h2>
+    </div>
+    <div>
+        <h2>Model Name</h2>
     </div>
 </div>
-
 <div class="form-group" id="content2">
-    <form action="/model-name/" method="post">
+
+    <form action="question1_app/model-name/" method="post">
         <div class="container" id="container2">
             <div class="dropdown">
                 <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
-                    Car Manufacturer
+                    Select From available Manufacturers
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                     <button class="dropdown-item" type="button">BMW</button>
@@ -38,18 +37,61 @@
 
             <div>
                 <input id="model_name" type="text" name="model_name" class="form-control" value="{{ current_name }}">
-                <label for="model_name">Model Name</label>
+                <label for="model_name">Field cannot be blank</label>
                 <div class="form-group" stylze="justify-content: end">
                     <input type="submit" class="btn btn-success" value="Submit details">
                 </div>
             </div>
         </div>
+
+        <div class="container">
+            <input type="submit" value="Lets go" class="form-control">
+        </div>
+
+    </form>
+
+    
+
+</div>
+
+<div class="container" style="background-color: red ; text-align: center;"> 
+    <h1> Hi there</h1>
+</div>
+
+
+<div class="container">
+
+    <form method="POST" action="question1_app/success_view" >
+        {% csrf_token %}
+
+        <div class="form-group">
+            {%for val in form%}
+            
+            {{ val.label_tag }}
+            {{val}}
+            {%endfor%}
+        </div>
+
+        <!-- <div class="form-group">
+            <label>First Name </label>
+            {{ form.first_name }}
+        </div>
+        <div class="form-group">
+            <label>Last Name </label>
+            {{ form.last_name }}
+        </div>
+        <div class="form-group">
+            <label>Roll Number</label>
+            {{ form.roll_number }}
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            {{ form.password }}
+        </div> -->
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
 </div>
-</div>
-
-
 
 <h1>{{ section.title }}</h1>
 
