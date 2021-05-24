@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p><b>City : </b>
+    <select name="city" class="form-control">
+        {% for results in showcity %}
+        <option value="{{ results.car_name}}">{{ results.car_name }}</option>
+        {% endfor %}
+    </select>
+</p>
+{% endblock %}
