@@ -8,5 +8,5 @@ body {
   margin: 0 auto;
   margin-top: 100px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
