@@ -4,6 +4,10 @@
 !*/
 !*.*
 
+# Other Stuff
+resources/
+resources.zip
+
 # Ignore Python Cache
 __pycache__/
 *.py[cod]
