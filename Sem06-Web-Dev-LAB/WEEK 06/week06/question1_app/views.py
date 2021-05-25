@@ -37,4 +37,4 @@ def showlist(request):
     context = {}
     context['form'] = InputForm()
     results = CarModel.objects.all
-    return render(request, "templates/list.html", {"showcity": results, "context": context})
+    return render(request, "templates/list.html", {"showManufacturer": results, "context": context})

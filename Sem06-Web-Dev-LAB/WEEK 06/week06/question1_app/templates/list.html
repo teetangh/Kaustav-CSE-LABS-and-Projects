@@ -3,9 +3,9 @@
 {% block content %}
 <div class="container">
     <div>
-        <p><b>City : </b>
-            <select name="city" class="form-control">
-                {% for results in showcity %}
+        <p><b>Manufacturer : </b>
+            <select name="Manufacturer" class="form-control">
+                {% for results in showManufacturer %}
                 <option value="{{ results.manufacturer_name}}">{{ results.manufacturer_name }}</option>
                 {% endfor %}
             </select>
