@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "question2_app",
     "question3_app",
     "question4_app",
+    "bootstrap4",
 ]
 
 MIDDLEWARE = [

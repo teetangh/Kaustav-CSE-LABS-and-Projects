@@ -1,6 +1,7 @@
-from .forms import InputForm
+from .forms import CarForm, InputForm
 from django.shortcuts import render
 from . import forms
+from . import models
 
 
 from .models import CarModel
@@ -8,9 +9,15 @@ from .models import CarModel
 
 
 def index(request):
-    context = {}
-    context['form'] = InputForm()
-    return render(request, "templates/index.html", context)
+    results = CarModel.objects.all
+
+    inputContext = {}
+    inputContext['form'] = InputForm()
+
+    carContext = {}
+    carContext['form'] = CarForm()
+
+    return render(request, "templates/index.html", {"showManufacturer": results, "inputContext": inputContext, "carContext": carContext})
 
 
 def success_view(request):
@@ -30,11 +37,3 @@ def success_view(request):
                   roll_number,
                   password)
     return render(request, "templates/success.html", context=None)
-
-
-def showlist(request):
-
-    context = {}
-    context['form'] = InputForm()
-    results = CarModel.objects.all
-    return render(request, "templates/list.html", {"showManufacturer": results, "context": context})
