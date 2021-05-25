@@ -33,5 +33,8 @@ def success_view(request):
 
 
 def showlist(request):
+
+    context = {}
+    context['form'] = InputForm()
     results = CarModel.objects.all
-    return render(request, "templates/list.html", {"showcity": results})
+    return render(request, "templates/list.html", {"showcity": results, "context": context})

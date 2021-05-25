@@ -1,11 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<p><b>City : </b>
-    <select name="city" class="form-control">
-        {% for results in showcity %}
-        <option value="{{ results.car_name}}">{{ results.car_name }}</option>
-        {% endfor %}
-    </select>
-</p>
+<div class="container">
+    <div>
+        <p><b>City : </b>
+            <select name="city" class="form-control">
+                {% for results in showcity %}
+                <option value="{{ results.manufacturer_name}}">{{ results.manufacturer_name }}</option>
+                {% endfor %}
+            </select>
+        </p>
+    </div>
+
+    <div>
+        {{ context }}
+    </div>
+
+</div>
 {% endblock %}
