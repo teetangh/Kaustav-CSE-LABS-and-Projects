@@ -4,7 +4,7 @@
 {% block title %}Index Page{% endblock %}
 
 {% block head %}
-<link rel="stylesheet" type="text/css" href="../static/question1_app/style.css">
+<link rel="stylesheet" type="text/css" href="../static/question1_app/css/style.css">
 {% endblock %}
 
 
@@ -23,20 +23,23 @@
 
     <form action="question1_app/model-name/" method="post">
         <div class="container" id="container2">
+
+
             <div class="dropdown">
                 <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
-                    Select From available Manufacturers
+                    Manufacturers from SQLite Database
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <button class="dropdown-item" type="button">BMW</button>
-                    <button class="dropdown-item" type="button">Mercedes</button>
-                    <button class="dropdown-item" type="button">Volvo</button>
+                    <select name="Manufacturer" class="form-control">
+                        {% for results in showManufacturer %}
+                        <option class="dropdown-item" value="{{ results.manufacturer_name}}">{{
+                            results.manufacturer_name }}
+                        </option>
+                        {% endfor %}
+                    </select>
                 </div>
             </div>
-
-
-
 
             <div>
                 <input id="model_name" type="text" name="model_name" class="form-control" value="{{ current_name }}">
@@ -45,10 +48,6 @@
                     <input type="submit" class="btn btn-success" value="Submit details">
                 </div>
             </div>
-        </div>
-
-        <div class="container">
-            <input type="submit" value="Lets go" class="form-control">
         </div>
 
     </form>
@@ -58,89 +57,84 @@
 <div class="container">
     <b>Manufacturer : </b>
     <select name="Manufacturer" class="form-control">
-
         {% for results in showManufacturer %}
         <option value="{{ results.manufacturer_name}}">{{ results.manufacturer_name }}</option>
         {% endfor %}
     </select>
-
-
-    {{ carContext.form }}
-</div>
-
-
-
-
-<div class="form-group" id="content2">
     <br>
-    <form action="success_view" method="post">
-        <div class="container" id="container2">
-
-
-            <div class="dropdown">
-                <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Select From available Manufacturers
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    {% for results in showManufacturer %}
-                    <option class="dropdown-item" value="{{ results.manufacturer_name}}">{{ results.manufacturer_name }}
-                    </option>
-                    {% endfor %}
-                </div>
-            </div>
-
-
-            <div>
-                <input id="model_name" type="text" name="model_name" class="form-control" value="{{ current_name }}">
-                <label for="model_name">Field cannot be blank</label>
-                <div class="form-group" stylze="justify-content: end">
-                    <input type="submit" class="btn btn-success" value="Submit details">
-                </div>
-            </div>
-        </div>
-    </form>
-
+    {{ carForm.form.car_name }}
 </div>
-
 
 
 <div class="container">
 
-    <form method="POST" action="success_view">{% csrf_token %}
+    <form method="POST" action="question1_app/success_view">{% csrf_token %}
         <div class="form-group">
             <label>First Name </label>
-            {{ inputContext.form.first_name }}
+            {{ inputForm.form.first_name }}
         </div>
         <div class="form-group">
             <label>Last Name </label>
-            {{ inputContext.form.last_name }}
+            {{ inputForm.form.last_name }}
         </div>
         <div class="form-group">
             <label>Roll Number</label>
-            {{ inputContext.form.roll_number }}
+            {{ inputForm.form.roll_number }}
         </div>
         <div class="form-group">
             <label>Password</label>
-            {{ inputContext.form.password }}
+            {{ inputForm.form.password }}
         </div>
+
 
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
 </div>
 
+<div>
+
+    <div class="container">
+        <form action="question1_app/success_view" method="POST">{% csrf_token %}
+            <div class="container">
+                {% for val in carForm.form %}
+
+                {% if val.label_tag == 'car_brand'%}
+                <div>
+
+                    <select name="CarForm" id="">
+                        {{val.label_tag}}
+                        {{val}
+                    </select>
+
+                </div>
+                {% else %}
+                <div>
+
+                    {{ val.label_tag }}
+                    {{ val }}
+                    {% endif %}
+
+                </div>
+
+                {% endfor %}
+
+                <div>
+                    <input type="submit" class="btn btn-success" value="Submit details">
+                </div>
+            </div>
+
+        </form>
+
+    </div>
 
 
-<h1>{{ section.title }}</h1>
+</div>
 
-{% for story in story_list %}
-<h2>
-    <a href="{{ story.get_absolute_url }}">
-        {{ story.headline|upper }}
-    </a>
-</h2>
-<p>{{ story.tease|truncatewords:"100" }}</p>
-{% endfor %}
 
+
+
+
+
+<script src="../static/question1_app/js/index.js"></script>
 {% endblock %}

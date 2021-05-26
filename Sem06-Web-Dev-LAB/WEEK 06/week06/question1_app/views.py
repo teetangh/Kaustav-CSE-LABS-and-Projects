@@ -11,29 +11,43 @@ from .models import CarModel
 def index(request):
     results = CarModel.objects.all
 
-    inputContext = {}
-    inputContext['form'] = InputForm()
+    inputForm = {}
+    inputForm['form'] = InputForm()
 
-    carContext = {}
-    carContext['form'] = CarForm()
+    carForm = {}
+    carForm['form'] = CarForm()
 
-    return render(request, "templates/index.html", {"showManufacturer": results, "inputContext": inputContext, "carContext": carContext})
+    return render(request, "templates/index.html", {"showManufacturer": results, "inputForm": inputForm, "carForm": carForm})
 
 
 def success_view(request):
-    form = forms.InputForm()
+    inputForm = forms.InputForm()
+    carForm = forms.CarForm()
+
     if request.method == 'POST':
 
-        form = forms.InputForm(request.POST)
-        if form.is_valid():
+        inputForm = forms.InputForm(request.POST)
+        carForm = forms.CarForm(request.POST)
 
-            first_name = form.cleaned_data['first_name']
-            last_name = form.cleaned_data['last_name']
-            roll_number = form.cleaned_data['roll_number']
-            password = form.cleaned_data['password']
+        if inputForm.is_valid():
 
-            print(first_name,
+            first_name = inputForm.cleaned_data['first_name']
+            last_name = inputForm.cleaned_data['last_name']
+            roll_number = inputForm.cleaned_data['roll_number']
+            password = inputForm.cleaned_data['password']
+
+            print("DEBUG 1",
+                  first_name,
                   last_name,
                   roll_number,
                   password)
+
+        if carForm.is_valid():
+            car_name = carForm.cleaned_data['car_name']
+            car_brand = carForm.cleaned_data["car_brand"]
+            # car_brand = dict(carForm.fields['car_brand'].choices)[car_brand]
+
+            print("DEBUG 2",
+                  car_name, car_brand)
+
     return render(request, "templates/success.html", context=None)

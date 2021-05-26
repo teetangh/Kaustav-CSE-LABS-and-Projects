@@ -32,6 +32,15 @@ class InputForm(forms.Form):
 
 
 class CarForm(forms.Form):
+
+    CAR_BRAND_CHOICES = [
+        ('MR', 'maruti'),
+        ('WG', 'Wagonr'),
+        ('FZ', 'Forza'),
+    ]
+
+    # car_brand = models.CharField(choices=CAR_BRAND_CHOICES, default=MR)
+    car_brand = forms.ChoiceField(choices=CAR_BRAND_CHOICES)
     car_name = forms.CharField(max_length=200, widget=TextInput(
         attrs={
             'class': 'form-control ',
