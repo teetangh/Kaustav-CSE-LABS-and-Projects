@@ -21,5 +21,5 @@ urlpatterns = [
     path("question1_app", include("question1_app.urls")),
     path("question2_app", include("question2_app.urls")),
     path("question3_app", include("question3_app.urls")),
-    # path("question4_app", include("question4_app.urls"))
+    path("question4_app", include("question4_app.urls"))
 ]

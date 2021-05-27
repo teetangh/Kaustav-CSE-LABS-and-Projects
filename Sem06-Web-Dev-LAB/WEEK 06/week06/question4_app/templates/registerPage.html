@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}First Page{% endblock %}
+
+
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container" id="container1">
+
+    <form action="question4_app/successPage" method="post">{% csrf_token %}
+        <div>
+            <label for="username">Company</label>
+            {{ product_form.company }}
+            <label for="password">Device</label>
+            {{ product_form.device }}
+        </div>
+
+        <input type="submit" value="Submit" />
+    </form>
+
+</div>
+
+{% endblock %}
