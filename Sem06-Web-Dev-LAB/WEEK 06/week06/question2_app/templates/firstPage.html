@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}First Page{% endblock %}
+
+
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="../static/css/firstPage.css">
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container" id="container1">
+</div>
+<h1>Student Form</h1>
+<form method="POST" action="question2_app/secondPage">{% csrf_token %}
+
+    <div id="vertical-center">
+        <h2>Name: {{ student_form.name }}</h2>
+        <h2>Roll Number: {{ student_form.roll_number }}</h2>
+
+        <h2>Birth Year: {{ student_form.birth_year }}</h2>
+
+        <h2>subject: {{ student_form.subject }}</h2>
+        <h2>Submit
+            <button type="submit">Submit Form</button>
+        </h2>
+    </div>
+
+
+</form>
+</div>
+</div>
+
+
+<div class="container" id="container2">
+
+
+
+</div>
+
+{% endblock %}

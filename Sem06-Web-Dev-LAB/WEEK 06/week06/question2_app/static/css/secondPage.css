@@ -1,0 +1,9 @@
+body {
+  background-color: green;
+}
+
+#container1,
+#container2 {
+  display: flex;
+  justify-content: center;
+}

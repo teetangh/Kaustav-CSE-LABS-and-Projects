@@ -1,0 +1,14 @@
+body {
+  background-color: green;
+}
+
+#container1,
+#container2 {
+  display: flex;
+  justify-content: center;
+}
+
+br {
+  display: block;
+  margin: 10px 0;
+}
