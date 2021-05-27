@@ -1,0 +1,12 @@
+body {
+  background-color: grey;
+}
+
+#container1,
+#container2,
+#container3 {
+  /* margin: 0 auto;
+  margin-top: 100px; */
+  display: flex;
+  justify-content: space-evenly;
+}

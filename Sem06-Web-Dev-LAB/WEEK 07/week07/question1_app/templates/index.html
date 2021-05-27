@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+
+{% block title %}Index Page{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="../static/question1_app/css/style.css">
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="container" id="container1">
+    <div id="content">
+        <h2>Car Manufacturer</h2>
+    </div>
+    <div>
+        <h2>Model Name</h2>
+    </div>
+</div>
+<div class="form-group" id="content2">
+
+    <form action="question1_app/model-name/" method="post">
+        <div class="container" id="container2">
+
+
+            <div class="dropdown">
+                <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Manufacturers from SQLite Database
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <select name="Manufacturer" class="form-control">
+                        {% for results in showManufacturer %}
+                        <option class="dropdown-item" value="{{ results.manufacturer_name}}">{{
+                            results.manufacturer_name }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <input id="model_name" type="text" name="model_name" class="form-control" value="{{ current_name }}">
+                <label for="model_name">Field cannot be blank</label>
+                <div class="form-group" stylze="justify-content: end">
+                    <input type="submit" class="btn btn-success" value="Submit details">
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+</div>
+
+<div class="container">
+    <b>Manufacturer : </b>
+    <select name="Manufacturer" class="form-control">
+        {% for results in showManufacturer %}
+        <option value="{{ results.manufacturer_name}}">{{ results.manufacturer_name }}</option>
+        {% endfor %}
+    </select>
+    <br>
+    {{ carForm.form.car_name }}
+</div>
+
+
+<div class="container">
+
+    <form method="POST" action="question1_app/success_view">{% csrf_token %}
+        <div class="form-group">
+            <label>First Name </label>
+            {{ inputForm.form.first_name }}
+        </div>
+        <div class="form-group">
+            <label>Last Name </label>
+            {{ inputForm.form.last_name }}
+        </div>
+        <div class="form-group">
+            <label>Roll Number</label>
+            {{ inputForm.form.roll_number }}
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            {{ inputForm.form.password }}
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
+
+<div>
+
+    <div class="container">
+        <form action="question1_app/success_view" method="POST">{% csrf_token %}
+            <div class="container">
+                {% for val in carForm.form %}
+
+                {% if val.label_tag == 'car_brand'%}
+                <div>
+
+                    <select name="CarForm" id="">
+                        {{val.label_tag}}
+                        {{val}
+                    </select>
+
+                </div>
+                {% else %}
+                <div>
+
+                    {{ val.label_tag }}
+                    {{ val }}
+                    {% endif %}
+
+                </div>
+
+                {% endfor %}
+
+                <div>
+                    <input type="submit" class="btn btn-success" value="Submit details">
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<script src="../static/question1_app/js/index.js"></script>
+{% endblock %}
