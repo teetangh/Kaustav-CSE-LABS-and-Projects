@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}First Page{% endblock %}
+
+
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="../static/css/successsPage.css">
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container" id="container1">
+
+    <h2>
+        Welcome, {{ customer_username }}
+    </h2>
+
+    <h4>Your Email ID is</h4>{{ customer_email }}
+    <h4>Your Contact ID is</h4>{{ customer_contact }}
+</div>
+
+{% endblock %}

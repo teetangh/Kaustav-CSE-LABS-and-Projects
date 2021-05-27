@@ -12,25 +12,25 @@
 {% block content %}
 
 <div class="container" id="container1">
-</div>
-<h1>Student Form</h1>
-<form method="POST" action="question2_app/secondPage">{% csrf_token %}
+    <div>
+        <h1>Student Form</h1>
+        <form method="POST" action="question2_app/secondPage">{% csrf_token %}
 
-    <div id="vertical-center">
-        <h2>Name: {{ student_form.name }}</h2>
-        <h2>Roll Number: {{ student_form.roll_number }}</h2>
+            <div id="vertical-center">
+                <h2>Name: {{ student_form.name }}</h2>
+                <h2>Roll Number: {{ student_form.roll_number }}</h2>
 
-        <h2>Birth Year: {{ student_form.birth_year }}</h2>
+                <h2>Birth Year: {{ student_form.birth_year }}</h2>
 
-        <h2>subject: {{ student_form.subject }}</h2>
-        <h2>Submit
-            <button type="submit">Submit Form</button>
-        </h2>
+                <h2>subject: {{ student_form.subject }}</h2>
+                <h2>Submit
+                    <button type="submit">Submit Form</button>
+                </h2>
+            </div>
+
+
+        </form>
     </div>
-
-
-</form>
-</div>
 </div>
 
 

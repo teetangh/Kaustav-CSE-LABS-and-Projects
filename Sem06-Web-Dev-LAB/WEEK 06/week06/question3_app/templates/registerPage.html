@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}First Page{% endblock %}
+
+
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="../static/css/registerPage.css">
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container" id="container1">
+
+    <form action="question3_app/successPage" method="post">{% csrf_token %}
+        <div>
+            <label for="username">Username</label>
+            {{ customer.username }}
+            <label for="password">Password</label>
+            {{ customer.password }}
+        </div>
+
+        <div>
+            <label for="Email">Email</label>
+            {{ customer.email }}
+            <label for="Contact">Contact</label>
+            {{ customer.contact }}
+        </div>
+
+        <input type="submit" value="Submit" />
+    </form>
+
+</div>
+
+{% endblock %}
