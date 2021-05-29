@@ -32,7 +32,7 @@ def success_view(request):
             categoryForm_visits = categoryForm.cleaned_data["visits"]
             categoryForm_likes = categoryForm.cleaned_data["likes"]
 
-            print("inserted ===> ", categoryForm_name, categoryForm_email,
+            print("inserted category ===> ", categoryForm_name, categoryForm_email,
                   categoryForm_visits, categoryForm_likes)
 
             category_db = models.CategoryModel(
@@ -42,7 +42,6 @@ def success_view(request):
                 likes=categoryForm_likes,
             )
             category_db.save()
-            context["categoryModelQueries"] = models.CategoryModel.objects.all()
 
         if pageForm.is_valid():
             pageForm_category = pageForm.cleaned_data["category"]
@@ -50,7 +49,8 @@ def success_view(request):
             pageForm_url = pageForm.cleaned_data["url"]
             pageForm_views = pageForm.cleaned_data["views"]
 
-            print("inserted ===>", pageForm_category,
+            print(" Kaustav ")
+            print("inserted page ===>", pageForm_category,
                   pageForm_title, pageForm_url, pageForm_views)
 
             page_db = models.PageModel(
@@ -60,6 +60,7 @@ def success_view(request):
                 views=pageForm_views,
             )
             page_db.save()
-            context["pageModelQueries"] = models.PageModel.objects.all()
+        context["categoryModelQueries"] = models.CategoryModel.objects.all()
+        context["pageModelQueries"] = models.PageModel.objects.all()
 
     return render(request, "templates/success.html", context=context)
