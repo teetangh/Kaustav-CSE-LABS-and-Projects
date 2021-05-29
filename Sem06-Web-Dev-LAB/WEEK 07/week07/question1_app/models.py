@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Category(models.Model):
+class CategoryModel(models.Model):
     name = models.CharField(max_length=30)
     email = models.EmailField()
 
@@ -12,8 +12,8 @@ class Category(models.Model):
         return "%s %s" % (self.name, self.email)
 
 
-class Page(models.Model):
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+class PageModel(models.Model):
+    category = models.ForeignKey(CategoryModel, on_delete=models.CASCADE)
     title = models.CharField(max_length=30)
     url = models.URLField()
     views = models.IntegerField()

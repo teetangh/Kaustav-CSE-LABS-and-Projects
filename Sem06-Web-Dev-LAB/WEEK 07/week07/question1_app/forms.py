@@ -6,15 +6,15 @@ from django.forms.widgets import TextInput
 from . import models
 
 
-class CategoryForm(forms.ModelForm):
+class CategoryModelForm(forms.ModelForm):
 
     class Meta:
-        model = models.Category
+        model = models.CategoryModel
         fields = "__all__"
 
 
-class PageForm(forms.ModelForm):
+class PageModelForm(forms.ModelForm):
 
     class Meta:
-        model = models.Page
+        model = models.PageModel
         fields = "__all__"

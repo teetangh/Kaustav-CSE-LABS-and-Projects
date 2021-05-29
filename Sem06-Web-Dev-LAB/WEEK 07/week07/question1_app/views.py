@@ -8,21 +8,21 @@ from . import models
 def index(request):
 
     context = {}
-    context["categoryForm"] = forms.CategoryForm()
-    context["pageForm"] = forms.PageForm()
+    context["categoryForm"] = forms.CategoryModelForm()
+    context["pageForm"] = forms.PageModelForm()
 
     return render(request, "templates/index.html", context)
 
 
 def success_view(request):
 
-    categoryForm = forms.CategoryForm()
-    pageForm = forms.PageForm()
+    categoryForm = forms.CategoryModelForm()
+    pageForm = forms.PageModelForm()
 
     if request.method == "POST":
 
-        categoryForm = forms.CategoryForm(request.POST)
-        pageForm = forms.PageForm(request.POST)
+        categoryForm = forms.CategoryModelForm(request.POST)
+        pageForm = forms.PageModelForm(request.POST)
 
         if categoryForm.is_valid():
             categoryForm_name = categoryForm.cleaned_data["name"]
@@ -30,11 +30,19 @@ def success_view(request):
             categoryForm_visits = categoryForm.cleaned_data["visits"]
             categoryForm_likes = categoryForm.cleaned_data["likes"]
 
-            print("DEBUG 1 ",
-                  categoryForm_name,
-                  categoryForm_email,
-                  categoryForm_visits,
-                  categoryForm_likes)
+            # print("DEBUG 1 ",
+            #       categoryForm_name,
+            #       categoryForm_email,
+            #       categoryForm_visits,
+            #       categoryForm_likes)
+
+            category_db = models.CategoryModel(
+                name=categoryForm_name,
+                email=categoryForm_email,
+                visits=categoryForm_visits,
+                likes=categoryForm_likes,
+            )
+            category_db.save()
 
         if pageForm.is_valid():
             pageForm_category = pageForm.cleaned_data["category"]
@@ -47,5 +55,13 @@ def success_view(request):
                   pageForm_title,
                   pageForm_url,
                   pageForm_views)
+
+            page_db = models.PageModel(
+                name=pageForm_category,
+                email=pageForm_title,
+                visits=pageForm_url,
+                likes=pageForm_views,
+            )
+            page_db.save()
 
     return render(request, "templates/success.html", context=None)
