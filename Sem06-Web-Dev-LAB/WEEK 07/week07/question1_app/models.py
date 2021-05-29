@@ -1,12 +1,25 @@
 from django.db import models
 
 
-class CarModel(models.Model):
-    manufacturer_name = models.CharField(max_length=30)
+class Category(models.Model):
+    name = models.CharField(max_length=30)
+    email = models.EmailField()
 
-    def __name__(self):
-        return self.manufacturer_name
+    visits = models.IntegerField()
+    likes = models.IntegerField()
+
+    def __str__(self):
+        return "%s %s" % (self.name, self.email)
+
+
+class Page(models.Model):
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    title = models.CharField(max_length=30)
+    url = models.URLField()
+    views = models.IntegerField()
+
+    def __str__(self):
+        return self.title
 
     class Meta:
-        db_table = "question1_app_car"
-
+        ordering = ['title']

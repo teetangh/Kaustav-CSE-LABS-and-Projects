@@ -10,6 +10,21 @@
 
 {% block content %}
 
+<div class="container">
+    <form action="question1_app/success_view" method="post">{% csrf_token %}
+        {{ categoryForm }}
+
+        <input type="submit" value="Submit 1">
+    </form>
+
+    <form action="success_view" method="post">{% csrf_token %}
+        {{ pageForm }}
+        <input type="submit" value="Submit 2">
+    </form>
+</div>
+
+
+
 
 <script src="../static/question1_app/js/index.js"></script>
 {% endblock %}
