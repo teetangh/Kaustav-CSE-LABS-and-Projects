@@ -19,6 +19,8 @@ def success_view(request):
     categoryForm = forms.CategoryModelForm()
     pageForm = forms.PageModelForm()
 
+    context = {}
+
     if request.method == "POST":
 
         categoryForm = forms.CategoryModelForm(request.POST)
@@ -30,11 +32,8 @@ def success_view(request):
             categoryForm_visits = categoryForm.cleaned_data["visits"]
             categoryForm_likes = categoryForm.cleaned_data["likes"]
 
-            # print("DEBUG 1 ",
-            #       categoryForm_name,
-            #       categoryForm_email,
-            #       categoryForm_visits,
-            #       categoryForm_likes)
+            print("inserted ===> ", categoryForm_name, categoryForm_email,
+                  categoryForm_visits, categoryForm_likes)
 
             category_db = models.CategoryModel(
                 name=categoryForm_name,
@@ -43,6 +42,7 @@ def success_view(request):
                 likes=categoryForm_likes,
             )
             category_db.save()
+            context["categoryModelQueries"] = models.CategoryModel.objects.all()
 
         if pageForm.is_valid():
             pageForm_category = pageForm.cleaned_data["category"]
@@ -50,18 +50,16 @@ def success_view(request):
             pageForm_url = pageForm.cleaned_data["url"]
             pageForm_views = pageForm.cleaned_data["views"]
 
-            print("DEBUG 2",
-                  pageForm_category,
-                  pageForm_title,
-                  pageForm_url,
-                  pageForm_views)
+            print("inserted ===>", pageForm_category,
+                  pageForm_title, pageForm_url, pageForm_views)
 
             page_db = models.PageModel(
-                name=pageForm_category,
-                email=pageForm_title,
-                visits=pageForm_url,
-                likes=pageForm_views,
+                category=pageForm_category,
+                title=pageForm_title,
+                url=pageForm_url,
+                views=pageForm_views,
             )
             page_db.save()
+            context["pageModelQueries"] = models.PageModel.objects.all()
 
-    return render(request, "templates/success.html", context=None)
+    return render(request, "templates/success.html", context=context)
