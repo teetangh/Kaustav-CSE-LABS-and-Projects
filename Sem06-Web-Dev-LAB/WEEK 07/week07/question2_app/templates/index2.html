@@ -1,0 +1,30 @@
+{% extends "base2.html" %}
+
+
+{% block title %}Index Page{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="../static/question2_app/css/style.css" />
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+    <form action="question2_app/success_view" method="post">{% csrf_token %}
+        
+        {{ personForm.name }}
+        
+        {{ livesForm.street }}
+        {{ livesForm.city }}
+        
+        {{ worksForm.company }}
+        {{ worksForm.salary }}
+        
+        
+        <input type="submit" value="Submit Person">
+
+    </form>
+</div>
+
+{% endblock %}
