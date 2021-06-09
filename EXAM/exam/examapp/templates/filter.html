@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+
+{% block title %}Success Page{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="../static/question1_app/css/style.css">
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+    <h1 style="text-align: center;"> Student Table </h1>
+    <table class="table table-dark text-center">
+        <tr>
+            <th>Name</th>
+            <th>regno</th>
+            <th>cgpa</th>
+        </tr>
+        {% for item in studentModelQueries %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.regno }}</td>
+            <td>{{ item.cgpa }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+
+
+
+{% endblock %}
