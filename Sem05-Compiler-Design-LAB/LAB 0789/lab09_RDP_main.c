@@ -315,7 +315,6 @@ void expn()
 }
 void eprime()
 {
-    printf("\nTADA\n");
 
     if (strcmp(currentToken->type, "relational_operators") == 0)
     {

@@ -11,8 +11,12 @@ Although it shows 2 contributors, I had accidently commited my files from the ot
 
 ## Compiler Design Project
 
+> **NOTE**: You can click on the gifs to enlarge!
+
 ### Lexical Analyzer Demo:
 <img src="./Sem05-Compiler-Design-LAB/LAB 04/output_LA.gif"/>
 
 ### Symbol Table Generator Demo:
 <img src="./Sem05-Compiler-Design-LAB/LAB 04/output_STG.gif"/>
+
+### Recursive Descent Parser Demo:
