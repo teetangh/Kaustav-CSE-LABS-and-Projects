@@ -11,5 +11,8 @@ Although it shows 2 contributors, I had accidently commited my files from the ot
 
 ## Compiler Design Project
 
-### Lexical Analyzer + Symbol Table Generator:
-<img src="./Sem05-Compiler-Design-LAB/LAB 04/lab04_symbol_table_lexical_analyser_complete_output.gif"/>
+### Lexical Analyzer Demo:
+<img src="./Sem05-Compiler-Design-LAB/LAB 04/output_LA.gif"/>
+
+### Symbol Table Generator Demo:
+<img src="./Sem05-Compiler-Design-LAB/LAB 04/output_STG.gif"/>
