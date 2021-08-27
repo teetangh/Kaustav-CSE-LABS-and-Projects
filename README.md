@@ -12,4 +12,4 @@ Although it shows 2 contributors, I had accidently commited my files from the ot
 ## Compiler Design Project
 
 ### Lexical Analyzer + Symbol Table Generator:
-<video src='./Sem05-Compiler-Design-LAB/LAB 04/lab04_symbol_table_lexical_analyser_complete_demo.mkv' width="100%">
+<img src="./Sem05-Compiler-Design-LAB/LAB 04/output.gif"/>
