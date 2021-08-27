@@ -586,8 +586,8 @@ struct token *getNextToken(FILE *fp)
 int main(int argc, char const *argv[])
 {
     // FILE *fp = fopen("input_file1.c", "r");
-    FILE *fp = fopen("../LAB 03/lab03_q1_input_all_operators.c", "r");
-    // FILE *fp = fopen("input_file2_multi_function.c", "r");
+    // FILE *fp = fopen("../LAB 03/lab03_input1_all_operators.c", "r");
+    FILE *fp = fopen("input_file2_multi_function.c", "r");
 
     freopen("lab04_symbol_table_output.txt", "w", stdout);
 
