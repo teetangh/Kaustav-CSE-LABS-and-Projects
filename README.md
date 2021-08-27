@@ -3,10 +3,11 @@
 Although it shows 2 contributors, I had accidently commited my files from the other account since we work on the same system .
 Thus, the entire repository consists of SOLELY my implementations.
 
+## Compiler Design Project
 
 > **NOTE**: You can CLICK ON THE GIFS to ENLARGE THEM!
 
-## Compiler Design Project
+> **NOTE**: Scroll down to see more demos.
 
 ### Lexical Analyzer Demo:
 
